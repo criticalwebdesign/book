@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Endless Beer | Critical Web Design</title>
+
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .top {
+                background: url(assets/img/endless-beer-top.png) no-repeat center top;
+                min-height: 232px;
+                width: 100%;
+            }
+
+            .beerWrapper {
+                height: 100%;
+                overflow-y: scroll;
+            }
+
+            .beer {
+                background: url(assets/img/endless-beer-glass.png) repeat-y center top;
+                height: 2000px;
+            }
+
+            .bubbleWrapper {
+                position:relative;
+                z-index: 10;
+                /* background-color: rgba(0, 0, 0, .1); */
+                margin: 0 auto;
+                top:0;
+                width: 420px;
+                height: 100%;
+            }
+
+            .bubble {
+                position: absolute;
+                /* transform: translateY(100vh); */
+            }
+
+            .float {
+                animation-name: floatUp;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+                animation-delay: 0s;
+            }
+
+            @keyframes floatUp {
+                0% {
+                    /* start position */
+                    /* transform: translateY(50vh); */
+                    transform: translateY(calc(100vh + 1000px));
+                    /* transform: translateY(10px); */
+                }
+
+                100% {
+                    /* finish position */
+                    transform: translateY(300px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="beerWrapper"> -->
+        <div class="beer">
+            <div class="top"></div>
+            <div class="bubbleWrapper"></div>
+        </div>
+        <!-- </div> -->
+
+
+        <script>
+
+            let startHeight = 1000,
+                addHeight = 1000;
+            let height = window.innerHeight + addHeight;
+            let beer = document.querySelector('.beer');
+            let bubbleWrapper = document.querySelector('.bubbleWrapper');
+
+
+            let bubbleSVG = `<svg class="bubble float" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11.4182" cy="11.5732" r="11.0935" fill="#FFFFE1" fill-opacity="0.29" />
+                    <path d="M7.98564 8.63513C7.26192 12.523 5.47882 12.5089 5.47882 12.5089C5.47882 12.5089 3.23099 12.0527 3.95471 8.16485C5.8356 4.73865 6.87109 3.44866 10.759 4.17237C13.8304 6.41816 8.70935 4.74726 7.98564 8.63513Z" fill="#FFFFE1" fill-opacity="0.41" />
+                </svg>`;
+
+            let bubbles = [];
+            let bubbleCount = 0;
+            function addBubble() {
+                let x = Math.floor(Math.random() * bubbleWrapper.offsetWidth),
+                    y = window.offsetHeight + 100;
+                bubbleWrapper.insertAdjacentHTML('beforeend',
+                    `<div class="bubble${bubbleCount++}" style="transform: scale(${randomFloat(.25, .65)}) translateX(${x}px);">${bubbleSVG}</div>`);
+            }
+            let addBubbleInterval = setInterval(function () {
+                addBubble();
+                if (bubbleCount > 200) clearInterval(addBubbleInterval);
+            }, 500)
+
+            /**
+             *  Return a random floating point value between min (inclusive) and max (inclusive)
+             */
+            function randomFloat(min, max) {
+                return Math.random() * (max - min + 1) + min;
+            }
+
+            window.onscroll = function (ev) {
+                console.log("scroll", beer.style.height);
+
+                if ((windowHeight() + window.scrollY) >= document.body.offsetHeight) {
+                    console.log("bottom",
+                        "\nwindow.innerHeight =", windowHeight(),
+                        "\nwindow.scrollY =", window.scrollY,
+                        "\ndocument.body.offsetHeight =", document.body.offsetHeight,
+                        "\nbubbleWrapper.offsetHeight =", bubbleWrapper.offsetHeight,
+                        "\nbeer.style.height =", beer.style.height);
+                    height += addHeight;
+                    beer.setAttribute("style", `height:${height}px`);
+                }
+            };
+
+            const windowHeight = () => Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+
+
+        </script>
+    </body>
+</html>

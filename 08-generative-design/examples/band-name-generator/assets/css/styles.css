@@ -1,0 +1,276 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(19, 9, 50);
+    color: aquamarine;
+}
+
+
+
+/* include padding in size of box */
+div {
+    box-sizing: border-box;
+}
+
+/* align content vertically */
+.center-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* TESTING  */
+
+.test {
+    background-color: blue;
+    opacity: .5;
+}
+
+/*
+
+Flexbox cross axis is perpendicular to main axis:
+- if flex-direction = row (main axis = X)     => cross axis = columns (Y)
+- if flex-direction = column (main axis = Y)  => cross axis = rows (X)
+
+JUSTIFY = Main axis item alignment
+- justify-items - set on container
+- justify-self - set on items 
+- justify-content - set on container, distributes spacing between items (multi-line containers only)
+
+ALIGN = Cross-axis item alignment 
+- align-items - set on container
+- align-self - set on items 
+- align-content - set on container, distributes spacing between items (multi-line containers only)
+
+*/
+
+/* form layout, two album covers */
+.flex-container {
+    /* turn on flex for items */
+    display: flex;
+    /* changes main axis = X */
+    flex-direction: row;
+    /* items can wrap (contstrain browser window to see */
+    flex-wrap: wrap;
+    /* main-axis item space distribution */
+    justify-content: center;
+    /* cross-axis item alignment  */
+    align-items: center;
+}
+
+/* a flex item, and flex column */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* a flex item, and flex column */
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    /* set initial main size of item */
+    flex-basis: 100%;
+    /* how item will flex per space available*/
+    flex: 1;
+}
+
+.waitUntilLoad {
+    display: none;
+}
+
+
+/* FRONT */
+
+.album {
+    width: 600px;
+    height: 600px;
+    background-size: 120% 120%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, .2);
+    background-color: midnightblue;
+}
+
+.albumFront {
+    text-align: center;
+    background-image: url("../img/cat1.jpg");
+}
+
+.albumName {
+    /* fill main axis */
+    justify-self: stretch;
+    /* relative space in container */
+    flex-grow: 3;
+    font-size: 4rem;
+    font-family: 'Castoro Titling';
+}
+
+.stickerWrapper {
+    flex-grow: 3;
+    display: flex;
+}
+
+.sticker {
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 120px;
+    height: 120px;
+    margin: 1rem;
+    padding: 1.2rem;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    transform: scale(.8) rotate(-25deg);
+    display: flex;
+    background-color: tomato;
+    font-size: 1.15rem;
+}
+
+.price {
+    font-size: 2rem;
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+.genre {
+    flex-grow: 1;
+}
+
+.bandName {
+    flex-grow: 5;
+    justify-self: stretch;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Bungee Shade', cursive;
+}
+
+
+
+
+/* BACK */
+
+.albumBackOverlay {
+    background-color: midnightblue;
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.albumBack {
+    background-image: url("../img/cat2.jpg");
+    text-shadow: 2px 2px midnightblue;
+}
+
+.songList {
+    flex-grow: 5;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.song {
+    margin: .5rem 0;
+}
+
+.songTitle {
+    margin: 0 .2rem 0 0;
+}
+
+.songLength,
+.songCredits {
+    font-size: .9rem;
+    opacity: .4;
+}
+
+.songLength {
+    margin: 0 .2rem 0 0;
+}
+
+.credits {
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    font-size: .85rem;
+    opacity: .8;
+    margin: 1rem 0 0 0;
+}
+
+
+
+
+
+/* FORM */
+
+form {
+    color: aquamarine;
+    padding: 1rem 0;
+}
+
+label,
+button {
+    margin: 0 .2rem 0 .8rem;
+}
+
+input,
+button,
+select {
+    background-color: aliceblue;
+    border: none;
+    padding: .1rem .2rem;
+    margin: .3rem .2rem;
+    border-radius: .2rem;
+}
+
+button {
+    margin-left: .5rem;
+    border-radius: .3rem;
+    background-color: aquamarine;
+}
+
+.reload {
+    font-size: 1.5rem;
+}
+
+.lyrics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lyricWrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 2rem;
+    color: cadetblue
+}
+
+.lyricTitle {
+    margin: 2rem 0 .5rem 0;
+}
+
+.lyricVerse {
+    margin: .5rem 0 0;
+}

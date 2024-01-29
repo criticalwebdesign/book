@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai Albers: Interactive Albers Painting</title>
+    <!-- 
+    Title: Ai Albers: Interactive Albers Painting
+    Author(s): Chat GPT-4 prompted by xtine burrough, Owen Mundy
+    Date: 2023
+    License: MIT
+    -->
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      canvas {
+        border: 2px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="albersCanvas" width="800" height="600"></canvas>
+
+    <script>
+      // Set up the canvas and context
+      const canvas = document.getElementById("albersCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Define the initial colors
+      let color1 = "#FF0000"; // Red
+      let color2 = "#0000FF"; // Blue
+
+      // Draw the initial Albers painting
+      drawAlbersPainting(color1, color2);
+
+      // Handle click events on the canvas
+      canvas.addEventListener("click", handleCanvasClick);
+
+      // Function to draw the Albers painting
+      function drawAlbersPainting(colorA, colorB) {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw rectangles with color interactions
+        ctx.fillStyle = colorA;
+        ctx.fillRect(0, 0, canvas.width / 2, canvas.height / 2);
+
+        ctx.fillStyle = colorB;
+        ctx.fillRect(canvas.width / 2, 0, canvas.width / 2, canvas.height / 2);
+
+        ctx.fillStyle = colorB;
+        ctx.fillRect(0, canvas.height / 2, canvas.width / 2, canvas.height / 2);
+
+        ctx.fillStyle = colorA;
+        ctx.fillRect(
+          canvas.width / 2,
+          canvas.height / 2,
+          canvas.width / 2,
+          canvas.height / 2
+        );
+      }
+
+      // Function to handle click events on the canvas
+      function handleCanvasClick(event) {
+        // Get the click coordinates
+        const x = event.clientX - canvas.offsetLeft;
+        const y = event.clientY - canvas.offsetTop;
+
+        // Determine which color to change based on the clicked area
+        if (x < canvas.width / 2 && y < canvas.height / 2) {
+          color1 = getRandomColor();
+        } else if (x >= canvas.width / 2 && y < canvas.height / 2) {
+          color2 = getRandomColor();
+        } else if (x < canvas.width / 2 && y >= canvas.height / 2) {
+          color2 = getRandomColor();
+        } else {
+          color1 = getRandomColor();
+        }
+
+        // Redraw the Albers painting with the updated colors
+        drawAlbersPainting(color1, color2);
+      }
+
+      // Function to generate a random color
+      function getRandomColor() {
+        return "#" + Math.floor(Math.random() * 16777215).toString(16);
+      }
+    </script>
+  </body>
+</html>

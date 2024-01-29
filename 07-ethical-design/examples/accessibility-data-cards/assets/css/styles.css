@@ -1,0 +1,387 @@
+/* styles.css */
+
+:root {
+    --background: 228, 219, 219;
+    --menuBackground: 0;
+    --menuBackgroundActive: .2;
+    --menuBorderSize: 6px;
+    --menuBorder: .3;
+    --menuBorderActive: .5;
+    --valueBackground: .9;
+    --valueBackgroundActive: 1;
+    --valueBorder: .4;
+
+
+
+    /* 
+    Using an RGB triplet allows you to create color variants later with the prop and  rgba()
+    https://stackoverflow.com/a/41265350/441878 
+    */
+    --rose: 237, 91, 102;
+    --green: 79, 167, 17;
+    --cyan: 0, 162, 184;
+    --blue: 35, 138, 223;
+    --purple: 190, 86, 221;
+    --magenta: 240, 91, 189;
+    /* these colors are darker variations:display:
+      green, cyan, blue, */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var(--background));
+    color: rgb(50, 60, 68);
+}
+
+a {
+    text-decoration: underline !important;
+}
+
+.cardMenu {
+    cursor: default;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    border: none;
+    border-radius: 2rem;
+}
+
+.card-body {
+    padding: .5rem;
+}
+
+
+/* accessibility */
+.cardMenu:hover {
+    cursor: pointer;
+}
+
+/* accessibility */
+.card:hover,
+.card:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: none;
+    /* replace focus outline with something nicer */
+    /* outline: -webkit-focus-ring-color rgba(var(--rose), var(--menuBackgroundActive)) 5px; */
+    /* added in individual color classes */
+}
+
+/* accessibility */
+.description {
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+
+
+
+
+.rose,
+.rose .value {
+    background-color: rgba(var(--rose), var(--menuBackground));
+    border: var(--menuBorderSize) solid rgba(var(--rose), var(--menuBorder)) !important;
+}
+
+.rose .value {
+    color: rgba(var(--rose), var(--valueBackground));
+    border: var(--menuBorderSize) solid rgba(var(--rose), var(--valueBorder)) !important;
+}
+
+.active.rose .value {
+    background-color: rgba(var(--rose), var(--valueBackgroundActive));
+}
+
+
+/* accessibility */
+.rose:hover,
+.rose:focus,
+.active.rose {
+    background-color: rgba(var(--rose), var(--menuBackgroundActive));
+    border: var(--menuBorderSize) solid rgba(var(--rose), var(--menuBorderActive));
+    outline: -webkit-focus-ring-color rgba(var(--rose), var(--menuBackgroundActive)) 5px;
+}
+
+/* accessibility */
+.description-rose {
+    background-color: rgba(var(--rose), var(--menuBorder));
+    border: var(--menuBorderSize) solid rgba(var(--rose), var(--menuBorderActive));
+}
+
+
+
+
+.green,
+.green .value {
+    background-color: rgba(var(--green), var(--menuBackground));
+    border: var(--menuBorderSize) solid rgba(var(--green), var(--menuBorder)) !important;
+}
+
+.green .value {
+    color: rgba(var(--green), var(--valueBackground));
+    border: var(--menuBorderSize) solid rgba(var(--green), var(--valueBorder)) !important;
+}
+
+.active.green .value {
+    background-color: rgba(var(--green), var(--valueBackgroundActive));
+}
+
+
+/* accessibility */
+.green:hover,
+.green:focus,
+.active.green {
+    background-color: rgba(var(--green), var(--menuBackgroundActive));
+    border: var(--menuBorderSize) solid rgba(var(--green), var(--menuBorderActive));
+    outline: -webkit-focus-ring-color rgba(var(--green), var(--menuBackgroundActive)) 5px;
+}
+
+/* accessibility */
+.description-green {
+    background-color: rgba(var(--green), var(--menuBorder));
+    border: var(--menuBorderSize) solid rgba(var(--green), var(--menuBorderActive));
+}
+
+
+
+
+
+
+.cyan,
+.cyan .value {
+    background-color: rgba(var(--cyan), var(--menuBackground));
+    border: var(--menuBorderSize) solid rgba(var(--cyan), var(--menuBorder)) !important;
+}
+
+.cyan .value {
+    color: rgba(var(--cyan), var(--valueBackground));
+    border: var(--menuBorderSize) solid rgba(var(--cyan), var(--valueBorder)) !important;
+}
+
+.active.cyan .value {
+    background-color: rgba(var(--cyan), var(--valueBackgroundActive));
+}
+
+
+/* accessibility */
+.cyan:hover,
+.cyan:focus,
+.active.cyan {
+    background-color: rgba(var(--cyan), var(--menuBackgroundActive));
+    border: var(--menuBorderSize) solid rgba(var(--cyan), var(--menuBorderActive));
+    outline: -webkit-focus-ring-color rgba(var(--cyan), var(--menuBackgroundActive)) 5px;
+}
+
+/* accessibility */
+.description-cyan {
+    background-color: rgba(var(--cyan), var(--menuBorder));
+    border: var(--menuBorderSize) solid rgba(var(--cyan), var(--menuBorderActive));
+}
+
+
+
+
+
+.blue,
+.blue .value {
+    background-color: rgba(var(--blue), var(--menuBackground));
+    border: var(--menuBorderSize) solid rgba(var(--blue), var(--menuBorder)) !important;
+}
+
+.blue .value {
+    color: rgba(var(--blue), var(--valueBackground));
+    border: var(--menuBorderSize) solid rgba(var(--blue), var(--valueBorder)) !important;
+}
+
+.active.blue .value {
+    background-color: rgba(var(--blue), var(--valueBackgroundActive));
+}
+
+
+/* accessibility */
+.blue:hover,
+.blue:focus,
+.active.blue {
+    background-color: rgba(var(--blue), var(--menuBackgroundActive));
+    border: var(--menuBorderSize) solid rgba(var(--blue), var(--menuBorderActive));
+    outline: -webkit-focus-ring-color rgba(var(--blue), var(--menuBackgroundActive)) 5px;
+}
+
+/* accessibility */
+.description-blue {
+    background-color: rgba(var(--blue), var(--menuBorder));
+    border: var(--menuBorderSize) solid rgba(var(--blue), var(--menuBorderActive));
+}
+
+
+
+
+
+
+
+
+.purple,
+.purple .value {
+    background-color: rgba(var(--purple), var(--menuBackground));
+    border: var(--menuBorderSize) solid rgba(var(--purple), var(--menuBorder)) !important;
+}
+
+.purple .value {
+    color: rgba(var(--purple), var(--valueBackground));
+    border: var(--menuBorderSize) solid rgba(var(--purple), var(--valueBorder)) !important;
+}
+
+.active.purple .value {
+    background-color: rgba(var(--purple), var(--valueBackgroundActive));
+}
+
+
+/* accessibility */
+.purple:hover,
+.purple:focus,
+.active.purple {
+    background-color: rgba(var(--purple), var(--menuBackgroundActive));
+    border: var(--menuBorderSize) solid rgba(var(--purple), var(--menuBorderActive));
+    outline: -webkit-focus-ring-color rgba(var(--purple), var(--menuBackgroundActive)) 5px;
+}
+
+/* accessibility */
+.description-purple {
+    background-color: rgba(var(--purple), var(--menuBorder));
+    border: var(--menuBorderSize) solid rgba(var(--purple), var(--menuBorderActive));
+}
+
+
+
+
+
+.magenta,
+.magenta .value {
+    background-color: rgba(var(--magenta), var(--menuBackground));
+    border: var(--menuBorderSize) solid rgba(var(--magenta), var(--menuBorder)) !important;
+}
+
+.magenta .value {
+    color: rgba(var(--magenta), var(--valueBackground));
+    border: var(--menuBorderSize) solid rgba(var(--magenta), var(--valueBorder)) !important;
+}
+
+.active.magenta .value {
+    background-color: rgba(var(--magenta), var(--valueBackgroundActive));
+}
+
+/* accessibility */
+.magenta:hover,
+.magenta:focus,
+.active.magenta {
+    background-color: rgba(var(--magenta), var(--menuBackgroundActive));
+    border: var(--menuBorderSize) solid rgba(var(--magenta), var(--menuBorderActive));
+    outline: -webkit-focus-ring-color rgba(var(--rose), var(--menuBackgroundActive)) 5px;
+}
+
+/* accessibility */
+.description-magenta {
+    background-color: rgba(var(--magenta), var(--menuBorder));
+    border: var(--menuBorderSize) solid rgba(var(--magenta), var(--menuBorderActive));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* accessibility */
+@media (max-width: 991.98px) {
+    .card {
+        border: none !important;
+    }
+}
+
+.active .value {
+    color: white;
+}
+
+.card-text {
+    font-size: smaller;
+}
+
+.grid-container {
+    display: grid;
+    gap: .5rem;
+    /* grid-template-columns: repeat(4, minmax(5rem, 1fr)); */
+    grid-template-rows: repeat(4, minmax(5rem, 1fr));
+    grid-auto-flow: column;
+}
+
+.report-value {
+    display: inline-block;
+    padding: .2rem .4rem;
+    margin-right: .5rem;
+    margin-top: .5rem;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 20%;
+    color: white;
+}
+
+.graphic {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.affected .graphic {
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: .2;
+}
+
+.affected .graphic:hover {
+    opacity: .4;
+}
+
+.btn,
+.value {
+    transition-property: background-color;
+    transition-duration: .15s;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 6rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    padding: .4rem;
+    text-align: center;
+    /* accessibility */
+    font-weight: 500;
+    /* accessibility */
+    font-size: 1.2rem;
+    background-color: #212529;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.active {
+    transition-property: transform;
+    transition-duration: .15s;
+    /* accessibility */
+    transform: scale(1.1);
+}
+
+.btn-text {
+    margin-top: 1rem;
+}

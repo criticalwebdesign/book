@@ -1,0 +1,48 @@
+body {
+    font: 16px/22px Arial;
+}
+
+code {
+    font-weight: bold;
+}
+
+
+/* display these items in a grid */
+
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+
+
+/* defaults */
+
+img {
+    width: 300px;
+}
+
+.bgImgDefaultSize {
+    width: 300px;
+    aspect-ratio: 1/1;
+    background-size: cover;
+}
+
+/* 1 */
+
+.cssBackgroundImg {
+    background-image: url(../img/cat-01.jpg);
+}
+
+.cssBackgroundImg:hover {
+    background-image: url(../img/cat-02.jpg);
+    cursor: crosshair;
+}

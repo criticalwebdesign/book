@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessibility Data | Critical Web Design</title>
+
+    <!-- 
+    Title: Accessibility Data (original cards version)
+    Author(s): Owen Mundy, xtine burrough
+    Date: 2023
+    License: MIT
+    -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="my-2 mt-md-5 my-md-4">Users affected by website accessibility</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav class="container-xl">
+        <div class="row text-center g-0 g-lg-3">
+            <div class="col-4 col-sm-2 col-lg-2 m-0 my-lg-2">
+                <div class="card text-center cardMenu rose focus-ring-rose" data-option="0" data-percent="15" tabindex="0">
+                    <div class="card-body h-100 px-2">
+                        <div class="value">15%</div>
+                        <p class="card-text mt-2 d-none d-md-block">World population with some sort of disability</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-2 col-lg-2 m-0 my-lg-2">
+                <div class="card text-center cardMenu green focus-ring-green" data-option="1" data-percent="23" tabindex="0">
+                    <div class="card-body h-100 px-2">
+                        <div class="value">23%</div>
+                        <p class="card-text mt-2 d-none d-md-block">Website images with missing alternative text</p>
+                        <!-- and over one-third of all images analyzed had detectable accessibility issues -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-2 col-lg-2 m-0 my-lg-2">
+                <div class="card text-center cardMenu cyan focus-ring-cyan" data-option="2" data-percent="26" tabindex="0">
+                    <div class="card-body h-100 px-2">
+                        <div class="value">26%</div>
+                        <p class="card-text mt-2 d-none d-md-block">Adults in the United States who have a disability</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-2 col-lg-2 m-0 my-lg-2">
+                <div class="card text-center cardMenu blue focus-ring-blue" data-option="3" data-percent="51" tabindex="0">
+                    <div class="card-body h-100 px-2">
+                        <div class="value">50.8%</div>
+                        <p class="card-text mt-2 d-none d-md-block">Average detectable accessibility errors per web page</p>
+                        <!-- According to the Web AIM Million Report researching one million websites,  -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-2 col-lg-2 m-0 my-lg-2">
+                <div class="card text-center cardMenu purple focus-ring-purple" data-option="4" data-percent="74" tabindex="0">
+                    <div class="card-body h-100 px-2">
+                        <div class="value">74%</div>
+                        <p class="card-text mt-2 d-none d-md-block">Disabled Americans with no high-speed internet, smartphone, or computer</p>
+                        <!-- Roughly a quarter of Americans with disabilities (26%) say they have high-speed internet at home, a smartphone, a desktop or laptop computer, and a tablet compared with 44% of those who report not having a disability.  -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-sm-2 col-lg-2 m-0 my-lg-2">
+                <div class="card text-center cardMenu magenta focus-ring-magenta" data-option="5" data-percent="97" tabindex="0">
+                    <div class="card-body h-100 px-2">
+                        <div class="value">96.8%</div>
+                        <p class="card-text mt-2 d-none d-md-block">Web pages with detectable WCAG 2 failures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid my-1 d-md-none">
+        <div class="description text-center">Select an option above</div>
+    </section>
+
+    <section class="container mt-4 mb-5 d-none">
+        <div class="report text-center" role="alert"></div>
+    </section>
+
+    <section class="container-xl mt-4 mb-5">
+        <div class="users grid-container"></div>
+    </section>
+
+    <footer class="container text-center">
+        Source: Geoff Cudd, <a href="https://ddiy.co/web-accessibility-statistics/" target="_blank" class="link-body-emphasis" title="Source">Web Accessibility Statistics</a>, 2023
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../../../assets/js/functions.js"></script>
+    <!-- <script src="assets/js/viewport-functions.js"></script> -->
+
+
+    <script>
+
+
+        let userCount = 0,
+            currentOption = 0,
+            currentPercent = 0,
+            cardMenu = document.querySelectorAll(".cardMenu"),
+            usersEle = document.querySelector(".users"),
+            descriptionEle = document.querySelector(".description"),
+            reportEle = document.querySelector(".report");
+
+        let colors = [
+            'rose', 'green', 'cyan', 'blue', 'purple', 'magenta'
+        ]
+
+        // 1. when the page finishes loading
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                // save options (default to first)
+                saveOptions(0);
+                // display users
+                displayUsers();
+
+                // add an event listener to each button in menu
+                for (let i = 0; i < cardMenu.length; i++) {
+                    cardMenu[i].addEventListener("mouseover", menuHandler, false);
+                    cardMenu[i].addEventListener("focus", menuHandler, false);
+                }
+            },
+            false
+        );
+
+
+        // 2. handler for options menu
+        function menuHandler(e) {
+            // console.log(e.currentTarget);
+            // console.log(e.currentTarget.dataset);
+            // console.log(e.currentTarget.dataset.percent);
+
+            // exit function if no option found
+            if (!e.currentTarget.dataset.option) return;
+
+            // exit function if the option already shown
+            if (currentOption == e.currentTarget.dataset.option) return;
+
+            // save options (using current target of cursor / focus)
+            saveOptions(e.currentTarget.dataset.option);
+
+            // show selected
+            displayUsers();
+        }
+
+        // 3. save options needed to display users
+        function saveOptions(option) {
+            console.log("3 - saveOptions()", option);
+
+            // update # of users to show
+            userCount = updateUserCount();
+            if (option === 0) {
+                currentOption = -1;
+                currentPercent = 0
+            } else {
+                // save data from option
+                currentOption = cardMenu[option].dataset.option;
+                currentPercent = cardMenu[option].dataset.percent;
+            }
+        }
+
+
+        // 4. show option as selected, display users
+        function displayUsers() {
+
+            //  get number of affected users
+            let affected = Math.round((userCount * currentPercent) / 100);
+
+            // get random user ids
+            let userArr = populateArrayRandomIntUnique(0, 115, 36);
+            // console.log(userArr);
+
+            // create string to store data
+            let str = "";
+            // loop through array, save
+            for (let i = 0; i < userCount; i++) {
+                let showAffectedClass = "";
+                if (i < affected) {
+                    showAffectedClass = "affected";
+                }
+                str += `<span class="${showAffectedClass}">
+                            <img src="../../assets/img/users/${userArr[i]}.jpg" class="graphic" alt="portrait of a person who does not exist ${i}">
+                        </span>`;
+            }
+            // add html to page
+            usersEle.innerHTML = str;
+
+            updateGridColumns();
+            report();
+
+
+
+            // remove active from all menu items
+            for (let i = 0; i < cardMenu.length; i++) {
+                cardMenu[i].classList.remove("active");
+            }
+
+            // exit early if currentOption is -1
+            if (currentOption < 0) return;
+
+            // add active to just the target
+            cardMenu[currentOption].classList.add("active");
+            // set focus as well
+            cardMenu[currentOption].focus();
+            // update condensed description for mobile 
+            descriptionEle.innerHTML = `<div class="description description-${colors[currentOption]}">${cardMenu[currentOption].textContent}</div>`;
+        }
+
+
+
+
+
+        // ******************* ACCESSIBILITY ***********************
+
+
+
+        let viewportSize,
+            rowCounts = { xs: 2, sm: 3, md: 3, lg: 3, xl: 4, xxl: 4 },
+            // columnsCounts = { xs: 4, sm: 4, md: 6, lg: 6, xl: 8, xxl: 9 },
+            viewportUserCounts = { xs: 8, sm: 12, md: 18, lg: 18, xl: 32, xxl: 36 };
+
+        function updateUserCount() {
+            // update viewport size
+            viewportSize = getViewportSize();
+            // update number of persons in display
+            return viewportUserCounts[viewportSize];
+        }
+
+        function updateGridColumns() {
+            // change the number of columns in the grid based on viewport size
+            usersEle.style.gridTemplateRows = `repeat(${rowCounts[viewportSize]},minmax(5rem, 1fr))`;
+        }
+
+        // every time viewport is resized
+        window.addEventListener(
+            "resize",
+            function (event) {
+                // console.log("resize event");
+
+                // save previous user count
+                let previousUserCount = userCount;
+                let previousViewportSize = viewportSize;
+
+                // update # of users to show
+                userCount = updateUserCount();
+
+
+
+                console.log(viewportSize, userCount, previousUserCount);
+
+                // number of users has changed
+                if (userCount != previousUserCount || viewportSize != previousViewportSize) {
+                    // update layout
+                    displayUsers();
+                }
+            },
+            true
+        );
+
+
+        function report() {
+            console.log(viewportSize, userCount, currentOption, currentPercent);
+            reportEle.innerHTML = `
+                viewportSize <span class="report-value">${viewportSize}</span> 
+                userCount <span class="report-value">${userCount}</span> 
+                currentOption <span class="report-value">${currentOption}</span> 
+                currentPercent <span class="report-value">${currentPercent}</span> 
+            `;
+        }
+
+    </script>
+
+</body>
+</html>

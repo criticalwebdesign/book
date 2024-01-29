@@ -1,0 +1,106 @@
+/* Chapter 7 asset - Adds color improvements to example (and exercise) */
+
+:root {
+    /* 
+    Using an RGB triplet allows you to create color variants later with the prop and  rgba()
+    https://stackoverflow.com/a/41265350/441878 
+    */
+    --rose: 237, 91, 102;
+    --green: 79, 167, 17;
+    --cyan: 0, 162, 184;
+    --blue: 35, 138, 223;
+    --purple: 190, 86, 221;
+    --magenta: 240, 91, 189;
+    /* these colors are darker variations:display:
+      green, cyan, blue, */
+}
+
+
+
+
+/* ROSE */
+
+.blurb .rose {
+    border-bottom: var(--borderSize) solid rgb(var(--rose)) !important;
+}
+
+.option.rose {
+    border: var(--borderSize) solid rgba(var(--rose), var(--optionOpacity)) !important;
+}
+
+.option.rose.active {
+    background-color: rgba(var(--rose), var(--optionOpacityActive));
+}
+
+/* GREEN */
+
+.blurb .green {
+    border-bottom: var(--borderSize) solid rgb(var(--green)) !important;
+}
+
+.option.green {
+    border: var(--borderSize) solid rgba(var(--green), var(--optionOpacity)) !important;
+}
+
+.option.green.active {
+    background-color: rgba(var(--green), var(--optionOpacityActive));
+}
+
+/* CYAN */
+
+.blurb .cyan {
+    border-bottom: var(--borderSize) solid rgb(var(--cyan)) !important;
+}
+
+.option.cyan {
+    border: var(--borderSize) solid rgba(var(--cyan), var(--optionOpacity)) !important;
+}
+
+.option.cyan.active {
+    background-color: rgba(var(--cyan), var(--optionOpacityActive));
+}
+
+/* BLUE */
+
+.blurb .blue {
+    border-bottom: var(--borderSize) solid rgb(var(--blue)) !important;
+}
+
+.option.blue {
+    border: var(--borderSize) solid rgba(var(--blue), var(--optionOpacity)) !important;
+}
+
+.option.blue.active {
+    background-color: rgba(var(--blue), var(--optionOpacityActive));
+}
+
+/* PURPLE */
+
+.blurb .purple {
+    border-bottom: var(--borderSize) solid rgb(var(--purple)) !important;
+}
+
+.option.purple {
+    border: var(--borderSize) solid rgba(var(--purple), var(--optionOpacity)) !important;
+}
+
+.option.purple.active {
+    background-color: rgba(var(--purple), var(--optionOpacityActive));
+}
+
+/* MAGENTA */
+
+.blurb .magenta {
+    border-bottom: var(--borderSize) solid rgb(var(--magenta)) !important;
+}
+
+.option.magenta {
+    border: var(--borderSize) solid rgba(var(--magenta), var(--optionOpacity)) !important;
+}
+
+.option.magenta.active {
+    background-color: rgba(var(--magenta), var(--optionOpacityActive));
+}
+
+
+

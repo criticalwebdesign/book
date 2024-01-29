@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #e6ce55;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.bgImgDefault {
+  width: 400px;
+  aspect-ratio: 1/1; /* https://caniuse.com/mdn-css_properties_aspect-ratio */
+  /*background-size: cover;*/
+  display: block;
+  margin: 4rem auto;
+}
+/*
+.cssBackgroundImg {
+  background-image: url(../img/wrench.png);
+}
+
+.cssBackgroundImg:hover {
+  background-image: url(../img/clock.png);
+  cursor: crosshair;
+}
+*/
+.text {
+  display: block;
+  width: 50%;
+  margin: 6rem auto;
+  /* border-color: black; border-style: solid; */
+  /* turn borders off and on to see the borders of the display area */
+}
+
+/*
+@font-face {
+  font-family: "Futura Press";
+  src: url(FUTURAPR.woff) format("WOFF");
+}
+/* Downloaded Futura Press for free from https://www.wfonts.com/font/futura-press#google_vignette and changed it from TTF to WOFF with an online converter */
+*/
+
+h1 {
+  color: black;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+/*  font-family: "Futura Press", Helvetica, sans-serif;*/
+  color: dodgerblue;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1rem;
+  text-align: right;
+  margin-top: -2.5rem;
+}
+
+h3 a:link,
+a:visited {
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: white;
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <circle cx="70" cy="28" r="15" style="fill:orange" />
+    <polygon points="0,80 35,20 58,45 70,32 100,80" fill="magenta" />
+    <text font-size="100%" font-family="Arial" x="28" y="68" fill="white">SVG</text>
+</svg>

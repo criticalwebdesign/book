@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Asynchronous JS examples</title>
+</head>
+
+<body>
+
+    <h1>Asynchronous JS examples</h1>
+
+
+
+
+    <script>
+
+        // event handlers use callbacks
+        document.addEventListener('click', () => {
+            console.log("click from a callback function");
+        });
+
+        // a callback from the page load event
+        window.addEventListener("load", (event) => {
+            console.log("page has loaded");
+        });
+
+        // requesting data from a server
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => response.json())
+            .then(json => {
+                console.log("JSON data returned from fetch()", json);
+            });
+
+    </script>
+</body>
+
+</html>

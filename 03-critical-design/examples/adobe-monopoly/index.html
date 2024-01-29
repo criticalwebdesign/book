@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monopoly</title>
+
+    <!-- 
+    Title: Monopoly
+    Author: Owen Mundy
+    Date: 2023
+    License: MIT
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            font: 16px / 22px "Roboto", sans-serif;
+        }
+
+        header {
+            width: 100%;
+            padding: 150px 0 100px 0;
+            background-color: #ff0000;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .tagline {
+            font-weight: normal;
+            margin-top: 5rem;
+        }
+
+        main {
+            margin: 70px 0;
+            background-color: #ffffff;
+            opacity: 0;
+        }
+
+        table {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        tr td:nth-child(2) {
+            text-align: right;
+        }
+
+        tr td:nth-child(3) {
+            text-align: right;
+            padding-left: 20px;
+        }
+
+        footer {
+            margin: 70px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <img class="logo" src="assets/img/brand.svg">
+
+        <h2 class="tagline">Expand your universe</h2>
+
+    </header>
+
+    <main>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>Emerald City Software</td>
+                    <td></td>
+                    <td>1990</td>
+                </tr>
+            </thead>
+            <tr>
+                <td>BluePoint Technologies</td>
+                <td></td>
+                <td>1990</td>
+            </tr>
+            <tr>
+                <td>LaserTools-Language Tech</td>
+                <td></td>
+                <td>1992</td>
+            </tr>
+            <tr>
+                <td>OCR Systems</td>
+                <td></td>
+                <td>1992</td>
+            </tr>
+            <tr>
+                <td>Aldus Corporation</td>
+                <td>$437,676,000</td>
+                <td>1994</td>
+            </tr>
+            <tr>
+                <td>LaserTools</td>
+                <td></td>
+                <td>1994</td>
+            </tr>
+            <tr>
+                <td>Photoshop</td>
+                <td></td>
+                <td>1905</td>
+            </tr>
+            <tr>
+                <td>Frame Technology</td>
+                <td>$566,567,000</td>
+                <td>1995</td>
+            </tr>
+            <tr>
+                <td>Ares Software</td>
+                <td></td>
+                <td>1996</td>
+            </tr>
+            <tr>
+                <td>Sandcastle</td>
+                <td>$3,500,000</td>
+                <td>1997</td>
+            </tr>
+            <tr>
+                <td>HyWay Ferranti</td>
+                <td></td>
+                <td>1997</td>
+            </tr>
+            <tr>
+                <td>DigiDox</td>
+                <td></td>
+                <td>1997</td>
+            </tr>
+            <tr>
+                <td>GoLive Systems</td>
+                <td></td>
+                <td>1999</td>
+            </tr>
+            <tr>
+                <td>Fotiva</td>
+                <td></td>
+                <td>2001</td>
+            </tr>
+            <tr>
+                <td>Accelio</td>
+                <td>$72,000,000</td>
+                <td>2002</td>
+            </tr>
+            <tr>
+                <td>Syntrillium Software</td>
+                <td></td>
+                <td>2003</td>
+            </tr>
+            <tr>
+                <td>Yellow Dragon Software-Tech</td>
+                <td></td>
+                <td>2003</td>
+            </tr>
+            <tr>
+                <td>Q-Link Technologies, Inc.</td>
+                <td></td>
+                <td>2004</td>
+            </tr>
+            <tr>
+                <td>OKYZ</td>
+                <td></td>
+                <td>2004</td>
+            </tr>
+            <tr>
+                <td>Macromedia</td>
+                <td>$3,573,000,000</td>
+                <td>2005</td>
+            </tr>
+            <tr>
+                <td>Navisware</td>
+                <td></td>
+                <td>2005</td>
+            </tr>
+            <tr>
+                <td>Trade and Technologies France</td>
+                <td></td>
+                <td>2006</td>
+            </tr>
+            <tr>
+                <td>Pixmantec</td>
+                <td></td>
+                <td>2006</td>
+            </tr>
+            <tr>
+                <td>InterAKT</td>
+                <td></td>
+                <td>2006</td>
+            </tr>
+            <tr>
+                <td>Serious Magic Inc.</td>
+                <td></td>
+                <td>2006</td>
+            </tr>
+            <tr>
+                <td>Scene7</td>
+                <td></td>
+                <td>2007</td>
+            </tr>
+            <tr>
+                <td>Virtual Ubiquity</td>
+                <td></td>
+                <td>2007</td>
+            </tr>
+            <tr>
+                <td>YaWah</td>
+                <td></td>
+                <td>2008</td>
+            </tr>
+            <tr>
+                <td>Business Catalyst</td>
+                <td></td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>Omniture</td>
+                <td>$1,800,000,000</td>
+                <td>2009</td>
+            </tr>
+            <tr>
+                <td>Day Software</td>
+                <td>$240,000,000</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td>Demdex</td>
+                <td></td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>EchoSign</td>
+                <td></td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>Iridas Technology</td>
+                <td></td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>Nitobi</td>
+                <td></td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>Typekit</td>
+                <td></td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>Auditude</td>
+                <td>$120,000,000</td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>Efficient Frontier Technology</td>
+                <td></td>
+                <td>2011</td>
+            </tr>
+            <tr>
+                <td>Behance Inc.</td>
+                <td></td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>Neolane</td>
+                <td>$600,000,000</td>
+                <td>2013</td>
+            </tr>
+            <tr>
+                <td>Satellite</td>
+                <td></td>
+                <td>2013</td>
+            </tr>
+            <tr>
+                <td>Aviary</td>
+                <td></td>
+                <td>2014</td>
+            </tr>
+            <tr>
+                <td>Fotolia</td>
+                <td>$800,000,000</td>
+                <td>2015</td>
+            </tr>
+            <tr>
+                <td>Mixamo</td>
+                <td></td>
+                <td>2015</td>
+            </tr>
+            <tr>
+                <td>Livefyre</td>
+                <td></td>
+                <td>2016</td>
+            </tr>
+            <tr>
+                <td>TubeMogul</td>
+                <td>$540,000,000</td>
+                <td>2016</td>
+            </tr>
+            <tr>
+                <td>Sayspring</td>
+                <td></td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>Uru</td>
+                <td></td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>Magento</td>
+                <td>$1,680,000,000</td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>Marketo</td>
+                <td>$4,750,000,000</td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>Allegorithmic</td>
+                <td></td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td>Workfront</td>
+                <td>$1,500,000,000</td>
+                <td>2020</td>
+            </tr>
+            <tr>
+                <td>Frame.io</td>
+                <td>$1,275,000,000</td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td>ContentCal</td>
+                <td></td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td>Abstract Notebooks</td>
+                <td></td>
+                <td>2021</td>
+            </tr>
+            <tr>
+                <td>Figma</td>
+                <td>$20,000,000,000</td>
+                <td>2022</td>
+            </tr>
+        </table>
+
+    </main>
+
+    <footer>
+        <!-- table conversion https://wtools.io/convert-tsv-to-html-table -->
+        Source: <a href="https://en.wikipedia.org/wiki/List_of_acquisitions_by_Adobe" target="_blank">Wikipedia</a>
+    </footer>
+
+    <script>
+        let logo = document.querySelector(".logo");
+        let tagline = document.querySelector(".tagline");
+        let main = document.querySelector("main");
+
+        logo.addEventListener("mouseover", function () {
+            this.src = "assets/img/unbrand.svg";
+            this.style.cursor = "not-allowed"
+            tagline.innerText = "Acquisitions since 1990";
+            main.style.transition = '1s';
+            main.style.opacity = 1;
+        });
+
+        logo.addEventListener("mouseout", function () {
+            this.src = "assets/img/brand.svg";
+            this.style.cursor = "pointer"
+            tagline.innerText = "Expand your universe";
+            main.style.transition = '10s';
+            main.style.opacity = 0;
+        });
+    </script>
+</body>
+</html>

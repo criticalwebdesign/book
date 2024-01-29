@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Quote (Maintenance)</title>
+
+    <!-- 
+    Title: Maintenance is a drag (after Mierle Laderman Ukeles)
+    Author: Owen Mundy
+    Date: 2023
+    License: MIT
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: 'Roboto Slab', serif;
+            color: white;
+            font-size: 4vw;
+            text-shadow: 3px 3px 3px rgba(242, 129, 212, 0.8);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .svg {
+            width: 100%;
+        }
+
+        svg {
+            margin: 0 auto;
+            display: block;
+            /* background-color: aqua; */
+        }
+
+        .text {
+            position: absolute;
+            text-align: center;
+            z-index: 10;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container svg">
+        <div class="text"></div>
+        <!-- <div class="svg"></div> -->
+    </div>
+    <script src="../../assets/js/functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.2.0/svg.min.js"></script>
+    <script>
+
+        // Manifesto for Maintenance Art (1969)
+        // Mierle Laderman Ukeles
+        // https://queensmuseum.org/wp-content/uploads/2016/04/Ukeles-Manifesto-for-Maintenance-Art-1969.pdf
+        // Maintenance is a drag; it takes all the fucking time
+        // let words = `
+        //     clean your desk, 
+        //     wash the dishes, 
+        //     clean the floor,
+        //     wash your clothes, 
+        //     wash your toes, 
+        //     change the baby’s diaper, 
+        //     finish the report, 
+        //     correct the typos, 
+        //     mend the fence, 
+        //     keep the customer happy, 
+        //     throw out the stinking garbage, 
+        //     watch out don’t put things in your nose, 
+        //     what shall I wear, 
+        //     I have no sox, 
+        //     pay your bills, 
+        //     don’t litter, 
+        //     save string, 
+        //     wash your hair, 
+        //     change the sheets,
+        //     go to the store, 
+        //     I’m out of perfume, 
+        //     say it again—he doesn’t understand, 
+        //     seal it again—it leaks, 
+        //     go to work, 
+        //     this art is dusty, 
+        //     clear the table, 
+        //     call him again,
+        //     flush the toilet, 
+        //     stay young.
+        // `.split(/[,.;]+/);
+
+        // Maintenance is a drag (after Mierle Laderman Ukeles)
+        let words = `
+            wake up,
+            get caffeine,
+            schedule the call,
+            take the pill,
+            answer the email,
+            walk the dog,
+            drive to campus,
+            find my phone,
+            drop off the child,
+            login with Duo,
+            mark it as spam,
+            cybersecurity training,
+            grade the papers,
+            do your taxes,
+            unsubscribe from list, 
+            meet with hiring committee,
+            read the notice,
+            write the grant,
+            annual report,
+            go to the doctor,
+            click confirm on Moodle,
+            learn student names,
+            write recommendation letters,
+            upload the documents,
+            commit the code,
+            get a vaccination,
+            hang the decorations,
+            encourage class attendance,
+            enter your password,
+            write learning objectives,
+            attend faculty meeting,
+            push the branch,
+            update the GA4 code,
+            add your real name,
+            file the syllabus,
+            clean the desk, 
+            book the flights,
+            back up the hard drive,
+            go on vacation,
+            join the committee,
+            install the update,
+            check the printer ink,
+            finish the report, 
+            department meeting,
+            correct the typo, 
+            what shall I wear, 
+            pay the bill, 
+            go to the store, 
+            pick up the child,
+            make dinner,
+            get some exercise,
+            feed the dog,
+            wash your clothes, 
+            go to the opening,
+            jiggle the handle,
+            charge the phone, 
+            do the dishes, 
+            wind down,
+            go to sleep,
+            be happy
+        `.split(/[,.;]+/);
+
+        let word = 0,
+            pause = 0,
+            wordInterval = 500,
+            pauseInterval = wordInterval * .03
+
+        SVG.on(document, 'DOMContentLoaded', function () {
+            // let w = 1200, h = w;
+            var draw = SVG().addTo('.container')
+                .size('100%', '100%')
+            // .size(w, h)
+            const text = document.querySelector(".text");
+            setInterval(function () {
+                if (word < words.length) {
+                    drawSVG();
+                    drawText();
+                    word++;
+                } else if (++pause > pauseInterval) {
+                    word = 0;
+                    pause = 0;
+                }
+            }, wordInterval)
+
+
+            function drawSVG() {
+                // tests
+                // var rect = draw.rect(100, 100).attr({ fill: '#f06' })
+                // polygon.plot([[0,0], [100,50], [50,100], [150,50], [200,50]])
+
+                // draw polygon
+                var polygon = draw.polygon('0,0').fill('none').attr({ fill: '#f06' })
+                // create a random polygon w/{count} corners
+                let count = randomInt(3, 8);
+
+                let w = window.innerWidth, h = window.innerHeight;
+                let poly1 = getRandomBox(w * .1, h * .1, 4);
+                // let poly1 = getRandomPolygon(w * .1, h * .1, 4);
+                console.log(JSON.stringify(poly1))
+                // create a second, slightly different, to animate the points of the first
+                let poly2 = [];
+                for (let i = 0; i < poly1.length; i++) {
+                    poly2.push([poly1[i][0] += Math.random() * 25, poly1[i][1] += Math.random() * 25])
+                }
+                // console.log(poly1)
+                let { r, g, b } = randomRGB([100, 255], [100, 255], [100, 255])
+                let rotatation = Math.random() * 360;
+                // console.log(`rgb(${r},${g},${b})`)
+                polygon
+                    .plot(poly1).attr({ fill: `rgba(${r},${65},${b}, .2)` }).opacity(0)
+                    .transform({ rotate: rotatation, origin: 'center' }, true)
+                    .animate(2000).plot(poly2).opacity(1)
+
+                rotatation = Math.random() * -15;
+                if (Math.random() > .5) rotatation = Math.abs(rotatation);
+                polygon
+                    .animate((wordInterval * 1.4) * Math.abs(rotatation)).opacity(0)
+                    .transform({ rotate: rotatation, origin: 'center' }, true).ease('easeInOutCubic')
+                    .after(function () {
+                        this.element().remove()
+                    })
+            }
+
+            function drawText() {
+                for (let i = 0; i < 5; i++) {
+                    console.log(words[word].trim())
+                    text.innerHTML = words[word].trim();
+                    if (word > words.length - 1) word = 0;
+                    break;
+                }
+            }
+        })
+
+
+    </script>
+
+</body>
+</html>

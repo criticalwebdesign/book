@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Band Name Generator | Critical Web Design</title>
+
+    <!-- 
+    Title: Band Name Generator - Module 8.3 (start)
+    Author: Owen Mundy
+    Date: 2024
+    License: MIT
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Castoro+Titling&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- replace with 
+    https://github.com/omundy/critical-web-design-book/blob/main/08-generative-design/examples/band-name-generator/assets/css/styles.css
+ -->
+
+</head>
+<body style="display: none;" onload="this.document.body.style.display='block'">
+
+    <div class="flex-container">
+        <form action="" id="bandForm">
+            <div class="row">
+
+                <label for="members" class="center-vertical">Members</label>
+                <input type="number" name="members" id="members" min="1" max="99" placeholder="?">
+
+                <label for="venueSelect" class="center-vertical">Venue</label>
+                <select name="venueSelect" id="venueSelect">
+                    <option value="">?</option>
+                    <option value="Night Club">Night Club</option>
+                    <option value="Battle of the Bands">Battle of the Bands</option>
+                    <option value="Parking Garage">Parking Garage</option>
+                    <option value="Basement">Basement</option>
+                    <option value="Garage">Garage</option>
+                    <option value="Street Corner">Street Corner</option>
+                    <option value="Public Park">Public Park</option>
+                    <option value="Parade">Parade</option>
+                    <option value="Arena">Arena</option>
+                    <option value="Inauguration">Inauguration</option>
+                    <option value="Youtube">Youtube</option>
+                    <option value="Birthday Party">Birthday Party</option>
+                </select>
+
+                <label for="genreSelect" class="center-vertical">Genre</label>
+                <select name="genreSelect" id="genreSelect">
+                    <option value="">?</option>
+                    <option value="Blues">Blues</option>
+                    <option value="Classical">Classical</option>
+                    <option value="Country">Country</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Folk">Folk</option>
+                    <option value="Funk">Funk</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Latin">Latin</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Non Music">Non Music</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rap">Rap</option>
+                    <option value="Reggae">Reggae</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Soul">Soul</option>
+                    <option value="Stage And Screen">Stage And Screen</option>
+                    <option value="World">World</option>
+                </select>
+
+                <button onclick="location.reload()" class="reload">&#x27F3;</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- style="display: none;" -->
+    <div class="flex-container" id="albumWrapper">
+
+        <div class="flex-column album albumFront">
+            <div class="albumName center-vertical">Album Name</div>
+
+            <div class="stickerWrapper">
+                <div class="sticker">
+                    <div class="price">$9.99</div>
+                    <div class="genre">Easy Listening</div>
+                </div>
+            </div>
+            <div class="bandName center-vertical">Band Name</div>
+        </div>
+
+        <div class="flex-column album albumBack">
+            <div class="albumBackOverlay">
+
+                <div class='row songList'>
+                    <div class='column songListInner'>
+
+                        <div class="song">
+                            <span class="songTitle">Song 1</span>
+                            <span class="songLength">3:33</span>
+                            <span class="songCredits">Credit, Credit, Credit</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Song 2</span>
+                            <span class="songLength">3:33</span>
+                            <span class="songCredits">Credit, Credit, Credit</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Song 3</span>
+                            <span class="songLength">3:33</span>
+                            <span class="songCredits">Credit, Credit, Credit</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Song 4</span>
+                            <span class="songLength">3:33</span>
+                            <span class="songCredits">Credit, Credit, Credit</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Song 5</span>
+                            <span class="songLength">3:33</span>
+                            <span class="songCredits">Credit, Credit, Credit</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Song 6</span>
+                            <span class="songLength">3:33</span>
+                            <span class="songCredits">Credit, Credit, Credit</span>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class='credits'>
+                    <div class="designer">Album Designer: A. Designer</div>
+                    <div class="producer">Producer: Sr. Producer</div>
+                    <div class="location">Location</div>
+                    <div class="copyright">&copy; 2024 Catnip Records</div>
+                    <div class="promo">
+                        <span class="website">bandwebsite.com</span> /
+                        <span class="email">mail@bandwebsite.com</span>
+                    </div>
+                </div>
+
+                <div class="lyrics"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-container" style="display:flex">
+        <pre class="debug"></pre>
+    </div>
+
+    <!-- helper functions for this module -->
+    <script src="../../../assets/js/functions.js"></script>
+    <!-- replace with remote version -->
+
+
+    <script type="module">
+        // import faker
+        import { faker } from 'https://esm.sh/@faker-js/faker/locale/en';
+
+        function generate() {
+
+            ///// GENERATE DATA //////
+
+            let members = document.querySelector("#genreSelect").value;
+            if (!members) {
+                members = randomInt(1, 10);
+                document.querySelector("#members").value = members;
+            }
+
+            let venue = document.querySelector("#venueSelect").value;
+            if (!venue) {
+                let venueSelect = document.querySelector("#venueSelect");
+                let options = venueSelect.options;
+                let r = randomInt(1, options.length - 1);
+                console.log(r, options)
+                venue = options[r].value;
+                venueSelect.value = venue;
+            }
+
+            // create music genre
+            let genre = document.querySelector("#genreSelect").value;
+            if (!genre) {
+                genre = faker.music.genre();
+                document.querySelector("#genreSelect").value = genre;
+            }
+
+            // default band and album name
+            let name = faker.word.adjective() + " " + faker.word.noun();
+            let albumName = faker.science.chemicalElement().name;
+            // change band and album name for certain conditions
+            if (genre == "Rock") {
+                name = faker.commerce.productMaterial() + " " + faker.vehicle.model();
+            } else if (genre == "Electronic") {
+                name = "DJ " + faker.hacker.abbreviation();
+            }
+            console.log(members, venue, genre, name);
+
+            // album art
+            let albumFront = faker.image.urlLoremFlickr({ category: 'abstract', width: 800, height: 800 }),
+                albumBack = faker.image.urlLoremFlickr({ category: 'animals', width: 800, height: 800 });
+
+            // songs
+            let songCount = randomInt(4, 11);
+            let songs = "";
+            for (let i = 0; i < songCount; i++) {
+                let songTitle = "";
+                let wordCount = randomInt(1, 4);
+                while (--wordCount >= 0) {
+                    songTitle += upperCaseFirst(faker.word.sample()) + " ";
+                }
+                songs += `<div class="song">
+                            <span class="songTitle">${songTitle}</span>
+                            <span class="songLength">${randomInt(1, 6)}:${randomInt(0, 59)}</span>
+                         </div>`;
+            }
+            // console.log(songs);
+
+
+
+
+            ///// DISPLAY DATA //////
+
+            document.querySelector(".genre").innerHTML = genre;
+            document.querySelector(".bandName").innerHTML = name;
+            document.querySelector(".albumName").innerHTML = albumName;
+            document.querySelector(".albumFront").style.backgroundImage = `url(${albumFront})`;
+            document.querySelector(".albumBack").style.backgroundImage = `url(${albumBack})`;
+            document.querySelector(".songListInner").innerHTML = songs;
+
+            // set colors
+            let colorRange = [50, 150]
+            colorRange = [venue.length, venue.length * 10];
+
+            document.querySelector(".sticker").style.backgroundColor = randomRGBStr(colorRange, colorRange, colorRange);
+            
+            let albumBackOverlayColor = randomRGBStr(colorRange, colorRange, colorRange);
+            document.querySelector(".albumBackOverlay").style.backgroundColor = albumBackOverlayColor;
+            document.querySelector("html").style.backgroundColor = albumBackOverlayColor;
+            document.body.style.backgroundColor = albumBackOverlayColor;
+
+            
+            document.querySelector(".price").innerHTML = `$${randomInt(1, 9)}.99`
+
+
+        }
+        generate();
+
+
+        ///// LISTENERS //////
+
+        document.querySelector("#bandForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            generate();
+        })
+
+
+    </script>
+
+</body>
+</html>

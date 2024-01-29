@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Click Chaos</title>
+
+    <!-- 
+    Title: Chaos (Click)
+    Author: Owen Mundy
+    Date: 2023
+    License: MIT
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Share Tech', sans-serif;
+            font-size: 7vw;
+            background-color: #000;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .bar {
+            z-index: 99;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        a:hover {
+            color: #33cccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bar"></div>
+
+    Both
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/everyday');">everyday</a>
+    and
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/exotic');">exotic</a>,
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/public');">public</a>
+    and
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/private');">private</a>,
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/autonomous');">autonomous</a>
+    and
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/commercial');">commercial</a>,
+    the
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/internet');">internet</a>
+    is
+    a
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/chaotic');">chaotic</a>,
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/diverse');">diverse</a>
+    and
+    <!-- <a href="#" onClick="swapImage('http://johngodley.files.wordpress.com/2012/08/crowded.jpg');">crowded</a> -->
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/crowded');">crowded</a>
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/form');">form</a>
+    of
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/contemporary');">contemporary</a>
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/public');">public</a>
+    <a href="#" onClick="swapImage('https://loremflickr.com/1440/900/space');">space</a>.
+
+    <br> —Rachel Greene, Internet Art
+
+    <script>
+        Image.prototype.load = function (url) {
+            var thisImg = this;
+            var xmlHTTP = new XMLHttpRequest();
+            xmlHTTP.open('GET', url, true);
+            xmlHTTP.responseType = 'arraybuffer';
+            xmlHTTP.onload = function (e) {
+                var blob = new Blob([this.response]);
+                thisImg.src = window.URL.createObjectURL(blob);
+            };
+            xmlHTTP.onprogress = function (e) {
+                // console.log(e)
+                thisImg.completedPercentage = parseInt((e.loaded / e.total) * 100);
+            };
+            xmlHTTP.onloadstart = function () {
+                thisImg.completedPercentage = 0;
+            };
+            xmlHTTP.send();
+        };
+        Image.prototype.completedPercentage = 0;
+
+        let bar = document.querySelector(".bar");
+        function swapImage(url) {
+
+            let img = new Image();
+            img.load(url + "?_=" + (+new Date()));
+            bar.style.width = 0 + "%";
+            let i = 0;
+            let int = setInterval(function () {
+                console.log(img.completedPercentage)
+                bar.style.width = (i += .5) + img.completedPercentage + "%";
+            }, 10)
+            img.onload = function () {
+                clearInterval(int);
+                bar.style.width = 0
+                document.body.style.backgroundImage = "url(" + img.src + ")";
+            };
+        }
+
+        swapImage('https://loremflickr.com/1440/900/public')
+
+    </script>
+</body>
+
+</html>

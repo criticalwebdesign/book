@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Swap</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+
+    <h1>Swap images using CSS and Javascript</h1>
+
+
+    <div class="flex-container">
+
+        <div class="col">
+            <div class="bgImgDefaultSize cssBackgroundImg"></div>
+            <p>1. CSS > Change the value of <code>background-image</code> property of div on <code>:hover</code></p>
+        </div>
+
+        <div class="col">
+            <div id="ele2" class="bgImgDefaultSize" style="background-image: url(./assets/img/cat-01.jpg)"></div>
+            <p>2. JS/CSS > Change the value of <code>background-image</code> with <b>mouseover</b> / <b>mouseout</b> listener added to id with <code>.querySelector()</code></p>
+        </div>
+
+        <div class="col">
+            <img id="ele3" src="./assets/img/cat-01.jpg">
+            <p>3. JS > Change the value of <code>img.src</code> with <b>mouseover</b> / <b>mouseout</b> listener added to id using <code>.querySelector()</code></p>
+        </div>
+
+        <div class="col">
+            <div id="ele4" class="bgImgDefaultSize" style="background-image: url(./assets/img/cat-01.jpg)"></div>
+            <p>4. JS/CSS > Change the value of <code>img.src</code> with <b>mousedown</b> / <b>mouseup</b> listener added to id with <code>.querySelector()</code></p>
+        </div>
+
+        <div class="col">
+            <img id="ele5" src="./assets/img/cat-01.jpg">
+            <p>5. JS > Change the value of <code>img.src</code> with <b>click</b> listener added to id with <code>.querySelector()</code></p>
+        </div>
+
+        <div class="col">
+            <img id="ele6" src="./assets/img/cat-01.jpg">
+            <p>6. JS > Change the value of <code>img.src</code> with <b>click</b> listener added to id with <code>.getElementById()</code></p>
+        </div>
+
+    </div>
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

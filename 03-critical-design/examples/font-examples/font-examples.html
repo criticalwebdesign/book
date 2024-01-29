@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Font Examples | Critical Web Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/clear-sans" type="text/css">
+
+    <style>
+        .large {
+            font-size: 2.5rem;
+            margin: 2rem 0 .5rem 0;
+        }
+
+        code {
+            display: block;
+            margin-top: .5rem;
+            color: #666;
+        }
+
+        small {
+            color: #666;
+        }
+
+        .arial {
+            font-family: "Arial", sans-serif;
+        }
+
+        .helvetica {
+            font-family: "Helvetica", sans-serif;
+        }
+
+        @font-face {
+            font-family: "Open Sans";
+            src: url("./OpenSans-Regular.woff2") format("woff2");
+        }
+
+        .opensans {
+            font-family: "Open Sans", sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .roboto {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .clearsans {
+            font-family: "ClearSansRegular", sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="example arial">
+        <div class="large">The quick brown fox jumps over the lazy dog</div>
+        <small>
+            1. <a href="https://en.wikipedia.org/wiki/Arial" target="_blank">Arial</a> (1982) -
+            Rendered (potentially) using fonts installed on your computer.
+        </small>
+        <code>.arial { font-family: "Arial", "Helvetica", sans-serif }</code>
+    </div>
+    <div class="example helvetica">
+        <div class="large">The quick brown fox jumps over the lazy dog</div>
+        <small>
+            2. <a href="https://en.wikipedia.org/wiki/Helvetica" target="_blank">Helvetica</a> (1957) -
+            rendered (potentially) from your OS, but likely replaced by Arial.
+        </small>
+        <code>.helvetica { font-family: "Helvetica", "Arial", sans-serif }</code>
+    </div>
+    <div class="example opensans">
+        <div class="large">The quick brown fox jumps over the lazy dog</div>
+        <small>
+            3. <a href="https://en.wikipedia.org/wiki/Open_Sans" target="_blank">Open Sans</a> (2011) loaded from a WOFF2 file;
+            License:
+            <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL" target="_blank">
+                Open Font License (OFL)
+            </a>
+        </small>
+        <code>.opensans { font-family: "Open Sans", sans-serif; }</code>
+    </div>
+    <div class="example clearsans">
+        <div class="large">The quick brown fox jumps over the lazy dog</div>
+        <small>
+            4. <a href="https://en.wikipedia.org/wiki/Roboto" target="_blank">Clear Sans</a> (2012) loaded from the <a href="https://fontlibrary.org/en/font/clear-sans" target="_blank">Font Library</a>;
+            License:
+            <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">
+                Apache License, Version 2.0
+            </a>
+        </small>
+        <code>.clearsans { font-family: "ClearSansRegular", sans-serif; }</code>
+    </div>
+    <div class="example roboto">
+        <div class="large">The quick brown fox jumps over the lazy dog</div>
+        <small>
+            5. <a href="https://en.wikipedia.org/wiki/Roboto" target="_blank">Roboto</a> (2011) loaded from Google Fonts;
+            License:
+            <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">
+                Apache License, Version 2.0
+            </a>
+        </small>
+        <code>.roboto { font-family: "Roboto", sans-serif; }</code>
+    </div>
+</body>
+</html>

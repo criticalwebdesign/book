@@ -1,0 +1,19 @@
+/* Chapter 7 asset - Adds accessibility improvements to example */
+
+/* show feedback on hover */
+.option:hover {
+    cursor: pointer;
+}
+
+/* increase link size to show it is selected */
+.active {
+    transform: scale(1.1);
+}
+
+/* allow styled options to improve feedback on hover and hide the unattractive blue outline that Bootstrap implements */
+.option:hover,
+.option:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: none;
+}

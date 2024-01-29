@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Custom Properties | Critical Web Design</title>
+
+    <style>
+        html {
+            --margin: 1.5rem;
+            --background: #A8D5E2;
+            --brand: #f9a620ff;
+            --links: #548c2fff;
+        }
+
+        body {
+            background-color: var(--background);
+        }
+
+        h1 {
+            color: var(--brand);
+            margin-top: var(--margin);
+        }
+
+        h2 {
+            color: var(--links);
+            margin-top: var(--margin);
+        }
+
+        a {
+            color: var(--links);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+
+    <p>More <a href="#">text</a></p>
+
+
+    <script>
+        let html = document.querySelector("html");
+        html.addEventListener("mousemove", function (e) {
+            // console.log(e.clientX, e.clientY)
+            html.style.setProperty("--background", `rgb(${(e.clientX / window.innerWidth) * 255}, 0, ${(e.clientY / window.innerHeight) * 255})`);
+        })
+    </script>
+
+</body>
+</html>

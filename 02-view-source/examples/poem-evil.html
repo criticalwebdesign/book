@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Don't Be Evil</title>
+
+    <!-- 
+    Title: Don't Be Evil (depreciated)
+    Author: Owen Mundy
+    Date: 2023
+    License: MIT
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Victor+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        /* https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08 */
+        :root,
+        body {
+            --rich-black: #03071eff;
+            --chocolate-cosmos: #370617ff;
+            --rosewood: #6a040fff;
+            --penn-red: #9d0208ff;
+            --engineering-orange: #d00000ff;
+            --sinopia: #dc2f02ff;
+            --persimmon: #e85d04ff;
+            --princeton-orange: #f48c06ff;
+            --orange-web: #faa307ff;
+            --selective-yellow: #ffba08ff;
+
+            width: 100%;
+            height: 100%;
+
+            margin: 0;
+            font-family: 'Victor Mono', monospace;
+            font-size: 2vw;
+            line-height: normal;
+            color: var(--rosewood);
+            background-color: var(--rich-black);
+            overflow-x: hidden;
+        }
+
+        .quote {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-end;
+
+            overflow-x: hidden;
+            padding: 0 5px;
+            width: 160%;
+            height: 100%;
+        }
+
+        .quote .line {
+            width: 100%;
+        }
+
+        .quote span {
+            display: inline-block;
+            margin: 0 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="quote"></div>
+
+    <script>
+
+        let quoteEle = document.querySelector(".quote");
+        let quoteArr = ["DON$T", "BE", "EVIL", "*DEPRE¢IATED"];
+        let outputArr = [];
+        let currency = ["$", "€", "£", "¥"]
+
+        let colorsDark = [
+            'rich-black',
+            'chocolate-cosmos',
+            'rosewood',
+
+            'rich-black',
+            'chocolate-cosmos',
+            'rosewood',
+            
+            'engineering-orange',
+
+        ]
+        let colorsMedium = [         
+            'rosewood',
+            'penn-red',
+            'engineering-orange',
+            'sinopia',
+                  
+            'rosewood',
+            'penn-red',
+            'engineering-orange',
+            'sinopia',
+
+            'persimmon',
+        ]
+        let colorsLight = [
+            'engineering-orange',
+            'sinopia',
+            'persimmon',
+            'princeton-orange',
+            'orange-web',
+            'selective-yellow'
+        ]
+
+
+        function populateArray(str, count) {
+            var sizedArray = Array.apply(null, Array(count));
+            return sizedArray.map(function (o) {
+                return str;
+            });
+        }
+
+        function randomInt(min = 0, max = 1) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function randomFromArray(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+        function wrapString(str, colorArr) {
+            return `<span style="color:var(--${randomFromArray(colorArr)})">${str}</span>`;
+        }
+        function zeroPad(num) {
+            return ("0" + num).slice(-2);
+        }
+
+        function convertTZ(date, tzString) {
+            return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", { timeZone: tzString }));
+        }
+
+        function getLineContent() {
+            // start with a set number so everything lines up
+            let chars = populateArray("$", 40);
+            let sf = convertTZ(new Date(), "America/Los_Angeles");
+            return [
+                chars.splice(0, randomInt(1, 3)).join(""),
+                new Date("September 4, 1998").toISOString().split("T")[0],
+                chars.splice(0, randomInt(1, 3)).join(""),
+                zeroPad(sf.getHours()) + ":" + zeroPad(sf.getMinutes()) + ":" + zeroPad(sf.getSeconds()),
+                chars.splice(0, randomInt(2, chars.length / 3)).join(""),
+                chars.splice(0, randomInt(2, chars.length / 3)).join(""),
+            ]
+        }
+
+
+        function updateText() {
+
+            // writing a new line
+            outputArr.push(getLineContent());
+
+            let outputStr = "";
+
+
+            // loop through all content and convert to HTML
+            for (let i = 0; i < outputArr.length; i++) {
+
+                // colors to use to render this line
+                let colors = colorsLight;
+                if (i < outputArr.length / 5) {
+                    colors = colorsDark;
+                } else  if (i < outputArr.length / 2) {
+                    colors = colorsMedium;
+                }
+
+                // start the div.line
+                outputStr += "<div class='line'>";
+                // add date
+                outputStr += wrapString(outputArr[i][0], colors) +
+                    wrapString(outputArr[i][1], colors) +
+                    wrapString(outputArr[i][2], colors) +
+                    wrapString(outputArr[i][3], colors);
+                // for each word
+                for (let j = 0; j < quoteArr.length; j++) {
+                    outputStr += wrapString("$", colors) +
+                        wrapString(outputArr[i][4], colors) +
+                        quoteArr[j] +
+                        wrapString(outputArr[i][5], colors);
+                }
+                outputStr += "</div>";
+            }
+            // add html to page
+            quoteEle.innerHTML = outputStr;
+            // console.log(outputArr)
+
+
+            // trim
+            let firstEle = document.querySelector(".quote > div")
+            if (firstEle.offsetTop < 60 || outputArr.length > 25) {
+                outputArr.splice(0, 1);
+            }
+            // console.log(firstEle.offsetTop)
+        }
+
+
+
+        const FPS = 5;
+        let prevTick = 0;
+        let now = 0;
+        // let test = 0;
+        function render() {
+            requestAnimationFrame(render);
+
+            // clamp to fixed framerate
+            now = Math.round(FPS * Date.now() / 1000);
+            if (now == prevTick) return;
+            prevTick = now;
+            // if (++test > 10) return;
+            // otherwise, do your stuff ...
+            updateText();
+        }
+        render();
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concert Venue | Critical Web Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        button img {
+            width: 2rem;
+        }
+
+        /* center the logo horizontal and vertical */
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.65);
+        }
+
+        .date {
+            margin: 0 0 .5rem;
+            font-size: .95rem;
+            color: #333;
+        }
+
+        .venue {
+            margin: .1rem 0 .2rem;
+            font-size: 1.2rem;
+        }
+
+        .purchase {
+            margin: .85rem 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 dynamic"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../../assets/js/functions.js"></script>
+    <script type="module">
+        import { faker } from "https://esm.sh/@faker-js/faker";
+
+        function randomPosition() {
+            let str = "";
+            str += `margin-top: ${randomInt(10, 20)}%`;
+            str += `margin-right: ${randomInt(10, 20)}%`;
+            return str;
+        }
+
+        function randomGradient() {
+            let r1 = randomInt(0, 255),
+                g1 = randomInt(0, 205),
+                b1 = randomInt(0, 255),
+                r2 = randomInt(50, 255),
+                g2 = randomInt(0, 205),
+                b2 = randomInt(50, 255);
+
+            let str = "";
+            str += `background: rgb(${r1},${g1},${b1});
+                    background: linear-gradient(125deg, rgba(${r1},${g1},${b1},1) 0%, rgba(${r2},${g2},${b2},1) 100%);`;
+            return str;
+        }
+
+        function getBandname() {
+            return `${faker.word.adjective()} ${faker.word.noun()}`;
+        }
+
+        function getCard(i) {
+            let logoNum = Math.floor(Math.random() * 21);
+            let date = new Date(faker.date.soon({ days: i + 3 }));
+
+            let r = Math.random();
+            let venue = "";
+            if (r < .2) venue = `${faker.person.lastName()} Hall`;
+            if (r < .3) venue = `${faker.person.lastName()} Amphitheatre`;
+            else if (r < .4) venue = `${faker.company.name()} Arena`;
+            else if (r < .6) venue = `${faker.company.name()} Stadium`;
+            else if (r < .8) venue = `${faker.person.lastName()} Colosseum`;
+            else venue = `Club ${faker.vehicle.color()}`;
+
+            let str = `
+                    <div class="col py-3">
+                        <div class="card h-100">                            
+                            <div class="card-img-top" width="100%" height="200px" style="overflow: hidden; position: relative; ${randomGradient()}">
+                                <img class="logo" src="../../assets/img/shapes-fake-logos/logo${logoNum}.png">
+                            </div>
+                            <div class="card-body">                                  
+                                <div class="date">${date.getDate()} ${date.toLocaleString('default', { month: 'long' })}, ${date.getFullYear()}</div>
+                                
+                                <h4 class="card-title" style = "text-transform:capitalize;">${getBandname()}</h4>
+                                <div class="card-text venue">${venue}, ${faker.location.city()}</div>          
+
+                                <button class="btn btn-outline-primary purchase"">Purchase</button>
+                            </div>                        
+                        </div>     
+                    </div>                    
+               `;
+            return str;
+        }
+
+        let count = Math.floor(Math.random() * 12) + 2;
+        let str = "";
+        for (let i = 0; i < count; i++) {
+            str += getCard(i);
+        }
+        document.querySelector(".dynamic").innerHTML = str;
+
+        document
+            .querySelector("body")
+            .addEventListener("mouseover", function (event) {
+                // console.log(event.target.className);
+                if (event.target.className.includes("purchase")) {
+                    event.target.innerHTML = "SOLD OUT";
+                    event.target.className = event.target.className.replace(
+                        "primary",
+                        "secondary"
+                    );
+                    event.target.parentElement.style.opacity = 0.5;
+                }
+            });
+
+			// function purchase(){
+			//     event.target.innerHTML = "SOLD OUT";
+			//     event.target.className = event.target.className.replace("primary","danger");
+			//     console.log(event.target.parent);
+			// }
+
+			// make these by hand and
+			// move this to the "more advanced practice"
+
+			// <h5 class="card-title">${faker.company.name()}</h5>
+			// <p class="card-text">${faker.company.catchPhrase()}</p>
+
+			// let shapes = [
+			//     "circle",
+			//     "cross",
+			//     "hexagon",
+			//     "pentagon",
+			//     "rhombus",
+			//     "square",
+			//     // "star",
+			//     "triangle",
+			// ];
+
+			// function randomTransform(i, l) {
+			//     let str = "";
+			//     str += `transform: `;
+
+			//     if (i % 2 === 0) {
+			//         if (l == 1) str += `translateX(${randomInt(-15, 0)}%)`;
+			//         else str += `translateX(${randomInt(0, 15)}%)`;
+			//     }
+			//     else
+			//         if (l == 1) str += `translateY(${randomInt(-15, 0)}%)`;
+			//         else str += `translateY(${randomInt(0, 15)}%)`;
+
+			//     str += `scale(.5) `;
+
+			//     let rotationR = Math.random();
+			//     if (rotationR < .25)
+			//         str += `rotateZ(45deg);`;
+			//     else if (rotationR < .5)
+			//         str += `rotateZ(90deg);`;
+			//     else if (rotationR < .75)
+			//         str += `rotateZ(135deg);`;
+			//     else
+			//         str += `rotateZ(180deg);`;
+
+			//     return str;
+			// }
+			// function getCard(i) {
+			//     let index1 = Math.floor(Math.random() * shapes.length);
+			//     let index2 = Math.floor(Math.random() * shapes.length);
+
+			//     // <svg width="100%" height="200px">
+			//     //             <defs>
+			//     //                 <linearGradient id="grad${r1}" x1="0%" y1="0%" x2="100%" y2="100%">
+			//     //                     <stop offset="0%" style="stop-color:rgb(${r1},${g1},${b1});stop-opacity:1" />
+			//     //                     <stop offset="100%" style="stop-color:rgb(${r2},${g2},${b2});stop-opacity:1" />
+			//     //                 </linearGradient>
+			//     //             </defs>
+			//     //             <rect x="0" y="0" width="100%" height="200px" fill="url(#grad${r1})" />
+			//     //         </svg>
+
+			//     let str = `
+			//         <div class="col py-3">
+			//             <div class="card h-100">
+
+			//                 <div class="card-img-top" width="100%" height="200px" style="overflow: hidden; position: relative; ${randomGradient()}">
+			//                     <img class="logo" style="${randomTransform(i, 1)}" src="../../assets/img/shapes-lg-outline/${shapes[index1]}-lg-outline.svg">
+			//                     <img class="logo" style="${randomTransform(i, 2)}" src="../../assets/img/shapes-lg-outline/${shapes[index2]}-lg-outline.svg">
+			//                 </div>
+
+			//                 <div class="card-body">
+			//                     <h4 class="card-title" style = "text-transform:capitalize;">${faker.word.adjective()} ${faker.word.noun()}</h4>
+
+			//                     <p class="card-text">${faker.location.city()}</p>
+			//                     <p class="card-text">${new Date(faker.date.future()).toDateString()}</p>
+			//                 </div>
+			//             </div>
+			//         </div>
+			//    `;
+			//     return str;
+			// }
+    </script>
+</body>
+</html>

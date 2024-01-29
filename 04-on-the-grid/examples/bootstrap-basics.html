@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Basics | Critical Web Design</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+
+    <style>
+        .box {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        /* uncomment to override styles */
+
+
+        :root {
+            --oranges-btn-color: #000;
+            --oranges-btn-hover-color: #000;
+            --oranges-btn-bg: #eeac20;
+            --oranges-btn-hover-bg: #e6a61c;
+            --oranges-btn-hover-border: #eaa91e;
+            --oranges-btn-active-border: #ebaa1c;
+            --oranges-btn-focus-shadow-rgb: 235, 170, 28;
+        }
+
+
+        .btn-primary {
+            --bs-btn-color: var(--oranges-btn-color);
+            --bs-btn-bg: var(--oranges-btn-bg);
+            --bs-btn-border-color: var(--oranges-btn-bg);
+            --bs-btn-hover-color: var(--oranges-btn-hover-color);
+            --bs-btn-hover-bg: var(--oranges-btn-hover-bg);
+            --bs-btn-hover-border-color: var(--oranges-btn-hover-border);
+            --bs-btn-focus-shadow-rgb: var(--oranges-btn-focus-shadow-rgb);
+            --bs-btn-active-color: var(--oranges-btn-hover-color);
+            --bs-btn-active-bg: var(--oranges-btn-hover-border);
+            --bs-btn-active-border-color: var(--oranges-btn-active-border);
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: var(--oranges-btn-hover-color);
+            --bs-btn-disabled-bg: var(--oranges-btn-bg);
+            --bs-btn-disabled-border-color: var(--oranges-btn-bg);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bootstrap Basics</h1>
+
+    <small>Buttons and colors of Bootstrap</small>
+
+    <div class="my-3">
+        <button type="button" class="btn btn-primary">Primary</button>
+    </div>
+
+    <div class="my-3">
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+    </div>
+
+    <div class="my-3">
+        <button type="button" class="btn btn-primary btn-sm">Small</button>
+        <button type="button" class="btn btn-primary">Medium</button>
+        <button type="button" class="btn btn-primary btn-lg">Large</button>
+    </div>
+
+    <div class="my-3">
+        <button type="button" class="btn btn-outline-primary btn-sm">Small</button>
+        <button type="button" class="btn btn-outline-primary">Medium</button>
+        <button type="button" class="btn btn-outline-primary btn-lg">Large</button>
+    </div>
+
+
+    <div class="my-3">
+        <span class="box" style="background-color: var(--bs-blue)"></span>
+        <span class="box" style="background-color: var(--bs-indigo)"></span>
+        <span class="box" style="background-color: var(--bs-purple)"></span>
+        <span class="box" style="background-color: var(--bs-pink)"></span>
+        <span class="box" style="background-color: var(--bs-red)"></span>
+        <span class="box" style="background-color: var(--bs-orange)"></span>
+        <span class="box" style="background-color: var(--bs-yellow)"></span>
+        <span class="box" style="background-color: var(--bs-green)"></span>
+        <span class="box" style="background-color: var(--bs-teal)"></span>
+        <span class="box" style="background-color: var(--bs-cyan)"></span>
+        <span class="box" style="background-color: var(--bs-black)"></span>
+        <span class="box" style="background-color: var(--bs-gray)"></span>
+        <span class="box" style="background-color: var(--bs-white)"></span>
+    </div>
+
+
+    <div class="my-3">
+        <h1>h1. Bootstrap heading</h1>
+        <h2>h2. Bootstrap heading</h2>
+        <h3>h3. Bootstrap heading</h3>
+        <h4>h4. Bootstrap heading</h4>
+        <h5>h5. Bootstrap heading</h5>
+        <h6>h6. Bootstrap heading</h6>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

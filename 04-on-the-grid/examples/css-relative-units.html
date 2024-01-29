@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Relative Units | Critical Web Design</title>
+
+    <style>
+        :root {
+            /* https://coolors.co/palette/eae4e9-fff1e6-fde2e4-fad2e1-e2ece9-bee1e6-f0efeb-dfe7fd-cddafd */
+            --magnolia: #eae4e9ff;
+            --linen: #fff1e6ff;
+            --misty-rose: #fde2e4ff;
+            --mimi-pink: #fad2e1ff;
+            --mint-cream: #e2ece9ff;
+            --light-blue: #bee1e6ff;
+            --isabelline: #f0efebff;
+            --lavender-web: #dfe7fdff;
+            --periwinkle: #cddafdff;
+        }
+
+        html {
+            font-family: Arial;
+            /* The default font size is based on the size set by user's browser.
+            You should not set this explicitely */
+        }
+
+        h2 {
+            border-bottom: 1px solid #aaa;
+            padding: .5rem 0;
+        }
+
+        .unit {
+            display: inline-block;
+            border-radius: 10%;
+            padding: .2rem .3rem;
+        }
+
+        .unitVw {
+            background-color: var(--magnolia);
+        }
+
+        .unitVh {
+            background-color: var(--linen);
+        }
+
+        .unitPx {
+            background-color: var(--misty-rose);
+        }
+
+        .unitPct {
+            background-color: var(--lavender-web);
+        }
+
+        .compoundedPct {
+            background-color: var(--lavender-web);
+            font-size: 110%;
+        }
+
+        .unitEm {
+            background-color: var(--mint-cream);
+        }
+
+        .compoundedEm {
+            background-color: var(--mint-cream);
+            font-size: 1.1em;
+        }
+
+        .unitRem {
+            background-color: var(--isabelline);
+        }
+
+        td {
+            padding: .5rem;
+            text-align: right;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Relative Units</h1>
+
+    <ul>
+        <li><span class="unit unitPx">px</span> - length unit based on pixels in the device display</li>
+        <li><span class="unit unitPct">%</span> - unit equal to percent of specified point size <i>of current parent element</i></li>
+        <li><span class="unit unitEm">em</span> - based on "em" in print <a href="https://en.wikipedia.org/wiki/Em_(typography)" target="_blank">typography</a>. Size is equal to decimal percent of specified point size <i>of the parent element</i></li>
+        <li><span class="unit unitRem">rem</span> - the "root em" unit is equal to decimal percent of the "root element" font size </li>
+    </ul>
+
+
+
+
+
+    <h2>The base font size</h2>
+
+
+    <p>The default font size in browsers is <span class="unit unitPx" style="font-size: 16px;">16px</span>.
+        Therefore (unless explicitly changed)
+        <span class="unit unitPct" style="font-size: 100%;">100%</span> =
+        <span class="unit unitEm" style="font-size: 1em;">1em</span> =
+        <span class="unit unitRem" style="font-size: 1rem;">1rem</span> =
+        <span class="unit unitPx" style="font-size: 16px;">16px</span>.
+    </p>
+
+
+
+
+
+    <h2>Responsive units</h2>
+
+    <ul>
+        <li><span class="unit unitVw" style="font-size: 1vw;">vw</span> - 1% of the viewport's width so: <span class="unit unitVw" style="font-size: 1vw;">1vw</span> = <span class="unit unitPx" style="font-size: 19.2px;">19.2px</span>*</li>
+        <li><span class="unit unitVh" style="font-size: 1vh;">vh</span> - 1% of the viewport's height so: <span class="unit unitVh" style="font-size: 1vh;">1vw</span> = <span class="unit unitPx" style="font-size: 10.8px;">10.8px</span>*</li>
+    </ul>
+
+    <p>
+        *if the viewport fills a 1920x1080 (HD) display
+    </p>
+
+
+
+
+    <h2>The <span class="unit unitRem">rem</span> unit</h2>
+
+    <p>The root em (rem) unit is based on the size set as the page default.</p>
+    <p>Text sizes can easily be scaled up or down by using rem. So, using <span class="unit" style="font-size: 16px;">16px</span> as the base size: </p>
+    <table>
+        <tr>
+            <td><span class="unit unitPct" style="font-size: 50%;">50%</span></td>
+            <td><span class="unit unitPx" style="font-size: 8px;">8px</span></td>
+            <td><span class="unit unitEm" style="font-size: .5em;">.5em</span></td>
+            <td><span class="unit unitRem" style="font-size: .5rem;">.5rem</span></td>
+        </tr>
+        <tr>
+            <td><span class="unit unitPct" style="font-size: 75%;">75%</span></td>
+            <td><span class="unit unitPx" style="font-size: 12px;">12px</span></td>
+            <td><span class="unit unitEm" style="font-size: .75em;">.75em</span></td>
+            <td><span class="unit unitRem" style="font-size: .75rem;">.75rem</span></td>
+        </tr>
+        <tr>
+            <td><span class="unit unitPct" style="font-size: 100%;">100%</span></td>
+            <td><span class="unit unitPx" style="font-size: 16px;">16px</span></td>
+            <td><span class="unit unitEm" style="font-size: 1em;">1em</span></td>
+            <td><span class="unit unitRem" style="font-size: 1rem;">1rem</span></td>
+        </tr>
+        <tr>
+            <td><span class="unit unitPct" style="font-size: 125%;">125%</span></td>
+            <td><span class="unit unitPx" style="font-size: 20px;">20px</span></td>
+            <td><span class="unit unitEm" style="font-size: 1.25em;">1.25em</span></td>
+            <td><span class="unit unitRem" style="font-size: 1.25rem;">1.25rem</span></td>
+        </tr>
+        <tr>
+            <td><span class="unit unitPct" style="font-size: 150%;">150%</span></td>
+            <td><span class="unit unitPx" style="font-size: 24px;">24px</span></td>
+            <td><span class="unit unitEm" style="font-size: 1.5em;">1.5em</span></td>
+            <td><span class="unit unitRem" style="font-size: 1.5rem;">1.5rem</span></td>
+        </tr>
+        <tr>
+            <td><span class="unit unitPct" style="font-size: 200%;">200%</span></td>
+            <td><span class="unit unitPx" style="font-size: 32px;">32px</span></td>
+            <td><span class="unit unitEm" style="font-size: 2em;">2em</span></td>
+            <td><span class="unit unitRem" style="font-size: 2rem;">2rem</span></td>
+        </tr>
+    </table>
+
+
+    <h2>The problem with <span class="unit unitPct">%</span> and <span class="unit unitEm">em</span></h2>
+
+    <p>Unlike the <span class="unit unitRem">rem</span>, the <span class="unit unitPct">%</span> and <span class="unit unitEm">em</span> units are based on the size <i>of the parent</i>. </p>
+    <p>
+        <span class="compoundedPct">
+            Using
+            <span class="compoundedEm">
+                them
+                <span class="compoundedPct">
+                    can
+                    <span class="compoundedEm">
+                        create
+                        <span class="compoundedPct">
+                            compounding
+                            <span class="compoundedEm">
+                                issues
+                                <span class="compoundedPct">
+                                    that
+                                    <span class="compoundedEm">
+                                        are
+                                        <span class="compoundedPct">
+                                            easy
+                                            <span class="compoundedEm">
+                                                to
+                                                <span class="compoundedPct">
+                                                    see
+                                                    <span class="compoundedEm">
+                                                        when
+                                                        <span class="compoundedPct">
+                                                            nesting
+                                                            <span class="compoundedEm">
+                                                                classes.
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            </span>
+        </span>
+    </p>
+
+
+
+
+    <h2>References</h2>
+
+    <ul>
+        <li><a href="https://www.sitepoint.com/understanding-and-using-rem-units-in-css/" target="_blank">Rem in CSS: Understanding and Using rem Units</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank">MDN: CSS values and units</a></li>
+        <li><a href="https://blog.hubspot.com/website/css-font-size" target="_blank">How to Change Font Size in CSS</a></li>
+    </ul>
+
+
+
+</body>
+</html>

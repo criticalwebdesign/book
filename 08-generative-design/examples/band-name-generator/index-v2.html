@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Band Name Generator | Critical Web Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Castoro+Titling&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+
+
+    <div class="flex-container">
+        <form action="" id="bandForm">
+            <div class="row">
+
+                <label for="members" class="center-vertical">Band members</label>
+                <input type="number" name="members" id="members" min="1" max="99" placeholder="?">
+
+                <label for="venueSelect" class="center-vertical">Perform at</label>
+                <select name="venueSelect" id="venueSelect">
+                    <option value="">?</option>
+                    <option value="youtube">youtube</option>
+                    <option value="garage">garage</option>
+                    <option value="basement">basement</option>
+                    <option value="park">park</option>
+                    <option value="parking-garage">parking garage</option>
+                    <option value="night-club">night club</option>
+                    <option value="inaugurations">inaugurations</option>
+                    <option value="arenas">sold-out arenas</option>
+                </select>
+
+                <label for="genreSelect" class="center-vertical">Genre</label>
+                <select name="genreSelect" id="genreSelect">
+                    <option value="">?</option>
+                    <option value="rock">Rock</option>
+                    <option value="metal">Metal</option>
+                    <option value="pop">Pop</option>
+                    <option value="electronic">Electronic</option>
+                    <option value="folk">Folk</option>
+                    <option value="world">World</option>
+                    <option value="country">Country</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="funk">Funk</option>
+                    <option value="soul">Soul</option>
+                    <option value="hip-hop">Hip Hop</option>
+                    <option value="classical">Classical</option>
+                    <option value="latin">Latin</option>
+                    <option value="reggae">Reggae</option>
+                    <option value="stage">Stage And Screen</option>
+                    <option value="blues">Blues</option>
+                    <option value="non-music">Non Music</option>
+                    <option value="rap">Rap</option>
+                </select>
+
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- style="display: none;" -->
+    <div class="flex-container" id="albumWrapper">
+
+        <div class="flex-column album albumFront">
+            <div class="albumName center-vertical">Album Name</div>
+
+            <div class="stickerWrapper" style="display: none;">
+                <div class="sticker">
+                    <div class="price">$9.99</div>
+                    <div class="genre">Easy Listening</div>
+                </div>
+            </div>
+            <div class="bandName center-vertical">Band Name</div>
+        </div>
+
+        <div class="flex-column album albumBack">
+            <div class="albumBackOverlay">
+
+                <div class='row songList'>
+                    <div class='column songListInner'>
+
+                        <div class="song">
+                            <span class="songTitle">A Song</span>
+                            <span class="songLength">4:21</span>
+                            <span class="songCredits">Member 1, Member 2, Member 3</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Another Song</span>
+                            <span class="songLength">4:21</span>
+                            <span class="songCredits">Member 1, Member 2, Member 3</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Another Song (pt.2)</span>
+                            <span class="songLength">4:21</span>
+                            <span class="songCredits">Member 1, Member 2, Member 3</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">A Song (Redux)</span>
+                            <span class="songLength">4:21</span>
+                            <span class="songCredits">Member 1, Member 2, Member 3</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Short Song</span>
+                            <span class="songLength">4:21</span>
+                            <span class="songCredits">Member 1, Member 2, Member 3</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">Really Short Song</span>
+                            <span class="songLength">4:21</span>
+                            <span class="songCredits">Member 1, Member 2, Member 3</span>
+                        </div>
+
+                        <div class="song">
+                            <span class="songTitle">This is not a love song</span>
+                            <span class="songLength">4:21</span>
+                            <span class="songCredits">Member 1, Member 2, Member 3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='credits'>
+                    <div class="designer">Album Designer: A. Designer</div>
+                    <div class="producer">Producer: Sr. Producer</div>
+                    <div class="location">Location</div>
+                    <div class="copyright">&copy; 2323 Catnip Records</div>
+                    <div class="promo">
+                        <span class="website">bandwebsite.com</span> /
+                        <span class="email">mail@bandwebsite.com</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="lyrics"></div>
+
+    <div class="flex-container" style="display:flex">
+        <pre class="debug"></pre>
+    </div>
+
+    <!-- helper functions for this module -->
+    <script src="../../../assets/js/functions.js"></script>
+
+    <script type="module">
+
+        // 1. import faker
+        import { faker } from 'https://esm.sh/@faker-js/faker';
+
+        // 2. test music genre
+        let genre = faker.music.genre();
+        console.log(genre);
+
+        // 3. get a band name
+        let name = faker.word.noun() + " " + faker.word.noun();
+
+        // 4. update name
+        if (genre == "Rock") {
+            name = faker.commerce.productMaterial() + " " + faker.vehicle.model();
+        } else if (genre == "Electronic") {
+            name = "DJ " + faker.hacker.abbreviation();
+        }
+        console.log(name);
+
+        // 5. update the page
+        document.querySelector(".bandName").innerHTML = name;
+
+    </script>
+
+
+</body>
+</html>

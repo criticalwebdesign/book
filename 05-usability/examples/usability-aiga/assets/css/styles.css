@@ -1,0 +1,57 @@
+:root {
+    --hotness: #fb3f7c;
+    --purple-lt: #9156e9;
+    --sky-lt3: #bff4fb;
+    --sky-lt2: #82e5f2;
+    --sky-lt1: #61d6e5;
+    --sky: #49c8da;
+    --sky-dk1: #2ea5b5;
+    --sky-dk2: #2796a4;
+}
+
+a {
+    color: var(--hotness);
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--sky);
+}
+
+h2 {
+    color: var(--sky);
+}
+
+.sky-border-bottom {
+    border-bottom: 5px solid var(--sky-lt3);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sky-border-top {
+    border-top: 2px solid var(--sky-lt3);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+img {
+    padding-right: 1rem;
+}
+
+.btn-custom {
+    /* color */
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-active-color: var(--bs-white);
+    --bs-btn-hover-color: var(--bs-white);
+    /* bg */
+    --bs-btn-bg: var(--sky);
+    --bs-btn-hover-bg: var(--sky-dk1);
+    --bs-btn-active-bg: var(--sky-dk2);
+    /* border */
+    --bs-btn-border-color: var(--sky-dk1);
+    --bs-btn-hover-border-color: var(--sky-dk1);
+    --bs-btn-active-border-color: var(--sky-dk1);
+    /* shadow */
+    --bs-btn-focus-shadow-rgb: var(--sky-dk1);
+}
