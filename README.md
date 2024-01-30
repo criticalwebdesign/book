@@ -15,13 +15,13 @@ Publish your first web page: By the end of the modules in this chapter you will 
 Design and code a page featuring expressive typography. Start by pre-visualizing the design in Figma and then code the page using HTML, CSS, and Javascript. The text can be any glyph, a single word, or an important phrase from one of the texts at [designmanifestos.org](https://designmanifestos.org). Select a phrase that speaks to you. 
 Examples: [After Gerhard Rühm](https://omundy.github.io/critical-web-design-book/02-view-source/examples/after-ruhm.html) | [Poem (Chaos)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-chaos.html) | [Poem (Click)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-click.html) | [Don't Be Evil)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-evil.html) | [Poem (Shake)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-shake.html) | [Poem (Think)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-think.html)
 
-<img height="220" src="assets/img/previews/02/ch2-Poem-Shake-640w.gif"> <img height="220" src="assets/img/previews/02/ch2-Poem-Think.png"> <img height="220" src="assets/img/previews/02/ch2-after-ruhm.png"> <img height="220" src="assets/img/previews/02/ch2-Poem-Click.png"> <img height="220" src="assets/img/previews/02/ch2-dont-be-evil.gif"> <img height="220" src="assets/img/previews/02/ch2-Poem-Random-640w.gif">
+<img height="240" src="assets/img/previews/02/ch2-Poem-Shake-640w.gif"> <img height="240" src="assets/img/previews/02/ch2-Poem-Think.png"> <img height="240" src="assets/img/previews/02/ch2-after-ruhm.png"> <img height="240" src="assets/img/previews/02/ch2-Poem-Click.png"> <img height="240" src="assets/img/previews/02/ch2-dont-be-evil.gif"> <img height="240" src="assets/img/previews/02/ch2-Poem-Random-640w.gif">
 
 ## Chapter 3 - Critical Design
 
 Create a work of critical web design: Throughout the modules in this chapter you will redesign a logo to create a visual form incorporating commentary. You will then use Figma to iterate on design, consider typographic choices using Google Fonts, and create a web page with interactive images and Javascript to express your ideas. Examples: [Monopoly](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/adobe-monopoly) | [Time](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/ikea-time/)
 
-<img height="220" src="assets/img/previews/03/delocator-logo-2013.png"> <img height="220" src="assets/img/previews/03/delocator-logo-2011.jpg"> <img height="220" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim.gif"> <img height="220" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim.gif">
+<img height="240" src="assets/img/previews/03/delocator-logo-2013.png"> <img height="240" src="assets/img/previews/03/delocator-logo-2011.jpg"> <img height="240" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim.gif"> <img height="240" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim.gif">
 
 
 
@@ -42,7 +42,7 @@ Design a responsive multi-column web page layout for a fictional newspaper. Use 
 
 Create and implement a usability test, then design a responsive web page to reflect on findings. Evaluate your design using the "less is more" critique. Code the design using bootstrap, including a working web form to output the score from the System Usability Scale (SUS) survey. Examples: [AIGA usability test](https://omundy.github.io/critical-web-design-book/05-usability/examples/usability-aiga/)
 
-<img height="220" src="assets/img/previews/05/ch5-outcome-lg.png"> <img height="220" src="assets/img/previews/05/ch5-outcome-md.png"> <img height="220" src="assets/img/previews/05/ch5-outcome-sm.png"> <img height="220" src="assets/img/previews/05/ch5-outcome-xs.png">
+<img height="240" src="assets/img/previews/05/ch5-outcome-lg.png"> <img height="240" src="assets/img/previews/05/ch5-outcome-md.png"> <img height="240" src="assets/img/previews/05/ch5-outcome-sm.png"> <img height="240" src="assets/img/previews/05/ch5-outcome-xs.png">
 
 ## Chapter 6 - Off the Grid
 
@@ -50,7 +50,7 @@ Create an experimental composition and then explode it!
 
 Examples: [Haiku (xtine)](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/haiku-xtine.html) | [Birds](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/birds.html) | [Baldwin](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/baldwin.html) | [Maintenance](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/maintenance.html)
 
-<img height="220" src="assets/img/previews/06/ch6-nyt-explode.png"> <img height="220" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> <img height="220" src="assets/img/previews/06/ch6-birds-1.gif"> <img height="220" src="assets/img/previews/06/ch6-baldwin-1.gif">  <img height="220" src="assets/img/previews/06/ch6-maintenance-3.gif"> 
+<img height="240" src="assets/img/previews/06/ch6-nyt-explode.png"> <img height="240" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> <img height="240" src="assets/img/previews/06/ch6-birds-1.gif"> <img height="240" src="assets/img/previews/06/ch6-baldwin-1.gif">  <img height="240" src="assets/img/previews/06/ch6-maintenance-3.gif"> 
 
 ## Chapter 7 - Ethical Design
 
@@ -59,7 +59,7 @@ Create an interactive feature that tells a story with data to accompany an artic
 Examples: 
 [Accessibility Data](https://omundy.github.io/critical-web-design-book/07-ethical-design/examples/accessibility-data)
 
-<img height="220" src="assets/img/previews/07/ch7-outcome-accessibility-xl.png"> <img height="220" src="assets/img/previews/07/ch7-outcome-accessibility-md.png"> <img height="220" src="assets/img/previews/07/ch7-outcome-accessibility-sm.png"> 
+<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-xl.png"> <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-md.png"> <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-sm.png"> 
 
 
 
@@ -75,7 +75,9 @@ Examples:
 [Music Venue](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue.html)
 
 
-<img height="220" src="assets/img/previews/08/band-name-stretch-goodness.png"> <img height="220" src="assets/img/previews/08/music-venue-xl-1.png"> <img height="220" src="assets/img/previews/08/music-venue-md-1.png"> <img height="220" src="assets/img/previews/08/music-venue-sm-1.png">  <img height="220" src="assets/img/previews/08/string-art-generator-5.png">   <img height="220" src="assets/img/previews/08/band-name-default.png"> <img height="220" src="assets/img/previews/08/08-boxes-5-svg-custom-palette.png"> 
+
+<img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> 
+<img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> <!--<img height="240" src="assets/img/previews/08/band-name-stretch-goodness.png"> <img height="240" src="assets/img/previews/08/08-boxes-4-svg-2.png"> <img height="240" src="assets/img/previews/08/music-venue-xl-1.png"> <img height="240" src="assets/img/previews/08/music-venue-md-1.png"> <img height="240" src="assets/img/previews/08/music-venue-sm-1.png">  --><img height="240" src="assets/img/previews/08/band-name-rotten-husband.png"> <img height="240" src="assets/img/previews/08/string-art-generator-5.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png"> 
 
 
 
