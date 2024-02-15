@@ -2,13 +2,20 @@
 
 A collection of examples and exercises to accompany _Critical Web Design_ by xtine burrough and Owen Mundy.
 
-<!-- NOTE: Figures beginning with "ch" -->
+
 
 ## Chapter 1 - Networks
 
 Publish your first web page: By the end of the modules in this chapter you will create and publish your first web page. Starting with the next exercise, you will create your Sites folder in your home directory and use the command line to navigate your hard drive in Terminal or Git Bash.
 
-<img height="270" src="assets/img/previews/01/01-01-network-types.png"> <img height="270" src="assets/img/previews/01/01-11-git-branches.png">
+[Codepen.io](https://codepen.io/owenmundy/pen/QWzJKVz) | [Glitch.com](https://glitch.com/edit/#!/dig245-hello-world)
+
+
+<img height="270" src="assets/img/previews/01/ch1-glitch-hello-world.png"> 
+
+<!-- <img height="270" src="assets/img/previews/01/01-01-network-types.png"> <img height="270" src="assets/img/previews/01/01-11-git-branches.png"> -->
+
+
 
 ## Chapter 2 - View Source
 
