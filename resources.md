@@ -1,19 +1,31 @@
-# Resources
+# Critical Web Design Resources
+
+
+
+## Chapter 7 - Ethical Design
+
+
+### Related Content
+
+
+### References
+
+
+### Inspiration
 
 
 
 
-## Related Content
+## Chapter 8 - Generative Design
 
 
+### Related Content
 
 
-## References
+### References
 
 
-
-
-## Inspiration
+### Inspiration
 
 
 ### Generative Art & Design
