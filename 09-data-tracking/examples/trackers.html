@@ -10,45 +10,109 @@
 </head>
 <body>
 
-    <!-- A YouTube embed -->
+
+
+
+
+
 
     <div class="container">
-    <div class="ratio ratio-4x3">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=_U5wln0rCHoUl1Jh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <div class="row">
+            <div class="col">
+                <h2 class="mt-3">How Are You Identified?</h2>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row mt-5">
+            <div class="col-12 col-md-2">
+                <h4>Link Tracking</h4>
+            </div>
+            <div class="col-12 col-md-5">
+                Clicking any online advertisement will send you to a URL containing parameters intended to transmit data about your web activity. It works with Google Analytics and other advertising tools, but <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/">does not require consent</a> under the GDPR like cookies and third party tracking pixels.
+            </div>
+            <div class="col-12 col-md-5">
+                <code>
+                    <a href="https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer">https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer</a>
+                </code>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-12 col-md-2">
+                <h4>Embedded Media</h4>
+            </div>
+            <div class="col-12 col-md-5">
+                Any Javascript you embed on
+                <ol>
+                    <li>Open DevTools > Applications</li>
+                    <li>Expand Storage > Cookies</li>
+                    <li>Select the cookie with the name _ga (Google Analytics)</li>
+                </ol>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="ratio ratio-4x3">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=_U5wln0rCHoUl1Jh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5" style="min-height: 200px;">
+            <div class="col-12 col-md-2">
+                <h4>Meta Tracking Pixel</h4>
+            </div>
+            <div class="col-12 col-md-5">
+                You can't see it, because it's an invisible 1x1 pixel image file, but the Meta Tracking Pixel
+            </div>
+            <div class="col-12 col-md-5">
+
+
+                <!-- Meta Pixel Code -->
+                <script>
+                    !function (f, b, e, v, n, t, s) {
+                        if (f.fbq) return; n = f.fbq = function () {
+                            n.callMethod ?
+                                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                        };
+                        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                        n.queue = []; t = b.createElement(e); t.async = !0;
+                        t.src = v; s = b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s)
+                    }(window, document, 'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', '893511094044886');
+                    fbq('track', 'PageView');
+                </script>
+                <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" /></noscript>
+                <!-- End Meta Pixel Code -->
+                <img src="https://www.facebook.com/tr?id=4309188662501524&ev=PageView&noscript=1" alt="">
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-
-    <!-- A Facebook tracking pixel -->
-<!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '893511094044886');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    <img src="https://www.facebook.com/tr?id=4309188662501524&ev=PageView&noscript=1" alt="">
-
-
-
-
-
-    <ul>
-        <li>Open DevTools</li>
-        <li>Select Applications</li>
-        <li>Expand Storage > Cookies</li>
-        <li>SelectLook for _ga (Google Analytics)</li>
-    </ul>
-
-</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
