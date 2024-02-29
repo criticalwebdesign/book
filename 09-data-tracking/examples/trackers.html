@@ -69,6 +69,13 @@
                 <small class="d-block mt-2">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
                 <small class="d-block mt-2">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
 
+                <!-- 
+                Resources
+                https://en.wikipedia.org/wiki/UTM_parameters
+                https://blog.hootsuite.com/how-to-use-utm-parameters/
+                https://developers.facebook.com/docs/instagram/ads-api/guides/url-tags-for-tracking/
+                -->
+
             </div>
             <div class="col-12 col-md-5 example">
 
@@ -121,16 +128,17 @@
                 <h4>Embedded Widgets</h4>
             </div>
             <div class="col-12 col-md-5">
-                YouTube and other embedded media can also access your data.
+                Any script you embed on your web page can potentially access users' data. Even a simple sharing button like this one from Facebook.
                 <ol>
                     <li>Open DevTools > Applications</li>
                     <li>Expand Storage > Cookies</li>
-                    <li>Select the cookie with the name _ga (Google Analytics)</li>
+                    <li>Look under the domain column for ".facebook.com"</li>
                 </ol>
             </div>
             <div class="col-12 col-md-5 example">
 
                 <!-- 
+                Resources:
                 https://developers.facebook.com/docs/plugins/share-button/
                 -->
                 <div id="fb-root"></div>
@@ -171,11 +179,17 @@
                 <h4>Meta Tracking Pixel</h4>
             </div>
             <div class="col-12 col-md-5" style="min-height: 200px;">
-                You can't see it, because it's an invisible 1x1 pixel image, but the Meta Tracking Pixel is one of the sneakiest
+                You can't see it because it's invisible, but this 1x1 pixel image, a.k.a. the Meta Tracking Pixel is one of the sneakiest forms of tracking out there. It works on emails
             </div>
             <div class="col-12 col-md-5 example">
 
+                <!-- 
+                Resources:
+                https://blog.hootsuite.com/facebook-pixel/
+                https://www.facebook.com/business/help/964258670337005?id=1205376682832142
+                -->
 
+                <!-- Owen's Tracking Pixel -->
                 <!-- Meta Pixel Code -->
                 <script>
                     !function (f, b, e, v, n, t, s) {
@@ -194,7 +208,6 @@
                 </script>
                 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" /></noscript>
                 <!-- End Meta Pixel Code -->
-                <img src="https://www.facebook.com/tr?id=4309188662501524&ev=PageView&noscript=1" alt="">
 
 
             </div>
