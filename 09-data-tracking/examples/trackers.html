@@ -14,6 +14,16 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+
+    <!-- Open Graph tags for FB link previews
+    https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url" content="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Critical Web Design - Tracking the Trackers" />
+    <meta property="og:description" content="Explore how others store and access your data to track and manipulate you across different websites, browsers, and devices." />
+    <meta property="og:image" content="https://omundy.github.io/critical-web-design-book/assets/img/previews/09/rick-roll.png" />
+
+
     <style>
         .example {
             border: 1px solid #ccc;
@@ -21,24 +31,26 @@
             background-color: #eee;
             border-radius: 5px;
         }
+
+        .example code {
+            display: block;
+            white-space: pre-wrap
+        }
     </style>
 </head>
 <body>
 
 
 
-
-
-
-
-    <div class="container">
+    <div class="container my-3">
 
         <div class="row">
             <div class="col">
-                <h2 class="mt-3">How Are You Identified?</h2>
-                <p>Explore how others store and access your data to track and manipulate you across different websites, browsers, and devices.</p>
+                <h2 class="mt-3">Have You Been Identified?</h2>
 
-                <small class="d-block mt-2">⚠️ This page contains several web tracking methods and is for testing only. Opening it in an incognito window with ad and / or tracker blockers disabled will allow you to see most results.</small>
+                <p>Explore how companies, and others store and access your data to track and manipulate you across different websites, browsers, and devices.</p>
+
+                <small class="d-block mt-2">⚠️ This page contains several web tracking methods and is for testing only. We don't save any information, but the trackers on the page probably will. Opening it in an incognito window with ad and / or tracker blockers disabled will allow you to see most results.</small>
             </div>
         </div>
 
@@ -52,7 +64,7 @@
             </div>
             <div class="col-12 col-md-5">
 
-                Link tracking is easy to spot and avoid. When you click an ad or attempt to share a link the extra URL parameters (see Module 5.3) added at the end of the address are attempting to transmit data about your web activity. Parameters like <b>utm_source</b> and <b>utm_campaign</b> are <a href="https://en.wikipedia.org/wiki/UTM_parameters">standard</a>, but there are many others that can be parsed by analytics and advertising tools. Find and click on an online ad to see one in action.
+                Link tracking is easy to spot and avoid. If you click an ad or share a website extra URL parameters (see Module 5.3) are added to the end of the link address. Parameters like <b>utm_source</b>, <b>utm_campaign</b>, and others are used by analytics and advertising tools to track the effectiveness of their marketing campaigns. Find and click on an online ad to see one in action.
 
                 <small class="d-block mt-2">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
                 <small class="d-block mt-2">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
@@ -61,14 +73,11 @@
             <div class="col-12 col-md-5 example">
 
                 <div>Example 1:</div>
-                <code>
-                    <a href="https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer">https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer</a>
+                <code><a href="https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer">https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer</a>
                 </code>
 
-                <div class="mt-3">Example 2 (your data):</div>
-                <code class="elelink">
-
-                </code>
+                <div class="mt-3">Example 2 (a sample of your data):</div>
+                <code class="elelink"></code>
             </div>
         </div>
 
@@ -81,7 +90,38 @@
                 <h4>Cookies</h4>
             </div>
             <div class="col-12 col-md-5">
-                Any Javascript you embed on a page instantly has access to your
+                <p>
+                    Cookies are probably the most well-known method for identifying you online. A cookie can be set by Javascript or a web server, and will usually contain a string of characters that identifies you, for better or worse. Without cookies websites cannot authenticate or identify you to remember you are logged in or store your preferences. However, this also allows you to be tracked using only this identifier. This page has set several cookies thanks to all the embedded examples. To see them:
+                </p>
+
+                <ol>
+                    <li>Open DevTools > Applications</li>
+                    <li>Expand Storage > Cookies</li>
+                    <li>The cookies set by this page begin with "cwd-", but all others, like "_ga" (Google Analytics), are set by trackers </li>
+                </ol>
+
+                <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. If you delete a cookie used for authentication you may need to login again.</small>
+            </div>
+            <div class="col-12 col-md-5 example">
+                <div>Example cookies (refresh to update)</div>
+                <code class="elecookie"></code>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="row mt-5">
+            <div class="col-12 col-md-2">
+                <h4>Embedded Widgets</h4>
+            </div>
+            <div class="col-12 col-md-5">
+                YouTube and other embedded media can also access your data.
                 <ol>
                     <li>Open DevTools > Applications</li>
                     <li>Expand Storage > Cookies</li>
@@ -89,6 +129,14 @@
                 </ol>
             </div>
             <div class="col-12 col-md-5 example">
+
+                <!-- 
+                https://developers.facebook.com/docs/plugins/share-button/
+                -->
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0&appId=189746494413987" nonce="Q1uUfeVv"></script>
+
+                <div class="fb-share-button" data-href="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fomundy.github.io%2Fcritical-web-design-book%2F09-data-tracking%2Fexamples%2Ftrackers.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 
             </div>
         </div>
@@ -153,18 +201,6 @@
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
 
@@ -173,39 +209,89 @@
     <script src="../../assets/js/fs-environment.js"></script>
     <script>
 
-        async function main() {
-
+        async function showLink() {
+            const elelink = document.querySelector('.elelink');
+            let url = "https://www.example.com/page?"
             try {
-                const elelink = document.querySelector('.elelink');
-
-                let url = "https://www.example.com/page?"
                 let browser = await Environment.getBrowserName();
                 if (browser) url += `browser=${browser}`
-                let location = await Environment.getLocation();
-                if (location.ip) url += `&ip=${location.ip}`
-                if (location.city) url += `&ip=${location.city}`
-                if (location.region) url += `&ip=${location.region}`
-                if (location.country) url += `&ip=${location.country}`
-                if (location.continent) url += `&ip=${location.continent}`
-                if (location.lat) url += `&ip=${location.lat}`
-                if (location.lng) url += `&ip=${location.lng}`
-                if (location.timezone) url += `&ip=${location.timezone}`
-                let language = await Environment.getBrowserLanguage();
-                if (language) url += `&language=${language}`
                 let platform = await Environment.getPlatform();
                 if (platform) url += `&platform=${platform}`
+                let language = await Environment.getBrowserLanguage();
+                if (language) url += `&language=${language}`
                 let { level, charging } = await Environment.getBattery();
                 if (level) url += `&battery=${level}%`
                 if (charging) url += `&charging=${charging}`
 
-                console.log("url",url)
-
-                elelink.innerHTML = `<a href="https://www.example.com/page?browser=${url}">${url}</a>`;
+                let geo = await Environment.getGeoLocation();
+                if (geo.ip) url += `&ip=${geo.ip}`
+                if (geo.isp) url += `&isp=${geo.isp}`
+                if (geo.city) url += `&city=${geo.city}`
+                if (geo.region) url += `&amp;region=${geo.region}`
+                if (geo.country) url += `&country=${geo.country}`
+                if (geo.flag) url += `&flag=${geo.flag}`
+                if (geo.continent) url += `&continent=${geo.continent}`
+                if (geo.lat) url += `&lat=${geo.lat}`
+                if (geo.lng) url += `&lng=${geo.lng}`
+                if (geo.timezone) url += `&timezone=${geo.timezone}`
+                if (geo.currency) url += `&amp;currency=${geo.currency}`
             } catch (err) {
-                console.log("err",err)
-            } 
+                console.log("err", err)
+            } finally {
+                // console.log("url", url)
+                elelink.innerHTML = `<a href="https://www.example.com/page?browser=${url}">${url}</a>`;
+            }
+
+
+
+        }
+
+        async function showCookie() {
+            // references
+            const elecookie = document.querySelector('.elecookie');
+            let today = new Date();
+            today.setTime(today.getTime() + (365 * 24 * 60 * 60 * 1000));
+            let message = "cwd-message",
+                previous = "cwd-previous",
+                visited = "cwd-visited"
+
+            // look for previous cookie
+            let cookieArr = document.cookie.split("; ")
+            console.log(cookieArr)
+            let previousVisit = cookieArr
+                .find((row) => row.startsWith(visited + "="))
+                ?.split("=")[1];
+
+            if (previousVisit) {
+                document.cookie = `${previous}=${previousVisit}; expires=${today.toUTCString()}; path=/`;
+            }
+
+
+            document.cookie = `${message}=Hello!🤣; expires=${today.toUTCString()}; path=/`;
+            document.cookie = `${visited}=${today.toUTCString()}; expires=${today.toUTCString()}; path=/`;
+
+
+            let cookieData =
+                `${message}=${cookieArr
+                    .find((row) => row.startsWith(message + "="))
+                    ?.split("=")[1]} \n${previous}=${cookieArr
+                        .find((row) => row.startsWith(previous + "="))
+                        ?.split("=")[1]} \n${visited}=${cookieArr
+                            .find((row) => row.startsWith(visited + "="))
+                            ?.split("=")[1]}`
+
+            elecookie.textContent = cookieData;
+        }
+
+        async function main() {
+            showLink()
+            showCookie()
         }
         main()
+
+
+
+
 
     </script>
 
