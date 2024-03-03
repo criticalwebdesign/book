@@ -1,7 +1,7 @@
 ---
 name: Errata report
 about: Use this template to report an issue with the book or code
-title: "[Issue found]"
+title: Describe the issue
 labels: ''
 assignees: ''
 
