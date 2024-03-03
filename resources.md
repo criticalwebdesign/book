@@ -123,6 +123,9 @@
 
 
 
+
+
+
 ## 8-Generative Design
 
 
@@ -147,6 +150,16 @@ See these sites and texts for more inspiring examples of generative design:
 - Google Experiments https://experiments.withgoogle.com/  
 
 
+### Flash
+
+Macromedia’s Flash was a software tool that combined an animation timeline, a highly intuitive vector drawing and tweening tool, and a script editor which allowed creators to attach scripts to keyframes, objects, or events. Flash files could be exported in SWF format and then embedded in HTML. Flash was widespread, inspiring international conferences, and artists, designers, game developers across the web. Adobe, who purchased Macromedia, has mostly discontinued Flash today due to performance, accessibility, and security issues on mobile devices. While publishing Flash projects online is no longer possible one can still find evidence of its impact on generative design:
+
+- Flash Math Creativity (see photos http://levitated.net/bones/flashmath/photos.html) with interviews and sample code from generative artists and designers 
+- Jared Tarbell https://www.artnome.com/news/2020/8/24/interview-with-generative-artist-jared-tarbell 
+- Paul Prudence https://www.transphormetic.com/ 
+- Manny Tan https://experiments.withgoogle.com/search?q=Manny%20Tan 
+- The New York Times has recently made it possible to view all their interactive reporting built using Flash in their archives. See: Robert Kosara, “The New York Times Now Has a Web Flash Player,” (January 8, 2024) https://eagereyes.org/blog/2024/nytimes-web-flash-player.
+
 
 ### Electronic and Generative Literature
 
@@ -158,6 +171,15 @@ If you are interested in computational, electronic, or generative literature/poe
 - The New River: A Journal of Digital Art & Literature https://thenewriver.us/
 - The School for Poetic Computation https://sfpc.study/
 - Taper https://taper.badquar.to/
+
+
+### Generative Interfaces
+
+- The NSynth Sound Maker (2017) by Yotam Mann https://experiments.withgoogle.com/sound-maker
+- Pixeldudesmaker by 0x72 https://0x72.itch.io/pixeldudesmaker
+- itch.io is popular for publishing indie games, but also showcases an impressive collection of procedural generators https://itch.io/tools/tag-procedural 
+- Pippen Barr https://pippinbarr.com/itisasifyouweredoingwork/
+
 
 
 
