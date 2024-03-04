@@ -25,17 +25,56 @@
 
 
     <style>
-        .example {
-            border: 1px solid #ccc;
-            padding: 12px;
-            background-color: #eee;
-            border-radius: 5px;
-            min-height: 200px;
+        .card.dark {
+            background-color: #282C34;
+            color: var(--bs-gray-500);
         }
 
-        .example code {
+        .card-body code {
             display: block;
-            white-space: pre-wrap
+            white-space: pre-wrap;
+            line-height: 1.3rem;
+            color: #A249BC;
+        }
+
+        .card-body code.comment {
+            color: #777;
+        }
+
+
+        .card-header {
+            font-size: .9rem;
+        }
+
+        .card-body.empty {
+            min-height: 100px;
+        }
+
+        .card-body.scroll {
+            max-height: 200px;
+        }
+
+        .card-footer {
+            text-align: right;
+            font-size: .9rem;
+        }
+
+        /* dark */
+
+        .dark .card-body code {
+            color: #38B3C2;
+        }
+
+        .dark .card-header {
+            color: var(--bs-gray-300);
+        }
+
+        .dark .card-body {
+            background-color: #282C34;
+        }
+
+        .dark .card-footer {
+            color: var(--bs-gray-500);
         }
     </style>
 </head>
@@ -58,24 +97,31 @@
 
 
 
-
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Link Tracking</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
-                        Link tracking is easy to spot and avoid. If you click an ad or share a website extra URL parameters (see Module 5.3) are added to the end of the link address. Parameters like <b>utm_source</b>, <b>utm_campaign</b>, and others are used by analytics and advertising tools to track the effectiveness of their marketing campaigns. Find and click on an online ad to see one in action.
+                        <p>Link tracking is easy to spot and avoid. If you click an ad or share a website extra URL parameters (see Module 5.3) are added to the end of the link address. Parameters like <b>utm_source</b>, <b>utm_campaign</b>, and others are used by analytics and advertising tools to track the effectiveness of their marketing campaigns. </p>
 
-                        <small class="d-block mt-2">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
-                        <small class="d-block mt-2">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
+                        <ol>
+                            <li>Examine the two example URLs on the right, including the one that shows how these can access data about you.</li>
+                            <li>Find and click on an online ad to see a real one in action.</li>
+                        </ol>
+
+                        <details>
+                            <summary>More Details</summary>
+                            <small class="d-block mt-2">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
+                            <small class="d-block mt-2">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
+                        </details>
 
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
+            <div class="col-12 col-md-5">
 
                 <!-- 
                 Resources
@@ -84,12 +130,26 @@
                 https://developers.facebook.com/docs/instagram/ads-api/guides/url-tags-for-tracking/
                 -->
 
-                <div>Example 1:</div>
-                <code><a href="https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer">https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer</a>
-                </code>
 
-                <div class="mt-3">Example 2 (a sample of your data):</div>
-                <code class="elelink"></code>
+                <div class="card dark">
+                    <div class="card-header">
+                        Link tracking example
+                    </div>
+                    <div class="card-body">
+                        <code><a href="https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer">https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer</a></code>
+                    </div>
+                </div>
+
+                <div class="card dark mt-3">
+                    <div class="card-header">
+                        Link tracking example (using your data)
+                    </div>
+                    <div class="card-body">
+                        <code class="elelink"></code>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
@@ -98,32 +158,51 @@
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Cookies</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            Cookies are probably the most well-known method for identifying you online. A cookie can be set by Javascript or a web server, and will usually contain a string of characters that identifies you, for better or worse. Without cookies websites cannot authenticate or identify you to remember you are logged in or store your preferences. However, this also allows you to be tracked using only this identifier.
+                            <b>Cookies</b> are probably the most well-known method for identifying you online. A cookie can be set by Javascript or a web server, and will usually contain the domain name that set the cookie (this site or a 3d party), a name, date, and a string of characters that identifies you. Without cookies websites won't know you are logged in or store your preferences. However, cookies also let sites track you, even if they only know you by this identifier. To see the example cookies set by this page:
                         </p>
-
-                        <p>This page has set several cookies thanks to all the embedded examples. To see them:</p>
 
                         <ol>
                             <li>Open DevTools > Applications</li>
                             <li>Expand Storage > Cookies</li>
-                            <li>The cookies set by this page begin with "cwd-". Refresh the page to see their data change.</li>
+                            <li>Select the domain: omundy.github.com</li>
+                            <li>Example cookies set by this page (prefixed with <code>cwd-</code>) show you the last time you visited. Refresh to see data update.</li>
                             <li>All other cookies are set by the resources and embedded scripts on this page. For example, "_ga" is the identifier for Google Analytics. Try deleting them and reloading the page to see what happens.</li>
                         </ol>
 
-                        <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. If you delete a cookie used for authentication you may need to login again.</small>
+                        <details>
+                            <summary>More Details</summary>
+                            <small class="d-block mt-2">⚠️ If you click on the other domains in DevTools > Cookies you will see others set by all the embedded examples.</small>
+                            <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. If you delete a cookie used for authentication you may need to login again.</small>
+                        </details>
 
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
-                <div>Example cookies (refresh to update)</div>
-                <code class="elecookie"></code>
+            <div class="col-12 col-md-5">
+
+                <div class="card dark">
+                    <div class="card-header">Cookies set by this page</div>
+                    <div class="card-body">
+                        <code class="elecookie"></code>
+                    </div>
+                    <div class="card-footer">Refresh page to update</div>
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-header">Set your own values using the console and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookiee">document.cookie</a></div>
+                    <div class="card-body">
+                        <code>document.cookie = "msg=hello, world!;"</code>
+                        <code>console.log(document.cookie)</code>
+                        <code class="comment">//-> "msg=hello, world!; ..."</code>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -133,13 +212,13 @@
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Local Storage</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            The Local Storage API is much more advanced method for Javascript store all kinds of data in the browser. 
+                            The Web Storage API is a much more advanced method for Javascript store all kinds of data in the browser.
                         </p>
 
                         <p>This page has set several cookies thanks to all the embedded examples. To see them:</p>
@@ -147,21 +226,40 @@
                         <ol>
                             <li>Open DevTools > Applications</li>
                             <li>Expand Storage > Local Storage</li>
-                            <li>The items set by this page begin with "cwd-". Refresh the page to see their data change.</li>
+                            <li>The items set by this page begin with "cwd-". Refresh to see data update.</li>
                             <li>All other items in Local Storage are set by the resources and embedded scripts on this page. </li>
-
-<!-- Check out Wordle for an interesting look at how they store your data. -->
+                            <li>Check out <a href="https://www.nytimes.com/games/wordle">Wordle</a> for an interesting look at how they store your data. </li>
 
                         </ol>
 
-                        <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. If you delete a cookie used for authentication you may need to login again.</small>
+                        <details>
+                            <summary>More Details</summary>
+                            <small class="d-block mt-2">⚠️ Click on other domains in DevTools > Local Storage to see the data set by the embedded examples.</small>
+                            <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. If you delete a cookie used for authentication you may need to login again.</small>
+                        </details>
 
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
-                <div>Example cookies (refresh to update)</div>
-                <code class="elecookie"></code>
+            <div class="col-12 col-md-5">
+
+                <div class="card dark">
+                    <div class="card-header">Local Storage items set by this page</div>
+                    <div class="card-body">
+                        <code class="elestorage"></code>
+                    </div>
+                    <div class="card-footer">Refresh page to update</div>
+                </div>
+
+                <div class="card mt-3">
+                    <div class="card-header">Set your own values using the console and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a></div>
+                    <div class="card-body">
+                        <code>localStorage.setItem("hello", "world!")</code>
+                        <code>localStorage.getItem("hello")</code>
+                        <code class="comment">//-> "world!"</code>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -171,10 +269,10 @@
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Ad & Tracker Blockers</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
                         <p>It's worth noting here an interesting detail about ad blockers, which usually function by intercepting and preventing requests for ad networks from embedded scripts and resources. To do this they must maintain lists (known as blocklists) in order to know which domains are tracking and trying to manipulate users.
                         </p>
@@ -186,15 +284,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
+            <div class="col-12 col-md-5">
 
                 <!-- 
                 Resources:
                 https://github.com/disconnectme/disconnect-tracking-protection
                 -->
 
-                <div>A sample from entities.json</div>
-                <code>... adnologies":{"properties":["adnologies.com","heias.com"],"resources":["adnologies.com","heias.com"]},"Adobe":{"properties":["adobe.com","livefyre.com","marketo.com","tmogul.com","tubemogul.com","typekit.com"],"resources":["2o7.net","adobe.com","adobedc.net","adsymptotic.com","auditude.com","demdex.com","demdex.net","dmtracker.com","efrontier.com","everestads.net","everestjs.net","everesttech.net","fyre.co","hitbox.com","livefyre.com","marketo.com","marketo.net","mktoresp.com","omniture.com","omtrdc.net","scene7.com","sitestat.com","tmogul.com","touchclarity.com","tubemogul.com","typekit.com"]},"Adomik":{"properties":["adomik.com"],"resources":["adomik.com"]},"AdOnion":{"properties":["adonion.com"],"resources":["adonion.com"]}, ...</code>
+                <div class="card dark">
+                    <div class="card-header">Tracker domains from Disconnect's entities.json</div>
+                    <div class="card-body overflow-y-scroll scroll">
+                        <code class="eleentities">...<br>adnologies":{<br>&nbsp;&nbsp;"properties":["adnologies.com","heias.com"],<br>&nbsp;&nbsp;"resources":["adnologies.com","heias.com"]},<br>"Adobe":{<br>&nbsp;&nbsp;"properties":["adobe.com","livefyre.com","marketo.com","tmogul.com","tubemogul.com","typekit.com"],<br>&nbsp;&nbsp;"resources":["2o7.net","adobe.com","adobedc.net","adsymptotic.com","auditude.com","demdex.com","demdex.net","dmtracker.com","efrontier.com","everestads.net","everestjs.net","everesttech.net","fyre.co","hitbox.com","livefyre.com","marketo.com","marketo.net","mktoresp.com","omniture.com","omtrdc.net","scene7.com","sitestat.com","tmogul.com","touchclarity.com","tubemogul.com","typekit.com"]},<br>"Adomik":{<br>&nbsp;&nbsp;"properties":["adomik.com"],<br>&nbsp;&nbsp;"resources":["adomik.com"]},<br>"AdOnion":{<br>&nbsp;&nbsp;"properties":["adonion.com"],<br>&nbsp;&nbsp;"resources":["adonion.com"]}, <br>...</code>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/entities.json">entities.json</a></div>
+                </div>
+
+
 
             </div>
         </div>
@@ -205,32 +310,57 @@
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Embedded Widgets</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Any script you embed on your web page can potentially access users' data. Even a simple sharing button like this one from Facebook.</p>
+                        <p>Any script you embed on your web page can potentially access your users' data, including simple "social media share buttons" like these.</p>
 
                         <ol>
-                            <li>Open DevTools > Applications</li>
-                            <li>Expand Storage > Cookies</li>
-                            <li>Look under the domain column for ".facebook.com"</li>
+                            <li>Open DevTools > Applications > Storage</li>
+                            <li>Expand Cookies and select <code>.facebook.com</code> or <code>.twitter.com</code> to see stored data.</li>
+                            <li>Expand Local storage and select <code>.facebook.com</code> or <code>.twitter.com</code> to see stored data.</li>
                         </ol>
 
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
+            <div class="col-12 col-md-5">
 
-                <!-- 
-                Resources:
-                https://developers.facebook.com/docs/plugins/share-button/
-                -->
-                <div id="fb-root"></div>
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0&appId=189746494413987" nonce="Q1uUfeVv"></script>
+                <div class="card dark">
+                    <div class="card-header">Facebook share button</div>
+                    <div class="card-body">
 
-                <div class="fb-share-button" data-href="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-layout="" data-size=""><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fomundy.github.io%2Fcritical-web-design-book%2F09-data-tracking%2Fexamples%2Ftrackers.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                        <!-- Resources:
+                        https://developers.facebook.com/docs/plugins/share-button/
+                        -->
+                        <div id="fb-root"></div>
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0&appId=189746494413987" nonce="Q1uUfeVv"></script>
+
+                        <!-- Your share button code -->
+                        <div class="fb-share-button" data-href="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-layout="button_count" data-size="large">
+                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fomundy.github.io%2Fcritical-web-design-book%2F09-data-tracking%2Fexamples%2Ftrackers.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="card dark mt-3">
+                    <div class="card-header">Tweet button</div>
+                    <div class="card-body">
+
+                        <!-- Resources:
+                        https://developer.twitter.com/en/docs/twitter-for-websites/web-intents/overview
+                        https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview
+                        -->
+                        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+                        <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=Critical%20Web%20Design%20-%20Tracking%20the%20Trackers&url=https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-size="large">Tweet</a>
+
+                    </div>
+                </div>
+
 
             </div>
         </div>
@@ -240,10 +370,10 @@
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Embedded Media</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
                         <p>YouTube and other embedded media can also access your data.</p>
 
@@ -256,10 +386,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
-                <div class="ratio ratio-4x3">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=_U5wln0rCHoUl1Jh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="col-12 col-md-5">
+
+
+
+
+                <div class="card dark mt-3">
+                    <div class="card-header">Embedded media</div>
+                    <div class="card-body">
+
+                        <div class="ratio ratio-4x3">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=_U5wln0rCHoUl1Jh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -270,10 +412,10 @@
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Meta Tracking Pixel</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
                         <p>
                             You can't see it because it's invisible, but this 1x1 pixel image, a.k.a. the Meta Tracking Pixel is one of the sneakiest forms of tracking out there. It works on emails
@@ -282,7 +424,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
+            <div class="col-12 col-md-5">
 
                 <!-- 
                 Resources:
@@ -290,26 +432,37 @@
                 https://www.facebook.com/business/help/964258670337005?id=1205376682832142
                 -->
 
-                <!-- Owen's Tracking Pixel -->
-                <!-- Meta Pixel Code -->
-                <script>
-                    !function (f, b, e, v, n, t, s) {
-                        if (f.fbq) return; n = f.fbq = function () {
-                            n.callMethod ?
-                                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                        };
-                        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-                        n.queue = []; t = b.createElement(e); t.async = !0;
-                        t.src = v; s = b.getElementsByTagName(e)[0];
-                        s.parentNode.insertBefore(t, s)
-                    }(window, document, 'script',
-                        'https://connect.facebook.net/en_US/fbevents.js');
-                    fbq('init', '893511094044886');
-                    fbq('track', 'PageView');
-                </script>
-                <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" /></noscript>
-                <!-- End Meta Pixel Code -->
 
+
+                <div class="card dark mt-3">
+                    <div class="card-header">Owen's Tracking Pixel</div>
+                    <div class="card-body empty">
+
+                        <!-- Owen's Tracking Pixel -->
+                        <!-- Meta Pixel Code -->
+                        <script>
+                            !function (f, b, e, v, n, t, s) {
+                                if (f.fbq) return; n = f.fbq = function () {
+                                    n.callMethod ?
+                                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                };
+                                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                                n.queue = []; t = b.createElement(e); t.async = !0;
+                                t.src = v; s = b.getElementsByTagName(e)[0];
+                                s.parentNode.insertBefore(t, s)
+                            }(window, document, 'script',
+                                'https://connect.facebook.net/en_US/fbevents.js');
+                            fbq('init', '893511094044886');
+                            fbq('track', 'PageView');
+                        </script>
+                        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" /></noscript>
+                        <!-- End Meta Pixel Code -->
+
+                        <code>Nothing to see here. 😎 </code>
+                        <code>This method is completely invisible.</code>
+
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -318,10 +471,10 @@
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Browser Fingerprinting</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
                         <p>Browser fingerprinting works by storing a list of all the attributes of your browser and device that, when combined, are specific enough that you can be reliably identified out of a crowd of internet users.</p>
 
@@ -332,14 +485,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
+            <div class="col-12 col-md-5">
 
-                <!-- 
-                Resources:
+                <!-- Resources:
                 https://www.avast.com/c-what-is-browser-fingerprinting
                 -->
+                <div class="card dark mt-3">
+                    <div class="card-header">Browser fingerprinting</div>
+                    <div class="card-body empty">
 
-                <code>Nothing to see here. This method is completely invisible.</code>
+                        <code>Nothing to see here. 😎 </code>
+                        <code>This method is completely invisible.</code>
+
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -352,10 +511,10 @@
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-xl-3">
                         <h4>Other ways to see your data</h4>
                     </div>
-                    <div class="col-12 col-lg-8 mb-3">
+                    <div class="col-12 col-xl-9 mb-3">
 
                         <p></p>
 
@@ -366,13 +525,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5 example">
+            <div class="col-12 col-md-5">
 
                 <!-- 
                 Resources:
                 -->
 
-                <code></code>
+                <div class="card dark mt-3">
+                    <div class="card-header">More Resources</div>
+                    <div class="card-body empty">
+
+
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -424,53 +589,96 @@
                 // console.log("url", url)
                 elelink.innerHTML = `<a href="https://www.example.com/page?browser=${url}">${url}</a>`;
             }
-
-
-
         }
+
+
+        async function showEntities() {
+            fetch('https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json')
+                .then(resp => resp.json())
+                .then(data => {
+                    if (!data) return;
+                    const eleentities = document.querySelector('.eleentities');
+                    eleentities.innerHTML = JSON.stringify(data, null, '&nbsp;');
+                })
+        }
+
+        function getDate() {
+            let d = new Date();
+            d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+            return d;
+        }
+
+        let message = "cwd-msg",
+            previous = "cwd-prev",
+            visited = "cwd-visit"
 
         async function showCookie() {
             // references
-            const elecookie = document.querySelector('.elecookie');
-            let today = new Date();
-            today.setTime(today.getTime() + (365 * 24 * 60 * 60 * 1000));
-            let message = "cwd-message",
-                previous = "cwd-previous",
-                visited = "cwd-visited"
+            const ele = document.querySelector('.elecookie');
+            let today = getDate();
 
             // look for previous cookie
             let cookieArr = document.cookie.split("; ")
-            console.log(cookieArr)
+            // console.log("cookieArr", cookieArr)
             let previousVisit = cookieArr
                 .find((row) => row.startsWith(visited + "="))
                 ?.split("=")[1];
 
+            // update previous
             if (previousVisit) {
                 document.cookie = `${previous}=${previousVisit}; expires=${today.toUTCString()}; path=/`;
             }
-
-
-            document.cookie = `${message}=Hello!🤣; expires=${today.toUTCString()}; path=/`;
+            // update others
+            document.cookie = `${message}=Hello!👋; expires=${today.toUTCString()}; path=/`;
             document.cookie = `${visited}=${today.toUTCString()}; expires=${today.toUTCString()}; path=/`;
 
-
-            let cookieData =
-                `${message}=${cookieArr
+            // get data for display in page
+            let str =
+                `${message}   = ${cookieArr
                     .find((row) => row.startsWith(message + "="))
-                    ?.split("=")[1]} \n${previous}=${cookieArr
+                    ?.split("=")[1]} \n${previous}  = ${cookieArr
                         .find((row) => row.startsWith(previous + "="))
-                        ?.split("=")[1]} \n${visited}=${cookieArr
+                        ?.split("=")[1]} \n${visited} = ${cookieArr
                             .find((row) => row.startsWith(visited + "="))
                             ?.split("=")[1]}`
 
-            elecookie.textContent = cookieData;
+            ele.textContent = str;
         }
 
-        async function main() {
-            showLink()
-            showCookie()
+
+        async function showStorage() {
+
+            // references
+            const ele = document.querySelector('.elestorage');
+            let today = getDate();
+
+            // look for previous
+            let previousVisit = localStorage.getItem(visited);
+            // console.log("previousVisit", previousVisit);
+
+            // update previous
+            if (previousVisit) {
+                localStorage.setItem(previous, previousVisit);
+            }
+            // update others
+            localStorage.setItem(message, "Hello!🤣");
+            localStorage.setItem(visited, today.toUTCString());
+
+            // get data for display in page
+            let str = `${message}   = ${localStorage.getItem(message)}\n${previous}  = ${previousVisit}\n${visited} = ${localStorage.getItem(visited)}`
+
+            ele.textContent = str;
         }
-        main()
+
+
+
+        async function main() {
+            await showLink();
+            await showEntities();
+            await showCookie();
+            await showStorage();
+        }
+        main();
 
 
 
