@@ -15,25 +15,30 @@ var Environment = (function () {
 	 *  Get location - Thanks to Fly on the Wall (Yumna and Jeremy)
 	 */
 	let apiKey = "0124f293e597ecbb56d530359574ff3b7c5ff74a41966f4ba1d156cc";
-	async function getGeoLocation() {
+	async function getGeoLocation_ipdata() {
 		return fetch(`https://api.ipdata.co?api-key=${apiKey}`)
-			.then(res => res.json())
-            .then(data => {
-                // console.log(data);
-                return {
-                    ip: data.ip,
-                    isp: data.asn.name,
-                    city: data.city,
-                    region: data.region,
-                    country: data.country_name,
-                    continent: data.continent_name,
-                    lat: data.latitude,
-                    lng: data.longitude,
-                    timezone: data.time_zone.name,
-                    flag: data.emoji_flag,
-                    currency: data.currency.code
-                };
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				return data;
 			});
+	}
+	async function getGeoLocation() {
+		let data = await getGeoLocation_ipdata();
+		console.log(data);
+		return {
+			ip: data.ip,
+			isp: data.asn.name,
+			city: data.city,
+			region: data.region,
+			country: data.country_name,
+			continent: data.continent_name,
+			lat: data.latitude,
+			lng: data.longitude,
+			timezone: data.time_zone.name,
+			flag: data.emoji_flag,
+			currency: data.currency.code,
+		};
 	}
 
 	/**
@@ -73,6 +78,69 @@ var Environment = (function () {
 			let charging = battery.charging;
 			return { level, charging };
 		});
+    }
+    // usage
+    // let { level, charging } = await Environment.getBattery();
+
+	// Query a single permission in a try...catch block and return result
+	// https://developer.mozilla.org/en-US/docs/Web/API/Permissions/query
+	async function getPermission(permission) {
+		try {
+			const result = await navigator.permissions.query({
+				name: permission,
+			});
+			return result.state;
+		} catch (error) {
+			return `(not supported)`;
+		}
+	}
+	// Array of permissions
+	const permissions = [
+		"accelerometer",
+		"accessibility-events",
+		"ambient-light-sensor",
+		"background-sync",
+		"camera",
+		"clipboard-read",
+		"clipboard-write",
+		"geolocation",
+		"gyroscope",
+		"local-fonts",
+		"magnetometer",
+		"microphone",
+		"midi",
+		"notifications",
+		"payment-handler",
+		"persistent-storage",
+		"push",
+		"screen-wake-lock",
+		"storage-access",
+		"top-level-storage-access",
+		"window-management",
+	];
+	// Iterate through the permissions and log the result
+	async function getAllPermissions() {
+		let result = {};
+		for (const permission of permissions) {
+			result[permission] = await getPermission(permission);
+			// log(result);
+		}
+		return result;
+	}
+
+	async function getNavigatorFormatted() {
+		return {
+			battery: await Environment.getBattery(),
+			browser: await getBrowserName(),
+			cookieEnabled: navigator.cookieEnabled || false,
+			deviceMemory: navigator.deviceMemory || 0,
+			doNotTrack: navigator.doNotTrack || null,
+			geolocation: navigator.geolocation || {},
+			language: await getBrowserLanguage(),
+			permissions: await getAllPermissions(),
+			platform: await getPlatform(),
+			userAgent: navigator.userAgent || "",
+		};
 	}
 
 	async function getBrowserName() {
@@ -304,10 +372,12 @@ var Environment = (function () {
 	}
 
 	// PUBLIC
-    return {
-        getGeoLocation: getGeoLocation,
+	return {
+		getGeoLocation_ipdata: getGeoLocation_ipdata,
+		getGeoLocation: getGeoLocation,
 		getLocation: getLocation,
 		getBattery: getBattery,
+		getNavigatorFormatted: getNavigatorFormatted,
 		getBrowserName: getBrowserName,
 		getBrowserLanguage: getBrowserLanguage,
 		getPlatform: getPlatform,

@@ -47,11 +47,15 @@
         }
 
         .card-body.empty {
-            min-height: 100px;
+            min-height: 50px;
         }
 
-        .card-body.scroll {
-            max-height: 200px;
+        .card-body.h100 {
+            height: 100px;
+        }
+
+        .card-body.h200 {
+            height: 200px;
         }
 
         .card-footer {
@@ -67,6 +71,7 @@
 
         .dark .card-header {
             color: var(--bs-gray-300);
+            border-bottom-color: var(--bs-gray-600);
         }
 
         .dark .card-body {
@@ -75,6 +80,22 @@
 
         .dark .card-footer {
             color: var(--bs-gray-500);
+            border-top-color: var(--bs-gray-600);
+        }
+
+        /* https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/ */
+        /* a[href^="http"]::after,
+        a[href^="https://"]::after, */
+        a[target="_blank"]::after {
+            content: "";
+            width: 11px;
+            height: 11px;
+            margin-left: 4px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
         }
     </style>
 </head>
@@ -88,7 +109,7 @@
             <div class="col">
                 <h2 class="mt-3">Have You Been Identified?</h2>
 
-                <p>Explore how companies, and others store and access your data to track and manipulate you across different websites, browsers, and devices.</p>
+                <p>Use DevTools to explore how trackers and other embedded scripts collect, store, and identify your data in the browser. </p>
 
                 <small class="d-block mt-2">⚠️ This page contains several web tracking methods and is for testing only. We don't save any information, but the trackers on the page probably will. Opening it in an incognito window with ad and / or tracker blockers disabled will allow you to see most results.</small>
             </div>
@@ -101,21 +122,69 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
+                        <h4>Your Data</h4>
+                    </div>
+                    <div class="col-12 col-xl-9 mb-3">
+
+                        <p>Websites can access a lot of information about visitors thanks to basic browser functionality and data sent via request headers. </p>
+
+                        <ol>
+                            <li>Example 1-1 shows data from the window.navigator Javascript object. Run it in the console to see more.</li>
+                            <li>Explore the quiz at <a href="https://geokitten.com" target="_blank">https://geokitten.com</a> and then examine example 1-2 showing data returned from a geolocation API using only your IP address. </li>
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+
+                <!-- Resources
+                -->
+
+
+                <div class="card dark">
+                    <div class="card-header">
+                        1-1 Data available in every browser
+                    </div>
+                    <div class="card-body overflow-y-scroll h100">
+                        <code class="eledata"></code>
+                    </div>
+                </div>
+
+                <div class="card dark mt-3">
+                    <div class="card-header">
+                        1-2 Data discovered from your IP address
+                    </div>
+                    <div class="card-body overflow-y-scroll h100">
+                        <code class="elegeo"></code>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-12 col-md-7">
+                <div class="row">
+                    <div class="col-12 col-xl-3">
                         <h4>Link Tracking</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Link tracking is easy to spot and avoid. If you click an ad or share a website extra URL parameters (see Module 5.3) are added to the end of the link address. Parameters like <b>utm_source</b>, <b>utm_campaign</b>, and others are used by analytics and advertising tools to track the effectiveness of their marketing campaigns. </p>
+                        <p>Link tracking is easy to spot and avoid. Clicking an ad or sharing a website adds extra URL parameters (see Module 5.3), like <b>utm_source</b>, <b>utm_campaign</b>, to the end of the link. These parameters can pass data about your activity to analytics and advertising tools to track the effectiveness of marketing campaigns.</p>
 
                         <ol>
-                            <li>Examine the two example URLs on the right, including the one that shows how these can access data about you.</li>
+                            <li>Examine the two example URLs containing link tracking parameters. Example 2-2 shows how these can access and share data about you.</li>
                             <li>Find and click on an online ad to see a real one in action.</li>
                         </ol>
 
                         <details>
                             <summary>More Details</summary>
                             <small class="d-block mt-2">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
-                            <small class="d-block mt-2">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
+                            <small class="d-block mt-2">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/" target="_blank">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
                         </details>
 
                     </div>
@@ -133,16 +202,16 @@
 
                 <div class="card dark">
                     <div class="card-header">
-                        Link tracking example
+                        2-1 Link tracking example
                     </div>
                     <div class="card-body">
-                        <code><a href="https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer">https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer</a></code>
+                        <code><a href="https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer" target="_blank">https://www.example.com/page?utm_content=buffercf3b2&utm_medium=social&utm_source=snapchat.com&utm_campaign=buffer</a></code>
                     </div>
                 </div>
 
                 <div class="card dark mt-3">
                     <div class="card-header">
-                        Link tracking example (using your data)
+                        2-2 Link tracking example (using your data)
                     </div>
                     <div class="card-body">
                         <code class="elelink"></code>
@@ -164,21 +233,21 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            <b>Cookies</b> are probably the most well-known method for identifying you online. A cookie can be set by Javascript or a web server, and will usually contain the domain name that set the cookie (this site or a 3d party), a name, date, and a string of characters that identifies you. Without cookies websites won't know you are logged in or store your preferences. However, cookies also let sites track you, even if they only know you by this identifier. To see the example cookies set by this page:
+                            <b>Cookies</b> are used by websites to store information in your browser. Cookies can be created using Javascript or a web server, store any text up to 4 kilobytes (about 2000 words), and are only accessible by the website that stored that cookie. Without cookies enabled websites won't know you are logged in or store your preferences. However, cookies also let sites track you, even if they only know you by this identifier.
                         </p>
 
                         <ol>
-                            <li>Open DevTools > Applications</li>
-                            <li>Expand Storage > Cookies</li>
-                            <li>Select the domain: omundy.github.com</li>
-                            <li>Example cookies set by this page (prefixed with <code>cwd-</code>) show you the last time you visited. Refresh to see data update.</li>
-                            <li>All other cookies are set by the resources and embedded scripts on this page. For example, "_ga" is the identifier for Google Analytics. Try deleting them and reloading the page to see what happens.</li>
+                            <li>Open DevTools > Applications and then expand Cookies (under Storage on the left) to see the domains that have set cookies on this page. </li>
+                            <li>Select the domain: omundy.github.com. Example 3-1 shows cookies (prefixed with <code>cwd-</code>) that save the last time you visited this page. Refresh to see data update. </li>
+                            <li>All other cookies are set by the resources and embedded scripts on this page. For example, <code>_ga</code> is the identifier for Google Analytics. Try deleting them and reloading the page to see what happens.</li>
+                            <li>Set your own cookie by running the code in Example 3-2 in the DevTools console.</li>
                         </ol>
 
                         <details>
                             <summary>More Details</summary>
                             <small class="d-block mt-2">⚠️ If you click on the other domains in DevTools > Cookies you will see others set by all the embedded examples.</small>
-                            <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. If you delete a cookie used for authentication you may need to login again.</small>
+                            <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. Delete a cookie set by this page and refresh to see them again. If you delete a cookie used for authentication you may need to login again.</small>
+                            <small class="d-block mt-2">⚠️ Cookies containing unique IDs are sent with internet requests. In DevTools > Network > Select a resource and click on the Headers tab and scroll to the Request Headers, to see the cookies sent to Google every time you load this file. Select the Cookies tab to see the total list of cookies. If you select different requests on the left, even requests for image files will send cookies.</small>
                         </details>
 
                     </div>
@@ -187,7 +256,9 @@
             <div class="col-12 col-md-5">
 
                 <div class="card dark">
-                    <div class="card-header">Cookies set by this page</div>
+                    <div class="card-header">
+                        3-1 Cookies set by this page
+                    </div>
                     <div class="card-body">
                         <code class="elecookie"></code>
                     </div>
@@ -195,7 +266,9 @@
                 </div>
 
                 <div class="card mt-3">
-                    <div class="card-header">Set your own values using the console and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookiee">document.cookie</a></div>
+                    <div class="card-header">
+                        3-2 Add a cookie using the console and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie" target="_blank">document.cookie</a>
+                    </div>
                     <div class="card-body">
                         <code>document.cookie = "msg=hello, world!;"</code>
                         <code>console.log(document.cookie)</code>
@@ -218,24 +291,21 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            The Web Storage API is a much more advanced method for Javascript store all kinds of data in the browser.
+                            The Web Storage API is a more advanced method that allows Javascript to store all kinds of data in the browser.
                         </p>
 
-                        <p>This page has set several cookies thanks to all the embedded examples. To see them:</p>
-
                         <ol>
-                            <li>Open DevTools > Applications</li>
-                            <li>Expand Storage > Local Storage</li>
-                            <li>The items set by this page begin with "cwd-". Refresh to see data update.</li>
-                            <li>All other items in Local Storage are set by the resources and embedded scripts on this page. </li>
-                            <li>Check out <a href="https://www.nytimes.com/games/wordle">Wordle</a> for an interesting look at how they store your data. </li>
+                            <li>In DevTools > Applications, expand Local Storage.</li>
+                            <li>The items set by this page begin with <code>cwd-</code>. Refresh to see data update.</li>
+                            <li>All other items in Local Storage are set by the resources and embedded scripts on this page. As with cookies, you can edit or delete the data stored in Local or Session Storage.</li>
+                            <li>Check out <a href="https://www.nytimes.com/games/wordle" target="_blank">Wordle</a> to see if you can figure out how it stores your game progress using Local Storage (hint: look for a key named <code>nyt-wordle-moogle</code>).</li>
 
                         </ol>
 
                         <details>
                             <summary>More Details</summary>
                             <small class="d-block mt-2">⚠️ Click on other domains in DevTools > Local Storage to see the data set by the embedded examples.</small>
-                            <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. If you delete a cookie used for authentication you may need to login again.</small>
+                            <small class="d-block mt-2">⚠️ Any row can be edited or deleted. If you delete a row used for authentication you may need to login again.</small>
                         </details>
 
                     </div>
@@ -244,7 +314,9 @@
             <div class="col-12 col-md-5">
 
                 <div class="card dark">
-                    <div class="card-header">Local Storage items set by this page</div>
+                    <div class="card-header">
+                        4-1 Local Storage items set by this page
+                    </div>
                     <div class="card-body">
                         <code class="elestorage"></code>
                     </div>
@@ -252,7 +324,9 @@
                 </div>
 
                 <div class="card mt-3">
-                    <div class="card-header">Set your own values using the console and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a></div>
+                    <div class="card-header">
+                        4-2 Set your own values using the console and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localStorage</a>
+                    </div>
                     <div class="card-body">
                         <code>localStorage.setItem("hello", "world!")</code>
                         <code>localStorage.getItem("hello")</code>
@@ -266,40 +340,50 @@
 
 
 
+
+
+
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4>Ad & Tracker Blockers</h4>
+                        <h4>Your Identity</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>It's worth noting here an interesting detail about ad blockers, which usually function by intercepting and preventing requests for ad networks from embedded scripts and resources. To do this they must maintain lists (known as blocklists) in order to know which domains are tracking and trying to manipulate users.
+                        <p>
+                            The one data point that can't be directly accessed from your online activity is your identity. This doesn't stop trackers from trying to find it, or creating one for you even if they don't know your real name. Whether you are logged in or not, websites create various tokens and GUIDs (generic user ids) to identify and allow you access to specific pages, or collect your data to manipulate your behavior.
                         </p>
 
+
                         <ol>
-                            <li>The <a href="https://disconnect.me/">Disconnect browser extension</a> conveniently makes their lists open source. Check out their <a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json">services</a> and <a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/entities.json">entities</a> files to see if you recognize any of these domains.</li>
+                            <li>In DevTools > Applications > Cookies</li>
+                            <li>The items set by this page begin with <code>cwd-</code>. Refresh to see data update.</li>
+                            <li>All other items in Local Storage are set by the resources and embedded scripts on this page. As with cookies, you can edit or delete the data stored in Local or Session Storage.</li>
+                            <li>Check out <a href="https://www.nytimes.com/games/wordle" target="_blank">Wordle</a> to see if you can figure out how it stores your game progress using Local Storage (hint: look for a key named <code>nyt-wordle-moogle</code>).</li>
+
                         </ol>
+
+                        <details>
+                            <summary>More Details</summary>
+                            <small class="d-block mt-2">⚠️ Click on other domains in DevTools > Local Storage to see the data set by the embedded examples.</small>
+                            <small class="d-block mt-2">⚠️ Any row can be edited or deleted. If you delete a row used for authentication you may need to login again.</small>
+                        </details>
 
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-5">
 
-                <!-- 
-                Resources:
-                https://github.com/disconnectme/disconnect-tracking-protection
-                -->
-
                 <div class="card dark">
-                    <div class="card-header">Tracker domains from Disconnect's entities.json</div>
-                    <div class="card-body overflow-y-scroll scroll">
-                        <code class="eleentities">...<br>adnologies":{<br>&nbsp;&nbsp;"properties":["adnologies.com","heias.com"],<br>&nbsp;&nbsp;"resources":["adnologies.com","heias.com"]},<br>"Adobe":{<br>&nbsp;&nbsp;"properties":["adobe.com","livefyre.com","marketo.com","tmogul.com","tubemogul.com","typekit.com"],<br>&nbsp;&nbsp;"resources":["2o7.net","adobe.com","adobedc.net","adsymptotic.com","auditude.com","demdex.com","demdex.net","dmtracker.com","efrontier.com","everestads.net","everestjs.net","everesttech.net","fyre.co","hitbox.com","livefyre.com","marketo.com","marketo.net","mktoresp.com","omniture.com","omtrdc.net","scene7.com","sitestat.com","tmogul.com","touchclarity.com","tubemogul.com","typekit.com"]},<br>"Adomik":{<br>&nbsp;&nbsp;"properties":["adomik.com"],<br>&nbsp;&nbsp;"resources":["adomik.com"]},<br>"AdOnion":{<br>&nbsp;&nbsp;"properties":["adonion.com"],<br>&nbsp;&nbsp;"resources":["adonion.com"]}, <br>...</code>
+                    <div class="card-header">
+                        4-1 Local Storage items set by this page
                     </div>
-                    <div class="card-footer"><a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/entities.json">entities.json</a></div>
+                    <div class="card-body">
+                        <code class="elestorage"></code>
+                    </div>
+                    <div class="card-footer">Refresh page to update</div>
                 </div>
-
-
 
             </div>
         </div>
@@ -307,11 +391,13 @@
 
 
 
+
+
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4>Embedded Widgets</h4>
+                        <h4>Embedded Scripts: Analytics, Widgets, & Media </h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -323,12 +409,47 @@
                             <li>Expand Local storage and select <code>.facebook.com</code> or <code>.twitter.com</code> to see stored data.</li>
                         </ol>
 
+
+
+                        <p>YouTube and other embedded media can also access your data.</p>
+
+                        <ol>
+                            <li>Open DevTools > Applications</li>
+                            <li>Expand Storage > Cookies</li>
+                            <li>Select the cookie with the name _ga (Google Analytics)</li>
+                        </ol>
+
+
+
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-5">
 
                 <div class="card dark">
+                    <div class="card-header">Google Analytics</div>
+                    <div class="card-body empty">
+
+
+                        <!-- Google tag (gtag.js) -->
+                        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFYTWR6TXG"></script>
+                        <script>
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag() { dataLayer.push(arguments); }
+                            gtag('js', new Date());
+
+                            gtag('config', 'G-DFYTWR6TXG');
+                        </script>
+
+
+                        <code>Nothing to see here. 😎 </code>
+                        <code>This method is completely invisible.</code>
+
+                    </div>
+                </div>
+
+
+                <div class="card dark mt-3">
                     <div class="card-header">Facebook share button</div>
                     <div class="card-body">
 
@@ -362,35 +483,6 @@
                 </div>
 
 
-            </div>
-        </div>
-
-
-
-        <div class="row mt-5">
-            <div class="col-12 col-md-7">
-                <div class="row">
-                    <div class="col-12 col-xl-3">
-                        <h4>Embedded Media</h4>
-                    </div>
-                    <div class="col-12 col-xl-9 mb-3">
-
-                        <p>YouTube and other embedded media can also access your data.</p>
-
-                        <ol>
-                            <li>Open DevTools > Applications</li>
-                            <li>Expand Storage > Cookies</li>
-                            <li>Select the cookie with the name _ga (Google Analytics)</li>
-                        </ol>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-5">
-
-
-
-
                 <div class="card dark mt-3">
                     <div class="card-header">Embedded media</div>
                     <div class="card-body">
@@ -404,6 +496,8 @@
 
             </div>
         </div>
+
+
 
 
 
@@ -479,7 +573,7 @@
                         <p>Browser fingerprinting works by storing a list of all the attributes of your browser and device that, when combined, are specific enough that you can be reliably identified out of a crowd of internet users.</p>
 
                         <ol>
-                            <li>See your browser's "fingerprint" at <a href="https://amiunique.org">amiunique.org</a></li>
+                            <li>See your browser's "fingerprint" at <a href="https://amiunique.org" target="_blank">amiunique.org</a></li>
                         </ol>
 
                     </div>
@@ -506,6 +600,13 @@
 
 
 
+        <div class="row mt-5">
+            <div class="col-12">
+                <h4>Other Examples</h4>
+                <hr>
+            </div>
+        </div>
+
 
 
         <div class="row mt-5">
@@ -519,7 +620,7 @@
                         <p></p>
 
                         <ol>
-                            <li>Use <a href="https://themarkup.org/series/blacklight">Blacklight</a>, a Real-Time Website Privacy Inspector. Enter the address of any website, and Blacklight will scan it and reveal the specific user-tracking technologies on the site.</li>
+                            <li>Use <a href="https://themarkup.org/series/blacklight" target="_blank">Blacklight</a>, a Real-Time Website Privacy Inspector. Enter the address of any website, and Blacklight will scan it and reveal the specific user-tracking technologies on the site.</li>
                         </ol>
 
                     </div>
@@ -548,6 +649,47 @@
 
 
 
+        <div class="row mt-5">
+            <div class="col-12 col-md-7">
+                <div class="row">
+                    <div class="col-12 col-xl-3">
+                        <h4>Ad & Tracker Blockers</h4>
+                    </div>
+                    <div class="col-12 col-xl-9 mb-3">
+
+                        <p>It's worth noting here an interesting detail about ad blockers, which usually function by intercepting and preventing requests for ad networks from embedded scripts and resources. To do this they must maintain lists (known as blocklists) in order to know which domains are tracking and trying to manipulate users.
+                        </p>
+
+                        <ol>
+                            <li>The <a href="https://disconnect.me/" target="_blank">Disconnect browser extension</a> conveniently makes their lists open source. Check out their <a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json" target="_blank">services</a> and <a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/entities.json" target="_blank">entities</a> files to see if you recognize any of these domains.</li>
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+
+                <!-- 
+                Resources:
+                https://github.com/disconnectme/disconnect-tracking-protection
+                -->
+
+                <div class="card dark">
+                    <div class="card-header">Tracker domains from Disconnect's entities.json</div>
+                    <div class="card-body overflow-y-scroll h200">
+                        <code class="eleentities">...<br>adnologies":{<br>&nbsp;&nbsp;"properties":["adnologies.com","heias.com"],<br>&nbsp;&nbsp;"resources":["adnologies.com","heias.com"]},<br>"Adobe":{<br>&nbsp;&nbsp;"properties":["adobe.com","livefyre.com","marketo.com","tmogul.com","tubemogul.com","typekit.com"],<br>&nbsp;&nbsp;"resources":["2o7.net","adobe.com","adobedc.net","adsymptotic.com","auditude.com","demdex.com","demdex.net","dmtracker.com","efrontier.com","everestads.net","everestjs.net","everesttech.net","fyre.co","hitbox.com","livefyre.com","marketo.com","marketo.net","mktoresp.com","omniture.com","omtrdc.net","scene7.com","sitestat.com","tmogul.com","touchclarity.com","tubemogul.com","typekit.com"]},<br>"Adomik":{<br>&nbsp;&nbsp;"properties":["adomik.com"],<br>&nbsp;&nbsp;"resources":["adomik.com"]},<br>"AdOnion":{<br>&nbsp;&nbsp;"properties":["adonion.com"],<br>&nbsp;&nbsp;"resources":["adonion.com"]}, <br>...</code>
+                    </div>
+                    <div class="card-footer"><a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/entities.json" target="_blank">entities.json</a></div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
 
     </div>
 
@@ -557,128 +699,140 @@
     <script src="../../assets/js/fs-environment.js"></script>
     <script>
 
-        async function showLink() {
-            const elelink = document.querySelector('.elelink');
-            let url = "https://www.example.com/page?"
-            try {
-                let browser = await Environment.getBrowserName();
-                if (browser) url += `browser=${browser}`
-                let platform = await Environment.getPlatform();
-                if (platform) url += `&platform=${platform}`
-                let language = await Environment.getBrowserLanguage();
-                if (language) url += `&language=${language}`
-                let { level, charging } = await Environment.getBattery();
-                if (level) url += `&battery=${level}%`
-                if (charging) url += `&charging=${charging}`
+        (async () => {
 
-                let geo = await Environment.getGeoLocation();
-                if (geo.ip) url += `&ip=${geo.ip}`
-                if (geo.isp) url += `&isp=${geo.isp}`
-                if (geo.city) url += `&city=${geo.city}`
-                if (geo.region) url += `&amp;region=${geo.region}`
-                if (geo.country) url += `&country=${geo.country}`
-                if (geo.flag) url += `&flag=${geo.flag}`
-                if (geo.continent) url += `&continent=${geo.continent}`
-                if (geo.lat) url += `&lat=${geo.lat}`
-                if (geo.lng) url += `&lng=${geo.lng}`
-                if (geo.timezone) url += `&timezone=${geo.timezone}`
-                if (geo.currency) url += `&amp;currency=${geo.currency}`
-            } catch (err) {
-                console.log("err", err)
-            } finally {
-                // console.log("url", url)
-                elelink.innerHTML = `<a href="https://www.example.com/page?browser=${url}">${url}</a>`;
+            let data = await Environment.getNavigatorFormatted(),
+                geo = await Environment.getGeoLocation_ipdata();
+
+            async function showData() {
+                try {
+                    const eledata = document.querySelector('.eledata');
+                    eledata.innerHTML = JSON.stringify(data, null, '&nbsp;');
+                    const elegeo = document.querySelector('.elegeo');
+                    elegeo.innerHTML = JSON.stringify(geo, null, '&nbsp;');
+                }
+                catch (err) {
+                    console.error(err);
+                }
             }
-        }
 
+            async function showLink() {
+                const elelink = document.querySelector('.elelink');
+                let url = "https://www.example.com/page?"
+                try {
+                    url += `browser=${data.browser}`
+                    url += `&platform=${data.platform}`
+                    url += `&language=${data.language}`
 
-        async function showEntities() {
-            fetch('https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json')
-                .then(resp => resp.json())
-                .then(data => {
-                    if (!data) return;
-                    const eleentities = document.querySelector('.eleentities');
-                    eleentities.innerHTML = JSON.stringify(data, null, '&nbsp;');
-                })
-        }
+                    url += `&battery=${data.battery.level}%`
+                    url += `&charging=${data.battery.charging}`
 
-        function getDate() {
-            let d = new Date();
-            d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
-            return d;
-        }
-
-        let message = "cwd-msg",
-            previous = "cwd-prev",
-            visited = "cwd-visit"
-
-        async function showCookie() {
-            // references
-            const ele = document.querySelector('.elecookie');
-            let today = getDate();
-
-            // look for previous cookie
-            let cookieArr = document.cookie.split("; ")
-            // console.log("cookieArr", cookieArr)
-            let previousVisit = cookieArr
-                .find((row) => row.startsWith(visited + "="))
-                ?.split("=")[1];
-
-            // update previous
-            if (previousVisit) {
-                document.cookie = `${previous}=${previousVisit}; expires=${today.toUTCString()}; path=/`;
+                    url += `&ip=${geo.ip}`
+                    url += `&isp=${geo.asn.name}`
+                    url += `&city=${geo.city}`
+                    url += `&amp;region=${geo.region}`
+                    url += `&country=${geo.country_name}`
+                    url += `&flag=${geo.emoji_flag}`
+                    url += `&continent=${geo.continent_name}`
+                    url += `&lat=${geo.latitude}`
+                    url += `&lng=${geo.longitude}`
+                    url += `&timezone=${geo.time_zone.name}`
+                    url += `&amp;currency=${geo.currency.code}`
+                } catch (err) {
+                    console.log("err", err)
+                } finally {
+                    // console.log("url", url)
+                    elelink.innerHTML = `<a target="_blank" href="https://www.example.com/page?browser=${url}">${url}</a>`;
+                }
             }
-            // update others
-            document.cookie = `${message}=Hello!👋; expires=${today.toUTCString()}; path=/`;
-            document.cookie = `${visited}=${today.toUTCString()}; expires=${today.toUTCString()}; path=/`;
-
-            // get data for display in page
-            let str =
-                `${message}   = ${cookieArr
-                    .find((row) => row.startsWith(message + "="))
-                    ?.split("=")[1]} \n${previous}  = ${cookieArr
-                        .find((row) => row.startsWith(previous + "="))
-                        ?.split("=")[1]} \n${visited} = ${cookieArr
-                            .find((row) => row.startsWith(visited + "="))
-                            ?.split("=")[1]}`
-
-            ele.textContent = str;
-        }
 
 
-        async function showStorage() {
-
-            // references
-            const ele = document.querySelector('.elestorage');
-            let today = getDate();
-
-            // look for previous
-            let previousVisit = localStorage.getItem(visited);
-            // console.log("previousVisit", previousVisit);
-
-            // update previous
-            if (previousVisit) {
-                localStorage.setItem(previous, previousVisit);
+            async function showEntities() {
+                fetch('https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/entities.json')
+                    .then(resp => resp.json())
+                    .then(data => {
+                        if (!data) return;
+                        const eleentities = document.querySelector('.eleentities');
+                        eleentities.innerHTML = JSON.stringify(data, null, '&nbsp;');
+                    })
             }
-            // update others
-            localStorage.setItem(message, "Hello!🤣");
-            localStorage.setItem(visited, today.toUTCString());
 
-            // get data for display in page
-            let str = `${message}   = ${localStorage.getItem(message)}\n${previous}  = ${previousVisit}\n${visited} = ${localStorage.getItem(visited)}`
+            function getDate() {
+                let d = new Date();
+                d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+                return d;
+            }
 
-            ele.textContent = str;
-        }
+            let message = "cwd-msg",
+                previous = "cwd-prev",
+                visited = "cwd-visit"
+
+            async function showCookie() {
+                // references
+                const ele = document.querySelector('.elecookie');
+                let today = getDate();
+
+                // look for previous cookie
+                let cookieArr = document.cookie.split("; ")
+                // console.log("cookieArr", cookieArr)
+                let previousVisit = cookieArr
+                    .find((row) => row.startsWith(visited + "="))
+                    ?.split("=")[1];
+
+                // update previous
+                if (previousVisit) {
+                    document.cookie = `${previous}=${previousVisit}; expires=${today.toUTCString()}; path=/`;
+                }
+                // update others
+                document.cookie = `${message}=Hello!👋; expires=${today.toUTCString()}; path=/`;
+                document.cookie = `${visited}=${today.toUTCString()}; expires=${today.toUTCString()}; path=/`;
+
+                // get data for display in page
+                let str =
+                    `${message}   = ${cookieArr
+                        .find((row) => row.startsWith(message + "="))
+                        ?.split("=")[1]} \n${previous}  = ${cookieArr
+                            .find((row) => row.startsWith(previous + "="))
+                            ?.split("=")[1]} \n${visited} = ${cookieArr
+                                .find((row) => row.startsWith(visited + "="))
+                                ?.split("=")[1]}`
+
+                ele.textContent = str;
+            }
 
 
+            async function showStorage() {
 
-        async function main() {
+                // references
+                const ele = document.querySelector('.elestorage');
+                let today = getDate();
+
+                // look for previous
+                let previousVisit = localStorage.getItem(visited);
+                // console.log("previousVisit", previousVisit);
+
+                // update previous
+                if (previousVisit) {
+                    localStorage.setItem(previous, previousVisit);
+                }
+                // update others
+                localStorage.setItem(message, "Hello!🤣");
+                localStorage.setItem(visited, today.toUTCString());
+
+                // get data for display in page
+                let str = `${message}   = ${localStorage.getItem(message)}\n${previous}  = ${previousVisit}\n${visited} = ${localStorage.getItem(visited)}`
+
+                ele.textContent = str;
+            }
+
+
+            await showData();
             await showLink();
             await showEntities();
             await showCookie();
             await showStorage();
-        }
-        main();
+
+        })();
 
 
 
