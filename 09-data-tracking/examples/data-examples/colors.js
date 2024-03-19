@@ -1,0 +1,5 @@
+let colors = [
+	{ name: "red", hex: "ff0000", rgb: [255, 0, 0] },
+	{ name: "green", hex: "00ff00", rgb: [0, 255, 0] },
+	{ name: "blue", hex: "0000ff", rgb: [0, 0, 255] },
+];
