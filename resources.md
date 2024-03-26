@@ -199,6 +199,100 @@ If you are interested in computational, electronic, or generative literature/poe
 
 
 
+### Javascript Prototype
+
+Objects are commonly used to represent the properties and behaviors of entities in a programming model called **Object Oriented Programming (OOP)**. OOP languages use predefined classes and inheritance to derive behavior. For example, all objects of a car class will have wheels and headlights that turn on, which are inherited by its child classes that define more specific properties. 
+
+Javascript uses a(n arguably simpler) **prototype** pattern to define objects. When you create a new variable in Javascript it creates a new copy of the object prototype, cloning all its functionality and data. Javascript's prototype shares many of the OOP's benefits. For example, Javascript objects use **encapsulation** to group and identify similar information inside a single container (like formats for a color), and standardizes access to their properties. 
+
+Type an open and close curly brace in the DevTools Console to see the properties all objects receive from the prototype:
+
+```js
+{} 
+// -> [[Prototype]]: Object
+    constructor: ƒ Date()
+    hasOwnProperty: ƒ hasOwnProperty()
+    isPrototypeOf: ƒ isPrototypeOf()
+    ...
+```
+
+In the console, create a new object: 
+
+```js
+let color = {
+    name: "red",
+}
+```
+
+If you log the color value you can see the `name` property you creaded, as well as the constructor from the prototype:
+
+```js
+color
+// -> {name: "red"}
+    [[Prototype]]: Object
+        constructor: ƒ Date()
+        hasOwnProperty: ƒ hasOwnProperty()
+        isPrototypeOf: ƒ isPrototypeOf()
+        ...
+```
+
+If you type the constructor (the method in each object that creates itself) of any data type based on the object, like Date, you will again see the prototype functions listed below the functions (ƒ) specific to that object.
+
+```js
+new Date()
+    // -> constructor: ƒ Date()
+    getDate: ƒ getDate()
+    getDay: ƒ getDay()
+    getFullYear: ƒ getFullYear()
+    ...
+    [[Prototype]]: Object
+        constructor: ƒ Date()
+        ...
+```
+
+
+### Install Node
+
+Here's a basic install process for Node.js. While you can download and run a [prebuilt installer](https://nodejs.org/en/download) we prefer using NVM (Node Version Manager) to let you manage and upgrade your installation later:
+
+1. Install NVM with Homebrew (Mac only) or run the [Node NVM install scripts](https://nodejs.org/en/download/package-manager) (all platforms) one line at a time on the command line.
+
+```bash
+# installs NVM (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+
+2. Use NVM to install Node
+
+```bash
+# download and install Node.js
+nvm install 20
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.11.1`
+# verifies the right NPM version is in the environment
+npm -v # should print `10.2.4`
+```
+
+3. Create a project directory and change to it: 
+
+```bash
+mkdir hello-node & cd hello-node
+```
+
+4. Create a file in this folder named `index.js` and paste the below code.
+
+```js
+let greeting = "Hello, from Node";
+console.log(greeting);
+```
+
+5. In the Terminal, run the script with: 
+
+```bash
+node index.js
+```
+
+
 
 
 ## 10-Design & Power
