@@ -147,7 +147,13 @@ See these sites and texts for more inspiring examples of generative design:
 - Generative Design: Visualize, Program, and Create with JavaScript in p5.js, 2nd Edition (2018) https://generative-gestaltung.de
 - Form+Code in Design, Art, and Architecture (2010) https://formandcode.com 
 - Generative design tutorials and examples https://generativeartistry.com/ 
-- Google Experiments https://experiments.withgoogle.com/  
+- Google Experiments https://experiments.withgoogle.com/ 
+
+
+### Creative Coding Tools
+
+- Two.js https://two.js.org (Jonathan "Jono" Brandel) is a two-dimensional drawing library for the web that also lets you output graphics to the page using SVG, HTML Canvas, and WebGL. See his [codepen](https://codepen.io/jonobr1/) for [inspiring examples](https://codepen.io/jonobr1/pen/MWaeWRr) [created using two.js](https://codepen.io/jonobr1/pen/qBONdKX)
+- Three.js https://threejs.org (Ricardo Cabello) is a 3D graphics library for the web using JS and WebGL. This framework, and Cabello's (“mrdoob”) personal work, is rooted in the early generative visualizations of the DemoScene and Flash. See his [work](https://mrdoob.com/#/117/fire) at https://mrdoob.com
 
 
 ### Flash
@@ -175,12 +181,12 @@ If you are interested in computational, electronic, or generative literature/poe
 
 ### Generative Interfaces
 
+Example generative art and design web interfaces
+
 - The NSynth Sound Maker (2017) by Yotam Mann https://experiments.withgoogle.com/sound-maker
 - Pixeldudesmaker by 0x72 https://0x72.itch.io/pixeldudesmaker
 - itch.io is popular for publishing indie games, but also showcases an impressive collection of procedural generators https://itch.io/tools/tag-procedural 
 - Pippen Barr https://pippinbarr.com/itisasifyouweredoingwork/
-
-
 
 
 
