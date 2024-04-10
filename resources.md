@@ -2,19 +2,14 @@
 <!-- https://bit.ly/cwd-resources -->
 
 
+A collection of related content, references, and inspiration to accompany the book.
+
 
 
 
 ## 0-Introduction
 
 
-### Related Content
-
-
-### References
-
-
-### Inspiration
 
 
 
@@ -37,13 +32,6 @@ A list of manifestos by / for artists, designers, and engineers:
 
 
 
-### Related Content
-
-
-### References
-
-
-### Inspiration
 
 
 
@@ -51,13 +39,7 @@ A list of manifestos by / for artists, designers, and engineers:
 ## 2-View Source
 
 
-### Related Content
 
-
-### References
-
-
-### Inspiration
 
 
 
@@ -66,13 +48,7 @@ A list of manifestos by / for artists, designers, and engineers:
 ## 3-Critical Design
 
 
-### Related Content
 
-
-### References
-
-
-### Inspiration
 
 
 
@@ -81,13 +57,7 @@ A list of manifestos by / for artists, designers, and engineers:
 ## 4-On the Grid
 
 
-### Related Content
 
-
-### References
-
-
-### Inspiration
 
 
 
@@ -96,13 +66,7 @@ A list of manifestos by / for artists, designers, and engineers:
 ## 5-Usability & Forms
 
 
-### Related Content
 
-
-### References
-
-
-### Inspiration
 
 
 
@@ -111,13 +75,7 @@ A list of manifestos by / for artists, designers, and engineers:
 ## 6-Off the Grid
 
 
-### Related Content
 
-
-### References
-
-
-### Inspiration
 
 
 
@@ -126,7 +84,7 @@ A list of manifestos by / for artists, designers, and engineers:
 ## 7-Ethical Design
 
 
-### Related Content
+
 
 
 ### Accessibility Testing Tools
@@ -140,13 +98,6 @@ A list of accessibility testing tools that we found to be helpful and intuitive:
 
 
 
-### References
-
-
-### Inspiration
-
-
-
 
 
 
@@ -154,13 +105,7 @@ A list of accessibility testing tools that we found to be helpful and intuitive:
 ## 8-Generative Design
 
 
-### Related Content
 
-
-### References
-
-
-### Inspiration
 
 
 ### Generative Art & Design
@@ -220,13 +165,6 @@ Example generative art and design web interfaces
 ## 9-Data Tracking
 
 
-### Related Content
-
-
-### References
-
-
-### Inspiration
 
 
 
@@ -329,13 +267,7 @@ node index.js
 ## 10-Design & Power
 
 
-### Related Content
 
-
-### References
-
-
-### Inspiration
 
 
 
@@ -344,13 +276,7 @@ node index.js
 ## 11-Distribution
 
 
-### Related Content
 
-
-### References
-
-
-### Inspiration
 
 
 
