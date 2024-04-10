@@ -23,6 +23,20 @@
 ## 1-Networks
 
 
+
+
+### Design Manifestos
+
+A list of manifestos by / for artists, designers, and engineers:
+
+- https://molleindustria.org/files/BIG-DATA.html 
+- https://designmanifestos.org 
+- https://designmanifestos.org/first-things-first-a-manifesto-2020-edition/ 
+- https://antisoftware.club/manifesto.html 
+- https://criticalengineering.org 
+
+
+
 ### Related Content
 
 
