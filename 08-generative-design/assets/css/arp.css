@@ -1,0 +1,24 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #22252C;
+}
+
+/* keep the controls outside the flow and visible regardless how the visualization unfolds */
+.controls {
+    position: absolute;
+    z-index: 999;
+    background-color: rgb(24, 26, 31);
+    color: #ccc;
+    padding: 5px;
+    margin: 12px;
+    border-radius: 3px;
+}
+
+.controls label {
+    vertical-align: 4px;
+    font-family: system-ui;
+    font-size: 12px;
+}
