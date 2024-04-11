@@ -28,16 +28,16 @@
         function generate() {
             let output = '';
             let count = randomInt(6, 12);
+            let size = window.innerWidth * .12;
 
-            let winW = window.innerWidth,
-                winH = window.innerHeight;
 
             for (let i = 0; i < count; i++) {
                 // parameters
-                let h = randomInt(winH * .1, winH * .3),
-                    w = randomInt(h * .8, h * 1.2),  
-                    x = randomInt(winW * .2, winW * .8) - (w * .5),
-                    y = randomInt(winH * .2, winH * .8) - (h * .5);
+                let w = randomInt(size * .8, size * 1.2),
+                    h = randomInt(size * .8, size * 1.2);
+
+                let x = randomInt(window.innerWidth * .2, window.innerWidth * .8) - (w * .5),
+                    y = randomInt(window.innerHeight * .2, window.innerHeight * .8) - (h * .5);
 
                 let style = `
                     position: absolute;
@@ -47,8 +47,7 @@
                     height: ${h}px;
                     background-color:${randomHex()};
                 `;
-                output += `<div style="${style}"></div>
-                `;
+                output += `<div style="${style}"></div>`;
             }
             // display
             viz.innerHTML = output;
