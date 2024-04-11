@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>After Jean Arp - 8.2-start</title>
+
+    <!-- 
+    Title: After Jean Arp - Module 1 (finished) / Module 2 (start)
+    References: https://www.moma.org/collection/works/37013
+    Author: Owen Mundy
+    Date: 2023
+    License: MIT
+    -->
+
+    <style></style>
+</head>
+<body>
+
+    <main></main>
+
+    <script>
+
+        // global
+        let viz = document.querySelector("main");
+
+        // generate
+        function generate() {
+            let output = '';
+            let count = randomInt(6, 12);
+
+            let base = window.innerWidth * .14;
+
+
+            for (let i = 0; i < count; i++) {
+                // parameters
+                let w = randomInt(base * .8, base * 1.2),
+                    h = randomInt(base * .8, base * 1.2);
+
+                let x = randomInt(window.innerWidth * .2, window.innerWidth * .8) - (w * .5),
+                    y = randomInt(window.innerHeight * .2, window.innerHeight * .8) - (h * .5);
+
+                let style = `
+                    position: absolute;
+                    transform: translate(${x}px,${y}px)
+                        rotate(${randomInt(-1, 1)}deg);
+                    width: ${w}px;
+                    height: ${h}px;
+                    background-color:${randomHex()};
+                `;
+                output += `<div style="${style}"></div>
+                `;
+            }
+            // display
+            viz.innerHTML = output;
+            // console.log(output);
+        }
+
+        // helpers
+        function randomInt(min = 1, max = 100) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function randomHex() {
+            let hex = "", chars = "0123456789abcdef";
+            for (let i = 0; i < 6; i++) {
+                hex += chars[randomInt(0, chars.length - 1)];
+            }
+            return "#" + hex;
+        }
+
+        // listeners
+        window.addEventListener("load", generate);
+        document.addEventListener("click", generate);
+
+
+    </script>
+
+</body>
+</html>
