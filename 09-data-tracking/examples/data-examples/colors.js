@@ -1,5 +1,6 @@
 let colors = [
-	{ name: "red", hex: "ff0000", rgb: [255, 0, 0] },
-	{ name: "green", hex: "00ff00", rgb: [0, 255, 0] },
-	{ name: "blue", hex: "0000ff", rgb: [0, 0, 255] },
+    { id: "cyan", hex: "00ffff", rgb: [0, 255, 255] },
+    { id: "magenta", hex: "ff00ff", rgb: [255, 0, 255] },
+    { id: "yellow", hex: "ffff00", rgb: [255, 255, 0] },
+    { id: "black", hex: "000000", rgb: [0, 0, 0] }
 ];
