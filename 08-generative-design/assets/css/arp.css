@@ -6,6 +6,8 @@ body {
     background-color: #22252C;
 }
 
+div { position: absolute; }
+
 /* keep the controls outside the flow and visible regardless how the visualization unfolds */
 .controls {
     position: absolute;
