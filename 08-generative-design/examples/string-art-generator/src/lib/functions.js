@@ -8,7 +8,7 @@ export const shuffleArray = (_arr) => {
 	return _arr;
 };
 export const randomHex = () =>
-	"#" + Math.floor(Math.random() * 16777215).toString(16);
+	Math.floor(Math.random() * 16777215).toString(16);
 
 export const randomInt = (min = 0, max = 1) =>
 	Math.floor(Math.random() * (max - min + 1)) + min;

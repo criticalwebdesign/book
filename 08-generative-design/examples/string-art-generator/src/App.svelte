@@ -8,7 +8,7 @@ License: MIT
 <script>
 	import * as F from "./lib/functions.js";
 	let title = "String Art Generator",
-		str = "",
+		str = title,
 		arr;
 
 	let w = 70,
@@ -85,7 +85,7 @@ License: MIT
                 https://svelte.dev/docs/element-directives#style-property -->
 				<div
 					class="char"
-					style:color={F.randomHex()}
+					style:color="#{F.randomHex()}"
 					style:left="{F.randomInt(45 - w / 2, 40 + w / 2)}%"
 					style:top="{F.randomInt(50 - h / 2, 40 + h / 2)}%"
 					style:transform="rotate({F.randomInt(0, 360)}deg)"
@@ -116,24 +116,12 @@ License: MIT
 			<!-- tutorial -->
 			<div>
 				<label class="note" for="fmin">font--</label>
-				<input
-					id="fmin"
-					type="range"
-					min=".5"
-					max="100"
-					bind:value={fmin}
-				/>
+				<input id="fmin" type="range" min=".5" max="100" bind:value={fmin} />
 				<span class="digit">{fmin}</span>
 				<br />
 
 				<label class="note" for="fmax">font++</label>
-				<input
-					id="fmax"
-					type="range"
-					min=".5"
-					max="100"
-					bind:value={fmax}
-				/>
+				<input id="fmax" type="range" min=".5" max="100" bind:value={fmax} />
 				<span class="digit">{fmax}</span>
 			</div>
 

@@ -102,7 +102,7 @@
                     max = 1.1;
 
                 // CIRCLE
-                // output += `<circle r="${randomInt(5, 30)}" fill="${randomHex()}" cx="${x}" cy="${y}"></circle> `;
+                // output += `<circle r="${randomInt(5, 30)}" fill="#${randomHex()}" cx="${x}" cy="${y}"></circle> `;
 
                 // POLYGON
                 // create points to define polygon [x1,y1 x2,y2 x3,y3 x4,y4] 
@@ -130,7 +130,7 @@
             for (let i = 0; i < 6; i++) {
                 hex += chars[randomInt(0, chars.length - 1)];
             }
-            return "#" + hex;
+            return hex;
         }
         function randomFromArray(arr) {
             return arr[Math.floor(Math.random() * arr.length)];

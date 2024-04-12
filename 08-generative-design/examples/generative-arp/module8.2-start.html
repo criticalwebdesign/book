@@ -13,7 +13,6 @@
     License: MIT
     -->
 
-    <style></style>
 </head>
 <body>
 
@@ -45,7 +44,7 @@
                         rotate(${randomInt(-1, 1)}deg);
                     width: ${w}px;
                     height: ${h}px;
-                    background-color:${randomHex()};
+                    background-color:#${randomHex()};
                 `;
                 output += `<div style="${style}"></div>`;
             }
@@ -63,7 +62,7 @@
             for (let i = 0; i < 6; i++) {
                 hex += chars[randomInt(0, chars.length - 1)];
             }
-            return "#" + hex;
+            return hex;
         }
 
         // listeners

@@ -70,7 +70,7 @@ function randomHexFromString() {
  *  https://gomakethings.com/a-better-way-to-generate-a-random-color-with-vanilla-js/
  */
 function randomHex() {
-	return "#" + Math.floor(Math.random() * 16777215).toString(16);
+	return Math.floor(Math.random() * 16777215).toString(16);
 }
 /**
  *  Return a random index from the array
