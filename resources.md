@@ -149,6 +149,29 @@ If you are interested in computational, electronic, or generative literature/poe
 - Taper https://taper.badquar.to/
 
 
+
+### Generative Design in Games
+
+- https://gigl.scs.carleton.ca/sites/default/files/ling_xu/treemodelingwithguidingvectors.pdf
+- https://www.google.com/search?q=procedural+generation&tbm=isch
+- https://taper.badquar.to/2/tty.html
+- https://en.wikipedia.org/wiki/Development_of_No_Man%27s_Sky
+- https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+- https://en.wikipedia.org/wiki/Boids
+
+
+### Demoscene
+
+Another important influence on the history and practice of generative art is the demoscene, a subculture of hackers, clubs, and competitions (a.k.a. demoparties) (Figure 8.x) that blended creativity, hacking, and hardware testing. Emerging in Europe during the 1980s, demos were small self-contained computer programs written to test computer hardware capabilities using the most intense algorithmically-generated graphics and audio effects of the time. Typical competition categories restricted the size of the demo's executable, the compiled code packaged into a single file, by overall size (e.g. 1k, 4k, or 64k), and platform (8-bit like Atari or Commodore 64 or 16 bit Amiga). While the results (like "[PC DOS Demoscene mix](https://www.youtube.com/watch?v=O4T7pIs--LA)" or "[Hologon by The Electronic Knights [Amiga 500]](https://www.youtube.com/watch?v=pYtleuGV7ok)") might appear simplistic today, their output can be appreciated for their technical and artistic constraints when considering the abundant limitations on their hardware and access to programming resources (Stinson, Liz. “[The Ever-Changing Art of the Screensaver.](https://eyeondesign.aiga.org/the-ever-changing-art-of-the-screensaver/)” in Eye on Design).  
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Assembly2004-areena01.jpg">
+
+Caption: Hackers gathered in an ice rink during the 2004 Assembly demoscene party in Finland https://commons.wikimedia.org/wiki/File:Assembly2004-areena01.jpg 
+
+
+
+
 ### Generative Interfaces
 
 Example generative art and design web interfaces
