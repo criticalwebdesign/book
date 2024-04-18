@@ -303,7 +303,12 @@
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>A <b>tracker</b> is any code that collects data on users. The Ghostery tracker blocker describes 16 categories of trackers, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that manipulate or sell your data are most certainly not. Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and Twitter buttons, Youtube video). However, most tracker code is hidden unless you examine the source code or use DevTools to see how they are storing information about you.</p>
+                        <p>A <b>tracker</b> is any code that collects data on users. The Ghostery tracker blocker describes 16 categories of trackers, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
+                        
+                        <ol>
+                            <li>Examine the examples. Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and Twitter buttons, Youtube video). </li>
+                            <li>View the source code of this page. Most tracker code is hidden unless you look at the code or use DevTools to see how they are storing information about you.</li>
+                        </ol>
 
                     </div>
                 </div>
@@ -396,14 +401,14 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            <b>Cookies</b> are used by websites to store information in your browser. Cookies can be created using Javascript or a web server, store any text up to 4 kilobytes (about 2000 words), and are only accessible by the website that created the cookie. Without cookies enabled websites won't know you are logged in or store your preferences. However, cookies also let sites track you, even if they only know you by this identifier.
+                            <b>Cookies</b> are used by websites to store information in your browser. Cookies <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">can be created using Javascript or a web server using the Set-Cookie header</a>, can store any text up to 4 kilobytes (about 2000 words), and are only accessible by the website that created the cookie. Without cookies enabled websites won't know you are logged in or store your preferences. However, cookies also let sites track you, even if they only know you by this identifier.
                         </p>
 
                         <ol>
                             <li>Open DevTools > Applications and then expand Cookies (under Storage on the left) to see the domains that have set cookies on this page. </li>
-                            <li>Select the domain: omundy.github.com and look for cookies prefixed with <code>cwd</code> Example 4-1 shows the same data (when you visited this page). Refresh the page to update the date in both locations. </li>
-                            <li>All other cookies are set by the resources and embedded scripts on this page. For example, <code>_ga</code> is the identifier for Google Analytics. Try deleting them and reloading the page to see what happens.</li>
+                            <li>Select the domain: omundy.github.com and look for cookies prefixed with <code>cwd</code> Example 4-1 shows this data (when you visited this page). Refresh the page to update the date. Try deleting the cookie and reloading the page to see what happens.</li>
                             <li>Set your own cookie by running the code in Example 4-2 in the DevTools console.</li>
+                            <li>Visit <a href="https://stickyscreen.org" target="_blank">https://stickyscreen.org</a> and edit the content in the note. Close the page and open it again to see the text it "remembered" (stored in cookies) </li>
                         </ol>
 
                         <details>
@@ -460,13 +465,13 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            The Web Storage API is a better method for storing information in the browser, using a key to make it easy to retrieve or update.
+                            The Web Storage API associates data values with keys (like JSON) to make it easier to retrieve or update data in the browser.
                         </p>
 
                         <ol>
                             <li>In DevTools > Applications, expand Local Storage.</li>
-                            <li>Select the domain: omundy.github.com and look for records prefixed with <code>cwd</code> Example 5-1 shows the same data (when you visited this page). Refresh the page to update the date in both locations. </li>
-                            <li>All other items in Local Storage are set by the resources and embedded scripts on this page. As with cookies, you can edit or delete the data stored in Local Storage.</li>
+                            <li>Select the domain: omundy.github.com and look for records prefixed with <code>cwd</code> Example 5-1 shows this data (when you visited this page). Refresh the page to update the date. Try deleting the row and reloading the page to see what happens.</li>
+                            <li>Set your own items in localStorage by running the code in Example 5-2 in the DevTools console. As with cookies, you can edit or delete the data stored in Local Storage.</li>
                             <li>Check out <a href="https://www.nytimes.com/games/wordle" target="_blank">Wordle</a> to see if you can figure out how it stores your game progress using Local Storage (hint: look for a key named <code>nyt-wordle-moogle</code>).</li>
 
                         </ol>
@@ -501,9 +506,9 @@
                         5-2 Set your own values using the console and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">localStorage</a>
                     </div>
                     <div class="card-body">
-                        <code>localStorage.setItem("hello", "world!")</code>
-                        <code>localStorage.getItem("hello")</code>
-                        <code class="comment">//-> "world!"</code>
+                        <code>localStorage.setItem("abc", 123)</code>
+                        <code>localStorage.getItem("abc")</code>
+                        <code class="comment">//-> 123</code>
                     </div>
                 </div>
 
@@ -525,27 +530,19 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            The one data point that can't be directly accessed from your online activity is your identity. This doesn't stop trackers from trying to find it, or creating one for you even if they don't know your real name. Whether you are logged in or not, websites create various tokens and GUIDs (generic user ids) to identify and allow you access to specific pages, or collect your data to manipulate your behavior.
+                            One data point that can't be directly accessed from your online activity is your identity. When you login to a web service (that presumably knows your name) a unique string of characters called a <b>token</b> is saved inside a cookie in your client. The cookie is sent with every request to that service to identify you and connect your activity across each browser and device. You won't, for example, have to repeatedly enter your name and password across every page of that site, and the site will customize your experience using your activity. Your YouTube recommendations and history (and targeted ads) across devices will be the same. This is called <b>deterministic tracking</b>. 
                         </p>
 
-                        <!-- 
+                        <p>
+                            A tracker attempting to collect your data may not know your real name but it won't stop them from creating a profile for you and assigning tracking IDs to match your activity. Whether you are logged in or not, <b>cross-device tracking</b> can connect you to your activity and manipulate your behavior across all your browsers, apps, and devices. For example, if you click a link in an email or webpage with link tracking parameters it can link your profiles, even anonymous profiles, across devices. 
+                        </p>
+            
                         <ol>
-                            <li>Open DevTools > Applications > Storage</li>
-                            <li>Expand Cookies and select <code>.facebook.com</code> or <code>.twitter.com</code> to see stored data.</li>
-                            <li>Expand Local storage and select <code>.facebook.com</code> or <code>.twitter.com</code> to see stored data.</li>
+                            <li>All other cookies and items in local storage are set by the resources and embedded scripts on this page. Look for the following identifiers in DevTools > Applications (for some of these you may need to be logged into that service)</li>
+                            <li>Example 6-1: <code>_fbc</code> is the name used by the cookie for the Meta Tracking Pixel (see below) used by Facebook and others to track users across the web.</li>
+                            <li>Example 6-2: <code>_ga</code> is an identifier used by Google Analytics to track users. </li>
+                            <li>Example 6-3: Explore other identifiers set by <a href="https://help.twitter.com/en/rules-and-policies/x-cookies" target="_blank">Twitter</a> and others in DevTools.</li>
                         </ol>
-
-
-
-                        <p>YouTube and other embedded media can also access your data.</p>
-
-                        <ol>
-                            <li>Open DevTools > Applications</li>
-                            <li>Expand Storage > Cookies</li>
-                            <li>Select the cookie with the name _ga (Google Analytics)</li>
-                        </ol> -->
-
-
 
                     </div>
                 </div>
@@ -554,7 +551,7 @@
 
                 <div class="card dark">
                     <div class="card-header">
-                        4-1 Meta Tracking Pixel Cookie Identifier
+                        6-1 Meta Tracking Pixel Cookie Identifier
                     </div>
                     <div class="card-body">
                         <code class="elefb"></code>
@@ -563,10 +560,60 @@
 
                 <div class="card dark mt-3">
                     <div class="card-header">
-                        4-2 Google Analytics Cookie Identifier
+                        6-2 Google Analytics Cookie Identifier
                     </div>
                     <div class="card-body">
                         <code class="elega"></code>
+                    </div>
+                </div>
+
+                <div class="card dark mt-3">
+                    <div class="card-header">
+                        6-3 Other Identifiers
+                    </div>
+                    <div class="card-body">
+                        <code>😎 These are set by other domains in DevTools > Applications.</code>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row mt-5">
+            <div class="col-12 col-md-7">
+                <div class="row">
+                    <div class="col-12 col-xl-3">
+                        <h4><span class="num">7.</span> Browser Fingerprinting</h4>
+                    </div>
+                    <div class="col-12 col-xl-9 mb-3">
+
+                        <p>
+                            With the web progressively being less accepting of third party cookies, even if you are not logged-into a service and careful about your actions, companies can still use <b>probabilistic tracking</b> to identify you from your anonymous activity. By using <b>browser fingerprinting</b> to consider collections of unique attributes about user devices (like browser version, device type, operating system, IP addresses, browsing patterns, and more) this algorithmically-enhanced method employed by most ad targeting campaigns has "a 97.3 percent chance of accurately identifying users across devices." Much like many other methods listed above, this tactic is invisible, yet requires no cookies or embedded code to identify your activity across the web
+                        </p>
+
+                        <ol>
+                            <li>To see your "fingerprint" visit: <a href="https://amiunique.org" target="_blank">amiunique.org</a></li>
+                            <li>Learn how to cover your tracks: <a href="https://coveryourtracks.eff.org/" target="_blank">coveryourtracks.eff.org</a> </li>
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+
+                <!-- Resources:
+                https://www.avast.com/c-what-is-browser-fingerprinting
+                -->
+                <div class="card dark mt-3">
+                    <div class="card-header">7-1 Browser fingerprinting</div>
+                    <div class="card-body empty">
+
+                        <code>Nothing to see here. 😎 This method is invisible.</code>
+
                     </div>
                 </div>
 
@@ -580,18 +627,24 @@
 
 
 
-
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">7.</span> Meta Tracking Pixel</h4>
+                        <h4><span class="num">8.</span> Meta Tracking Pixel</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            You can't see it because it's invisible, but this 1x1 pixel image, a.k.a. the Meta Tracking Pixel is one of the sneakiest forms of tracking out there. It works on emails
+                            You can't see it because it's invisible, but this 1x1 pixel image is one of the sneakiest forms of tracking out there. A <b>Tracking pixels</b> are image files that use request headers to collect data and identify users. They don't need Javascript to run and can even inform marketers when and whether you opened their emails. 
                         </p>
+
+                        <ol>
+                            <li>Right click on the broken image link in example 8-1 and Open Image in New Tab.</li>
+                            <li>Open DevTools > Network, reload the page, and select the first resource.</li>
+                            <li>If you are not logged into a Facebook account then click on the Headers tab to see all the data in the header that will be used to "fingerprint" you.</li>
+                            <li>If you are logged-into a Facebook account you will also see a Cookies tab with all the data your browser sent with this request. You can confirm it's linked to your identity by copying and pasting the value of the <code>c_user</code> field (your Facebook ID) after https://facebook.com/<c_user> in a browser.</li>
+                        </ol>
 
                     </div>
                 </div>
@@ -607,7 +660,7 @@
 
 
                 <div class="card dark mt-3">
-                    <div class="card-header">Owen's Tracking Pixel</div>
+                    <div class="card-header">8-1 Owen's Tracking Pixel</div>
                     <div class="card-body empty">
 
                         <!-- Owen's Tracking Pixel -->
@@ -627,10 +680,10 @@
                             fbq('init', '893511094044886');
                             fbq('track', 'PageView');
                         </script>
-                        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" /></noscript>
+                        
                         <!-- End Meta Pixel Code -->
 
-                        <code>Nothing to see here. 😎 This method is invisible.</code>
+                        <code>😎 This tracking pixel <img height="25" width="25" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" /> has been edited so you can click on it.</code>
 
                     </div>
                 </div>
@@ -639,40 +692,11 @@
         </div>
 
 
-        <div class="row mt-5">
-            <div class="col-12 col-md-7">
-                <div class="row">
-                    <div class="col-12 col-xl-3">
-                        <h4><span class="num">8.</span> Browser Fingerprinting</h4>
-                    </div>
-                    <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Browser fingerprinting (a.k.a. "Device Fingerprinting") is a way to track your activity by storing a list of all the attributes of your browser and device that, when considered together, are specific enough that you can be reliably identified out of a crowd of other users. Much like many other methods listed above, this tactic is invisible, yet requires no cookies or embedded code to identify your activity across the web.</p>
 
-                        <ol>
-                            <li>To see your "fingerprint" visit: <a href="https://amiunique.org" target="_blank">amiunique.org</a></li>
-                            <li>Learn how to cover your tracks: <a href="https://coveryourtracks.eff.org/" target="_blank">coveryourtracks.eff.org</a> </li>
-                        </ol>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-5">
 
-                <!-- Resources:
-                https://www.avast.com/c-what-is-browser-fingerprinting
-                -->
-                <div class="card dark mt-3">
-                    <div class="card-header">Browser fingerprinting</div>
-                    <div class="card-body empty">
 
-                        <code>Nothing to see here. 😎 This method is invisible.</code>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
 
 
 
