@@ -18,7 +18,7 @@
     <!-- Open Graph tags for FB link previews
     https://developers.facebook.com/docs/sharing/webmasters -->
     <meta property="og:url" content="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="Critical Web Design - Tracking the Trackers" />
     <meta property="og:description" content="Explore how others store and access your data to track and manipulate you across different websites, browsers, and devices." />
     <meta property="og:image" content="https://omundy.github.io/critical-web-design-book/assets/img/previews/09/rick-roll.png" />
@@ -316,19 +316,21 @@
                     <div class="card-body">
 
                         <!-- Resources:
+                        https://developers.facebook.com/docs/plugins/like-button
                         https://developers.facebook.com/docs/plugins/share-button/
                         -->
+                        <!-- Load Facebook SDK for JavaScript -->
                         <div id="fb-root"></div>
-                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0&appId=189746494413987" nonce="Q1uUfeVv"></script>
-
+                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0&appId=321840702000287" nonce="B6IcNbvD"></script>
+                        <!-- Your like button code -->
+                        <div class="fb-like" data-href="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-width="" data-layout="button_count" data-action="like" data-size="large"></div>
                         <!-- Your share button code -->
-                        <div class="fb-share-button" data-href="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-layout="button_count" data-size="large">
-                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fomundy.github.io%2Fcritical-web-design-book%2F09-data-tracking%2Fexamples%2Ftrackers.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-                        </div>
+                        <div class="fb-share-button" data-href="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-layout="button_count" data-size="large"></div>
+
 
 
                         <span style="vertical-align: -6px; margin-left: 10px;">
-                            <!-- Resources:
+                        <!-- Resources:
                         https://developer.twitter.com/en/docs/twitter-for-websites/web-intents/overview
                         https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview
                         -->
