@@ -26,6 +26,7 @@
 
     <style>
         :root {
+            --code: #38B3C2;
             --code-bg: #282C34;
         }
 
@@ -42,6 +43,15 @@
             background-color: var(--code-bg);
             font-size: 1rem;
         } */
+
+
+        code:not(.card-body code) {
+            /* color: var(--code); */
+            background-color: #eee;
+            display: inline-block;
+            padding: 0px 4px;
+            border-radius: 4px;
+        }
 
         .card.dark {
             background-color: #282C34;
@@ -83,10 +93,6 @@
 
         /* dark */
 
-        .dark .card-body code {
-            color: #38B3C2;
-        }
-
         .dark .card-header {
             color: var(--bs-gray-300);
             border-bottom-color: var(--bs-gray-600);
@@ -94,6 +100,10 @@
 
         .dark .card-body {
             background-color: var(--code-bg);
+        }
+
+        .dark .card-body code {
+            color: var(--code);
         }
 
         .dark .card-footer {
@@ -109,11 +119,34 @@
             width: 11px;
             height: 11px;
             margin-left: 4px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+            background-image: url(../../assets/img/icons/icon-link-round-thin.svg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
             display: inline-block;
+        }
+
+        .dark a[target="_blank"]::after {
+            content: "";
+            width: 11px;
+            height: 11px;
+            margin-left: 4px;
+            background-image: url(../../assets/img/icons/icon-link-round-thin-white.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+        }
+
+
+
+
+        .alert {
+            padding: .5rem 1rem .5rem 1rem;
+        }
+
+        .alert-dismissible {
+            padding-right: 2rem;
         }
     </style>
 </head>
@@ -130,7 +163,13 @@
 
                 <p>Use DevTools to explore how trackers and other embedded scripts collect, store, and identify your data in the browser. </p>
 
-                <small class="d-block mt-2">⚠️ This page contains several web tracking methods and is for testing only. We don't save any information, but the trackers on the page probably will. Opening it in an incognito window with ad and / or tracker blockers disabled will allow you to see most results.</small>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <small>
+                        <strong>⚠️ Surveillance detected!</strong> This page contains several web tracking methods and for testing only. We don't save any information, but the trackers on the page probably will. Open it in an incognito window with ad/tracker blockers disabled will allow you to see most results.
+                    </small>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
             </div>
         </div>
 
@@ -153,11 +192,11 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">1</span> Your Data</h4>
+                        <h4><span class="num">1.</span> Your Data</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Websites can access a lot of information about visitors thanks to basic browser functionality and data sent via request headers. </p>
+                        <p>Websites can access a lot of information about visitors using only Javascript and request headers. </p>
 
                         <ol>
                             <li>Example 1-1 shows data from the <code>window.navigator</code> Javascript object. Run it in the console to see more.</li>
@@ -196,11 +235,11 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">2</span> Link Tracking</h4>
+                        <h4><span class="num">2.</span> Link Tracking</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Link tracking is easy to spot and avoid. When you click an ad or share a website extra URL parameters (see Module 5.3), like <code>utm_source</code>, <code>utm_campaign</code>, are added to the end of the link. These parameters can pass data about your activity to analytics and advertising tools to track the effectiveness of marketing campaigns.</p>
+                        <p>Link tracking is easy to spot and avoid. When you click an ad or share a website extra URL parameters, like <code>utm_source</code>, <code>utm_campaign</code>, are added to the end of the link. These parameters can pass data about your activity to analytics and advertising tools to track the effectiveness of marketing campaigns.</p>
 
                         <ol>
                             <li>Examine the two example URLs containing link tracking parameters. Example 2-1 is a common use. Example 2-2 shows how these could share data about you.</li>
@@ -209,8 +248,12 @@
 
                         <details>
                             <summary>More Details</summary>
-                            <small class="d-block mt-2">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
-                            <small class="d-block mt-2">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/" target="_blank">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
+                            <div class="alert alert-warning" role="alert">
+                                <small class="d-block">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <small class="d-block">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/" target="_blank">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
+                            </div>
                         </details>
 
                     </div>
@@ -255,7 +298,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">3</span> Common Trackers</h4>
+                        <h4><span class="num">3.</span> Common Trackers</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -345,7 +388,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">4</span> Cookies</h4>
+                        <h4><span class="num">4.</span> Cookies</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -362,9 +405,15 @@
 
                         <details>
                             <summary>More Details</summary>
-                            <small class="d-block mt-2">⚠️ If you click on the other domains in DevTools > Cookies you will see others set by all the embedded examples.</small>
-                            <small class="d-block mt-2">⚠️ Any cookie can be edited or deleted. Delete a cookie set by this page and refresh to see them again. If you delete a cookie used for authentication you may need to login again.</small>
-                            <small class="d-block mt-2">⚠️ Cookies containing unique IDs are sent with internet requests. To see the requests, in DevTools > Network > Select a resource and click on the Headers tab and scroll to the Request Headers. If cookies are sent a Cookies tab will show the total list of cookies. Select different requests on the left and you will notice even requests for image files will include cookies.</small>
+                            <div class="alert alert-warning" role="alert">
+                                <small class="d-block">⚠️ If you click on the other domains in DevTools > Cookies you will see others set by all the embedded examples.</small>
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <small class="d-block">⚠️ Any cookie can be edited or deleted. Delete a cookie set by this page and refresh to see them again. If you delete a cookie used for authentication you may need to login again.</small>
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <small class="d-block">⚠️ Cookies containing unique IDs are sent with internet requests. To see the requests, in DevTools > Network > Select a resource and click on the Headers tab and scroll to the Request Headers. If cookies are sent a Cookies tab will show the total list of cookies. Select different requests on the left and you will notice even requests for image files will include cookies.</small>
+                            </div>
                         </details>
 
                     </div>
@@ -403,7 +452,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">5</span> Local Storage</h4>
+                        <h4><span class="num">5.</span> Local Storage</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -421,8 +470,12 @@
 
                         <details>
                             <summary>More Details</summary>
-                            <small class="d-block mt-2">⚠️ Click on other domains in DevTools > Local Storage to see the data set by the embedded examples.</small>
-                            <small class="d-block mt-2">⚠️ Any row can be edited or deleted. If you delete a row used for authentication you may need to login again.</small>
+                            <div class="alert alert-warning" role="alert">
+                                <small class="d-block">⚠️ Click on other domains in DevTools > Local Storage to see the data set by the embedded examples.</small>
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <small class="d-block">⚠️ Any row can be edited or deleted. If you delete a row used for authentication you may need to login again.</small>
+                            </div>
                         </details>
 
                     </div>
@@ -464,7 +517,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">6</span> Your Identity</h4>
+                        <h4><span class="num">6.</span> Your Identity</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -529,7 +582,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">7</span> Meta Tracking Pixel</h4>
+                        <h4><span class="num">7.</span> Meta Tracking Pixel</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -587,7 +640,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">8</span> Browser Fingerprinting</h4>
+                        <h4><span class="num">8.</span> Browser Fingerprinting</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -595,7 +648,7 @@
 
                         <ol>
                             <li>To see your "fingerprint" visit: <a href="https://amiunique.org" target="_blank">amiunique.org</a></li>
-                            <li>Learn how to cover your tracks: <a href="https://coveryourtracks.eff.org/" target="_blank">coveryourtracks.eff.org</a>  </li>
+                            <li>Learn how to cover your tracks: <a href="https://coveryourtracks.eff.org/" target="_blank">coveryourtracks.eff.org</a> </li>
                         </ol>
 
                     </div>
@@ -634,7 +687,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">9</span> Other ways to see your data</h4>
+                        <h4><span class="num">9.</span> Other ways to see your data</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -674,7 +727,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">10</span> Ad & Tracker Blockers</h4>
+                        <h4><span class="num">10.</span> Ad & Tracker Blockers</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -763,7 +816,7 @@
                     console.log("err", err)
                 } finally {
                     // console.log("url", url)
-                    elelink.innerHTML = `<a target="_blank" href="https://www.example.com/page?browser=${url}">${url}</a>`;
+                    elelink.innerHTML = `<a target="_blank" href="${url}">${url}</a>`;
                 }
             }
 
@@ -858,9 +911,6 @@
             await showStorage();
 
         })();
-
-
-
 
 
     </script>
