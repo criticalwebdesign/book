@@ -306,7 +306,7 @@
                         <p>A <b>tracker</b> is any code that collects data on users. The Ghostery tracker blocker describes 16 categories of trackers, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
                         
                         <ol>
-                            <li>Examine the examples. Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and Twitter buttons, Youtube video). </li>
+                            <li>Analyze the examples. Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and X buttons, Youtube video). </li>
                             <li>View the source code of this page. Most tracker code is hidden unless you look at the code or use DevTools to see how they are storing information about you.</li>
                         </ol>
 
@@ -405,8 +405,8 @@
                         </p>
 
                         <ol>
-                            <li>Open DevTools > Applications and then expand Cookies (under Storage on the left) to see the domains that have set cookies on this page. </li>
-                            <li>Select the domain: omundy.github.com and look for cookies prefixed with <code>cwd</code> Example 4-1 shows this data (when you visited this page). Refresh the page to update the date. Try deleting the cookie and reloading the page to see what happens.</li>
+                            <li>Open DevTools > Application and then expand Cookies (under Storage on the left) to see the domains that have set cookies on this page. </li>
+                            <li>Select the domain: <code>omundy.github.io</code> and look for cookies prefixed with <code>cwd</code> Example 4-1 displays this data (the date, hour, minute, and seconds when you visited this page). Refresh the page to update the date. Try deleting the cookie and reloading the page to see what happens.</li>
                             <li>Set your own cookie by running the code in Example 4-2 in the DevTools console.</li>
                             <li>Visit <a href="https://stickyscreen.org" target="_blank">https://stickyscreen.org</a> and edit the content in the note. Close the page and open it again to see the text it "remembered" (stored in cookies) </li>
                         </ol>
@@ -469,7 +469,7 @@
                         </p>
 
                         <ol>
-                            <li>In DevTools > Applications, expand Local Storage.</li>
+                            <li>In DevTools > Application, expand Local Storage.</li>
                             <li>Select the domain: omundy.github.com and look for records prefixed with <code>cwd</code> Example 5-1 shows this data (when you visited this page). Refresh the page to update the date. Try deleting the row and reloading the page to see what happens.</li>
                             <li>Set your own items in localStorage by running the code in Example 5-2 in the DevTools console. As with cookies, you can edit or delete the data stored in Local Storage.</li>
                             <li>Check out <a href="https://www.nytimes.com/games/wordle" target="_blank">Wordle</a> to see if you can figure out how it stores your game progress using Local Storage (hint: look for a key named <code>nyt-wordle-moogle</code>).</li>
@@ -534,14 +534,14 @@
                         </p>
 
                         <p>
-                            A tracker attempting to collect your data may not know your real name but it won't stop them from creating a profile for you and assigning tracking IDs to match your activity. Whether you are logged in or not, <b>cross-device tracking</b> can connect you to your activity and manipulate your behavior across all your browsers, apps, and devices. For example, if you click a link in an email or webpage with link tracking parameters it can link your profiles, even anonymous profiles, across devices. 
+                            A tracker attempting to collect your data may not know your real name but that won't stop them from creating a profile for you and assigning tracking IDs to match your activity. Whether you are logged in or not, <b>cross-device tracking</b> can connect you to your activity and manipulate your behavior across all your browsers, apps, and devices. For example, if you click a link in an email or webpage with link tracking parameters it can link your profiles, even anonymous profiles, across devices. 
                         </p>
             
                         <ol>
-                            <li>All other cookies and items in local storage are set by the resources and embedded scripts on this page. Look for the following identifiers in DevTools > Applications (for some of these you may need to be logged into that service)</li>
+                            <li>All other cookies and items in local storage are set by the resources and embedded scripts on this page. Look for the following identifiers in DevTools > Application (for some of these you may need to be logged into that service)</li>
                             <li>Example 6-1: <code>_fbc</code> is the name used by the cookie for the Meta Tracking Pixel (see below) used by Facebook and others to track users across the web.</li>
                             <li>Example 6-2: <code>_ga</code> is an identifier used by Google Analytics to track users. </li>
-                            <li>Example 6-3: Explore other identifiers set by <a href="https://help.twitter.com/en/rules-and-policies/x-cookies" target="_blank">Twitter</a> and others in DevTools.</li>
+                            <li>Example 6-3: Explore other identifiers set by <a href="https://help.twitter.com/en/rules-and-policies/x-cookies" target="_blank">X</a> (Twitter) and others in DevTools.</li>
                         </ol>
 
                     </div>
@@ -572,7 +572,7 @@
                         6-3 Other Identifiers
                     </div>
                     <div class="card-body">
-                        <code>😎 These are set by other domains in DevTools > Applications.</code>
+                        <code>😎 These are set by other domains in DevTools > Application.</code>
                     </div>
                 </div>
 
