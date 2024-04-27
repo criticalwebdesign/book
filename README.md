@@ -94,8 +94,12 @@ https://bad-password-api.glitch.me/
 
 ## Chapter 10 - Design & Power
 
-TBD
+https://big-feelings.glitch.me/
 
-## Chapter 11 - Distribution
+<img height="300" src="assets/img/previews/10/10-big-feelings.png">
 
-TBD
+
+
+<!-- ## Chapter 11 - Distribution
+
+TBD -->

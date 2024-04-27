@@ -190,6 +190,13 @@ Example generative art and design web interfaces
 ## 9-Data Tracking
 
 
+### ch9 Inspiration
+
+- https://clickclickclick.click/ 
+- https://pointerpointer.com/ 
+- https://studiomoniker.com/projects/do-not-touch 
+- https://designingfriction.com/ 
+
 
 
 
@@ -340,6 +347,9 @@ Example projects that involve crowdsourced information, user contributions, or o
 
 ### Interactive Documentaries
 
+- https://docubase.mit.edu/
 - https://donottrack-doc.com/en/episodes/
+- https://www.nytimes.com/interactive/2022/04/07/magazine/jeff-bezos-net-worth.html
+- Adam Pearce https://roadtolarissa.com/
 
 
