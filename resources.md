@@ -74,9 +74,11 @@ A list of manifestos by / for artists, designers, and engineers:
 
 ## 6-Off the Grid
 
+- Daniel Temkin [esoteric.codes](https://esoteric.codes)
 
 
-
+- Murial Cooper [1](https://mitpress.mit.edu/university-press-week-throwback-thursday-featuring-muriel-cooper/)
+- Jacqueline Casey [1](https://issuu.com/sebastianchapman/docs/comd1200_chapmansebastian_designheroes_presentatio) [2](https://www.google.com/search?q=Jacqueline+Casey+designer&tbm=isch)
 
 
 
@@ -165,9 +167,9 @@ If you are interested in computational, electronic, or generative literature/poe
 Another important influence on the history and practice of generative art is the demoscene, a subculture of hackers, clubs, and competitions (a.k.a. demoparties) (Figure 8.x) that blended creativity, hacking, and hardware testing. Emerging in Europe during the 1980s, demos were small self-contained computer programs written to test computer hardware capabilities using the most intense algorithmically-generated graphics and audio effects of the time. Typical competition categories restricted the size of the demo's executable, the compiled code packaged into a single file, by overall size (e.g. 1k, 4k, or 64k), and platform (8-bit like Atari or Commodore 64 or 16 bit Amiga). While the results (like "[PC DOS Demoscene mix](https://www.youtube.com/watch?v=O4T7pIs--LA)" or "[Hologon by The Electronic Knights [Amiga 500]](https://www.youtube.com/watch?v=pYtleuGV7ok)") might appear simplistic today, their output can be appreciated for their technical and artistic constraints when considering the abundant limitations on their hardware and access to programming resources (Stinson, Liz. “[The Ever-Changing Art of the Screensaver.](https://eyeondesign.aiga.org/the-ever-changing-art-of-the-screensaver/)” in Eye on Design).  
 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Assembly2004-areena01.jpg">
+<a href="https://upload.wikimedia.org/wikipedia/commons/e/ea/Assembly2004-areena01.jpg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Assembly2004-areena01.jpg" width="600"></a>
 
-Caption: Hackers gathered in an ice rink during the 2004 Assembly demoscene party in Finland https://commons.wikimedia.org/wiki/File:Assembly2004-areena01.jpg 
+Caption: Hackers gathered in an ice rink during the 2004 Assembly demoscene party in Finland
 
 
 
@@ -291,6 +293,42 @@ node index.js
 
 
 
+- Jamie Wilkinson and Greg Leuch (fffff.at) [Google Alarm extension](https://fffff.at/google-alarm/) 
+- Ben Grosser [Facebook Demetricator](https://bengrosser.com/projects/facebook-demetricator/)
+- Tim Schwartz [Resistant Systems](https://www.timschwartz.org/resistant-systems-spring-2022/), [Digital Resistance Kit](https://www.timschwartz.org/digital-resistance-kit/), [Password Cleanse](https://www.timschwartz.org/password-cleanse/) 
+
+
+
+### Organizations
+
+Groups who encourage technology companies to consider the public good over profit
+
+- https://tacticaltech.org
+- https://themarkup.org
+- https://www.humanetech.com
+- https://www.gamesforchange.org
+- https://tosdr.org
+- https://accountabletech.org
+- https://cltc.berkeley.edu/
+- https://cyber.harvard.edu/
+
+
+### Online Participation
+
+Example projects that involve crowdsourced information, user contributions, or other shared experiences.
+
+- Brooke Singer [toxicsites.us](https://toxicsites.us) 
+- Alex Fuller [onamountaintop.com](http://www.onamountaintop.com/)	
+
+
+
+
+
+### Mapping
+
+- JODI geogoo.net 😿
+
+
 
 
 
@@ -300,6 +338,8 @@ node index.js
 
 
 
+### Interactive Documentaries
 
+- https://donottrack-doc.com/en/episodes/
 
 
