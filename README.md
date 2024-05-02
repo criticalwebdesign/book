@@ -81,22 +81,24 @@ Examples:
 [String Art Generator (Svelte)](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/string-art-generator/dist) |
 [Music Venue](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue.html)
 
-<img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> <img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png">  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
+<img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> <!-- <img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png"> -->  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
 
 <!--<img height="240" src="assets/img/previews/08/band-name-stretch-goodness.png"> <img height="240" src="assets/img/previews/08/08-boxes-4-svg-2.png"> <img height="240" src="assets/img/previews/08/music-venue-xl-1.png"> <img height="240" src="assets/img/previews/08/music-venue-md-1.png"> <img height="240" src="assets/img/previews/08/music-venue-sm-1.png">  -->
 
 
 ## Chapter 9 - Data Tracking
 
+<img height="300" src="assets/img/previews/09/09-24-bad-password-api-finished-1.png">
+
 https://bad-password-api.glitch.me/
 
-<img height="240" src="assets/img/previews/09/ch9-bad-password-api.png">
+
 
 ## Chapter 10 - Design & Power
 
-https://big-feelings.glitch.me/
+<img height="300" src="assets/img/previews/10/10-22-big-feelings-finished.png">
 
-<img height="300" src="assets/img/previews/10/10-big-feelings.png">
+https://big-feelings.glitch.me/
 
 
 
