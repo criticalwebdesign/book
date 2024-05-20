@@ -88,17 +88,24 @@ Examples:
 
 ## Chapter 9 - Data Tracking
 
+Examine what data is being collected, processed, and used against you using DevTools, and then create a "bad password generator" that encourages others to increase their digital security and resist the surveillance of everyday life.
+
+Examples: [bad-password-api.glitch.me](https://bad-password-api.glitch.me/)
+
 <img height="300" src="assets/img/previews/09/09-24-bad-password-api-finished-1.png">
 
-https://bad-password-api.glitch.me/
+
 
 
 
 ## Chapter 10 - Design & Power
 
+Use Node.js, a SQLite database, and Leaflet to built an interactive site that visualizes feelings contributed by users around the world. 
+
+Examples: [big-feelings.glitch.me](https://big-feelings.glitch.me/)
+
 <img height="300" src="assets/img/previews/10/10-22-big-feelings-finished.png">
 
-https://big-feelings.glitch.me/
 
 
 
