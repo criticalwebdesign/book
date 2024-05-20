@@ -39,9 +39,24 @@ License: MIT
 		"The quick brown fox jumps over the lazy dog",
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
-		"🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴" +
-			"🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴",
-	];
+		"🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴" + "🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴",
+
+
+        "Designers […] hack the present to create the conditions of the future. ––Anne Balsamo",
+        "Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation, by children being taught mathematical concepts…A graphic representation of data abstracted from the banks of every computer in the human system. Unthinkable complexity. Lines of light ranged in the nonspace of the mind, clusters and constellation of data. Like city lights, receding… —William Gibson (1984)",
+        "Codes typically serve three main purposes. They are used for communication, clarification, or obfuscation. —Reas, McWilliams, and LUST",
+        "Most North Americans now live designer lives—sleep, eat, sit in a car, work, shop, watch TV, sleep again. I doubt there's more than a handful of free, spontaneous minutes anywhere in that cycle. —Kalle Lasn",
+        "There is a profound and enduring beauty in simplicity; in clarity, in efficiency. True simplicity is derived from so much more than just the absence of clutter and ornamentation. It’s about bringing order to complexity. —Jony Ive",
+        "Don't make me think —Steve Krug",
+        "Creativity is allowing yourself to make mistakes. Design is knowing which ones to keep. —Scott Adams",
+        "[As designers] our job is to advocate for the people who aren't in the room. [...] We need to understand we have a greater responsibility to society than to the people who sign the checks. —Mike Monteiro in Ruined by Design",
+        "Design isn’t crafting a beautiful, textured button with breathtaking animation. It’s figuring out if there’s a way to get rid of the button altogether. —Edward Tufte",
+        "Surveillance capitalism unilaterally claims human experience as free raw material for translation into behavioral data. ―Shoshana Zuboff",
+        "Great UX designers—those that are deliberate, thoughtful, thorough—are like superheroes. Make sure they’re using their powers for good. —Dan Brown",
+        "Design isn’t finished until somebody is using it. —Brenda Laurel",
+        "Before enlightenment, chop wood, carry water. After enlightenment, chop wood, carry water. —Zen Kōan",
+
+    ];
 	const addSample = () => {
 		let newstr = `${str}`;
 		let safety = 0;
