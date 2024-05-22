@@ -42,7 +42,7 @@ License: MIT
 		"🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴" + "🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴",
 
 
-        "Designers […] hack the present to create the conditions of the future. ––Anne Balsamo",
+        "Designers […] hack the present to create the conditions of the future. —Anne Balsamo",
         "Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation, by children being taught mathematical concepts…A graphic representation of data abstracted from the banks of every computer in the human system. Unthinkable complexity. Lines of light ranged in the nonspace of the mind, clusters and constellation of data. Like city lights, receding… —William Gibson (1984)",
         "Codes typically serve three main purposes. They are used for communication, clarification, or obfuscation. —Reas, McWilliams, and LUST",
         "Most North Americans now live designer lives—sleep, eat, sit in a car, work, shop, watch TV, sleep again. I doubt there's more than a handful of free, spontaneous minutes anywhere in that cycle. —Kalle Lasn",

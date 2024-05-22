@@ -81,7 +81,7 @@ Examples:
 [String Art Generator (Svelte)](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/string-art-generator/dist) |
 [Music Venue](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue.html)
 
-<img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> <!-- <img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png"> -->  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
+<img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> <img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png">  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
 
 <!--<img height="240" src="assets/img/previews/08/band-name-stretch-goodness.png"> <img height="240" src="assets/img/previews/08/08-boxes-4-svg-2.png"> <img height="240" src="assets/img/previews/08/music-venue-xl-1.png"> <img height="240" src="assets/img/previews/08/music-venue-md-1.png"> <img height="240" src="assets/img/previews/08/music-venue-sm-1.png">  -->
 
