@@ -14,15 +14,25 @@ License: MIT
 	let w = 70,
 		h = 50,
 		fmin = 1,
-		fmax = 25;
+		fmax = 25,
+		r = 255,
+		g = 255,
+		b = 255,
+		splitWordsChecked = true;
 
 	// credit: https://stackoverflow.com/a/71619350/441878
 	const splitEmoji = (string) =>
 		[...new Intl.Segmenter().segment(string)].map((x) => x.segment);
 
+	const splitWords = (string) =>
+		string.split(" ");	
+
 	function generate() {
 		// arr = F.shuffleArray(str.split(""));
 
+		if (splitWordsChecked)
+			arr = splitWords(str)
+		else
 		// this method works with emoji *and* text
 		arr = F.shuffleArray(splitEmoji(str));
 
@@ -42,7 +52,7 @@ License: MIT
 		"🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴" + "🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴",
 
 
-        "Designers […] hack the present to create the conditions of the future. —Anne Balsamo",
+        "Designers hack the present to create the conditions of the future. —Anne Balsamo",
         "Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation, by children being taught mathematical concepts…A graphic representation of data abstracted from the banks of every computer in the human system. Unthinkable complexity. Lines of light ranged in the nonspace of the mind, clusters and constellation of data. Like city lights, receding… —William Gibson (1984)",
         "Codes typically serve three main purposes. They are used for communication, clarification, or obfuscation. —Reas, McWilliams, and LUST",
         "Most North Americans now live designer lives—sleep, eat, sit in a car, work, shop, watch TV, sleep again. I doubt there's more than a handful of free, spontaneous minutes anywhere in that cycle. —Kalle Lasn",
@@ -100,8 +110,9 @@ License: MIT
                 https://svelte.dev/docs/element-directives#style-property -->
 				<div
 					class="char"
-					style:color="#{F.randomHex()}"
-					style:left="{F.randomInt(45 - w / 2, 40 + w / 2)}%"
+					style="transform-origin: center"
+					style:color="{F.randomRGBStr([0,r],[0,g],[0,b])}"
+					style:left="{F.randomInt(40 - w / 2, 50 + w / 2)}%"
 					style:top="{F.randomInt(50 - h / 2, 40 + h / 2)}%"
 					style:transform="rotate({F.randomInt(0, 360)}deg)"
 					style:font-size="{F.randomInt(fmin, fmax)}rem"
@@ -119,6 +130,10 @@ License: MIT
 				sample text. Tweak parameters and
 				<button class="sm" on:click={generate}>regenerate</button>
 				the visualization.
+
+				<input id="splitWordsChecked" type="checkbox" bind:checked={splitWordsChecked} on:change={generate} />
+				<label class="note" for="splitWordsChecked">Split words</label>
+
 			</div>
 
 			<div>
@@ -126,6 +141,22 @@ License: MIT
 				<label class="note" for="str" style="visibility: hidden;">
 					Enter text for transformation
 				</label>
+			</div>
+
+			<div>
+				<label class="note" for="r">r</label>
+				<input id="r" type="range" min="0" max="255" bind:value={r} />
+				<span class="digit">{r}</span>
+				<br />
+				
+				<label class="note" for="g">g</label>
+				<input id="g" type="range" min="0" max="255" bind:value={g} />
+				<span class="digit">{g}</span>
+				<br />
+
+				<label class="note" for="b">b</label>
+				<input id="b" type="range" min="0" max="255" bind:value={b} />
+				<span class="digit">{b}</span>
 			</div>
 
 			<!-- tutorial -->
@@ -189,9 +220,8 @@ License: MIT
 	}
 	.grid-container {
 		display: grid;
-		align-items: center;
 		gap: 0.5rem;
-		grid-template-columns: 2fr 2fr 2fr 2fr;
+		grid-template-columns: 2fr 3fr 2fr 2fr 2fr;
 		grid-template-rows: 1fr;
 
 		/* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
@@ -199,13 +229,14 @@ License: MIT
 	}
 	@media (max-width: 991.98px) {
 		.grid-container {
-			grid-template-columns: 2fr 2fr;
+			grid-template-columns: 2fr 2fr 2fr;
 			grid-template-rows: 2fr 2fr;
 		}
 	}
 
 	.grid-container > div {
 		height: 100px;
+		
 		/* border: 1px solid red; */
 	}
 	.sticky-footer {
@@ -220,7 +251,7 @@ License: MIT
 	}
 	textarea {
 		width: 100%;
-		height: 50px;
+		height: 80px;
 		padding: 0.5rem;
 		/* box */
 		background-color: var(--button-bg);
@@ -249,5 +280,6 @@ License: MIT
 	.char {
 		position: absolute;
 		line-height: 0%;
+		transform-origin: center;
 	}
 </style>
