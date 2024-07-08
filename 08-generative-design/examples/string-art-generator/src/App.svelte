@@ -131,7 +131,7 @@ License: MIT
 				<button class="sm" on:click={generate}>regenerate</button>
 				the visualization.
 
-				<input id="splitWordsChecked" type="checkbox" bind:checked={splitWordsChecked} on:change={generate} />
+				<input id="splitWordsChecked" type="checkbox" bind:checked={splitWordsChecked} on:change={generate}>
 				<label class="note" for="splitWordsChecked">Split words</label>
 
 			</div>
@@ -145,40 +145,40 @@ License: MIT
 
 			<div>
 				<label class="note" for="r">r</label>
-				<input id="r" type="range" min="0" max="255" bind:value={r} />
+				<input id="r" type="range" min="0" max="255" bind:value={r}>
 				<span class="digit">{r}</span>
-				<br />
+				<br>
 				
 				<label class="note" for="g">g</label>
-				<input id="g" type="range" min="0" max="255" bind:value={g} />
+				<input id="g" type="range" min="0" max="255" bind:value={g}>
 				<span class="digit">{g}</span>
-				<br />
+				<br>
 
 				<label class="note" for="b">b</label>
-				<input id="b" type="range" min="0" max="255" bind:value={b} />
+				<input id="b" type="range" min="0" max="255" bind:value={b}>
 				<span class="digit">{b}</span>
 			</div>
 
 			<!-- tutorial -->
 			<div>
 				<label class="note" for="fmin">font--</label>
-				<input id="fmin" type="range" min=".5" max="100" bind:value={fmin} />
+				<input id="fmin" type="range" min=".5" max="100" bind:value={fmin}>
 				<span class="digit">{fmin}</span>
-				<br />
+				<br>
 
 				<label class="note" for="fmax">font++</label>
-				<input id="fmax" type="range" min=".5" max="100" bind:value={fmax} />
+				<input id="fmax" type="range" min=".5" max="100" bind:value={fmax}>
 				<span class="digit">{fmax}</span>
 			</div>
 
 			<div>
 				<label class="note" for="w">width</label>
-				<input id="w" type="range" min="0" max="100" bind:value={w} />
+				<input id="w" type="range" min="0" max="100" bind:value={w}>
 				<span class="digit">{w}</span>
-				<br />
+				<br>
 
 				<label class="note" for="w">height</label>
-				<input id="h" type="range" min="0" max="100" bind:value={h} />
+				<input id="h" type="range" min="0" max="100" bind:value={h}>
 				<span class="digit">{h}</span>
 			</div>
 		</div>
