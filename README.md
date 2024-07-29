@@ -92,7 +92,7 @@ Examine what data is being collected, processed, and used against you using DevT
 
 Examples: [bad-password-api.glitch.me](https://bad-password-api.glitch.me/)
 
-<img height="300" src="assets/img/previews/09/09-24-bad-password-api-finished-1.png">
+<img height="300" src="assets/img/previews/09/bad-password-api-1.png">
 
 
 
