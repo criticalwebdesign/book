@@ -8,21 +8,31 @@ License: MIT
 <script>
 	import * as F from "./lib/functions.js";
 	let title = "String Art Generator",
-		str = "",
+		str = title,
 		arr;
 
 	let w = 70,
 		h = 50,
 		fmin = 1,
-		fmax = 25;
+		fmax = 25,
+		r = 255,
+		g = 255,
+		b = 255,
+		splitWordsChecked = true;
 
 	// credit: https://stackoverflow.com/a/71619350/441878
 	const splitEmoji = (string) =>
 		[...new Intl.Segmenter().segment(string)].map((x) => x.segment);
 
+	const splitWords = (string) =>
+		string.split(" ");	
+
 	function generate() {
 		// arr = F.shuffleArray(str.split(""));
 
+		if (splitWordsChecked)
+			arr = splitWords(str)
+		else
 		// this method works with emoji *and* text
 		arr = F.shuffleArray(splitEmoji(str));
 
@@ -39,9 +49,24 @@ License: MIT
 		"The quick brown fox jumps over the lazy dog",
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
-		"🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴" +
-			"🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴",
-	];
+		"🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴" + "🌶️🥬🥒🥑🧅🥕🥖🧀🫛🧄🍋🥭🥚🫑🥙🥗🌱🥦🥄🍴",
+
+
+        "Designers hack the present to create the conditions of the future. —Anne Balsamo",
+        "Cyberspace. A consensual hallucination experienced daily by billions of legitimate operators, in every nation, by children being taught mathematical concepts…A graphic representation of data abstracted from the banks of every computer in the human system. Unthinkable complexity. Lines of light ranged in the nonspace of the mind, clusters and constellation of data. Like city lights, receding… —William Gibson (1984)",
+        "Codes typically serve three main purposes. They are used for communication, clarification, or obfuscation. —Reas, McWilliams, and LUST",
+        "Most North Americans now live designer lives—sleep, eat, sit in a car, work, shop, watch TV, sleep again. I doubt there's more than a handful of free, spontaneous minutes anywhere in that cycle. —Kalle Lasn",
+        "There is a profound and enduring beauty in simplicity; in clarity, in efficiency. True simplicity is derived from so much more than just the absence of clutter and ornamentation. It’s about bringing order to complexity. —Jony Ive",
+        "Don't make me think —Steve Krug",
+        "Creativity is allowing yourself to make mistakes. Design is knowing which ones to keep. —Scott Adams",
+        "[As designers] our job is to advocate for the people who aren't in the room. [...] We need to understand we have a greater responsibility to society than to the people who sign the checks. —Mike Monteiro in Ruined by Design",
+        "Design isn’t crafting a beautiful, textured button with breathtaking animation. It’s figuring out if there’s a way to get rid of the button altogether. —Edward Tufte",
+        "Surveillance capitalism unilaterally claims human experience as free raw material for translation into behavioral data. ―Shoshana Zuboff",
+        "Great UX designers—those that are deliberate, thoughtful, thorough—are like superheroes. Make sure they’re using their powers for good. —Dan Brown",
+        "Design isn’t finished until somebody is using it. —Brenda Laurel",
+        "Before enlightenment, chop wood, carry water. After enlightenment, chop wood, carry water. —Zen Kōan",
+
+    ];
 	const addSample = () => {
 		let newstr = `${str}`;
 		let safety = 0;
@@ -85,8 +110,9 @@ License: MIT
                 https://svelte.dev/docs/element-directives#style-property -->
 				<div
 					class="char"
-					style:color={F.randomHex()}
-					style:left="{F.randomInt(45 - w / 2, 40 + w / 2)}%"
+					style="transform-origin: center"
+					style:color="{F.randomRGBStr([0,r],[0,g],[0,b])}"
+					style:left="{F.randomInt(40 - w / 2, 50 + w / 2)}%"
 					style:top="{F.randomInt(50 - h / 2, 40 + h / 2)}%"
 					style:transform="rotate({F.randomInt(0, 360)}deg)"
 					style:font-size="{F.randomInt(fmin, fmax)}rem"
@@ -104,6 +130,10 @@ License: MIT
 				sample text. Tweak parameters and
 				<button class="sm" on:click={generate}>regenerate</button>
 				the visualization.
+
+				<input id="splitWordsChecked" type="checkbox" bind:checked={splitWordsChecked} on:change={generate}>
+				<label class="note" for="splitWordsChecked">Split words</label>
+
 			</div>
 
 			<div>
@@ -113,38 +143,42 @@ License: MIT
 				</label>
 			</div>
 
+			<div>
+				<label class="note" for="r">r</label>
+				<input id="r" type="range" min="0" max="255" bind:value={r}>
+				<span class="digit">{r}</span>
+				<br>
+				
+				<label class="note" for="g">g</label>
+				<input id="g" type="range" min="0" max="255" bind:value={g}>
+				<span class="digit">{g}</span>
+				<br>
+
+				<label class="note" for="b">b</label>
+				<input id="b" type="range" min="0" max="255" bind:value={b}>
+				<span class="digit">{b}</span>
+			</div>
+
 			<!-- tutorial -->
 			<div>
 				<label class="note" for="fmin">font--</label>
-				<input
-					id="fmin"
-					type="range"
-					min=".5"
-					max="100"
-					bind:value={fmin}
-				/>
+				<input id="fmin" type="range" min=".5" max="100" bind:value={fmin}>
 				<span class="digit">{fmin}</span>
-				<br />
+				<br>
 
 				<label class="note" for="fmax">font++</label>
-				<input
-					id="fmax"
-					type="range"
-					min=".5"
-					max="100"
-					bind:value={fmax}
-				/>
+				<input id="fmax" type="range" min=".5" max="100" bind:value={fmax}>
 				<span class="digit">{fmax}</span>
 			</div>
 
 			<div>
 				<label class="note" for="w">width</label>
-				<input id="w" type="range" min="0" max="100" bind:value={w} />
+				<input id="w" type="range" min="0" max="100" bind:value={w}>
 				<span class="digit">{w}</span>
-				<br />
+				<br>
 
 				<label class="note" for="w">height</label>
-				<input id="h" type="range" min="0" max="100" bind:value={h} />
+				<input id="h" type="range" min="0" max="100" bind:value={h}>
 				<span class="digit">{h}</span>
 			</div>
 		</div>
@@ -186,9 +220,8 @@ License: MIT
 	}
 	.grid-container {
 		display: grid;
-		align-items: center;
 		gap: 0.5rem;
-		grid-template-columns: 2fr 2fr 2fr 2fr;
+		grid-template-columns: 2fr 3fr 2fr 2fr 2fr;
 		grid-template-rows: 1fr;
 
 		/* grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
@@ -196,13 +229,14 @@ License: MIT
 	}
 	@media (max-width: 991.98px) {
 		.grid-container {
-			grid-template-columns: 2fr 2fr;
+			grid-template-columns: 2fr 2fr 2fr;
 			grid-template-rows: 2fr 2fr;
 		}
 	}
 
 	.grid-container > div {
 		height: 100px;
+		
 		/* border: 1px solid red; */
 	}
 	.sticky-footer {
@@ -217,7 +251,7 @@ License: MIT
 	}
 	textarea {
 		width: 100%;
-		height: 50px;
+		height: 80px;
 		padding: 0.5rem;
 		/* box */
 		background-color: var(--button-bg);
@@ -246,5 +280,6 @@ License: MIT
 	.char {
 		position: absolute;
 		line-height: 0%;
+		transform-origin: center;
 	}
 </style>

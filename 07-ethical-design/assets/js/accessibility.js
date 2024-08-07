@@ -1,5 +1,11 @@
 // Adds accessibility features to accessibility-data example
 
+
+// variable is undefined
+if (typeof userCount === 'undefined') {
+    userCount = 36;
+}
+
 let selectedOption = 0,
 	viewportSize,
 	rowCounts = { xs: 3, sm: 3, md: 3, lg: 3, xl: 4, xxl: 4 },

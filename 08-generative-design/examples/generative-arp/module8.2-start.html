@@ -13,7 +13,6 @@
     License: MIT
     -->
 
-    <style></style>
 </head>
 <body>
 
@@ -28,16 +27,34 @@
         function generate() {
             let output = '';
             let count = randomInt(6, 12);
+            let size = window.innerWidth * .10;
 
-            let winW = window.innerWidth,
-                winH = window.innerHeight;
 
             for (let i = 0; i < count; i++) {
                 // parameters
-                let h = randomInt(winH * .1, winH * .3),
-                    w = randomInt(h * .8, h * 1.2),  
-                    x = randomInt(winW * .2, winW * .8) - (w * .5),
-                    y = randomInt(winH * .2, winH * .8) - (h * .5);
+                let w = randomInt(size * .8, size * 1.2);
+                let h = randomInt(size * .8, size * 1.2);
+
+                // let x = randomInt(
+                //     window.innerWidth * .2,
+                //     window.innerWidth * .8) - (w * .5);
+                // let y = randomInt(
+                //     window.innerHeight * .2,
+                //     window.innerHeight * .8) - (h * .5);
+
+                let centerX = (window.innerWidth * .5);
+                let centerY = (window.innerHeight * .5);
+                let offsetX = (window.innerWidth * .25);
+                let offsetY = (window.innerHeight * .25);
+
+                let x = randomInt(
+                    centerX - offsetX,
+                    centerX + offsetX
+                ) - (w * .5);
+                let y = randomInt(
+                    centerY - offsetY,
+                    centerY + offsetY
+                ) - (h * .5);
 
                 let style = `
                     position: absolute;
@@ -45,10 +62,9 @@
                         rotate(${randomInt(-1, 1)}deg);
                     width: ${w}px;
                     height: ${h}px;
-                    background-color:${randomHex()};
+                    background-color:#${randomHex()};
                 `;
-                output += `<div style="${style}"></div>
-                `;
+                output += `<div style="${style}"></div>`;
             }
             // display
             viz.innerHTML = output;
@@ -64,7 +80,7 @@
             for (let i = 0; i < 6; i++) {
                 hex += chars[randomInt(0, chars.length - 1)];
             }
-            return "#" + hex;
+            return hex;
         }
 
         // listeners

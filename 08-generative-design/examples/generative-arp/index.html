@@ -13,32 +13,7 @@
     License: MIT
     -->
 
-    <style>
-        html,
-        body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #22252C;
-        }
-
-
-        .controls {
-            position: absolute;
-            z-index: 999;
-            background-color: rgb(24, 26, 31);
-            color: #ccc;
-            padding: 5px;
-            margin: 12px;
-            border-radius: 3px;
-        }
-
-        .controls label {
-            vertical-align: 4px;
-            font-family: system-ui;
-            font-size: 12px;
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/arp.css">
 </head>
 <body>
 
@@ -85,36 +60,54 @@
             let output = '';
             // let count = randomInt(6, 12);
             let count = countEle.value || randomInt(6, 12);
-
-            let winW = window.innerWidth,
-                winH = window.innerHeight;
+            let size = window.innerWidth * .10;
 
             for (let i = 0; i < count; i++) {
                 // parameters
-                let h = randomInt(winH * .05, winH * .12) * scaleEle.valueAsNumber,
-                    w = randomInt(h * .8, h * 1.2),
-                    // x = randomInt(winW * .2, winW * .8),
-                    // y = randomInt(winH * .2, winH * .8),
-                    x = randomInt((winW * .5) - positionEle.valueAsNumber, (winW * .5) + positionEle.valueAsNumber),
-                    y = randomInt((winH * .5) - positionEle.valueAsNumber, (winH * .5) + positionEle.valueAsNumber),
-                    // min/max scale
-                    min = .9,
-                    max = 1.1;
+                let w = randomInt(size * .8, size * 1.2) * scaleEle.valueAsNumber;
+                let h = randomInt(size * .8, size * 1.2) * scaleEle.valueAsNumber;
+
+                let centerX = (window.innerWidth * .5);
+                let centerY = (window.innerHeight * .5);
+                let offsetX = positionEle.valueAsNumber;
+                let offsetY = positionEle.valueAsNumber;
+
+                let x = randomInt(
+                    centerX - offsetX,
+                    centerX + offsetX
+                );
+                let y = randomInt(
+                    centerY - offsetY,
+                    centerY + offsetY
+                );
+
+
 
                 // CIRCLE
-                // output += `<circle r="${randomInt(5, 30)}" fill="${randomHex()}" cx="${x}" cy="${y}"></circle> `;
+                // output += `<circle r="${randomInt(5, 30)}" fill="#${randomHex()}" cx="${x}" cy="${y}"></circle> `;
 
                 // POLYGON
                 // create points to define polygon [x1,y1 x2,y2 x3,y3 x4,y4] 
+
+
+                // min/max scale
+                let min = .75;
+                let max = .9;
+                // let points = `0,0 100,0 100,100 0,100`;
                 let points = `
                     ${-randomInt(w * min, w * max)},${-randomInt(h * min, h * max)} 
                     ${randomInt(w * min, w * max)},${-randomInt(h * min, h * max)} 
                     ${randomInt(w * min, w * max)},${randomInt(h * min, h * max)} 
                     ${-randomInt(w * min, w * max)},${randomInt(h * min, h * max)} 
                     `;
-                output += `<polygon fill="#${randomFromArray(colors)}" 
-                            stroke="none" points="${points}" 
-                            transform ="translate(${x},${y}) rotate(${randomInt(-1, 1)})" />`
+
+                // output += `<polygon stroke="none" points="${points}" 
+                //     transform ="translate(${x},${y}) rotate(${randomInt(-1, 1)})"
+                //     fill="#${randomHex()}" />`;
+
+                output += `<polygon stroke="none" points="${points}" 
+                    transform ="translate(${x},${y}) rotate(${randomInt(-1, 1)})" 
+                    fill="#${randomFromArray(colors)}" />`;
             }
             // display
             viz.innerHTML = output;
@@ -130,7 +123,7 @@
             for (let i = 0; i < 6; i++) {
                 hex += chars[randomInt(0, chars.length - 1)];
             }
-            return "#" + hex;
+            return hex;
         }
         function randomFromArray(arr) {
             return arr[Math.floor(Math.random() * arr.length)];
