@@ -7,9 +7,13 @@
 
     <!-- 👉 8.1 FINISH | 8.2 START FILE -->
 
+
+    <!-- 👉 add new CSS links here -->
+
 </head>
 <body>
 
+    <!-- 👉 change to SVG -->
     <main></main>
 
     <script>
@@ -55,6 +59,7 @@
                     height: ${h}px;
                     background-color:#${randomHex()};
                 `;
+				// 👉 change to output shapes for SVG
                 output += `<div style="${style}"></div>`;
             }
             // display
@@ -73,6 +78,7 @@
             }
             return hex;
         }
+		// 👉 add helper function
 
         // listeners
         window.addEventListener("load", generate);
