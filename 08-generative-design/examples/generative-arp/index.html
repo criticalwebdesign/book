@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>After Jean Arp - 8.2-finished</title>
 
-    <!-- 
-    Title: After Jean Arp - Module 2 (finished)
+    <!-- 👉 8.2 FINISHED 
+    Title: After Jean Arp
     References: https://www.moma.org/collection/works/37013
     Author: Owen Mundy
     Date: 2023
@@ -63,15 +63,18 @@
             let size = window.innerWidth * .10;
 
             for (let i = 0; i < count; i++) {
+                
                 // parameters
                 let w = randomInt(size * .8, size * 1.2) * scaleEle.valueAsNumber;
                 let h = randomInt(size * .8, size * 1.2) * scaleEle.valueAsNumber;
-
+                
+                // viewport center and offset
                 let centerX = (window.innerWidth * .5);
                 let centerY = (window.innerHeight * .5);
                 let offsetX = positionEle.valueAsNumber;
                 let offsetY = positionEle.valueAsNumber;
 
+                // random x,y position using center and offset
                 let x = randomInt(
                     centerX - offsetX,
                     centerX + offsetX
@@ -81,7 +84,7 @@
                     centerY + offsetY
                 );
 
-
+                // alternative shapes...
 
                 // CIRCLE
                 // output += `<circle r="${randomInt(5, 30)}" fill="#${randomHex()}" cx="${x}" cy="${y}"></circle> `;
