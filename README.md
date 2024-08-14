@@ -2,6 +2,8 @@
 
 A collection of examples and exercises to accompany _Critical Web Design_ by xtine burrough and Owen Mundy.
 
+> Critical Web Design teaches readers to conceptualize, design, and program responsive websites as both an applied and creative practice. Readers will develop and use technical skills in interface design, usability/accessibility, and coding in HTML/CSS and Javascript, as well as speculative and critical design methods for imagining and producing online works that address issues relevant to design and technology in society. 
+
 
 
 ## Chapter 1 Networks
