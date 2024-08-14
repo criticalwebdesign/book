@@ -21,8 +21,10 @@
     <!-- base styles for CH7 -->
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="../../assets/css/color.css">
-    <!-- accessibility improvements for CH7 -->
+    
+    <!-- 👉  accessibility improvements for CH7 -->
     <link rel="stylesheet" href="../../assets/css/accessibility.css">
+    
 </head>
 <body>
 
@@ -69,7 +71,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <!-- book functions file -->
     <script src="../../../assets/js/functions.js"></script>
-    <!-- accessibility improvements for CH7 -->
+
+    <!-- 👉 accessibility improvements for CH7 -->
     <script src="../../assets/js/accessibility.js"></script>
 
     <script>
@@ -87,7 +90,7 @@
             'rose', 'green', 'cyan', 'blue', 'purple', 'magenta'
         ]
 
-        // add code below...
+        // 👉 new code below...
 
         // references to elements
         let blurb = document.querySelector(".blurb");
@@ -98,7 +101,7 @@
 
         // loop through options
         options.forEach(function (element, index) {
-            // add an event listener to each
+            // adds an event listener to each
             element.addEventListener("mouseover", () => {
                 // console.log(index, element.textContent);
                 setActive(index);
@@ -136,7 +139,7 @@
 
             // create var to store html output
             let str = "";
-            // loop through the users and add output
+            // loop through the users and adds output
             for (let i = 0; i < count; i++) {
 
                 // control whether to change opacity
@@ -144,7 +147,7 @@
                 if (i < affected) {
                     showAffectedClass = "showAffected";
                 }
-                // add the user
+                // adds the user
                 str += `<span class="${showAffectedClass}">
                             <img src="https://omundy.github.io/critical-web-design-book/07-ethical-design/assets/img/users/${userArr[i]}.jpg" class="portrait" alt="portrait of a person who does not exist ${i}">
                         </span>`;
