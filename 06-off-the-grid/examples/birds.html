@@ -116,7 +116,7 @@
                 x = randomFloat(w * .25, w - (w * .25));
                 y = randomFloat(h * .25, h * .75);
 
-                // add char from string 
+                // adds char from string 
                 str += `<span style="z-index: ${++z}; 
                         color: rgba(${randomInt(100, 255)},${randomInt(100, 255)},${randomInt(100, 255)},${randomFloat(0, 1)});
                         transform:                             
@@ -134,7 +134,7 @@
                 //         rotate(${randomFloat(-50, 50)}deg) 
                 //         scale(${randomFloat(2.5, 35)});">${word[i]}</span>`;
 
-                // 15% of the time add a branch
+                // 15% of the time include a branch image
                 if (i > word.length * .85 || i < word.length * .6) {
                     str += `<span style="z-index: ${++z}; transform:                  
                                 translate(${x}px,${randomFloat(h * .2, h * .6)}px)

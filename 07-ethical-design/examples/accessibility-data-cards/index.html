@@ -130,7 +130,7 @@
                 // display users
                 displayUsers();
 
-                // add an event listener to each button in menu
+                // adds an event listener to each button in menu
                 for (let i = 0; i < cardMenu.length; i++) {
                     cardMenu[i].addEventListener("mouseover", menuHandler, false);
                     cardMenu[i].addEventListener("focus", menuHandler, false);
@@ -198,7 +198,7 @@
                             <img src="../../assets/img/users/${userArr[i]}.jpg" class="graphic" alt="portrait of a person who does not exist ${i}">
                         </span>`;
             }
-            // add html to page
+            // adds html to page
             usersEle.innerHTML = str;
 
             updateGridColumns();
@@ -214,7 +214,7 @@
             // exit early if currentOption is -1
             if (currentOption < 0) return;
 
-            // add active to just the target
+            // adds active to just the target
             cardMenu[currentOption].classList.add("active");
             // set focus as well
             cardMenu[currentOption].focus();
