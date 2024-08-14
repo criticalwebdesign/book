@@ -57,7 +57,7 @@ Create and implement a usability test, then design a responsive web page to refl
 
 Create an experimental composition and then explode it!
 
-Examples: [Haiku (xtine)](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/haiku-xtine.html) | [Birds](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/birds.html) | [Baldwin](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/baldwin.html) | [Maintenance](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/maintenance.html)
+Examples: [Haiku (xtine)](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/module6.3-finish.html) | [Birds](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/birds.html) | [Baldwin](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/baldwin.html) | [Maintenance](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/maintenance.html)
 
 <img height="240" src="assets/img/previews/06/ch6-nyt-explode.png"> <img height="240" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> <img height="240" src="assets/img/previews/06/ch6-birds-1.gif"> <img height="240" src="assets/img/previews/06/ch6-baldwin-1.gif">  <img height="240" src="assets/img/previews/06/ch6-maintenance-3.gif"> 
 
@@ -81,7 +81,7 @@ Examples:
 [AI Albers](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/ai-albers.html) |
 [Band Name Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/band-name-generator) |
 [String Art Generator (Svelte)](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/string-art-generator/dist) |
-[Music Venue](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue.html)
+[Music Venue](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue-generator.html)
 
 <img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> <img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png">  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
 
