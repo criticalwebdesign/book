@@ -10,7 +10,7 @@ A collection of examples and exercises to accompany _Critical Web Design_ by xti
 
 Publish your first web page: By the end of the modules in this chapter you will create and publish your first web page. Starting with the next exercise, you will create your Sites folder in your home directory and use the command line to navigate your hard drive in Terminal or Git Bash.
 
-[Codepen.io](https://codepen.io/owenmundy/pen/QWzJKVz) | [Glitch.com](https://glitch.com/edit/#!/dig245-hello-world)
+Examples: [Codepen.io](https://codepen.io/owenmundy/pen/QWzJKVz) | [Glitch.com](https://glitch.com/edit/#!/dig245-hello-world)
 
 
 <img height="270" src="assets/img/previews/01/ch1-glitch-hello-world.png"> 
@@ -22,6 +22,7 @@ Publish your first web page: By the end of the modules in this chapter you will 
 ## Chapter 2 View Source
 
 Design and code a page featuring expressive typography. Start by pre-visualizing the design in Figma and then code the page using HTML, CSS, and Javascript. The text can be any glyph, a single word, or an important phrase from one of the texts at [designmanifestos.org](https://designmanifestos.org). Select a phrase that speaks to you. 
+
 Examples: [After Gerhard Rühm](https://omundy.github.io/critical-web-design-book/02-view-source/examples/after-ruhm.html) | [Poem (Chaos)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-chaos.html) | [Poem (Click)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-click.html) | [Don't Be Evil)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-evil.html) | [Poem (Shake)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-shake.html) | [Poem (Think)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-think.html)
 
 <img height="240" src="assets/img/previews/02/ch2-Poem-Shake-640w.gif"> <img height="240" src="assets/img/previews/02/ch2-Poem-Think.png"> <img height="240" src="assets/img/previews/02/ch2-after-ruhm.png"> <img height="240" src="assets/img/previews/02/ch2-Poem-Click.png"> <img height="240" src="assets/img/previews/02/ch2-dont-be-evil.gif"> <img height="240" src="assets/img/previews/02/ch2-Poem-Random-640w.gif">
@@ -81,7 +82,7 @@ Examples:
 [AI Albers](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/ai-albers.html) |
 [Band Name Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/band-name-generator) |
 [String Art Generator (Svelte)](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/string-art-generator/dist) |
-[Music Venue](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue-generator.html)
+[Music  Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue-generator.html)
 
 <img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> <img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png">  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
 
