@@ -25,12 +25,12 @@ Examples: [Codepen.io](https://codepen.io/owenmundy/pen/QWzJKVz), [Glitch.com](h
 Design and code a page featuring expressive typography. Start by pre-visualizing the design in Figma and then code the page using HTML, CSS, and Javascript. The text can be any glyph, a single word, or an important phrase from one of the texts at [designmanifestos.org](https://designmanifestos.org). Select a phrase that speaks to you. 
 
 Examples: 
+[Poem (Shake)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-shake.html), 
+[Poem (Think)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-think.html), 
 [After Gerhard Rühm](https://omundy.github.io/critical-web-design-book/02-view-source/examples/after-ruhm.html), 
-[Poem (Chaos)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-chaos.html), 
 [Poem (Click)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-click.html), 
 [Don't Be Evil)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-evil.html), 
-[Poem (Shake)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-shake.html), 
-[Poem (Think)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-think.html)
+[Poem (Chaos)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-chaos.html) 
 
 <img height="240" src="assets/img/previews/02/ch2-Poem-Shake-640w.gif"> <img height="240" src="assets/img/previews/02/ch2-Poem-Think.png"> <img height="240" src="assets/img/previews/02/ch2-after-ruhm.png"> <img height="240" src="assets/img/previews/02/ch2-Poem-Click.png"> <img height="240" src="assets/img/previews/02/ch2-dont-be-evil.gif"> <img height="240" src="assets/img/previews/02/ch2-Poem-Random-640w.gif">
 
@@ -41,10 +41,14 @@ Examples:
 
 ## Chapter 3 Critical Design
 
-Create a work of critical web design: Throughout the modules in this chapter you will redesign a logo to create a visual form incorporating commentary. You will then use Figma to iterate on design, consider typographic choices using Google Fonts, and create a web page with interactive images and Javascript to express your ideas. Examples: [Monopoly](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/adobe-monopoly), [Time](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/ikea-time/)
+Throughout the modules in this chapter you will redesign a logo to create a visual form incorporating commentary. You will then use Figma to iterate on design, consider typographic choices using Google Fonts, and create a web page with interactive images and Javascript to express your ideas. 
 
-<!-- <img height="240" src="assets/img/previews/03/delocator-logo-2013.png"> <img height="240" src="assets/img/previews/03/delocator-logo-2011.jpg">  -->
-<img height="270" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim.gif"> <img height="270" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim.gif">
+Examples: 
+[Time](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/ikea-time/), 
+[Monopoly](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/adobe-monopoly)
+
+<img height="270" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim.gif"> 
+<img height="270" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim.gif">
 
 
 
