@@ -13,7 +13,7 @@ Publish your first web page: By the end of the modules in this chapter you will 
 Examples: [Codepen.io](https://codepen.io/owenmundy/pen/QWzJKVz), [Glitch.com](https://glitch.com/edit/#!/dig245-hello-world)
 
 
-<img height="300" src="assets/img/previews/01/ch1-glitch-hello-world.png"> 
+<img height="350" src="assets/img/previews/01/ch1-glitch-hello-world.png"> 
 
 
 
@@ -47,15 +47,16 @@ Examples:
 [Time](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/ikea-time/), 
 [Monopoly](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/adobe-monopoly)
 
-<img height="270" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim.gif"> 
-<img height="270" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim.gif">
+<img height="270" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim.gif"> <img height="270" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim.gif">
 
 
 
 
 ## Chapter 4 On the Grid
 
-Design a responsive multi-column web page layout for a fictional newspaper. Use lorem ipsum placeholder text throughout your design. Code the page using the Bootstrap framework. Examples: 
+Design a responsive multi-column web page layout for a fictional newspaper. Use lorem ipsum placeholder text throughout your design. Code the page using the Bootstrap framework. 
+
+Examples: 
 [The New York Felines](https://omundy.github.io/critical-web-design-book/04-on-the-grid/examples/the-new-york-felines/), 
 [The New York Thymes](https://omundy.github.io/critical-web-design-book/04-on-the-grid/examples/the-new-york-thymes/)
 
@@ -89,9 +90,9 @@ Create an experimental composition and then explode it!
 
 Examples: 
 [Haiku (xtine)](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/module6.3-finish.html), 
-[Birds](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/birds.html), 
-[Baldwin](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/baldwin.html), 
-[Maintenance](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/maintenance.html)
+[Haiku (Birds)](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/birds.html), 
+[After James Baldwin](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/baldwin.html), 
+[Maintenance is a Drag](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/maintenance.html)
 
 <img height="240" src="assets/img/previews/06/ch6-nyt-explode.png"> <img height="240" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> <img height="240" src="assets/img/previews/06/ch6-birds-1.gif"> <img height="240" src="assets/img/previews/06/ch6-baldwin-1.gif">  <img height="240" src="assets/img/previews/06/ch6-maintenance-3.gif"> 
 
@@ -120,7 +121,7 @@ Examples:
 [Generative (Jean) Arp](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/generative-arp), 
 [AI Albers](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/ai-albers.html), 
 [Band Name Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/band-name-generator), 
-[String Art Generator (Svelte)](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/string-art-generator/dist), 
+[String Art Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/string-art-generator/dist), 
 [Music  Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue-generator.html)
 
 <img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> <img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png">  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
@@ -135,7 +136,7 @@ Examine what data is being collected, processed, and used against you using DevT
 Examples: 
 [bad-password-api.glitch.me](https://bad-password-api.glitch.me/)
 
-<img height="300" src="assets/img/previews/09/bad-password-api-1.png">
+<img height="350" src="assets/img/previews/09/bad-password-api-1.png">
 
 
 
@@ -148,7 +149,7 @@ Use Node.js, a SQLite database, and Leaflet to built an interactive site that vi
 Examples: 
 [big-feelings.glitch.me](https://big-feelings.glitch.me/)
 
-<img height="300" src="assets/img/previews/10/10-22-big-feelings-finished.png">
+<img height="350" src="assets/img/previews/10/10-22-big-feelings-finished.png">
 
 
 
