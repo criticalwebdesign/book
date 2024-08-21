@@ -85,9 +85,11 @@ Create and implement a usability test, then design a responsive web page to refl
 Examples: 
 [AIGA usability test](https://omundy.github.io/critical-web-design-book/05-usability/examples/usability-aiga/)
 
+<!-- 
 <img height="240" src="assets/img/previews/05/ch5-outcome-lg.png"> <img height="240" src="assets/img/previews/05/ch5-outcome-md.png"> <img height="240" src="assets/img/previews/05/ch5-outcome-sm.png"> <img height="240" src="assets/img/previews/05/ch5-outcome-xs.png">
+ -->
 
-
+<img height="300" src="assets/img/previews/05/ch5-outcome-responsive-anim.gif">
 
 
 
@@ -104,7 +106,9 @@ Examples:
 [After James Baldwin](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/baldwin.html), 
 [Maintenance is a Drag](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/maintenance.html)
 
-<img height="240" src="assets/img/previews/06/ch6-nyt-explode.png"> <img height="240" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> <img height="240" src="assets/img/previews/06/ch6-birds-1.gif"> <img height="240" src="assets/img/previews/06/ch6-baldwin-1.gif">  <img height="240" src="assets/img/previews/06/ch6-maintenance-3.gif"> 
+<!-- <img height="240" src="assets/img/previews/06/ch6-nyt-explode.png">  -->
+
+<img height="300" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> <img height="300" src="assets/img/previews/06/ch6-birds-1.gif">  <img height="300" src="assets/img/previews/06/ch6-maintenance-3.gif">  <img height="300" src="assets/img/previews/06/ch6-baldwin-1.gif">
 
 
 
