@@ -108,7 +108,7 @@ Examples:
 
 <!-- <img height="240" src="assets/img/previews/06/ch6-nyt-explode.png">  -->
 
-<img height="300" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> <img height="300" src="assets/img/previews/06/ch6-birds-1.gif">  <img height="300" src="assets/img/previews/06/ch6-maintenance-3.gif">  <img height="300" src="assets/img/previews/06/ch6-baldwin-1.gif">
+<img height="270" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> <img height="270" src="assets/img/previews/06/ch6-birds-1.gif">  <img height="270" src="assets/img/previews/06/ch6-maintenance-3.gif">  <img height="270" src="assets/img/previews/06/ch6-baldwin-1.gif">
 
 
 
@@ -123,7 +123,12 @@ Create an interactive feature that tells a story with data to accompany an artic
 Examples: 
 [Accessibility Data](https://omundy.github.io/critical-web-design-book/07-ethical-design/examples/accessibility-data)
 
-<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-xl.png"> <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-md.png"> <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-sm.png"> 
+<!-- 
+<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-xl.png"> <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-md.png"> <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-sm.png">  
+-->
+
+<img height="300" src="assets/img/previews/07/ch7-outcome-accessibility-responsive-anim.gif"> <img height="300" src="assets/img/previews/07/ch7-outcome-accessibility-interaction-anim.gif">
+
 
 
 
