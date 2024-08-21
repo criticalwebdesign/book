@@ -60,10 +60,20 @@ Examples:
 [The New York Felines](https://omundy.github.io/critical-web-design-book/04-on-the-grid/examples/the-new-york-felines/), 
 [The New York Thymes](https://omundy.github.io/critical-web-design-book/04-on-the-grid/examples/the-new-york-thymes/)
 
-<img height="240" src="assets/img/previews/04/ch4-outcome-lg.png"> <img height="240" src="assets/img/previews/04/ch4-outcome-md.png">  <img height="240" src="assets/img/previews/04/ch4-outcome-sm.png"> <img height="240" src="assets/img/previews/04/ch4-outcome-xs.png">
+<!-- 
 
+<img height="240" src="assets/img/previews/04/ch4-outcome-lg.png"> <img height="240" src="assets/img/previews/04/ch4-outcome-md.png">  <img height="240" src="assets/img/previews/04/ch4-outcome-sm.png"> <img height="240" src="assets/img/previews/04/ch4-outcome-xs.png"> 
 
 <img height="240" src="assets/img/previews/04/ch4-outcome-thymes-desktop.png">  <img height="240" src="assets/img/previews/04/ch4-outcome-thymes-tablet.png"> <img height="240" src="assets/img/previews/04/ch4-outcome-thymes-mobile.png">
+
+-->
+
+
+<img height="350" src="assets/img/previews/04/ch4-outcome-responsive-anim.gif"> <img height="350" src="assets/img/previews/04/ch4-outcome-thymes-responsive-anim.gif">
+
+
+
+
 
 
 
