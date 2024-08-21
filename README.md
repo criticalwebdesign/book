@@ -77,7 +77,7 @@ Examples:
 -->
 
 
-<img height="300" src="assets/img/previews/04/ch4-outcome-responsive-anim.gif"> &nbsp;<img height="300" src="assets/img/previews/04/ch4-outcome-thymes-responsive-anim.gif">
+<img height="315" src="assets/img/previews/04/ch4-outcome-responsive-anim.gif"> &nbsp;<img height="315" src="assets/img/previews/04/ch4-outcome-thymes-responsive-anim.gif">
 
 
 
@@ -120,7 +120,7 @@ Examples:
 <!-- 
 <img height="240" src="assets/img/previews/06/ch6-nyt-explode.png"> -->
 
-<img height="270" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> &nbsp;<img height="270" src="assets/img/previews/06/ch6-birds-1.gif"> &nbsp;<img height="270" src="assets/img/previews/06/ch6-maintenance-3.gif"> &nbsp;<img height="270" src="assets/img/previews/06/ch6-baldwin-1.gif">
+<img height="300" src="assets/img/previews/06/ch6-haiku-xtine-browser-anim.gif"> &nbsp;<img height="300" src="assets/img/previews/06/ch6-birds-browser-anim.gif"> &nbsp;<img height="300" src="assets/img/previews/06/ch6-maintenance-browser-anim.gif"> &nbsp;<img height="300" src="assets/img/previews/06/fox-explode-browser-anim.gif">
 
 
 
@@ -156,7 +156,7 @@ Examples:
 [Music Venue Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue-generator.html),
 [...](https://github.com/omundy/critical-web-design-book/tree/main/08-generative-design/examples/)
 
-<img height="300" src="assets/img/previews/08/generative-arp-anim-browser-640-476.gif"> <img height="300" src="assets/img/previews/08/band-name-generator-anim-browser-640-476.gif"> &nbsp;<img height="300" src="assets/img/previews/08/string-art-generator-anim-browser-640-476.gif">
+<img height="300" src="assets/img/previews/08/generative-arp-anim-browser-640-476.gif"> <img height="300" src="assets/img/previews/08/band-name-generator-anim-browser-640-476.gif"> &nbsp;<img height="300" src="assets/img/previews/08/string-art-generator-anim-browser-640-476.gif"> &nbsp;<img height="300" src="assets/img/previews/08/endless-beer-browser-anim.gif">
 
 
 
