@@ -35,10 +35,10 @@ Examples:
 [Poem (Click)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-click.html), 
 [Don't Be Evil)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-evil.html)
 
-<img height="300" src="assets/img/previews/02/02-03-Poem-Think.png"> &nbsp; <img height="300" src="assets/img/previews/02/ch2-Poem-Chaos-browser-640w.gif">
+<img height="300" src="assets/img/previews/02/02-03-Poem-Think.png"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Chaos-browser-640w.gif">
 
 
-<!-- <img height="240" src="assets/img/previews/02/ch2-Poem-Shake-640w.gif"> &nbsp; <img height="240" src="assets/img/previews/02/ch2-Poem-Think.png"> &nbsp; <img height="240" src="assets/img/previews/02/ch2-after-ruhm.png"> &nbsp; <img height="240" src="assets/img/previews/02/ch2-Poem-Click.png"> &nbsp; <img height="240" src="assets/img/previews/02/ch2-dont-be-evil.gif">  -->
+<!-- <img height="240" src="assets/img/previews/02/ch2-Poem-Shake-640w.gif"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-Poem-Think.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-after-ruhm.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-Poem-Click.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-dont-be-evil.gif">  -->
 
 
 
@@ -53,7 +53,7 @@ Examples:
 [Time](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/ikea-time/), 
 [Monopoly](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/adobe-monopoly)
 
-<img height="300" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim.gif"> &nbsp; <img height="300" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim-browser.gif">
+<img height="300" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim.gif"> &nbsp;<img height="300" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim-browser.gif">
 
 
 
@@ -68,14 +68,14 @@ Examples:
 
 <!-- 
 
-<img height="240" src="assets/img/previews/04/ch4-outcome-lg.png"> &nbsp; <img height="240" src="assets/img/previews/04/ch4-outcome-md.png">  <img height="240" src="assets/img/previews/04/ch4-outcome-sm.png"> &nbsp; <img height="240" src="assets/img/previews/04/ch4-outcome-xs.png"> 
+<img height="240" src="assets/img/previews/04/ch4-outcome-lg.png"> &nbsp;<img height="240" src="assets/img/previews/04/ch4-outcome-md.png">  <img height="240" src="assets/img/previews/04/ch4-outcome-sm.png"> &nbsp;<img height="240" src="assets/img/previews/04/ch4-outcome-xs.png"> 
 
-<img height="240" src="assets/img/previews/04/ch4-outcome-thymes-desktop.png">  <img height="240" src="assets/img/previews/04/ch4-outcome-thymes-tablet.png"> &nbsp; <img height="240" src="assets/img/previews/04/ch4-outcome-thymes-mobile.png">
+<img height="240" src="assets/img/previews/04/ch4-outcome-thymes-desktop.png">  <img height="240" src="assets/img/previews/04/ch4-outcome-thymes-tablet.png"> &nbsp;<img height="240" src="assets/img/previews/04/ch4-outcome-thymes-mobile.png">
 
 -->
 
 
-<img height="300" src="assets/img/previews/04/ch4-outcome-responsive-anim.gif"> &nbsp; <img height="300" src="assets/img/previews/04/ch4-outcome-thymes-responsive-anim.gif">
+<img height="300" src="assets/img/previews/04/ch4-outcome-responsive-anim.gif"> &nbsp;<img height="300" src="assets/img/previews/04/ch4-outcome-thymes-responsive-anim.gif">
 
 
 
@@ -92,7 +92,7 @@ Examples:
 [AIGA usability test](https://omundy.github.io/critical-web-design-book/05-usability/examples/usability-aiga/)
 
 <!-- 
-<img height="240" src="assets/img/previews/05/ch5-outcome-lg.png"> &nbsp; <img height="240" src="assets/img/previews/05/ch5-outcome-md.png"> &nbsp; <img height="240" src="assets/img/previews/05/ch5-outcome-sm.png"> &nbsp; <img height="240" src="assets/img/previews/05/ch5-outcome-xs.png">
+<img height="240" src="assets/img/previews/05/ch5-outcome-lg.png"> &nbsp;<img height="240" src="assets/img/previews/05/ch5-outcome-md.png"> &nbsp;<img height="240" src="assets/img/previews/05/ch5-outcome-sm.png"> &nbsp;<img height="240" src="assets/img/previews/05/ch5-outcome-xs.png">
  -->
 
 <img height="300" src="assets/img/previews/05/ch5-outcome-responsive-anim.gif">
@@ -114,7 +114,7 @@ Examples:
 
 <!-- <img height="240" src="assets/img/previews/06/ch6-nyt-explode.png">  -->
 
-<img height="270" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> &nbsp; <img height="270" src="assets/img/previews/06/ch6-birds-1.gif">  <img height="270" src="assets/img/previews/06/ch6-maintenance-3.gif">  <img height="270" src="assets/img/previews/06/ch6-baldwin-1.gif">
+<img height="270" src="assets/img/previews/06/ch6-haiku-xtine-1.gif"> &nbsp;<img height="270" src="assets/img/previews/06/ch6-birds-1.gif">  <img height="270" src="assets/img/previews/06/ch6-maintenance-3.gif">  <img height="270" src="assets/img/previews/06/ch6-baldwin-1.gif">
 
 
 
@@ -130,10 +130,10 @@ Examples:
 [Accessibility Data](https://omundy.github.io/critical-web-design-book/07-ethical-design/examples/accessibility-data)
 
 <!-- 
-<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-xl.png"> &nbsp; <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-md.png"> &nbsp; <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-sm.png">  
+<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-xl.png"> &nbsp;<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-md.png"> &nbsp;<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-sm.png">  
 -->
 
-<img height="300" src="assets/img/previews/07/ch7-outcome-accessibility-responsive-anim.gif"> &nbsp; <img height="300" src="assets/img/previews/07/ch7-outcome-accessibility-interaction-anim.gif">
+<img height="300" src="assets/img/previews/07/ch7-outcome-accessibility-responsive-anim.gif"> &nbsp;<img height="300" src="assets/img/previews/07/ch7-outcome-accessibility-interaction-anim.gif">
 
 
 
@@ -149,9 +149,9 @@ Examples:
 [String Art Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/string-art-generator/dist), 
 [Music  Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue-generator.html)
 
-<img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> &nbsp; <img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> &nbsp; <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> &nbsp; <img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> &nbsp; <img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png">  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
+<img height="240" src="assets/img/previews/08/08-boxes-4-svg-1.png"> &nbsp;<img height="240" src="assets/img/previews/08/08-boxes-5-svg-custom-palette-1.png"> &nbsp;<img height="240" src="assets/img/previews/08/08-boxes-6-inputs-1.png"> &nbsp;<img height="240" src="assets/img/previews/08/08-boxes-6-inputs-2.png"> &nbsp;<img height="240" src="assets/img/previews/08/band-name-rotten-husband.png">  <img height="240" src="assets/img/previews/08/band-name-unpleasant-enthusiasm.png">  <img height="240" src="assets/img/previews/08/string-art-generator-5.png">
 
-<!--<img height="240" src="assets/img/previews/08/band-name-stretch-goodness.png"> &nbsp; <img height="240" src="assets/img/previews/08/08-boxes-4-svg-2.png"> &nbsp; <img height="240" src="assets/img/previews/08/music-venue-xl-1.png"> &nbsp; <img height="240" src="assets/img/previews/08/music-venue-md-1.png"> &nbsp; <img height="240" src="assets/img/previews/08/music-venue-sm-1.png">  -->
+<!--<img height="240" src="assets/img/previews/08/band-name-stretch-goodness.png"> &nbsp;<img height="240" src="assets/img/previews/08/08-boxes-4-svg-2.png"> &nbsp;<img height="240" src="assets/img/previews/08/music-venue-xl-1.png"> &nbsp;<img height="240" src="assets/img/previews/08/music-venue-md-1.png"> &nbsp;<img height="240" src="assets/img/previews/08/music-venue-sm-1.png">  -->
 
 
 ## Chapter 9 Data Tracking
