@@ -69,7 +69,7 @@ Examples:
 -->
 
 
-<img height="350" src="assets/img/previews/04/ch4-outcome-responsive-anim.gif"> <img height="350" src="assets/img/previews/04/ch4-outcome-thymes-responsive-anim.gif">
+<img height="300" src="assets/img/previews/04/ch4-outcome-responsive-anim.gif"> <img height="300" src="assets/img/previews/04/ch4-outcome-thymes-responsive-anim.gif">
 
 
 
