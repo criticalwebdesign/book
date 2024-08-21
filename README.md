@@ -29,17 +29,21 @@ Design and code a page featuring expressive typography. Start by pre-visualizing
 Examples: 
 [Poem (Think)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-think.html), 
 [Poem (Chaos)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-chaos.html), 
+[Poem (Click)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-click.html), 
+[Poem (Shake)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-shake.html), 
 [...](https://github.com/omundy/critical-web-design-book/tree/main/02-view-source/examples/)
 
-<!-- [Poem (Shake)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-shake.html), 
+<!-- 
+
 [After Gerhard Rühm](https://omundy.github.io/critical-web-design-book/02-view-source/examples/after-ruhm.html), 
-[Poem (Click)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-click.html), 
-[Don't Be Evil)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-evil.html) -->
 
-<img height="300" src="assets/img/previews/02/ch2-Poem-Think-browser.png"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Chaos-anim-browser-640x476.gif">
+[Don't Be Evil)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-evil.html) 
+-->
 
+<img height="300" src="assets/img/previews/02/ch2-Poem-Think-browser.png"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Chaos-anim-browser-640x476.gif"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Click-browser-anim.gif"> 
+ &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Shake-browser-anim.gif">
 
-<!-- <img height="240" src="assets/img/previews/02/ch2-Poem-Shake-640w.gif"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-Poem-Think.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-after-ruhm.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-Poem-Click.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-dont-be-evil.gif"> -->
+<!--  &nbsp;<img height="240" src="assets/img/previews/02/ch2-after-ruhm.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-Poem-Click.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-dont-be-evil.gif"> -->
 
 
 
