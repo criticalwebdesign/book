@@ -8,7 +8,7 @@ A collection of examples and exercises to accompany _Critical Web Design_ by xti
 
 ## Chapter 1 Networks
 
-By the end of the modules in this chapter you will create and publish your first web page. 
+By the end of the modules in this chapter you will create and publish your first web page using a code playground and then Github Pages. 
 
 Examples: 
 [Codepen.io](https://bit.ly/cwd-codepen-hello-world), 
@@ -48,7 +48,7 @@ Examples:
 
 ## Chapter 3 Critical Design
 
-Throughout the modules in this chapter you will redesign a logo to create a visual form incorporating commentary. You will then use Figma to iterate on design, consider typographic choices using Google Fonts, and create a web page with interactive images and Javascript to express your ideas. 
+Throughout the modules in this chapter you will redesign a logo to create a visual form incorporating commentary. You will use Figma to iterate on the design, considering typographic choices using Google Fonts, and create a web page with interactive images and Javascript to express your ideas. 
 
 Examples: 
 [Time](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/ikea-time/), 
@@ -88,7 +88,7 @@ Examples:
 
 ## Chapter 5 Usability & Forms
 
-Create and implement a usability test, then design a responsive web page to reflect on findings. Evaluate your design using the "less is more" critique. Code the design using bootstrap, including a working web form to output the score from the System Usability Scale (SUS) survey. 
+Create and implement a usability test, then design a responsive web page to reflect on findings. Evaluate your design using the "less is more" critique. Code the design using Bootstrap, including a working web form to calculate and display the score from the System Usability Scale (SUS) survey. 
 
 Examples: 
 [AIGA usability test](https://omundy.github.io/critical-web-design-book/05-usability/examples/usability-aiga/),
@@ -147,7 +147,7 @@ Examples:
 
 ## Chapter 8 Generative Design
 
-This chapter prompt leads you to continue the work in chapter 7 by designing and coding an interactive album generator application. These exercises model the generative design prompt that follows at the end of the chapter: to create a web page that can generate new iterations of itself based on some changeable data source, like user input, time, location, etc.
+This chapter prompt leads you to design and code a web page that can generate new iterations of itself based on some changeable data source, like user input, time, location, etc.
 
 Examples: 
 [Generative (Jean) Arp](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/generative-arp), 
@@ -179,7 +179,7 @@ Examples:
 
 ## Chapter 10 Design & Power
 
-Use Node.js, a SQLite database, and Leaflet to built an interactive site that visualizes feelings contributed by users around the world. 
+Use Node.js, an SQLite database, and Leaflet to built an interactive site that visualizes feelings contributed by users around the world on an interactive map. 
 
 Examples: 
 [big-feelings.glitch.me](https://big-feelings.glitch.me/)
@@ -188,7 +188,3 @@ Examples:
 
 
 
-
-<!-- ## Chapter 11 Distribution
-
-TBD -->
