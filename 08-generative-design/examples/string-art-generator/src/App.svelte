@@ -117,7 +117,7 @@ License: MIT
 					style:transform="rotate({F.randomInt(0, 360)}deg)"
 					style:font-size="{F.randomInt(fmin, fmax)}rem"
 				>
-					O
+					{letter}
 				</div>
 			{/each}
 		{/key}
