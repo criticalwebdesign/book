@@ -21,6 +21,8 @@
 
 }
 
+html,body { background-color: var(--body-bg); }
+
 a {
     font-weight: 500;
     color: var(--purple);
