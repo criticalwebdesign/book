@@ -112,12 +112,12 @@ License: MIT
 					class="char"
 					style="transform-origin: center"
 					style:color="{F.randomRGBStr([0,r],[0,g],[0,b])}"
-					style:left="{F.randomInt(40 - w / 2, 50 + w / 2)}%"
+					style:left="{F.randomInt((40-((fmin+fmax)/2)) - w / 2, 50 + w / 2)}%"
 					style:top="{F.randomInt(50 - h / 2, 40 + h / 2)}%"
 					style:transform="rotate({F.randomInt(0, 360)}deg)"
 					style:font-size="{F.randomInt(fmin, fmax)}rem"
 				>
-					{letter}
+					O
 				</div>
 			{/each}
 		{/key}
