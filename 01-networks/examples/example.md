@@ -25,3 +25,4 @@
 
 [link](https://www.markdownguide.org)
 
+![cat](https://omundy.github.io/dig245-hello-world/assets/img/cat.jpg)
