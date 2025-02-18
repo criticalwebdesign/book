@@ -13,7 +13,9 @@
 	</style>
 </head>
 <body>
-	<div></div>
+	<div>
+
+	</div>
 
 	<script>
 		const links = {
@@ -27,9 +29,15 @@
 		const hash = url.hash.replace("#", "");
 		console.log(hash);
 		if (links[hash]) {
-			document.querySelector("div").innerHTML = `Redirecting to... ${links[hash]}`;
+			// document.querySelector("div").innerHTML = `Redirecting to... ${links[hash]}`;
 			window.location.replace(links[hash]);
-		}	
+		} else {
+			let str = "";
+			for (var slug in links) {
+				str += `<a href="/go#${slug}">${slug}</a><br>`;
+			}
+			document.querySelector("div").innerHTML = str;
+		}
 	</script>
 </body>
 </html>
