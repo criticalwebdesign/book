@@ -34,7 +34,7 @@
 		} else {
 			let str = "";
 			for (var slug in links) {
-				str += `<a href="./go#${slug}">${slug}</a><br>`;
+				str += `<a href="./#${slug}">${slug}</a><br>`;
 			}
 			document.querySelector("div").innerHTML = str;
 		}
