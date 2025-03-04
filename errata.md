@@ -1,6 +1,6 @@
 # Errata
 
-A list of issues found in the printed text of the book. If you find any typos, errors in code, or otherwise incorrect information, please feel free to file an [Issue](https://github.com/omundy/critical-web-design-book/issues) in GitHub. 
+A list of issues found in the printed text of the book. If you find any typos, errors in code, or otherwise incorrect information, please feel free to file an [Issue](https://github.com/criticalwebdesign/book/issues) in GitHub. 
 
 <!-- 
 ## Chapter 0

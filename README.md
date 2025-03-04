@@ -13,7 +13,7 @@ By the end of the modules in this chapter you will create and publish your first
 Examples: 
 [Codepen.io](https://bit.ly/cwd-codepen-hello-world), 
 [Glitch.com](https://glitch.com/edit/#!/dig245-hello-world),
-[...](https://github.com/omundy/critical-web-design-book/tree/main/01-networks/examples/)
+[...](https://github.com/criticalwebdesign/book/tree/main/01-networks/examples/)
 
 <img height="300" src="assets/img/previews/01/hello-world-codepen.png"> &nbsp;<img height="300" src="assets/img/previews/01/hello-world-glitch.png"> 
 
@@ -27,17 +27,17 @@ Examples:
 Design and code a page featuring expressive typography. Start by pre-visualizing the design in Figma and then code the page using HTML, CSS, and Javascript. The text can be any glyph, a single word, or one of the texts at [designmanifestos.org](https://designmanifestos.org). 
 
 Examples: 
-[Poem (Think)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-think.html), 
-[Poem (Chaos)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-chaos.html), 
-[Poem (Click)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-click.html), 
-[Poem (Shake)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-shake.html), 
-[...](https://github.com/omundy/critical-web-design-book/tree/main/02-view-source/examples/)
+[Poem (Think)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-think.html), 
+[Poem (Chaos)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-chaos.html), 
+[Poem (Click)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-click.html), 
+[Poem (Shake)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-shake.html), 
+[...](https://github.com/criticalwebdesign/book/tree/main/02-view-source/examples/)
 
 <!-- 
 
-[After Gerhard Rühm](https://omundy.github.io/critical-web-design-book/02-view-source/examples/after-ruhm.html), 
+[After Gerhard Rühm](https://criticalwebdesign.github.io/book/02-view-source/examples/after-ruhm.html), 
 
-[Don't Be Evil)](https://omundy.github.io/critical-web-design-book/02-view-source/examples/poem-evil.html) 
+[Don't Be Evil)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-evil.html) 
 -->
 
 <img height="300" src="assets/img/previews/02/ch2-Poem-Think-browser.png"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Chaos-anim-browser-640x476.gif"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Click-browser-anim.gif"> 
@@ -55,9 +55,9 @@ Examples:
 Throughout the modules in this chapter you will redesign a logo to create a visual form incorporating commentary. You will use Figma to iterate on the design, considering typographic choices using Google Fonts, and create a web page with interactive images and Javascript to express your ideas. 
 
 Examples: 
-[Time](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/ikea-time/), 
-[Monopoly](https://omundy.github.io/critical-web-design-book/03-critical-design/examples/adobe-monopoly), 
-[...](https://github.com/omundy/critical-web-design-book/tree/main/03-critical-design/examples)
+[Time](https://criticalwebdesign.github.io/book/03-critical-design/examples/ikea-time/), 
+[Monopoly](https://criticalwebdesign.github.io/book/03-critical-design/examples/adobe-monopoly), 
+[...](https://github.com/criticalwebdesign/book/tree/main/03-critical-design/examples)
 
 <img height="300" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim-browser-640x476.gif"> &nbsp;<img height="300" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim-browser-640x476.gif">
 
@@ -69,9 +69,9 @@ Examples:
 Design a responsive multi-column web page layout for a fictional newspaper. Use lorem ipsum placeholder text throughout your design. Code the page using the Bootstrap CSS framework. 
 
 Examples: 
-[The New York Felines](https://omundy.github.io/critical-web-design-book/04-on-the-grid/examples/the-new-york-felines/), 
-[The New York Thymes](https://omundy.github.io/critical-web-design-book/04-on-the-grid/examples/the-new-york-thymes/),
-[...](https://github.com/omundy/critical-web-design-book/tree/main/04-on-the-grid/examples/)
+[The New York Felines](https://criticalwebdesign.github.io/book/04-on-the-grid/examples/the-new-york-felines/), 
+[The New York Thymes](https://criticalwebdesign.github.io/book/04-on-the-grid/examples/the-new-york-thymes/),
+[...](https://github.com/criticalwebdesign/book/tree/main/04-on-the-grid/examples/)
 
 
 <!-- individual breakpoints -->
@@ -95,8 +95,8 @@ Examples:
 Create and implement a usability test, then design a responsive web page to reflect on findings. Evaluate your design using the "less is more" critique. Code the design using Bootstrap, including a working web form to calculate and display the score from the System Usability Scale (SUS) survey. 
 
 Examples: 
-[AIGA usability test](https://omundy.github.io/critical-web-design-book/05-usability/examples/usability-aiga/),
-[...](https://github.com/omundy/critical-web-design-book/tree/main/05-usability/examples/)
+[AIGA usability test](https://criticalwebdesign.github.io/book/05-usability/examples/usability-aiga/),
+[...](https://github.com/criticalwebdesign/book/tree/main/05-usability/examples/)
 
 <!-- individual breakpoints -->
 <!-- 
@@ -115,11 +115,11 @@ Examples:
 Create an experimental composition and then explode it!
 
 Examples: 
-[Haiku (xtine)](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/module6.3-finish.html), 
-[Haiku (Birds)](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/birds.html), 
-[After James Baldwin](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/baldwin.html), 
-[Maintenance is a Drag](https://omundy.github.io/critical-web-design-book/06-off-the-grid/examples/maintenance.html),
-[...](https://github.com/omundy/critical-web-design-book/tree/main/06-off-the-grid/examples/)
+[Haiku (xtine)](https://criticalwebdesign.github.io/book/06-off-the-grid/examples/module6.3-finish.html), 
+[Haiku (Birds)](https://criticalwebdesign.github.io/book/06-off-the-grid/examples/birds.html), 
+[After James Baldwin](https://criticalwebdesign.github.io/book/06-off-the-grid/examples/baldwin.html), 
+[Maintenance is a Drag](https://criticalwebdesign.github.io/book/06-off-the-grid/examples/maintenance.html),
+[...](https://github.com/criticalwebdesign/book/tree/main/06-off-the-grid/examples/)
 
 <!-- 
 <img height="240" src="assets/img/previews/06/ch6-nyt-explode.png"> -->
@@ -137,8 +137,8 @@ Examples:
 Create an interactive feature that tells a story with data to accompany an article about the human impact of web accessibility. The idea should communicate 6 key statistics (%s) about accessibility while underscoring how non-accessible websites can exclude users with permanent or temporary disabilities. 
 
 Examples: 
-[Accessibility Data](https://omundy.github.io/critical-web-design-book/07-ethical-design/examples/accessibility-data),
-[...](https://github.com/omundy/critical-web-design-book/tree/main/07-ethical-design/examples/)
+[Accessibility Data](https://criticalwebdesign.github.io/book/07-ethical-design/examples/accessibility-data),
+[...](https://github.com/criticalwebdesign/book/tree/main/07-ethical-design/examples/)
 
 <!-- 
 <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-xl.png"> &nbsp;<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-md.png"> &nbsp;<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-sm.png"> 
@@ -154,11 +154,11 @@ Examples:
 This chapter prompt leads you to design and code a web page that can generate new iterations of itself based on some changeable data source, like user input, time, location, etc.
 
 Examples: 
-[Generative (Jean) Arp](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/generative-arp), 
-[Band Name Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/band-name-generator), 
-[String Art Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/string-art-generator/dist), 
-[Music Venue Generator](https://omundy.github.io/critical-web-design-book/08-generative-design/examples/music-venue-generator.html),
-[...](https://github.com/omundy/critical-web-design-book/tree/main/08-generative-design/examples/)
+[Generative (Jean) Arp](https://criticalwebdesign.github.io/book/08-generative-design/examples/generative-arp), 
+[Band Name Generator](https://criticalwebdesign.github.io/book/08-generative-design/examples/band-name-generator), 
+[String Art Generator](https://criticalwebdesign.github.io/book/08-generative-design/examples/string-art-generator/dist), 
+[Music Venue Generator](https://criticalwebdesign.github.io/book/08-generative-design/examples/music-venue-generator.html),
+[...](https://github.com/criticalwebdesign/book/tree/main/08-generative-design/examples/)
 
 <img height="300" src="assets/img/previews/08/generative-arp-anim-browser-640-476.gif"> <img height="300" src="assets/img/previews/08/band-name-generator-anim-browser-640-476.gif"> &nbsp;<img height="300" src="assets/img/previews/08/string-art-generator-anim-browser-640-476.gif"> &nbsp;<img height="300" src="assets/img/previews/08/endless-beer-browser-anim.gif">
 
@@ -173,7 +173,7 @@ Examine what data is being collected, processed, and used against you using DevT
 
 Examples: 
 [bad-password-api.glitch.me](https://bad-password-api.glitch.me/),
-[...](https://github.com/omundy/critical-web-design-book/tree/main/09-data-tracking/examples/)
+[...](https://github.com/criticalwebdesign/book/tree/main/09-data-tracking/examples/)
 
 <img height="350" src="assets/img/previews/09/bad-password-api-0.png">
 

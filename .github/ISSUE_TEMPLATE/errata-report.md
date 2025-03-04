@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Check for prior reports**
-[ ] I checked the [https://github.com/omundy/critical-web-design-book/blob/main/errata.md](Errata.md) and open issues for similar issues.
+[ ] I checked the [https://github.com/criticalwebdesign/book/blob/main/errata.md](Errata.md) and open issues for similar issues.
 
 **Describe the issue**
 A clear and concise description of the problem
