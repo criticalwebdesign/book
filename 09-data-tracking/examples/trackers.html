@@ -166,7 +166,7 @@
 
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <small>
-                        <strong>⚠️ Surveillance detected!</strong> This page contains several web tracking methods and for testing only. We don't save any information, but the trackers on the page probably will. Open it in an incognito window with ad/tracker blockers disabled will allow you to see most results.
+                        <strong>⚠️ Surveillance detected!</strong> This page contains several web tracking methods for testing only. We don't save any information, but the trackers on the page probably will. Opening it in an incognito window with ad/tracker blockers disabled will allow you to see most results.
                     </small>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -197,11 +197,11 @@
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Websites can access a lot of information about visitors using only Javascript and request headers. </p>
+                        <p>Websites can access a lot of information about visitors using basic technologies of the internet. </p>
 
                         <ol>
-                            <li>Example 1-1 shows data from the <code>window.navigator</code> Javascript object. Run it in the console to see more.</li>
-                            <li>Explore the quiz at <a href="https://geokitten.com" target="_blank">geokitten.com</a> and then examine example 1-2 showing data returned from a geolocation API using only your IP address. </li>
+                            <li>Example 1-1 shows data that can be access via Javascript. Type <code>window.navigator</code> in the DevTools console and press return to see more.</li>
+                            <li>Every time you request a resource on the internet your IP address is sent to a remote server. Explore the quiz at <a href="https://geokitten.com" target="_blank">geokitten.com</a> and then examine example 1-2 showing data returned from a geolocation API to see what can be learned about you using only your IP address. </li>
                         </ol>
 
                     </div>
@@ -240,7 +240,7 @@
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Link tracking is easy to spot and avoid. When you click an ad or share a website extra URL parameters, like <code>utm_source</code>, <code>utm_campaign</code>, are added to the end of the link. These parameters can pass data about your activity to analytics and advertising tools to track the effectiveness of marketing campaigns.</p>
+                        <p>This method is easy to spot. When you click an ad or share a website extra URL parameters, like <code>utm_source</code>, <code>utm_campaign</code>, are added to the end of the link. These parameters can pass data about your activity to analytics and advertising tools to track the effectiveness of marketing campaigns.</p>
 
                         <ol>
                             <li>Examine the two example URLs containing link tracking parameters. Example 2-1 is a common use. Example 2-2 shows how these could share data about you.</li>
@@ -250,10 +250,10 @@
                         <details>
                             <summary>More Details</summary>
                             <div class="alert alert-warning" role="alert">
-                                <small class="d-block">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
+                                <small class="d-block">⚠️ You can usually delete everything after the "?" whenever you see a <b>utm_*</b> link.</small>
                             </div>
                             <div class="alert alert-warning" role="alert">
-                                <small class="d-block">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/" target="_blank">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
+                                <small class="d-block">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/" target="_blank">does not require user consent</a> under the GDPR, unlike cookies and third party tracking pixels.</small>
                             </div>
                         </details>
 
@@ -303,7 +303,7 @@
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>A <b>tracker</b> is any code that collects data on users. The Ghostery tracker blocker describes 16 categories of trackers, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
+                        <p>A <b>tracker</b> is any code that collects data on users. The <a href="https://www.ghostery.com/blog/how-ghostery-categorizes-trackers" target="_blank">Ghostery tracker blocker describes 16 categories of trackers</a>, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
                         
                         <ol>
                             <li>Analyze the examples. Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and X buttons, Youtube video). </li>
@@ -374,7 +374,7 @@
 
                             gtag('config', 'G-DFYTWR6TXG');
                         </script>
-                        <code>Nothing to see here. 😎 This method is invisible.</code>
+                        <code>Nothing to see here. 😎 This method is invisible unless you examin the source code.</code>
 
                     </div>
                 </div>
