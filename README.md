@@ -168,7 +168,7 @@ Examples:
 [bad-password-api.glitch.me](https://bad-password-api.glitch.me/),
 [...](https://github.com/criticalwebdesign/book/tree/main/09-data-tracking/examples/)
 
-<img height="350" src="assets/img/previews/09/bad-password-api-0.png">
+<img height="550" src="assets/img/previews/09/bad-password-api-0.png">
 
 
 
@@ -181,7 +181,7 @@ Use Node.js, an SQLite database, and Leaflet to built an interactive site that v
 Examples: 
 [big-feelings.glitch.me](https://big-feelings.glitch.me/)
 
-<img height="350" src="assets/img/previews/10/10-22-big-feelings-finished.png">
+<img height="500" src="assets/img/previews/10/10-22-big-feelings-finished.png">
 
 
 
