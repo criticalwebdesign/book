@@ -31,21 +31,14 @@ Examples:
 [Poem (Chaos)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-chaos.html), 
 [Poem (Click)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-click.html), 
 [Poem (Shake)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-shake.html), 
+[After Gerhard Rühm](https://criticalwebdesign.github.io/book/02-view-source/examples/after-ruhm.html), 
+[Don't Be Evil](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-evil.html),
 [...](https://github.com/criticalwebdesign/book/tree/main/02-view-source/examples/)
 
-<!-- 
-
-[After Gerhard Rühm](https://criticalwebdesign.github.io/book/02-view-source/examples/after-ruhm.html), 
-
-[Don't Be Evil)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-evil.html) 
--->
-
 <img height="300" src="assets/img/previews/02/ch2-Poem-Think-browser.png"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Chaos-anim-browser-640x476.gif"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Click-browser-anim.gif"> 
- &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Shake-browser-anim.gif">
+ &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Shake-browser-anim.gif"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-after-ruhm.png"> &nbsp;<img height="300" src="assets/img/previews/02/ch2-dont-be-evil.gif">
 
-<!--  &nbsp;<img height="240" src="assets/img/previews/02/ch2-after-ruhm.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-Poem-Click.png"> &nbsp;<img height="240" src="assets/img/previews/02/ch2-dont-be-evil.gif"> -->
-
-
+ <!-- &nbsp;<img height="300" src="assets/img/previews/02/ch2-Poem-Click.png"> -->
 
 
 
