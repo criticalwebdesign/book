@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset=“UTF-8”>
+	<!-- 
+    Title: Think Different
+    Author: xtine burrough
+    Date: 2023
+    License: MIT
+    -->
+	<title>Think Different</title>
+	<style>
+		body {
+			/* these rules change the whole page */
+			font-family: 'Helvetica', 'Arial', sans-serif;
+			background-color: pink;
+		}
+
+		p {
+			/* these rules change all paragraph tags on this page */
+			color: green;
+			font-weight: bold;
+			font-size: 60px;
+			transform: rotate(2deg);
+			/* use positive margins to increase space between lines of block level elements */
+			margin-top: 35px;
+			margin-bottom: 35px;
+		}
+
+		/* these rules change only tags with the class=diff */
+		.diff {
+			color: #b5edcc;
+			font-weight: bold;
+			font-size: 220px;
+			letter-spacing: 12px;
+			/* negative margins decrease space between lines */
+			margin-top: -80px;
+			margin-bottom: -80px;
+		}
+
+		.offset {
+			/* move slightly to the right (away from the left margin) */
+			margin-left: 30px;
+		}
+
+		/* these rules change only span tags inside of tags with diff class */
+		.diff span {
+			display: inline-block;
+			transform: rotate(12deg);
+		}
+	</style>
+	<!--
+TTTTTTTTTTTThhhhhhhhhhhhhhh      I       nnnnnnnnnnnnnnnkkkkkkkkkkkkkkkkkkkkkkkk
+difffffffffffffffffffffffff      er      ennnnnnnnnnnnnntttttttttttttttttttttttt
+-->
+	<!--This is Apple Computer's slogan, used from 1997-2002, a two-word manifesto rendered as a browser poem.
+The Los Angeles ad firm Chiat Day is responsible for the slogan (Chiat Day appears in the Helvetica movie, you should watch it if you haven't seen it yet). 
+This work is sharable and attributed with a CC-BY license to xtine burrough-->
+</head>
+<body>
+	<p>Th</p>
+	<p>Th</p>
+	<p>Th</p>
+	<p>Th</p>
+	<p>ThThTh</p>
+	<p>ThThTh</p>
+	<p>ThThTh</p>
+	<p>ThThTh</p>
+	<p>TTThhhh!!!!</p>
+	<p>Th!nk </p>
+	<div class="diff">
+		diff<span>e</span>r<span style="transform:rotate(-12deg);">e</span>nt
+	</div>
+	<p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+</body>
+</html>
