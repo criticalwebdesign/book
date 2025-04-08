@@ -70,15 +70,14 @@
 
 	<script>
 
-		function randomNumber(min, max) {
-			return (Math.random() * (max - min)) + min;
-		}
-
 		let rotation = 0;
 		document.addEventListener("click", function () {
-			rotation += randomNumber(1, 200);
+			let min = 10;
+			let max = 40;
+			rotation += Math.random() * (max - min) + min;
 			document.body.style.transform = `rotate(${rotation}deg)`;
 		});
+
 
 	</script>
 
