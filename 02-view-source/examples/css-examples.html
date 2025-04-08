@@ -1,101 +1,134 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>CSS Examples | Critical Web Design</title>
+	<meta charset="utf-8">
+	<title>CSS Examples | Critical Web Design</title>
 
-    <style>
-        .container {
-            margin: 60px 20px;
-            width: 300px;
-            background-color: beige;
-            font: 16px/22px Arial, sans-serif;
-            color: white;
-            overflow: visible;
-        }
+	<style>
+		h1 {
+			color: hotpink !important;
+		}
+		
 
-        .container :nth-child(1) {
-            background-color: #BE56DD;
-        }
+		.myClass {
+			font-style: italic;
+			color: salmon;
+		}
 
-        .container :nth-child(2) {
-            background-color: #3E9FEF;
-        }
+		#uniqueId {
+			color: orange;
+		}
 
-        .container :nth-child(3) {
-            background-color: #38B3C2;
-        }
+		.anywhere {
+			position: absolute;
+			top: 350px;
+			left: 480px;
+			transform: rotate(-30deg);
+		}
 
-        .container :nth-child(4) {
-            background-color: #87C35C;
-        }
 
-        .container :nth-child(5) {
-            background-color: #E5B459;
-        }
 
-        .block>div {
-            display: block;
-            padding: 10px;
-            margin: 0 10px 10px 0;
-        }
+		.container {
+			margin: 60px 20px;
+			width: 300px;
+			background-color: beige;
+			font: 16px/22px Arial, sans-serif;
+			color: white;
+			overflow: visible;
+		}
 
-        .inline>div {
-            display: inline;
-            padding: 10px;
-            margin: 0 10px 10px 0;
-        }
+		.color1 {
+			background-color: #BE56DD;
+		}
 
-        .inline-block>div {
-            display: inline-block;
-            padding: 10px;
-            margin: 0 10px 10px 0;
-        }
-    </style>
+		.color2 {
+			background-color: #3E9FEF;
+		}
+
+		.color3 {
+			background-color: #38B3C2;
+		}
+
+		.color4 {
+			background-color: #87C35C;
+		}
+
+		.color5 {
+			background-color: #E5B459;
+		}
+
+		.block>div {
+			display: block;
+			padding: 10px;
+			margin: 0 10px 10px 0;
+		}
+
+		.inline>div {
+			display: inline;
+			padding: 10px;
+			margin: 0 10px 10px 0;
+		}
+
+		.inline-block>div {
+			display: inline-block;
+			padding: 10px;
+			margin: 0 10px 10px 0;
+		}
+	</style>
 </head>
 <body>
 
-    <h1>CSS Examples</h1>
+	<h1>CSS Examples</h1>
 
-    <p>Both everyday and exotic, public and private, autonomous and commercial, the internet is a chaotic, diverse and crowded form of contemporary public space. —Rachel Greene, Internet Art</p>
+	<p>Both everyday and exotic, public and private, autonomous and commercial, the internet is a chaotic, diverse and crowded form of contemporary public space. —Rachel Greene, Internet Art</p>
 
+	<h2>Inheritance</h2>
 
-    <h2>CSS class vs. id</h2>
-
-    <div class="myClass">We can reuse classes...</div>
-    <div class="myClass">We can reuse classes... again...</div>
-    <div class="myClass">We can reuse classes... again... and again...</div>
-
-    <div id="uniqueId">But there can only be one element with this id</div>
-    <div id="uniqueId">This will not validate!</div>
+    <p style="color: blue;">This paragraph uses inline styles</p>
+    <p>This paragraph uses a rule assigned to the tag</p>
+    <p class="myClass">This paragraph also has a class</p>
+    <p class="myClass" id="uniqueId">This paragraph has a class and id</p>
+    <p class="anywhere">A paragraph with an absolute position and transform</p>
 
 
 
-    <h2>CSS block vs inline</h2>
 
-    <div class="container block">
-        <div>Farfalla</div>
-        <div>Mariposa</div>
-        <div>Papillon</div>
-        <div>Schmetterling</div>
-        <div>Sommerfugl</div>
-    </div>
+	<h2>CSS class vs. id</h2>
 
-    <div class="container inline">
-        <div>Farfalla</div>
-        <div>Mariposa</div>
-        <div>Papillon</div>
-        <div>Schmetterling</div>
-        <div>Sommerfugl</div>
-    </div>
+	<div class="myClass">We can reuse classes...</div>
+	<div class="myClass">We can reuse classes... again...</div>
+	<div class="myClass">We can reuse classes... again... and again...</div>
 
-    <div class="container inline-block">
-        <div>Farfalla</div>
-        <div>Mariposa</div>
-        <div>Papillon</div>
-        <div>Schmetterling</div>
-        <div>Sommerfugl</div>
-    </div>
+	<div id="uniqueId">But there can only be one element with this id</div>
+	<div id="uniqueId">This will not validate!</div>
+
+
+
+	<h2>CSS block vs inline</h2>
+
+	<div class="container block">
+		<div class="color1">Farfalla</div>
+		<div class="color2">Mariposa</div>
+		<div class="color3">Papillon</div>
+		<div class="color4">Schmetterling</div>
+		<div class="color5">Sommerfugl</div>
+	</div>
+
+	<div class="container inline">
+		<div class="color1">Farfalla</div>
+		<div class="color2">Mariposa</div>
+		<div class="color3">Papillon</div>
+		<div class="color4">Schmetterling</div>
+		<div class="color5">Sommerfugl</div>
+	</div>
+
+	<div class="container inline-block">
+		<div class="color1">Farfalla</div>
+		<div class="color2">Mariposa</div>
+		<div class="color3">Papillon</div>
+		<div class="color4">Schmetterling</div>
+		<div class="color5">Sommerfugl</div>
+	</div>
 
 
 
