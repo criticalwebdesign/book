@@ -43,11 +43,10 @@
 			border-bottom: 2px solid rgb(220, 200, 180);
 		}
 
-		div {
+		body {
 			transition-property: transform;
 			transition-duration: 3s;
 		}
-
 	</style>
 </head>
 <body>
@@ -71,22 +70,15 @@
 
 	<script>
 
-
-
 		function randomNumber(min, max) {
 			return (Math.random() * (max - min)) + min;
 		}
 
 		let rotation = 0;
 		document.addEventListener("click", function () {
-		    rotation += randomNumber(1, 200);
-		    document.body.style.transform = `rotate(${rotation}deg)`;
+			rotation += randomNumber(1, 200);
+			document.body.style.transform = `rotate(${rotation}deg)`;
 		});
-
-
-
-
-
 
 	</script>
 

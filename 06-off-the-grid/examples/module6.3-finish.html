@@ -89,54 +89,21 @@
 	<script>
 
 
-		// Example 1 - JS 
-
-		// document.body.style.opacity = .5;
-		// document.body.style.transform = `rotate(${90}deg)`;
-
-		// Example 2 - JS 
-
-		// let rotation = 0;
-		// setInterval(function () {
-		//     rotation += 5;
-		//     document.body.style.transform = `rotate(${rotation}deg)`;
-		// }, 100);
-
-
-		// Example 3 - JS + CSS transition
-
-		// let rotation = 0;
-		// document.addEventListener("click", function () {
-		//     let min = 1;
-		//     let max = 20;
-		//     rotation += Math.random() * (max - min) + min;
-		//     document.body.style.transform = `rotate(${rotation}deg)`;
-		// });
-
-
-		// Example 4 - JS function
 
 		function randomNumber(min, max) {
 			return (Math.random() * (max - min)) + min;
 		}
 
-		// let rotation = 0;
-		// document.addEventListener("click", function () {
-		//     rotation += randomNumber(1, 200);
-		//     document.body.style.transform = `rotate(${rotation}deg)`;
-		// });
 
 
-
-
-		let grid = document.querySelectorAll(".grid-container");
+		// let grid = document.querySelectorAll(".grid-container");
 		let divs = document.querySelectorAll(".grid-container div");
 
 		function randomize() {
 			console.log(divs.length, "randomize!")
 
 			// affect the whole grid
-			grid[0].style.transform = `rotate(${Math.random() * 360}deg)`;
+			// grid[0].style.transform = `rotate(${Math.random() * 360}deg)`;
 
 			// just the grid divs
 			divs.forEach(function (div) {
