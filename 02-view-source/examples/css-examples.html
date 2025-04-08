@@ -8,7 +8,6 @@
 		h1 {
 			color: hotpink !important;
 		}
-		
 
 		.myClass {
 			font-style: italic;
@@ -16,63 +15,14 @@
 		}
 
 		#uniqueId {
-			color: orange;
+			color: green;
 		}
 
 		.anywhere {
 			position: absolute;
-			top: 350px;
-			left: 480px;
+			top: 550px;
+			left: 400px;
 			transform: rotate(-30deg);
-		}
-
-
-
-		.container {
-			margin: 60px 20px;
-			width: 300px;
-			background-color: beige;
-			font: 16px/22px Arial, sans-serif;
-			color: white;
-			overflow: visible;
-		}
-
-		.color1 {
-			background-color: #BE56DD;
-		}
-
-		.color2 {
-			background-color: #3E9FEF;
-		}
-
-		.color3 {
-			background-color: #38B3C2;
-		}
-
-		.color4 {
-			background-color: #87C35C;
-		}
-
-		.color5 {
-			background-color: #E5B459;
-		}
-
-		.block>div {
-			display: block;
-			padding: 10px;
-			margin: 0 10px 10px 0;
-		}
-
-		.inline>div {
-			display: inline;
-			padding: 10px;
-			margin: 0 10px 10px 0;
-		}
-
-		.inline-block>div {
-			display: inline-block;
-			padding: 10px;
-			margin: 0 10px 10px 0;
 		}
 	</style>
 </head>
@@ -84,51 +34,26 @@
 
 	<h2>Inheritance</h2>
 
-    <p style="color: blue;">This paragraph uses inline styles</p>
-    <p>This paragraph uses a rule assigned to the tag</p>
-    <p class="myClass">This paragraph also has a class</p>
-    <p class="myClass" id="uniqueId">This paragraph has a class and id</p>
-    <p class="anywhere">A paragraph with an absolute position and transform</p>
+	<p style="color: blue;">This paragraph uses inline styles</p>
+	<p>This paragraph uses a rule assigned to the tag</p>
+	<p class="myClass">This paragraph also has a class</p>
+	<p class="myClass" id="uniqueId">This paragraph has a class and id</p>
+	<p class="anywhere">A paragraph with an absolute position and transform</p>
 
 
 
 
 	<h2>CSS class vs. id</h2>
 
-	<div class="myClass">We can reuse classes...</div>
-	<div class="myClass">We can reuse classes... again...</div>
-	<div class="myClass">We can reuse classes... again... and again...</div>
+	<p class="myClass">We can reuse classes...</p>
+	<p class="myClass">We can reuse classes... again...</p>
+	<p class="myClass">We can reuse classes... again... and again...</p>
 
-	<div id="uniqueId">But there can only be one element with this id</div>
-	<div id="uniqueId">This will not validate!</div>
+	<p id="uniqueId">But there can only be one element with this id</p>
+	<p id="uniqueId">This will not validate!</p>
 
 
 
-	<h2>CSS block vs inline</h2>
-
-	<div class="container block">
-		<div class="color1">Farfalla</div>
-		<div class="color2">Mariposa</div>
-		<div class="color3">Papillon</div>
-		<div class="color4">Schmetterling</div>
-		<div class="color5">Sommerfugl</div>
-	</div>
-
-	<div class="container inline">
-		<div class="color1">Farfalla</div>
-		<div class="color2">Mariposa</div>
-		<div class="color3">Papillon</div>
-		<div class="color4">Schmetterling</div>
-		<div class="color5">Sommerfugl</div>
-	</div>
-
-	<div class="container inline-block">
-		<div class="color1">Farfalla</div>
-		<div class="color2">Mariposa</div>
-		<div class="color3">Papillon</div>
-		<div class="color4">Schmetterling</div>
-		<div class="color5">Sommerfugl</div>
-	</div>
 
 
 
