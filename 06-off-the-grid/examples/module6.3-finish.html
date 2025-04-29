@@ -96,14 +96,14 @@
 
 
 
-		// let grid = document.querySelectorAll(".grid-container");
+		let grid = document.querySelectorAll(".grid-container");
 		let divs = document.querySelectorAll(".grid-container div");
 
 		function randomize() {
 			console.log(divs.length, "randomize!")
 
 			// affect the whole grid
-			// grid[0].style.transform = `rotate(${Math.random() * 360}deg)`;
+			grid[0].style.transform = `rotate(${Math.random() * 360}deg)`;
 
 			// just the grid divs
 			divs.forEach(function (div) {
