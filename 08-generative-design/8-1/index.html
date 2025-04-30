@@ -1,16 +1,18 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>After Jean Arp - 8.2-start</title>
 
-    <!-- 👉 8.1 FINISH | 8.2 START FILE -->
+    <!-- 👉 8.1 -->
 
 
     <!-- 👉 add new CSS links here -->
 
 </head>
+
 <body>
 
     <!-- 👉 change to SVG -->
@@ -29,7 +31,7 @@
 
 
             for (let i = 0; i < count; i++) {
-                
+
                 // parameters
                 let w = randomInt(size * .8, size * 1.2);
                 let h = randomInt(size * .8, size * 1.2);
@@ -59,7 +61,7 @@
                     height: ${h}px;
                     background-color:#${randomHex()};
                 `;
-				// 👉 change to output shapes for SVG
+                // 👉 change to output shapes for SVG
                 output += `<div style="${style}"></div>`;
             }
             // display
@@ -78,7 +80,7 @@
             }
             return hex;
         }
-		// 👉 add helper function
+        // 👉 add helper function
 
         // listeners
         window.addEventListener("load", generate);
@@ -88,4 +90,5 @@
     </script>
 
 </body>
+
 </html>

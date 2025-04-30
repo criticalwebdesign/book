@@ -11,7 +11,7 @@ A collection of examples and exercises to accompany _Critical Web Design_ by xti
 By the end of the modules in this chapter you will create and publish your first web page using a code playground and then Github Pages. 
 
 Examples: 
-[Codepen.io](https://bit.ly/cwd-codepen-hello-world), 
+[Codepen.io](https://criticalwebdesign.github.io#codepen-hello-world), 
 [Glitch.com](https://glitch.com/edit/#!/dig245-hello-world),
 [...](https://github.com/criticalwebdesign/book/tree/main/01-networks/examples/)
 
@@ -108,7 +108,7 @@ Examples:
 Create an experimental composition and then explode it!
 
 Examples: 
-[Haiku (xtine)](https://criticalwebdesign.github.io/book/06-off-the-grid/examples/module6.3-finish.html), 
+[Haiku (xtine)](https://criticalwebdesign.github.io/book/06-off-the-grid/6-3), 
 [Haiku (Birds)](https://criticalwebdesign.github.io/book/06-off-the-grid/examples/birds.html), 
 [After James Baldwin](https://criticalwebdesign.github.io/book/06-off-the-grid/examples/baldwin.html), 
 [Maintenance is a Drag](https://criticalwebdesign.github.io/book/06-off-the-grid/examples/maintenance.html),
