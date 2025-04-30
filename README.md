@@ -27,7 +27,7 @@ Examples:
 Design and code a page featuring expressive typography. Start by pre-visualizing the design in Figma and then code the page using HTML, CSS, and Javascript. The text can be any glyph, a single word, or one of the texts at [designmanifestos.org](https://designmanifestos.org). 
 
 Examples: 
-[Think](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-think.html), 
+[Think](https://criticalwebdesign.github.io/book/02-view-source/2.3), 
 [Chaos](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-chaos.html), 
 [Click](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-click.html), 
 [Shake](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-shake.html), 
@@ -48,7 +48,7 @@ Examples:
 Throughout the modules in this chapter you will redesign a logo to create a visual form incorporating commentary. You will use Figma to iterate on the design, considering typographic choices using Google Fonts, and create a web page with interactive images and Javascript to express your ideas. 
 
 Examples: 
-[Time](https://criticalwebdesign.github.io/book/03-critical-design/examples/ikea-time/), 
+[Time](https://criticalwebdesign.github.io/book/03-critical-design/3.3), 
 [Monopoly](https://criticalwebdesign.github.io/book/03-critical-design/examples/adobe-monopoly), 
 [...](https://github.com/criticalwebdesign/book/tree/main/03-critical-design/examples)
 
@@ -62,7 +62,7 @@ Examples:
 Design a responsive multi-column web page layout for a fictional newspaper. Use lorem ipsum placeholder text throughout your design. Code the page using the Bootstrap CSS framework. 
 
 Examples: 
-[The New York Felines](https://criticalwebdesign.github.io/book/04-on-the-grid/examples/the-new-york-felines/), 
+[The New York Felines](https://criticalwebdesign.github.io/book/04-on-the-grid/4.3), 
 [The New York Thymes](https://criticalwebdesign.github.io/book/04-on-the-grid/examples/the-new-york-thymes/),
 [...](https://github.com/criticalwebdesign/book/tree/main/04-on-the-grid/examples/)
 
