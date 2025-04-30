@@ -27,10 +27,10 @@ Examples:
 Design and code a page featuring expressive typography. Start by pre-visualizing the design in Figma and then code the page using HTML, CSS, and Javascript. The text can be any glyph, a single word, or one of the texts at [designmanifestos.org](https://designmanifestos.org). 
 
 Examples: 
-[Poem (Think)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-think.html), 
-[Poem (Chaos)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-chaos.html), 
-[Poem (Click)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-click.html), 
-[Poem (Shake)](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-shake.html), 
+[Think](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-think.html), 
+[Chaos](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-chaos.html), 
+[Click](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-click.html), 
+[Shake](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-shake.html), 
 [After Gerhard Rühm](https://criticalwebdesign.github.io/book/02-view-source/examples/after-ruhm.html), 
 [Don't Be Evil](https://criticalwebdesign.github.io/book/02-view-source/examples/poem-evil.html),
 [...](https://github.com/criticalwebdesign/book/tree/main/02-view-source/examples/)
