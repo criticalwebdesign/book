@@ -38,11 +38,11 @@ img {
 
 /* 1 */
 
-.cssBackgroundImg {
+.backgroundImage {
     background-image: url(../img/cat-01.jpg);
 }
 
-.cssBackgroundImg:hover {
+.backgroundImage:hover {
     background-image: url(../img/cat-02.jpg);
     cursor: crosshair;
 }
