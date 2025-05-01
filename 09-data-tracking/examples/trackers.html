@@ -17,11 +17,11 @@
 
     <!-- Open Graph tags for FB link previews
     https://developers.facebook.com/docs/sharing/webmasters -->
-    <meta property="og:url" content="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html">
+    <meta property="og:url" content="https://criticalwebdesign.github.io/book/09-data-tracking/examples/trackers.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Critical Web Design - Tracking the Trackers">
     <meta property="og:description" content="Explore how others store and access your data to track and manipulate you across different websites, browsers, and devices.">
-    <meta property="og:image" content="https://omundy.github.io/critical-web-design-book/assets/img/previews/09/rick-roll.png">
+    <meta property="og:image" content="https://criticalwebdesign.github.io/book/assets/img/previews/09/rick-roll.png">
     <meta property="fb:app_id" content="321840702000287">
 
 
@@ -159,14 +159,17 @@
 
         <div class="row">
             <div class="col">
-                <h2 class="mt-3 text-center">Have You Been Identified?</h2>
+                
+				<h2 class="mt-3 text-center">Have You Been Identified?</h2>
+
+                <p class="text-center">Use <a href="https://www.google.com/search?q=how+to+open+DevTools" target="_blank">DevTools</a> to explore how trackers and other embedded scripts collect, store, and identify your data in the browser. </p>
+
                 <hr>
 
-                <p>Use DevTools to explore how trackers and other embedded scripts collect, store, and identify your data in the browser. </p>
 
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <small>
-                        <strong>⚠️ Surveillance detected!</strong> This page contains several web tracking methods and for testing only. We don't save any information, but the trackers on the page probably will. Open it in an incognito window with ad/tracker blockers disabled will allow you to see most results.
+                        <strong>⚠️ Surveillance detected!</strong> This page contains several web tracking methods. These are for testing and inspecting surveillance capitalism. While we don't save any information, the trackers on the page definitely will. Opening this page in an incognito window with ad/tracker blockers disabled will allow you to see most results.
                     </small>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -193,15 +196,15 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">1.</span> Your Data</h4>
+                        <h4 id="your-data"><span class="num">1.</span> Your Data</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Websites can access a lot of information about visitors using only Javascript and request headers. </p>
+                        <p>Websites can access a lot of information about visitors using basic technologies of the internet. </p>
 
                         <ol>
-                            <li>Example 1-1 shows data from the <code>window.navigator</code> Javascript object. Run it in the console to see more.</li>
-                            <li>Explore the quiz at <a href="https://geokitten.com" target="_blank">geokitten.com</a> and then examine example 1-2 showing data returned from a geolocation API using only your IP address. </li>
+                            <li>Example 1-1 shows data that can be access via Javascript. Type <code>window.navigator</code> in the DevTools console and press return to see more.</li>
+                            <li>Every time you request a resource on the internet your IP address is sent to a remote server. Explore the quiz at <a href="https://geokitten.com" target="_blank">geokitten.com</a> and then examine example 1-2 showing data returned from a geolocation API to see what can be learned about you using only your IP address. </li>
                         </ol>
 
                     </div>
@@ -236,11 +239,11 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">2.</span> Link Tracking</h4>
+                        <h4 id="link-tracking"><span class="num">2.</span> Link Tracking</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>Link tracking is easy to spot and avoid. When you click an ad or share a website extra URL parameters, like <code>utm_source</code>, <code>utm_campaign</code>, are added to the end of the link. These parameters can pass data about your activity to analytics and advertising tools to track the effectiveness of marketing campaigns.</p>
+                        <p>This method is easy to spot. When you click an ad or share a website extra URL parameters, like <code>utm_source</code>, <code>utm_campaign</code>, are added to the end of the link. These parameters can pass data about your activity to analytics and advertising tools to track the effectiveness of marketing campaigns.</p>
 
                         <ol>
                             <li>Examine the two example URLs containing link tracking parameters. Example 2-1 is a common use. Example 2-2 shows how these could share data about you.</li>
@@ -250,10 +253,10 @@
                         <details>
                             <summary>More Details</summary>
                             <div class="alert alert-warning" role="alert">
-                                <small class="d-block">⚠️ You can usually delete everything after the "?" whenever you use a <b>utm_*</b> link.</small>
+                                <small class="d-block">⚠️ You can usually delete everything after the "?" whenever you see a <b>utm_*</b> link.</small>
                             </div>
                             <div class="alert alert-warning" role="alert">
-                                <small class="d-block">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/" target="_blank">does not require consent</a> under the GDPR like cookies and third party tracking pixels.</small>
+                                <small class="d-block">⚠️ Link tracking <a href="https://blog.hootsuite.com/how-to-use-utm-parameters/" target="_blank">does not require user consent</a> under the GDPR, unlike cookies and third party tracking pixels.</small>
                             </div>
                         </details>
 
@@ -299,11 +302,11 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">3.</span> Common Trackers</h4>
+                        <h4 id="common-trackers"><span class="num">3.</span> Common Trackers</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>A <b>tracker</b> is any code that collects data on users. The Ghostery tracker blocker describes 16 categories of trackers, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
+                        <p>A <b>tracker</b> is any code that collects data on users. The <a href="https://www.ghostery.com/blog/how-ghostery-categorizes-trackers" target="_blank">Ghostery tracker blocker describes 16 categories of trackers</a>, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
                         
                         <ol>
                             <li>Analyze the examples. Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and X buttons, Youtube video). </li>
@@ -329,9 +332,9 @@
                         <div id="fb-root"></div>
                         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0&appId=321840702000287" nonce="B6IcNbvD"></script>
                         <!-- Your like button code -->
-                        <div class="fb-like" data-href="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-width="" data-layout="button_count" data-action="like" data-size="large"></div>
+                        <div class="fb-like" data-href="https://criticalwebdesign.github.io/book/09-data-tracking/examples/trackers.html" data-width="" data-layout="button_count" data-action="like" data-size="large"></div>
                         <!-- Your share button code -->
-                        <div class="fb-share-button" data-href="https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-layout="button_count" data-size="large"></div>
+                        <div class="fb-share-button" data-href="https://criticalwebdesign.github.io/book/09-data-tracking/examples/trackers.html" data-layout="button_count" data-size="large"></div>
 
 
 
@@ -341,7 +344,7 @@
                         https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview
                         -->
                             <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
-                            <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=Critical%20Web%20Design%20-%20Tracking%20the%20Trackers&url=https://omundy.github.io/critical-web-design-book/09-data-tracking/examples/trackers.html" data-size="large">Tweet</a>
+                            <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=Critical%20Web%20Design%20-%20Tracking%20the%20Trackers&url=https://criticalwebdesign.github.io/book/09-data-tracking/examples/trackers.html" data-size="large">Tweet</a>
 
                         </span>
 
@@ -374,7 +377,7 @@
 
                             gtag('config', 'G-DFYTWR6TXG');
                         </script>
-                        <code>Nothing to see here. 😎 This method is invisible.</code>
+                        <code>Nothing to see here. 😎 This method is invisible unless you examin the source code.</code>
 
                     </div>
                 </div>
@@ -396,7 +399,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">4.</span> Cookies</h4>
+                        <h4 id="cookies"><span class="num">4.</span> Cookies</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -406,7 +409,7 @@
 
                         <ol>
                             <li>Open DevTools > Application and then expand Cookies (under Storage on the left) to see the domains that have set cookies on this page. </li>
-                            <li>Select the domain: <code>omundy.github.io</code> and look for cookies prefixed with <code>cwd</code> Example 4-1 displays this data (the date, hour, minute, and seconds when you visited this page). Refresh the page to update the date. Try deleting the cookie and reloading the page to see what happens.</li>
+                            <li>Select the domain: <code>criticalwebdesign.github.io</code> and look for cookies prefixed with <code>cwd</code> Example 4-1 displays this data (the date, hour, minute, and seconds when you visited this page). Refresh the page to update the date. Try deleting the cookie and reloading the page to see what happens.</li>
                             <li>Set your own cookie by running the code in Example 4-2 in the DevTools console.</li>
                             <li>Visit <a href="https://stickyscreen.org" target="_blank">https://stickyscreen.org</a> and edit the content in the note. Close the page and open it again to see the text it "remembered" (stored in cookies) </li>
                         </ol>
@@ -460,7 +463,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">5.</span> Local Storage</h4>
+                        <h4 id="local-storage"><span class="num">5.</span> Local Storage</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -470,7 +473,7 @@
 
                         <ol>
                             <li>In DevTools > Application, expand Local Storage.</li>
-                            <li>Select the domain: omundy.github.com and look for records prefixed with <code>cwd</code> Example 5-1 shows this data (when you visited this page). Refresh the page to update the date. Try deleting the row and reloading the page to see what happens.</li>
+                            <li>Select the domain: criticalwebdesign.github.com and look for records prefixed with <code>cwd</code> Example 5-1 shows this data (when you visited this page). Refresh the page to update the date. Try deleting the row and reloading the page to see what happens.</li>
                             <li>Set your own items in localStorage by running the code in Example 5-2 in the DevTools console. As with cookies, you can edit or delete the data stored in Local Storage.</li>
                             <li>Check out <a href="https://www.nytimes.com/games/wordle" target="_blank">Wordle</a> to see if you can figure out how it stores your game progress using Local Storage (hint: look for a key named <code>nyt-wordle-moogle</code>).</li>
 
@@ -525,7 +528,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">6.</span> Your Identity</h4>
+                        <h4 id="your-identity"><span class="num">6.</span> Your Identity</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -587,7 +590,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">7.</span> Browser Fingerprinting</h4>
+                        <h4 id="browser-fingerprinting"><span class="num">7.</span> Browser Fingerprinting</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -631,7 +634,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">8.</span> Meta Tracking Pixel</h4>
+                        <h4 id="meta-tracking-pixel"><span class="num">8.</span> Meta Tracking Pixel</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -683,7 +686,7 @@
                         
                         <!-- End Meta Pixel Code -->
 
-                        <code>😎 This tracking pixel <img height="25" width="25" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1"> has been edited so you can click on it.</code>
+                        <code>😎 This tracking pixel <img height="25" width="25" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" style="background-color: var(--code); border: none;"> has been edited to allow you to see it.</code>
 
                     </div>
                 </div>
@@ -711,19 +714,40 @@
 
 
         <div class="row mt-3">
-            <div class="col-12 col-md-7">
+            <div class="col-12">
                 <div class="row">
-                    <div class="col-12 col-xl-3">
-                        <h4>How advertisers categorize you</h4>
+                    <div class="col-12 col-xl-2">
+                        <h4 id="how-advertisers-categorize-you">How advertisers categorize you</h4>
                     </div>
-                    <div class="col-12 col-xl-9 mb-3">
+                    <div class="col-12 col-xl-10 mb-3">
 
                         <p></p>
 
                         <ol>
                             <li>
-                                Visit the <a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies" target="_blank">Interactive Advertising Bureau's Github repository</a> containing "Ad Product", "Audience", and "Content" taxonomies. What do you notice about these collections of meta content? Are there concepts missing?         
+                                Inspect the "Ad Product", "Audience", and "Content" taxonomies on the <a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies" target="_blank">Interactive Advertising Bureau's Github repository</a>. What do you notice about these collections of meta content? Are there concepts missing?         
                             </li>
+
+							<div class="card dark my-3">
+								<div class="card-header">Selected rows from the Ad Product taxonomy</div>
+								<div class="card-body empty">
+
+			
+<code>Unique ID	Parent	Name	Tier 1	Tier 2	Tier 3	Tier 4					
+16	1	Auto Type	Automotive	Auto Type			
+17	16	Budget Cars	Automotive	Auto Type	Budget Cars		
+18	16	Certified Pre-Owned Cars	Automotive	Auto Type	Certified Pre-Owned Cars		
+19	16	Classic Cars	Automotive	Auto Type	Classic Cars		
+20	16	Concept Cars	Automotive	Auto Type	Concept Cars		
+21	16	Driverless Cars	Automotive	Auto Type	Driverless Cars		
+22	16	Green Vehicles	Automotive	Auto Type	Green Vehicles		
+23	16	Luxury Cars	Automotive	Auto Type	Luxury Cars		
+24	16	Performance Cars	Automotive	Auto Type	Performance Cars
+</code>
+			
+								</div>
+							</div>
+
                             <li>
                                 Compare the IAB lists to Google Ad's <a href="https://developers.google.com/google-ads/api/data/verticals">Verticals</a> provide similar targeting criteria for influencing users.
                             </li>
@@ -732,21 +756,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5">
-
-                <!-- 
-                Resources:
-                -->
-
-                <div class="card dark mt-3">
-                    <div class="card-header">More Resources</div>
-                    <div class="card-body empty">
-
-
-                    </div>
-                </div>
-
-            </div>
         </div>
 
 
@@ -754,36 +763,32 @@
 
 
         <div class="row mt-3">
-            <div class="col-12 col-md-7">
+            <div class="col-12">
                 <div class="row">
-                    <div class="col-12 col-xl-3">
-                        <h4><span class="num"></span> Other ways to see your data</h4>
+                    <div class="col-12 col-xl-2">
+                        <h4 id="other-ways-to-see-your-data"><span class="num"></span> Other ways to see your data</h4>
                     </div>
-                    <div class="col-12 col-xl-9 mb-3">
+                    <div class="col-12 col-xl-10 mb-3">
 
                         <p></p>
 
                         <ol>
                             <li>Use <a href="https://themarkup.org/series/blacklight" target="_blank">Blacklight</a>, a Real-Time Website Privacy Inspector. Enter the address of any website, and Blacklight will scan it and reveal the specific user-tracking technologies on the site.</li>
+
+							<li>Unsurprisingly, there are many types of data that Google collects. 
+								<ul>
+									<li><a href="https://myadcenter.google.com/" target="_blank">How your ads are “personalized”</a></li>
+									<li><a href="https://myactivity.google.com/" target="_blank">All of your Google activity</a></li>
+									<li><a href="https://myactivity.google.com/more-activity" target="_blank">Even more activity (web, youtube, timeline, etc.)</a></li>
+									<li><a href="https://myaccount.google.com/data-and-privacy" target="_blank">Account data and privacy settings</a></li>
+								</ul>
+							</li>
+							
+
                         </ol>
 
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-5">
-
-                <!-- 
-                Resources:
-                -->
-
-                <div class="card dark mt-3">
-                    <div class="card-header">More Resources</div>
-                    <div class="card-body empty">
-
-
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -796,7 +801,7 @@
             <div class="col-12 col-md-7">
                 <div class="row">
                     <div class="col-12 col-xl-3">
-                        <h4><span class="num">10.</span> Ad & Tracker Blockers</h4>
+                        <h4 id="blockers">Ad & Tracker Blockers</h4>
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
@@ -805,6 +810,7 @@
 
                         <ol>
                             <li>The <a href="https://disconnect.me/" target="_blank">Disconnect browser extension</a> conveniently makes their lists open source. Check out their <a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json" target="_blank">services</a> and <a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/entities.json" target="_blank">entities</a> files to see if you recognize any of these domains.</li>
+							<li>The <a href="https://www.ghostery.com/ghostery-ad-blocker" target="_blank">Ghostery tracker & ad blocker extension</a> block ads, cookies, popups & other <a href="https://www.ghostery.com/whotracksme" target="_blank">trackers</a>.</li>
                         </ol>
 
                     </div>
@@ -830,6 +836,30 @@
             </div>
         </div>
 
+
+
+
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-xl-2">
+                        <h4 id="cultural-examples">Inspiring cultural examples</h4>
+                    </div>
+                    <div class="col-12 col-xl-10 mb-3">
+
+                        <p></p>
+
+                        <ol>
+                            <li>Compare <a href="https://clickclickclick.click" target="_blank">clickclickclick.click</a> (sound on!) and <a href="https://atlasofsurveillance.org" target="_blank">atlasofsurveillance.org</a> - What is different about their approach? What is the same? .</li>
+							<li>Check out other examples tagged with surveillance in the <a href="https://criticalwebdesign.github.io/index" target="_blank">Critical Web Design Index</a></li>
+
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 

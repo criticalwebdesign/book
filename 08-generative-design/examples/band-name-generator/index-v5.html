@@ -191,7 +191,7 @@
             // GENRE 
 
             // get reference
-            // add "Select" so we don't overlap with display of data later
+            // adds "Select" so we don't overlap with display of data later
             let genreSelect = document.querySelector("#genreSelect");
             // if form element is set, otherwise use random
             if (genreSelect && genreSelect.selectedIndex > 0) {
@@ -281,7 +281,7 @@
             }
             band.members = faker.helpers.uniqueArray(faker.person.fullName, memberCount);
 
-            // if more than one member, add a "The" 50% of the time 
+            // if more than one member, adds a "The" 50% of the time 
             if (memberCount > 1 && randomFloat(0, 10) > 5) {
                 band.name = "The " + band.name;
             }
@@ -291,7 +291,7 @@
 
             // choose random number of songs
             let songCount = randomInt(4, 11);
-            // loop and add the number chosen 
+            // loop and adds the number chosen 
             for (let i = 0; i < songCount; i++) {
 
                 // number of words in the title
@@ -300,9 +300,9 @@
                 let songTitle = "";
                 // loop and words
                 for (let j = 0; j < wordsInTitle; j++) {
-                    // add space between words
+                    // adds space between words
                     if (j > 0) songTitle += " ";
-                    // add word, capitalized
+                    // adds word, capitalized
                     songTitle += upperCaseFirst(faker.lorem.word().trim());
                 }
 

@@ -25,3 +25,4 @@
 
 [link](https://www.markdownguide.org)
 
+![cat](assets/img/cat.png)

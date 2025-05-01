@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>After Jean Arp - 8.2</title>
+
+    <!-- 👉 8.2  
+    Title: After Jean Arp
+    References: https://www.moma.org/collection/works/37013
+    Author(s): Owen Mundy, xtine burrough
+    Date: 2023
+    License: MIT
+    -->
+
+    <!-- 👉 CSS -->
+    <link rel="stylesheet" href="assets/css/arp.css">
+
+</head>
+<body>
+
+    <section class="controls">
+        <label for="count">count</label>
+        <input type="range" id="count" min="1" max="200" step="1" value="8">
+        <label for="scale">scale</label>
+        <input type="range" id="scale" min=".05" max="5" step=".1" value="1">
+        <label for="position">position</label>
+        <input type="range" id="position" min="1" max="400" step="10" value="200">
+    </section>
+
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"></svg>
+
+
+    <script>
+
+        // global
+        let viz = document.querySelector("svg");
+        let countEle = document.querySelector("#count");
+        countEle.addEventListener("input", generate);
+        let scaleEle = document.querySelector("#scale");
+        scaleEle.addEventListener("input", generate);
+        let positionEle = document.querySelector("#position");
+        positionEle.addEventListener("input", generate);
+
+        // https://coolors.co/ff7b00-ff8800-ff9500-ffa200-ffaa00-ffb700-ffc300-ffd000-ffdd00-ffea00
+        let colors = ["f72585", "b5179e", "7209b7", "560bad", "480ca8", "3a0ca3", "3f37c9", "4361ee", "4895ef", "4cc9f0"];
+
+        // https://coolors.co/ff7b00-ff8800-ff9500-ffa200-ffaa00-ffb700-ffc300-ffd000-ffdd00-ffea00
+        // colors = ["ff7b00", "ff8800", "ff9500", "ffa200", "ffaa00", "ffb700", "ffc300", "ffd000", "ffdd00", "ffea00"];
+
+        // https://coolors.co/palette/562c2c-f2542d-f5dfbb-0e9594-127475
+        colors = ["562c2c", "f2542d", "f5dfbb", "0e9594", "127475"];
+
+        // https://coolors.co/palette/bce784-5dd39e-348aa7-525174-513b56
+        colors = ["bce784", "5dd39e", "348aa7", "525174", "513b56"]
+
+
+
+
+        // generate
+        function generate() {
+            let output = '';
+            // let count = randomInt(6, 12);
+            let count = countEle.value || randomInt(6, 12);
+            let size = window.innerWidth * .10;
+
+            for (let i = 0; i < count; i++) {
+                
+                // parameters
+                let w = randomInt(size * .8, size * 1.2) * scaleEle.valueAsNumber;
+                let h = randomInt(size * .8, size * 1.2) * scaleEle.valueAsNumber;
+                
+                // viewport center and offset
+                let centerX = (window.innerWidth * .5);
+                let centerY = (window.innerHeight * .5);
+                let offsetX = positionEle.valueAsNumber;
+                let offsetY = positionEle.valueAsNumber;
+
+                // random x,y position using center and offset
+                let x = randomInt(
+                    centerX - offsetX,
+                    centerX + offsetX
+                );
+                let y = randomInt(
+                    centerY - offsetY,
+                    centerY + offsetY
+                );
+
+                // alternative shapes...
+
+                // CIRCLE
+                // output += `<circle r="${randomInt(5, 30)}" fill="#${randomHex()}" cx="${x}" cy="${y}"></circle> `;
+
+                // POLYGON
+                // create points to define polygon [x1,y1 x2,y2 x3,y3 x4,y4] 
+
+
+                // min/max scale
+                let min = .75;
+                let max = .9;
+                // let points = `0,0 100,0 100,100 0,100`;
+                let points = `
+                    ${-randomInt(w * min, w * max)},${-randomInt(h * min, h * max)} 
+                    ${randomInt(w * min, w * max)},${-randomInt(h * min, h * max)} 
+                    ${randomInt(w * min, w * max)},${randomInt(h * min, h * max)} 
+                    ${-randomInt(w * min, w * max)},${randomInt(h * min, h * max)} 
+                    `;
+
+                // output += `<polygon stroke="none" points="${points}" 
+                //     transform ="translate(${x},${y}) rotate(${randomInt(-1, 1)})"
+                //     fill="#${randomHex()}" />`;
+
+			// 👉 change to output shapes for SVG
+                output += `<polygon stroke="none" points="${points}" 
+                    transform ="translate(${x},${y}) rotate(${randomInt(-1, 1)})" 
+                    fill="#${randomFromArray(colors)}" />`;
+            }
+            // display
+            viz.innerHTML = output;
+            // console.log(output)
+        }
+
+        // helpers
+        function randomInt(min = 1, max = 100) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function randomHex() {
+            let hex = "", chars = "0123456789abcdef";
+            for (let i = 0; i < 6; i++) {
+                hex += chars[randomInt(0, chars.length - 1)];
+            }
+            return hex;
+        }
+		// 👉 helper function to get random element from array
+        function randomFromArray(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+
+        // listeners
+        window.addEventListener("load", generate);
+        viz.addEventListener("click", generate);
+
+    </script>
+
+</body>
+</html>

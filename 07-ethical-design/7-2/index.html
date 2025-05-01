@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessibility Data | Critical Web Design</title>
+
+    <!-- 👉 7.2  -->
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <!-- base styles for CH7 -->
+    <link rel="stylesheet" href="https://criticalwebdesign.github.io/book/07-ethical-design/7-3/assets/css/styles.css">
+    <link rel="stylesheet" href="https://criticalwebdesign.github.io/book/07-ethical-design/7-3/assets/css/color.css">
+
+    <!-- 👉 add new CSS links here -->
+
+</head>
+<body>
+
+    <div class="container-fluid text-center my-5">
+        <h1>Users affected by website accessibility</h1>
+    </div>
+
+    <div class="container-xl text-center my-5">
+        <div class="row">
+            <div class="col-2">
+                <div class="option rose" data-percentage="15">15%</div>
+            </div>
+            <div class="col-2">
+                <div class="option green" data-percentage="23">23%</div>
+            </div>
+            <div class="col-2">
+                <div class="option cyan" data-percentage="26">26%</div>
+            </div>
+            <div class="col-2">
+                <div class="option blue" data-percentage="50.8">50.8</div>
+            </div>
+            <div class="col-2">
+                <div class="option purple" data-percentage="74">74%</div>
+            </div>
+            <div class="col-2">
+                <div class="option magenta" data-percentage="96.8">96.8%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xl text-center my-5">
+        <h4 class="blurb"></h4>
+    </div>
+
+    <div class="container-xl text-center my-5">
+        <div class="users grid-container"></div>
+    </div>
+
+    <div class="container-fluid text-center my-5">
+        1. Geoff Cudd, <a href="https://ddiy.co/web-accessibility-statistics/" target="_blank" class="link-body-emphasis" title="Source">Web Accessibility Statistics</a> (2023); 2. <a href="https://webaim.org/projects/million/#errors" target="_blank" class="link-body-emphasis" title="Source">The WebAIM Million</a> (2023)
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- book functions file -->
+    <script src="https://criticalwebdesign.github.io/book/assets/js/functions.js"></script>
+
+    <!-- 👉 add additional script element here -->
+
+    <script>
+
+        let text = [
+            "World population with some sort of disability<sup>1</sup>",
+            "Website images with missing alternative text<sup>2</sup>",
+            "Adults in the United States who have a disability<sup>2</sup>",
+            "Average detectable accessibility errors per web page<sup>1</sup>",
+            "Disabled Americans with no high-speed internet, smartphone, or computer<sup>2</sup>",
+            "Web pages with detectable WCAG 2 failures<sup>2</sup>", // webaim
+        ];
+
+        let colors = [
+            'rose', 'green', 'cyan', 'blue', 'purple', 'magenta'
+        ]
+
+        // 👉 add code below...
+
+        // references to elements
+        let blurb = document.querySelector(".blurb");
+        let options = document.querySelectorAll(".option");
+        let userArr = populateArrayRandomIntUnique(0, 115);
+        // console.log(userArr);
+        let userCount = 36;
+
+        // loop through options
+        options.forEach(function (element, index) {
+            // adds an event listener to each
+            element.addEventListener("mouseover", function (event) {
+                // console.log(index, element.textContent);
+                setActive(index);
+                displayUsers(userCount, index);
+            });
+        });
+
+        // show the menu item is selected
+        function setActive(index) {
+            //  populate blurb element using array index
+            blurb.innerHTML =
+                `<span class="${colors[index]}">${text[index]}</span>`;
+            options.forEach(function (element) {
+                element.classList.remove("active");
+            });
+            options[index].classList.add("active");
+        }
+
+        // display all the portraits
+        function displayUsers(count, index) {
+            // get percentage of option
+            let percentage = options[index].dataset.percentage;
+            // get affected number of users
+            let affected = Math.round((count * percentage) / 100);
+            // testing
+            console.log(percentage, count, affected);
+            // create var to store html output
+            let str = "";
+            // loop through the users and adds output
+            for (let i = 0; i < count; i++) {
+                // control whether to change opacity
+                let showAffectedClass = "";
+                if (i < affected) {
+                    showAffectedClass = "showAffected";
+                }
+                // adds the user
+                str += `<span class="${showAffectedClass}">
+                        <img src="../7-3/assets/img/users/${userArr[i]}.jpg" 
+                            class="portrait">
+                        </span>`;
+            }
+            // assign output to element
+            document.querySelector(".users").innerHTML = str;
+        }
+        setActive(0);
+        displayUsers(userCount, 0);
+
+    </script>
+
+
+</body>
+</html>

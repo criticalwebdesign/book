@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Off the Grid</title>
+
+	<!-- 👉 6.2 
+	Title: Haiku
+	Author(s): xtine burrough
+	Date: 2023
+	License: MIT
+	-->
+
+	<style>
+		html {
+			width: 100%;
+			height: 100%;
+		}
+
+		body {
+			margin: 1rem;
+			background-color: black;
+			color: whitesmoke;
+			font-size: 5rem;
+			overflow: hidden;
+			/* background: url("examples/assets/img/flames.gif");
+            background-repeat: no-repeat;
+            background-size: cover; */
+			/* shorthand */
+			background: black url("../6.3/assets/img/flames.gif") no-repeat center/cover;
+		}
+
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			gap: 2rem;
+			margin: 15% 4rem 0 4rem;
+		}
+
+		.last {
+			padding-bottom: 2rem;
+			border-bottom: 2px solid rgb(220, 200, 180);
+		}
+
+		body {
+			transition-property: transform;
+			transition-duration: 3s;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="grid-container">
+		<div>A</div>
+		<div>radiant</div>
+		<div class="last">young</div>
+
+		<div>woman</div>
+		<div>to</div>
+		<div>light</div>
+		<div>the</div>
+		<div class="last">darkest</div>
+
+		<div>corners</div>
+		<div>of</div>
+		<div class="last">winter</div>
+	</div>
+
+
+	<script>
+
+		let rotation = 0;
+		document.addEventListener("click", function () {
+			let min = 10;
+			let max = 40;
+			rotation += Math.random() * (max - min) + min;
+			document.body.style.transform = `rotate(${rotation}deg)`;
+		});
+
+
+	</script>
+
+</body>
+</html>

@@ -171,7 +171,7 @@
                 name = "DJ " + faker.hacker.abbreviation();
             }
 
-            // 4. add songs
+            // 4. adds songs
             let songs = [];
             let songCount = randomInt(4, 11);
             for (let i = 0; i < songCount; i++) {
@@ -194,7 +194,7 @@
             // update the page
             document.querySelector(".bandName").innerHTML = name;
 
-            // 4. add images
+            // 5. adds images
             document.querySelector(".albumFront").style.backgroundImage = `url(${albumFront})`;
             document.querySelector(".albumBack").style.backgroundImage = `url(${albumBack})`;
 

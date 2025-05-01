@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Off the Grid</title>
+
+	<!-- 👉 6.2 
+	Title: Haiku
+	Author(s): xtine burrough
+	Date: 2023
+	License: MIT
+	-->
+
+	<style>
+		html {
+			width: 100%;
+			height: 100%;
+		}
+
+		body {
+			margin: 1rem;
+			background-color: black;
+			color: whitesmoke;
+			font-size: 5rem;
+			overflow: hidden;
+			/* background: url("examples/assets/img/flames.gif");
+            background-repeat: no-repeat;
+            background-size: cover; */
+			/* shorthand */
+		}
+
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+			gap: 2rem;
+			margin: 15% 4rem 0 4rem;
+		}
+
+		.last {
+			padding-bottom: 2rem;
+			border-bottom: 2px solid rgb(220, 200, 180);
+		}
+
+		/* CSS Animation example */
+
+		@keyframes fadeOut {
+            0% { opacity: 1; } 
+            100% { opacity: 0; }
+        }
+        body {
+            animation-name: fadeOut;
+            animation-duration: 2s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+        }
+
+		/* CSS Transition example */
+
+		div {
+			transition-property: transform;
+			transition-duration: 3s;
+		}
+
+		/* body {
+            transition-property: transform;
+            transition-duration: 3s;
+        } */
+	</style>
+</head>
+<body>
+
+	<div class="grid-container">Hello, World</div>
+
+
+	<script>
+
+
+		// Example 1 - JS 
+
+		// document.body.style.opacity = .5;
+		// document.body.style.transform = `rotate(${90}deg)`;
+
+		// Example 2 - JS 
+
+		// let rotation = 0;
+		// setInterval(function () {
+		//     rotation += 5;
+		//     document.body.style.transform = `rotate(${rotation}deg)`;
+		// }, 100);
+
+
+		// Example 3 - JS + CSS transition
+
+		// let rotation = 0;
+		// document.addEventListener("click", function () {
+		//     let min = 1;
+		//     let max = 20;
+		//     rotation += Math.random() * (max - min) + min;
+		//     document.body.style.transform = `rotate(${rotation}deg)`;
+		// });
+
+
+		// Example 4 - JS function
+
+		function randomNumber(min, max) {
+			return (Math.random() * (max - min)) + min;
+		}
+
+		let rotation = 0;
+		document.addEventListener("click", function () {
+			rotation += randomNumber(1, 200);
+			document.body.style.transform = `rotate(${rotation}deg)`;
+		});
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
