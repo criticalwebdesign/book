@@ -7,7 +7,7 @@ console.log("Hello from main.js");
 let targetElement = document.querySelector("h2");
 
 // 3 - Log the reference to confirm it works
-console.log(targetElement);
+console.log(targetElement.outerHTML);
 
 // 4 - Add a mouseover event listener
 targetElement.addEventListener("mouseover", function () {
