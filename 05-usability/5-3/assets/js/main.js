@@ -6,16 +6,17 @@ myForm.addEventListener("submit", (event) => {
 	event.preventDefault();
 
     // create variables for all items
-	let q1 = this.q1.value;
-	let q2 = this.q2.value;
-	let q3 = this.q3.value;
-	let q4 = this.q4.value;
-	let q5 = this.q5.value;
-	let q6 = this.q6.value;
-	let q7 = this.q7.value;
-	let q8 = this.q8.value;
-	let q9 = this.q9.value;
-	let q10 = this.q10.value;
+	let q1 = Number(this.q1.value);
+	let q2 = Number(this.q2.value);
+	let q3 = Number(this.q3.value);
+	let q4 = Number(this.q4.value);
+	let q5 = Number(this.q5.value);
+	let q6 = Number(this.q6.value);
+	let q7 = Number(this.q7.value);
+	let q8 = Number(this.q8.value);
+	let q9 = Number(this.q9.value);
+	let q10 = Number(this.q10.value);
+
 
 	// For odd items: subtract one from the user response.
 	q1 -= 1;
