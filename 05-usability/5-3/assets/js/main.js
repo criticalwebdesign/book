@@ -18,7 +18,7 @@ myForm.addEventListener("submit", (event) => {
 	let q10 = Number(this.q10.value);
 
 
-	// For odd items: subtract one from the user response.
+	// For odd items: subtract one from the user response
 	q1 -= 1;
 	q3 -= 1;
 	q5 -= 1;
@@ -32,7 +32,7 @@ myForm.addEventListener("submit", (event) => {
 	q8 = 5 - q8;
 	q10 = 5 - q10;
 
-	// Add all converted responses; multiply that total by 2.5.
+	// Add all converted responses; multiply that total by 2.5
 	let answer = (q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10) * 2.5;
 
 	// store in a new input
