@@ -1,3 +1,5 @@
+// main.js
+
 let myForm = document.querySelector("#myForm");
 
 myForm.addEventListener("submit", (event) => {

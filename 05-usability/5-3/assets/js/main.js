@@ -1,11 +1,13 @@
+// main.js
+
 let myForm = document.querySelector("#myForm");
 
 myForm.addEventListener("submit", (event) => {
 
-    // prevent default behavior of form
+	// prevent default behavior of form
 	event.preventDefault();
 
-    // create variables for all items
+	// create variables for all items
 	let q1 = Number(this.q1.value);
 	let q2 = Number(this.q2.value);
 	let q3 = Number(this.q3.value);
