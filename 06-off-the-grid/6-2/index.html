@@ -1,19 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Off the Grid</title>
 
-	<!-- 👉 6.2 
-	Title: Haiku
-	Author(s): xtine burrough
-	Date: 2023
-	License: MIT
-	-->
+	<!-- 👉 6.2 -->
 
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
 
 	<div class="grid-container">
@@ -32,19 +29,7 @@
 		<div class="last">winter</div>
 	</div>
 
-
-	<script>
-
-		let rotation = 0;
-		document.addEventListener("click", function () {
-			let min = 10;
-			let max = 40;
-			rotation += Math.random() * (max - min) + min;
-			document.body.style.transform = `rotate(${rotation}deg)`;
-		});
-
-
-	</script>
-
+	<script src="assets/js/main.js"></script>
 </body>
+
 </html>
