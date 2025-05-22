@@ -16,6 +16,8 @@ body {
     background-size: cover;
     /* shorthand */
     background: black url("../img/flames.gif") no-repeat center/cover;
+    transition-property: transform;
+    transition-duration: 3s;
 }
 
 .grid-container {
@@ -29,26 +31,3 @@ body {
     padding-bottom: 2rem;
     border-bottom: 2px solid rgb(220, 200, 180);
 }
-
-/* CSS Animation example */
-
-/* @keyframes fadeOut {
-    0% { opacity: 1; } 
-    100% { opacity: 0; }
-}
-body {
-    animation-name: fadeOut;
-    animation-duration: 2s;
-} */
-
-/* CSS Transition example */
-
-div {
-    transition-property: transform;
-    transition-duration: 3s;
-}
-
-/* body {
-    transition-property: transform;
-    transition-duration: 3s;
-} */
