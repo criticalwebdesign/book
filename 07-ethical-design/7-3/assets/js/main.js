@@ -69,7 +69,3 @@ function displayUsers(count, index) {
     updateGridColumns(); // accessibility
 }
 
-// show selected in menu
-setActive(0);
-// show users below menu
-displayUsers(userCount, 0);
