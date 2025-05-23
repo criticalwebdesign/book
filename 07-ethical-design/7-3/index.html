@@ -124,10 +124,12 @@
             });
         });
 
-        // show selected in menu
-        setActive(0);
-        // show users below menu
-        displayUsers(userCount, 0);
+        (() => {
+            // show selected in menu
+            setActive(0);
+            // show users below menu
+            displayUsers(userCount, 0);
+        })();
 
     </script>
 </body>
