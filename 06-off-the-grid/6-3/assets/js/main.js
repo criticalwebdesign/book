@@ -1,9 +1,4 @@
-
-
-function randomNumber(min, max) {
-    return (Math.random() * (max - min)) + min;
-}
-
+// main.js
 
 
 let grid = document.querySelectorAll(".grid-container");
@@ -34,3 +29,6 @@ function randomize() {
 }
 document.addEventListener("click", randomize);
 
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
