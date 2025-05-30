@@ -130,8 +130,8 @@ Examples:
 Create an interactive feature that tells a story with data to accompany an article about the human impact of web accessibility. The idea should communicate 6 key statistics (%s) about accessibility while underscoring how non-accessible websites can exclude users with permanent or temporary disabilities. 
 
 Examples: 
-[Accessibility Data](https://criticalwebdesign.github.io/book/07-ethical-design/examples/accessibility-data),
-[...](https://github.com/criticalwebdesign/book/tree/main/07-ethical-design/examples/)
+[Accessibility Data](https://criticalwebdesign.github.io/book/07-ethical-by-design/7-3),
+[...](https://github.com/criticalwebdesign/book/tree/main/07-ethical-by-design/examples/)
 
 <!-- 
 <img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-xl.png"> &nbsp;<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-md.png"> &nbsp;<img height="240" src="assets/img/previews/07/ch7-outcome-accessibility-sm.png"> 
