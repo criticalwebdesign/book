@@ -12,10 +12,10 @@ By the end of the modules in this chapter you will create and publish your first
 
 Examples: 
 [Codepen.io](https://criticalwebdesign.github.io#codepen-hello-world), 
-[Glitch.com](https://glitch.com/edit/#!/dig245-hello-world),
+[Hello, World!](https://criticalwebdesign.github.io/book/01-networks/1-3),
 [...](https://github.com/criticalwebdesign/book/tree/main/01-networks/examples/)
 
-<img height="300" src="assets/img/previews/01/hello-world-codepen.png"> &nbsp;<img height="300" src="assets/img/previews/01/hello-world-glitch.png"> 
+<img height="300" src="assets/img/previews/01/hello-world-codepen.png"> &nbsp;<img height="300" src="assets/img/previews/00/01-04-whatYoullMake.png"> 
 
 
 
@@ -165,7 +165,7 @@ Examples:
 Examine what data is being collected, processed, and used against you using DevTools, and then create a "bad password generator" that encourages others to increase their digital security and resist the surveillance of everyday life.
 
 Examples: 
-[bad-password-api.glitch.me](https://bad-password-api.glitch.me/),
+[bad-password-api.vercel.app](https://bad-password-api.vercel.app/),
 [...](https://github.com/criticalwebdesign/book/tree/main/09-data-tracking/examples/)
 
 <img height="550" src="assets/img/previews/09/bad-password-api-0.png">
@@ -179,7 +179,7 @@ Examples:
 Use Node.js, an SQLite database, and Leaflet to built an interactive site that visualizes feelings contributed by users around the world on an interactive map. 
 
 Examples: 
-[big-feelings.glitch.me](https://big-feelings.glitch.me/)
+[big-feelings.vercel.app](https://big-feelings.vercel.app/)
 
 <img height="500" src="assets/img/previews/10/10-22-big-feelings-finished.png">
 
