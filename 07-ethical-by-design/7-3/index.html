@@ -111,7 +111,10 @@
             let str = "";
             str += `<span class="${showAffectedClass}">`;
             // 👉 accessibility - add alt text
-            str += `<img src="https://criticalwebdesign.github.io/book/07-ethical-by-design/7-3/assets/img/users/${userArr[currentUser]}.jpg" class="portrait" alt="portrait of a person who does not exist ${currentUser}">`;
+            str += `<img 
+                src="https://criticalwebdesign.github.io/book/07-ethical-by-design/7-3/assets/img/users/${userArr[currentUser]}.jpg" 
+                class="portrait" 
+                alt="portrait of a person who does not exist ${currentUser}">`;
             str += `</span>`;
             return str;
         }
