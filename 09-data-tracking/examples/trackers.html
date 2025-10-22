@@ -163,7 +163,7 @@
         <div class="row">
             <div class="col">
 
-                <h2 class="mt-3 text-center">Have You Been Identified?</h2>
+                <h2 class="mt-3 text-center">Tracking the Trackers</h2>
 
                 <p class="text-center">Follow 👉 prompts below to explore how trackers and other embedded scripts collect, store, and identify your data in the browser. </p>
 
@@ -190,12 +190,6 @@
 
 
 
-
-
-
-
-
-
         <div class="row mt-5">
             <div class="col-12 col-md-7">
                 <div class="row">
@@ -206,9 +200,16 @@
 
                         <p>Websites can access a lot of information about visitors using basic technologies of the internet. </p>
 
+                        <p>👉 View data from your device accessed with only Javascript.</p>
                         <ol>
-                            <li>👉 Open <a href="https://www.google.com/search?q=how+to+open+DevTools" target="_blank">DevTools</a> on this page. Type <code>window.navigator</code> into the Console and press return to see data (summarized in Example 1-1) that can be accessed via Javascript.</li>
-                            <li>Every time you request a resource on the internet your IP address is sent to a remote server. Explore the quiz at <a href="https://geokitten.com" target="_blank">geokitten.com</a> and then examine example 1-2 showing data returned from a geolocation API to see what can be learned about you using only your IP address.</li>
+                            <li>Open <a href="https://www.google.com/search?q=how+to+open+DevTools" target="_blank">DevTools</a> on this page. </li>
+                            <li>Type <code>window.navigator</code> into the Console and press return to see from where the data (<b>Example 1-1</b>) was captured.</li>
+                        </ol>
+
+                        <p>👉 Every web page you view on the internet has access to your IP address. </p>
+                        <ol>
+                            <li>Explore the quiz at <a href="https://geokitten.com" target="_blank">geokitten.com</a></li>
+                            <li>Examine the data (<b>Example 1-2</b>) returned from a geolocation API to see what can be learned about you using only your IP address.</li>
                         </ol>
 
                     </div>
@@ -249,9 +250,11 @@
 
                         <p>This method is easy to spot. When you click an ad or share a website extra URL parameters, like <code>utm_source</code>, <code>utm_campaign</code>, are added to the end of the link. These parameters can pass data about your activity to analytics and advertising tools to track the effectiveness of marketing campaigns.</p>
 
+                        <p>👉 Examine the two example URLs containing link tracking parameters. </p>
+
                         <ol>
-                            <li>Examine the two example URLs containing link tracking parameters. Example 2-1 is a common use. Example 2-2 shows how these could share data about you.</li>
-                            <li>Find and click on an online ad to see a real one in action.</li>
+                            <li><b>Example 2-1</b> is a common use. <b>Example 2-2</b> shows how these could share data about you.</li>
+                            <li><a href="https://www.facebook.com/ads/library/" target="_blank">Find</a> and click on an online ad to see a real one in action.</li>
                         </ol>
 
                         <details>
@@ -312,8 +315,9 @@
 
                         <p>A <b>tracker</b> is any code that collects data on users. The <a href="https://www.ghostery.com/blog/how-ghostery-categorizes-trackers" target="_blank">Ghostery tracker blocker describes 16 categories of trackers</a>, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
 
+                        <p>👉 Analyze the examples.</p>
                         <ol>
-                            <li>Analyze the examples. Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and X buttons, Youtube video). </li>
+                            <li> Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and X buttons, Youtube video). </li>
                             <li>View the source code of this page. Most tracker code is hidden unless you look at the code or use DevTools to see how they are storing information about you.</li>
                         </ol>
 
@@ -411,11 +415,12 @@
                             <b>Cookies</b> are used by websites to store information in your browser. Cookies <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">can be created using Javascript or a web server using the Set-Cookie header</a>, can store any text up to 4 kilobytes (about 2000 words), and are only accessible by the website that created the cookie. Without cookies enabled websites won't know you are logged in or store your preferences. However, cookies also let sites track you, even if they only know you by this identifier.
                         </p>
 
+                        <p>👉 Follow the prompts to view saved cookies</p>
                         <ol>
                             <li>Open DevTools > Application and then expand Cookies (under Storage on the left) to see the domains that have set cookies on this page. </li>
-                            <li>Select the domain: <code>criticalwebdesign.github.io</code> and look for cookies prefixed with <code>cwd</code> Example 4-1 displays this data (the date, hour, minute, and seconds when you visited this page). Refresh the page to update the date. Try deleting the cookie and reloading the page to see what happens.</li>
-                            <li>Set your own cookie by running the code in Example 4-2 in the DevTools console.</li>
-                            <li>Visit <a href="https://stickyscreen.org" target="_blank">https://stickyscreen.org</a> and edit the content in the note. Close the page and open it again to see the text it "remembered" (stored in cookies) </li>
+                            <li>Select the domain: <code>criticalwebdesign.github.io</code> and look for cookies prefixed with <code>cwd</code> <b>Example 4-1</b> displays this data (the date, hour, minute, and seconds when you visited this page). Refresh the page to update the date. Try deleting the cookie and reloading the page to see what happens.</li>
+                            <li>Set your own cookie by running the code in <b>Example 4-2</b> in the DevTools console.</li>
+                            <li>Visit <a href="https://stickyscreen.org" target="_blank">stickyscreen.org</a> and edit the content in the note. Close the page and open it again to see the text it "remembered" (stored in cookies) </li>
                         </ol>
 
                         <details>
@@ -475,10 +480,11 @@
                             The Web Storage API associates data values with keys (like JSON) to make it easier to retrieve or update data in the browser.
                         </p>
 
+                        <p>👉 Explore Local Storage data in your browser</p>
                         <ol>
                             <li>In DevTools > Application, expand Local Storage.</li>
-                            <li>Select the domain: criticalwebdesign.github.com and look for records prefixed with <code>cwd</code> Example 5-1 shows this data (when you visited this page). Refresh the page to update the date. Try deleting the row and reloading the page to see what happens.</li>
-                            <li>Set your own items in localStorage by running the code in Example 5-2 in the DevTools console. As with cookies, you can edit or delete the data stored in Local Storage.</li>
+                            <li>Select the domain: criticalwebdesign.github.com and look for records prefixed with <code>cwd</code> <b>Example 5-1</b> shows this data (when you visited this page). Refresh the page to update the date. Try deleting the row and reloading the page to see what happens.</li>
+                            <li>Set your own items in localStorage by running the code in <b>Example 5-2</b> in the DevTools console. As with cookies, you can edit or delete the data stored in Local Storage.</li>
                             <li>Check out <a href="https://www.nytimes.com/games/wordle" target="_blank">Wordle</a> to see if you can figure out how it stores your game progress using Local Storage (hint: look for a key named <code>nyt-wordle-moogle</code>).</li>
 
                         </ol>
@@ -546,9 +552,9 @@
 
                         <ol>
                             <li>All other cookies and items in local storage are set by the resources and embedded scripts on this page. Look for the following identifiers in DevTools > Application (for some of these you may need to be logged into that service)</li>
-                            <li>Example 6-1: <code>_fbc</code> is the name used by the cookie for the Meta Tracking Pixel (see below) used by Facebook and others to track users across the web.</li>
-                            <li>Example 6-2: <code>_ga</code> is an identifier used by Google Analytics to track users. </li>
-                            <li>Example 6-3: Explore other identifiers set by <a href="https://help.twitter.com/en/rules-and-policies/x-cookies" target="_blank">X</a> (Twitter) and others in DevTools.</li>
+                            <li><b>Example 6-1</b>: <code>_fbc</code> is the name used by the cookie for the Meta Tracking Pixel (see below) used by Facebook and others to track users across the web.</li>
+                            <li><b>Example 6-2</b>: <code>_ga</code> is an identifier used by Google Analytics to track users. </li>
+                            <li><b>Example 6-3</b>: Explore other identifiers set by <a href="https://help.twitter.com/en/rules-and-policies/x-cookies" target="_blank">X</a> (Twitter) and others in DevTools.</li>
                         </ol>
 
                     </div>
@@ -602,6 +608,7 @@
                             With the web progressively being less accepting of third party cookies, even if you are not logged-into a service and careful about your actions, companies can still use <b>probabilistic tracking</b> to identify you from your anonymous activity. By using <b>browser fingerprinting</b> to consider collections of unique attributes about user devices (like browser version, device type, operating system, IP addresses, browsing patterns, and more) this algorithmically-enhanced method employed by most ad targeting campaigns has "a 97.3 percent chance of accurately identifying users across devices." Much like many other methods listed above, this tactic is invisible, yet requires no cookies or embedded code to identify your activity across the web
                         </p>
 
+                        <p>👉 Find out how easy it is to track you using only your fingerprint</p>
                         <ol>
                             <li>To see your "fingerprint" visit: <a href="https://amiunique.org" target="_blank">amiunique.org</a></li>
                             <li>Learn how to cover your tracks: <a href="https://coveryourtracks.eff.org/" target="_blank">coveryourtracks.eff.org</a> </li>
@@ -646,8 +653,9 @@
                             You can't see it because it's invisible, but this 1x1 pixel image is one of the sneakiest forms of tracking out there. A <b>Tracking pixels</b> are image files that use request headers to collect data and identify users. They don't need Javascript to run and can even inform marketers when and whether you opened their emails.
                         </p>
 
+                        <p>👉 Find a tracking pixel in DevTools</p>
                         <ol>
-                            <li>Right click on the broken image link in example 8-1 and Open Image in New Tab.</li>
+                            <li>Right click on the broken image link in <b>Example 8-1</b> and Open Image in New Tab.</li>
                             <li>Open DevTools > Network, reload the page, and select the first resource.</li>
                             <li>If you are not logged into a Facebook account then click on the Headers tab to see all the data in the header that will be used to "fingerprint" you.</li>
                             <li>If you are logged-into a Facebook account you will also see a Cookies tab with all the data your browser sent with this request. You can confirm it's linked to your identity by copying and pasting the value of the c_user field (your Facebook ID) after https://facebook.com/<c_user> in a browser.</li>
@@ -690,7 +698,7 @@
 
                         <!-- End Meta Pixel Code -->
 
-                        <code>😎 This tracking pixel <img height="25" width="25" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" style="background-color: var(--code); border: none;"> has been edited to allow you to see it.</code>
+                        <code>😎 This tracking pixel <span style="display:inline-block; background: black; width: 3px; height: 3px; border: 2px solid red;"><img height="25" width="25" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1"></span> has been edited to allow you to see it.</code>
 
                     </div>
                 </div>
@@ -725,8 +733,8 @@
                     </div>
                     <div class="col-12 col-xl-10 mb-3">
 
-                        <p></p>
 
+                        <p>👉 See how advertisers categorize you</p>
                         <ol>
                             <li>
                                 Inspect the "Ad Product", "Audience", and "Content" taxonomies on the <a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies" target="_blank">Interactive Advertising Bureau's Github repository</a>. What do you notice about these collections of meta content? Are there concepts missing?
@@ -851,11 +859,12 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-12 col-xl-2">
-                        <h4 id="cultural-examples"><a href="#cultural-examples">Inspiring cultural examples</a></h4>
+                        <h4 id="cultural-examples"><a href="#cultural-examples">Discussion</a></h4>
                     </div>
                     <div class="col-12 col-xl-10 mb-3">
 
-                        <p></p>
+                        
+                        <p>👉 View and discuss inspiring cultural examples</p>
 
                         <ol>
                             <li>Compare <a href="https://clickclickclick.click" target="_blank">clickclickclick.click</a> (sound on!) and <a href="https://atlasofsurveillance.org" target="_blank">atlasofsurveillance.org</a> - What is different about their approach? What is the same? .</li>
