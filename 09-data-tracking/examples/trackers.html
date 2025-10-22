@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,27 +33,18 @@
             --code-bg: #282C34;
         }
 
-        h4 a, h4 a:link, h4 a:visited, h4 a:active, h4:hover {
+        h4 a,
+        h4 a:link,
+        h4 a:visited,
+        h4 a:active,
+        h4:hover {
             color: var(--text);
             text-decoration: none;
         }
+
         h4:hover {
             text-decoration: underline;
         }
-
-        /* h4 .num {
-            --size: 1.8rem;
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle;
-            line-height: var(--size);
-            height: var(--size);
-            width: var(--size);
-            border-radius: 50%;
-            color: white;
-            background-color: var(--code-bg);
-            font-size: 1rem;
-        } */
 
 
         code:not(.card-body code) {
@@ -160,7 +152,9 @@
         }
     </style>
 </head>
+
 <body>
+
 
 
 
@@ -168,17 +162,18 @@
 
         <div class="row">
             <div class="col">
-                
-				<h2 class="mt-3 text-center">Have You Been Identified?</h2>
 
-                <p class="text-center">Use <a href="https://www.google.com/search?q=how+to+open+DevTools" target="_blank">DevTools</a> to explore how trackers and other embedded scripts collect, store, and identify your data in the browser. </p>
+                <h2 class="mt-3 text-center">Have You Been Identified?</h2>
+
+                <p class="text-center">Follow 👉 prompts below to explore how trackers and other embedded scripts collect, store, and identify your data in the browser. </p>
 
                 <hr>
 
 
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <small>
-                        <strong>⚠️ Surveillance detected!</strong> This page contains several web tracking methods for testing only. While we don't save any information, the trackers on the page definitely will. Opening this page in an incognito window with ad/tracker blockers disabled will allow you to see most results.
+                        <strong>⚠️ Surveillance detected!</strong>
+                        This page contains several web tracking methods for testing only. While we don't save any information, the trackers on the page definitely will. Opening this page in an incognito window with ad/tracker blockers disabled will allow you to see most results.
                     </small>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -212,8 +207,8 @@
                         <p>Websites can access a lot of information about visitors using basic technologies of the internet. </p>
 
                         <ol>
-                            <li>Example 1-1 shows data that can be access via Javascript. Type <code>window.navigator</code> in the DevTools console and press return to see more.</li>
-                            <li>Every time you request a resource on the internet your IP address is sent to a remote server. Explore the quiz at <a href="https://geokitten.com" target="_blank">geokitten.com</a> and then examine example 1-2 showing data returned from a geolocation API to see what can be learned about you using only your IP address. </li>
+                            <li>👉 Open <a href="https://www.google.com/search?q=how+to+open+DevTools" target="_blank">DevTools</a> on this page. Type <code>window.navigator</code> into the Console and press return to see data (summarized in Example 1-1) that can be accessed via Javascript.</li>
+                            <li>Every time you request a resource on the internet your IP address is sent to a remote server. Explore the quiz at <a href="https://geokitten.com" target="_blank">geokitten.com</a> and then examine example 1-2 showing data returned from a geolocation API to see what can be learned about you using only your IP address.</li>
                         </ol>
 
                     </div>
@@ -316,7 +311,7 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>A <b>tracker</b> is any code that collects data on users. The <a href="https://www.ghostery.com/blog/how-ghostery-categorizes-trackers" target="_blank">Ghostery tracker blocker describes 16 categories of trackers</a>, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
-                        
+
                         <ol>
                             <li>Analyze the examples. Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and X buttons, Youtube video). </li>
                             <li>View the source code of this page. Most tracker code is hidden unless you look at the code or use DevTools to see how they are storing information about you.</li>
@@ -348,7 +343,7 @@
 
 
                         <span style="vertical-align: -6px; margin-left: 10px;">
-                        <!-- Resources:
+                            <!-- Resources:
                         https://developer.twitter.com/en/docs/twitter-for-websites/web-intents/overview
                         https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview
                         -->
@@ -542,13 +537,13 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            One data point that can't be directly accessed from your online activity is your identity. When you login to a web service (that presumably knows your name) a unique string of characters called a <b>token</b> is saved inside a cookie in your client. The cookie is sent with every request to that service to identify you and connect your activity across each browser and device. You won't, for example, have to repeatedly enter your name and password across every page of that site, and the site will customize your experience using your activity. Your YouTube recommendations and history (and targeted ads) across devices will be the same. This is called <b>deterministic tracking</b>. 
+                            One data point that can't be directly accessed from your online activity is your identity. When you login to a web service (that presumably knows your name) a unique string of characters called a <b>token</b> is saved inside a cookie in your client. The cookie is sent with every request to that service to identify you and connect your activity across each browser and device. You won't, for example, have to repeatedly enter your name and password across every page of that site, and the site will customize your experience using your activity. Your YouTube recommendations and history (and targeted ads) across devices will be the same. This is called <b>deterministic tracking</b>.
                         </p>
 
                         <p>
-                            A tracker attempting to collect your data may not know your real name but that won't stop them from creating a profile for you and assigning tracking IDs to match your activity. Whether you are logged in or not, <b>cross-device tracking</b> can connect you to your activity and manipulate your behavior across all your browsers, apps, and devices. For example, if you click a link in an email or webpage with link tracking parameters it can link your profiles, even anonymous profiles, across devices. 
+                            A tracker attempting to collect your data may not know your real name but that won't stop them from creating a profile for you and assigning tracking IDs to match your activity. Whether you are logged in or not, <b>cross-device tracking</b> can connect you to your activity and manipulate your behavior across all your browsers, apps, and devices. For example, if you click a link in an email or webpage with link tracking parameters it can link your profiles, even anonymous profiles, across devices.
                         </p>
-            
+
                         <ol>
                             <li>All other cookies and items in local storage are set by the resources and embedded scripts on this page. Look for the following identifiers in DevTools > Application (for some of these you may need to be logged into that service)</li>
                             <li>Example 6-1: <code>_fbc</code> is the name used by the cookie for the Meta Tracking Pixel (see below) used by Facebook and others to track users across the web.</li>
@@ -648,7 +643,7 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            You can't see it because it's invisible, but this 1x1 pixel image is one of the sneakiest forms of tracking out there. A <b>Tracking pixels</b> are image files that use request headers to collect data and identify users. They don't need Javascript to run and can even inform marketers when and whether you opened their emails. 
+                            You can't see it because it's invisible, but this 1x1 pixel image is one of the sneakiest forms of tracking out there. A <b>Tracking pixels</b> are image files that use request headers to collect data and identify users. They don't need Javascript to run and can even inform marketers when and whether you opened their emails.
                         </p>
 
                         <ol>
@@ -692,7 +687,7 @@
                             fbq('init', '893511094044886');
                             fbq('track', 'PageView');
                         </script>
-                        
+
                         <!-- End Meta Pixel Code -->
 
                         <code>😎 This tracking pixel <img height="25" width="25" src="https://www.facebook.com/tr?id=893511094044886&ev=PageView&noscript=1" style="background-color: var(--code); border: none;"> has been edited to allow you to see it.</code>
@@ -734,15 +729,15 @@
 
                         <ol>
                             <li>
-                                Inspect the "Ad Product", "Audience", and "Content" taxonomies on the <a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies" target="_blank">Interactive Advertising Bureau's Github repository</a>. What do you notice about these collections of meta content? Are there concepts missing?         
+                                Inspect the "Ad Product", "Audience", and "Content" taxonomies on the <a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies" target="_blank">Interactive Advertising Bureau's Github repository</a>. What do you notice about these collections of meta content? Are there concepts missing?
                             </li>
 
-							<div class="card dark my-3">
-								<div class="card-header">Selected rows from the Ad Product taxonomy</div>
-								<div class="card-body empty">
+                            <div class="card dark my-3">
+                                <div class="card-header">Selected rows from the Ad Product taxonomy</div>
+                                <div class="card-body empty">
 
-			
-<code>Unique ID	Parent	Name	Tier 1	Tier 2	Tier 3	Tier 4					
+
+                                    <code>Unique ID	Parent	Name	Tier 1	Tier 2	Tier 3	Tier 4					
 16	1	Auto Type	Automotive	Auto Type			
 17	16	Budget Cars	Automotive	Auto Type	Budget Cars		
 18	16	Certified Pre-Owned Cars	Automotive	Auto Type	Certified Pre-Owned Cars		
@@ -753,9 +748,9 @@
 23	16	Luxury Cars	Automotive	Auto Type	Luxury Cars		
 24	16	Performance Cars	Automotive	Auto Type	Performance Cars
 </code>
-			
-								</div>
-							</div>
+
+                                </div>
+                            </div>
 
                             <li>
                                 Compare the IAB lists to Google Ad's <a href="https://developers.google.com/google-ads/api/data/verticals">Verticals</a> provide similar targeting criteria for influencing users.
@@ -784,18 +779,18 @@
                         <ol>
                             <li>Use <a href="https://themarkup.org/series/blacklight" target="_blank">Blacklight</a>, a Real-Time Website Privacy Inspector. Enter the address of any website, and Blacklight will scan it and reveal the specific user-tracking technologies on the site.</li>
 
-							<li>Unsurprisingly, there are many types of data that Google collects. 
-								<ul>
-									<li><a href="https://myadcenter.google.com/" target="_blank">How your ads are “personalized”</a></li>
-									<li><a href="https://myactivity.google.com/" target="_blank">All of your Google activity</a></li>
-									<li><a href="https://myactivity.google.com/more-activity" target="_blank">Even more activity (web, youtube, timeline, etc.)</a></li>
-									<li><a href="https://myaccount.google.com/data-and-privacy" target="_blank">Account data and privacy settings</a></li>
-								</ul>
-							</li>
+                            <li>Unsurprisingly, there are many types of data that Google collects.
+                                <ul>
+                                    <li><a href="https://myadcenter.google.com/" target="_blank">How your ads are “personalized”</a></li>
+                                    <li><a href="https://myactivity.google.com/" target="_blank">All of your Google activity</a></li>
+                                    <li><a href="https://myactivity.google.com/more-activity" target="_blank">Even more activity (web, youtube, timeline, etc.)</a></li>
+                                    <li><a href="https://myaccount.google.com/data-and-privacy" target="_blank">Account data and privacy settings</a></li>
+                                </ul>
+                            </li>
 
                             <li>Use <a href="https://coveryourtracks.eff.org" target="_blank">coveryourtracks.eff.org</a> to see how trackers view your browser.</li>
 
-						
+
 
                         </ol>
 
@@ -822,7 +817,7 @@
 
                         <ol>
                             <li>The <a href="https://disconnect.me/" target="_blank">Disconnect browser extension</a> conveniently makes their lists open source. Check out their <a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/services.json" target="_blank">services</a> and <a href="https://github.com/disconnectme/disconnect-tracking-protection/blob/master/entities.json" target="_blank">entities</a> files to see if you recognize any of these domains.</li>
-							<li>The <a href="https://www.ghostery.com/ghostery-ad-blocker" target="_blank">Ghostery tracker & ad blocker extension</a> block ads, cookies, popups & other <a href="https://www.ghostery.com/whotracksme" target="_blank">trackers</a>.</li>
+                            <li>The <a href="https://www.ghostery.com/ghostery-ad-blocker" target="_blank">Ghostery tracker & ad blocker extension</a> block ads, cookies, popups & other <a href="https://www.ghostery.com/whotracksme" target="_blank">trackers</a>.</li>
                         </ol>
 
                     </div>
@@ -864,7 +859,7 @@
 
                         <ol>
                             <li>Compare <a href="https://clickclickclick.click" target="_blank">clickclickclick.click</a> (sound on!) and <a href="https://atlasofsurveillance.org" target="_blank">atlasofsurveillance.org</a> - What is different about their approach? What is the same? .</li>
-							<li>Check out other examples tagged with surveillance in the <a href="https://criticalwebdesign.github.io/index" target="_blank">Critical Web Design Index</a></li>
+                            <li>Check out other examples tagged with surveillance in the <a href="https://criticalwebdesign.github.io/index" target="_blank">Critical Web Design Index</a></li>
 
                         </ol>
 
@@ -1044,4 +1039,5 @@
     </script>
 
 </body>
+
 </html>
