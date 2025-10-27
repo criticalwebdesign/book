@@ -313,12 +313,13 @@
                     </div>
                     <div class="col-12 col-xl-9 mb-3">
 
-                        <p>A <b>tracker</b> is any code that collects data on users. The <a href="https://www.ghostery.com/blog/how-ghostery-categorizes-trackers" target="_blank">Ghostery tracker blocker describes 16 categories of trackers</a>, including advertising, analytics, widgets, and telemetry. As you might guess, the most common trackers are run by the most profitable companies like Google, Facebook, Amazon, and Microsoft. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
+                        <p>A <b>tracker</b> is any code that collects data on users. The <a href="https://www.ghostery.com/blog/how-ghostery-categorizes-trackers#tracker-categories" target="_blank">Ghostery tracker blocker describes 12 categories of trackers</a>, including advertising, analytics, widgets, and telemetry. As you might guess, the most prevalent trackers are built by large ad companies like Google, Facebook, Amazon, and Adobe. While some trackers are necessary to remember your login status, those that collect your data to sell it or manipulate you are most certainly not. </p>
 
-                        <p>👉 Analyze the examples.</p>
+                        <p>👉 Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and X buttons, Youtube video).</p>
                         <ol>
-                            <li> Some trackers are obvious from their visual components, such as the embedded widgets and media on this page (Facebook and X buttons, Youtube video). </li>
-                            <li>View the source code of this page. Most tracker code is hidden unless you look at the code or use DevTools to see how they are storing information about you.</li>
+                            <li>View the source code of this page with View Source and find the YouTube embed script. Web trackers inject code in the page when it loads so it is hidden unless you use DevTools to see the live code.</li>
+                            <li>Now use DevTools to inspect the page and find the iframe added by the YouTube embed script. </li>
+                            <li>Continue viewing child elements to see the additional scripts the tracker loads. How many of these are for essential functions (playing video) and how many are tracking or trying to advertise to users? What other <a href="https://www.ghostery.com/blog/how-ghostery-categorizes-trackers#tracker-categories" target="_blank">categories</a> do you see?</li>
                         </ol>
 
                     </div>
@@ -412,7 +413,7 @@
                     <div class="col-12 col-xl-9 mb-3">
 
                         <p>
-                            <b>Cookies</b> are used by websites to store information in your browser. Cookies <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">can be created using Javascript or a web server using the Set-Cookie header</a>, can store any text up to 4 kilobytes (about 2000 words), and are only accessible by the website that created the cookie. Without cookies enabled websites won't know you are logged in or store your preferences. However, cookies also let sites track you, even if they only know you by this identifier.
+                            <b>Cookies</b> are used by websites to store information in your browser. Cookies provide essential services, like remembering your identity so websites will remember you are logged in or store your preferences. However, they also let sites track you, even if they only know you by this identifier.
                         </p>
 
                         <p>👉 Follow the prompts to view saved cookies</p>
@@ -425,6 +426,14 @@
 
                         <details>
                             <summary>More Details</summary>
+
+                            <h5>Technical details</h5>
+                            <ul>
+                                <li>Cookies <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies" target="_blank">can be created using Javascript or a web server using the Set-Cookie header</a></li>
+                                <li>They can store any text up to 4 kilobytes (about 2000 words)</li>
+                                <li>Cookies are only accessible by the website that created the cookie. </li>
+                            </ul>
+
                             <div class="alert alert-warning" role="alert">
                                 <small class="d-block">⚠️ If you click on the other domains in DevTools > Cookies you will see others set by all the embedded examples.</small>
                             </div>
@@ -551,8 +560,9 @@
                         </p>
 
                         <ol>
-                            <li>All other cookies and items in local storage are set by the resources and embedded scripts on this page. Look for the following identifiers in DevTools > Application (for some of these you may need to be logged into that service)</li>
+                            <li>All other cookies and items in local storage are set by the resources and embedded scripts on the page. Look for the following identifiers in DevTools > Application (for some of these you may need to be logged into that service)</li>
                             <li><b>Example 6-1</b>: <code>_fbc</code> is the name used by the cookie for the Meta Tracking Pixel (see below) used by Facebook and others to track users across the web.</li>
+                            <!-- REPLACE WITH c_user ? -->
                             <li><b>Example 6-2</b>: <code>_ga</code> is an identifier used by Google Analytics to track users. </li>
                             <li><b>Example 6-3</b>: Explore other identifiers set by <a href="https://help.twitter.com/en/rules-and-policies/x-cookies" target="_blank">X</a> (Twitter) and others in DevTools.</li>
                         </ol>
@@ -863,7 +873,7 @@
                     </div>
                     <div class="col-12 col-xl-10 mb-3">
 
-                        
+
                         <p>👉 View and discuss inspiring cultural examples</p>
 
                         <ol>
