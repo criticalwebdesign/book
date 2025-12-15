@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,10 +26,23 @@
 
         header {
             width: 100%;
-            padding: 150px 0 100px 0;
+            height: 600px;
             background-color: #ff0000;
             text-align: center;
             color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header div {
+            position: absolute;
+        }
+
+        header div.unbrand {
+            z-index: 10;
+            opacity: 0;
+            cursor: not-allowed;
         }
 
         .tagline {
@@ -62,13 +76,20 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
 
-        <img class="logo" src="assets/img/brand.svg">
+        <div class="unbrand">
+            <img class="logo" src="assets/img/unbrand.svg">
+            <h2 class="tagline">Acquisitions since 1990</h2>
+        </div>
 
-        <h2 class="tagline">Expand your universe</h2>
+        <div class="brand">
+            <img class="logo" src="assets/img/brand.svg">
+            <h2 class="tagline">Expand your universe</h2>
+        </div>
 
     </header>
 
@@ -367,25 +388,28 @@
     </footer>
 
     <script>
-        let logo = document.querySelector(".logo");
-        let tagline = document.querySelector(".tagline");
+        let brand = document.querySelector(".brand");
+        let unbrand = document.querySelector(".unbrand");
         let main = document.querySelector("main");
+        let logo = document.querySelector(".logo");
 
         logo.addEventListener("mouseover", function () {
-            this.src = "assets/img/unbrand.svg";
-            this.style.cursor = "not-allowed"
-            tagline.innerText = "Acquisitions since 1990";
-            main.style.transition = '1s';
-            main.style.opacity = 1;
+            fade(brand, 1, 0);
+            fade(unbrand, 1, 1);
+            fade(main, 1, 1);
         });
 
         logo.addEventListener("mouseout", function () {
-            this.src = "assets/img/brand.svg";
-            this.style.cursor = "pointer"
-            tagline.innerText = "Expand your universe";
-            main.style.transition = '10s';
-            main.style.opacity = 0;
+            fade(unbrand, 5, 0);
+            fade(brand, 5, 1);
+            fade(main, 5, 0);
         });
+
+        function fade(ele, duration = 1, to = 1) {
+            ele.style.transition = `${duration}s`;
+            ele.style.opacity = to;
+        }
     </script>
 </body>
+
 </html>
