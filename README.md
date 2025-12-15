@@ -52,7 +52,7 @@ Examples:
 [Monopoly](https://criticalwebdesign.github.io/book/03-critical-design/examples/adobe-monopoly), 
 [...](https://github.com/criticalwebdesign/book/tree/main/03-critical-design/examples)
 
-<img height="300" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim-browser-640x476.gif"> &nbsp;<img height="300" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim-browser-640x476.gif">
+<img height="300" src="assets/img/previews/03/ch3-unbrand-ikea-time-anim-browser-640x476.gif"> &nbsp;<img height="300" src="assets/img/previews/03/ch3-unbrand-adobe-monopoly-anim-browser.gif">
 
 
 
