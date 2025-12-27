@@ -9,13 +9,13 @@ body {
     color: whitesmoke;
     font-size: 5rem;
     overflow: hidden;
-    /* 
-    background: url("../img/flames.gif");
+   
+    background: black url("../img/flames.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* shorthand */
-    background: black url("../img/flames.gif") no-repeat center/cover;
+    /* shorthand, but has issues on Safari */
+    /* background: black url("../img/flames.gif") no-repeat center/cover; */
     transition-property: transform;
     transition-duration: 3s;
 }

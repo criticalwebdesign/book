@@ -88,7 +88,7 @@ Examples:
 Create and implement a usability test, then design a responsive web page to reflect on findings. Evaluate your design using the "less is more" critique. Code the design using Bootstrap, including a working web form to calculate and display the score from the System Usability Scale (SUS) survey. 
 
 Examples: 
-[AIGA usability test](https://criticalwebdesign.github.io/book/05-usability/examples/usability-aiga/),
+[AIGA usability test](https://criticalwebdesign.github.io/book/05-usability/5-3/),
 [...](https://github.com/criticalwebdesign/book/tree/main/05-usability/examples/)
 
 <!-- individual breakpoints -->
