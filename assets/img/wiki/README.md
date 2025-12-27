@@ -1,1 +1,1 @@
-See .wiki/images/
+See https://criticalwebdesign.github.io/wiki/
