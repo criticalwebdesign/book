@@ -176,7 +176,7 @@ Examples:
 
 ## Chapter 10 Design & Power
 
-Use Node.js, an SQLite database, and Leaflet to built an interactive site that visualizes feelings contributed by users around the world on an interactive map. 
+Use Node.js, a MongoDB database, and Leaflet to built an interactive site that visualizes feelings contributed by users around the world on an interactive map. 
 
 Examples: 
 [big-feelings.vercel.app](https://big-feelings.vercel.app/)
