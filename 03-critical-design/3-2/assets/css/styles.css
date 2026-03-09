@@ -17,15 +17,15 @@ body {
   cursor: crosshair;
 }
 
-.text {
-  width: 50%;
-  margin: 96px auto;
-}
-
 h1 {
   color: black;
   font-size: 48px;
   text-align: center;
+}
+
+.text {
+  width: 50%;
+  margin: 96px auto;
 }
 
 .text * {
