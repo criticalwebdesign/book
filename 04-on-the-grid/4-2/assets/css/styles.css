@@ -1,0 +1,23 @@
+:root {
+    --spacing: .35rem;
+    /* CSS HEX */
+    --lilac: #c398bcff;
+    --wisteria: #c1aeeaff;
+    --powder-blue: #a7b8ddff;
+    --columbia-blue: #b7d0e1ff;
+    --flax: #f9f19fff;
+}
+
+html {
+    --hotness: #fb3f7c;
+    --sky: #49c8da;
+}
+
+h1 {
+    color: var(--hotness);
+}
+
+h2 {
+    color: var(--sky);
+    margin: var(--spacing);
+}
