@@ -10,7 +10,7 @@ myForm.addEventListener("submit", (event) => {
 	// create variables for all items and convert type to numbers
 	let q1 = Number(this.q1.value);
 	let q2 = Number(this.q2.value);
-	// complete these as part of the prompt
+	// 👉 If you completed Prompt 5.2 you would have made the following variables and added them to the answer formula
 	let q3 = Number(this.q3.value);
 	let q4 = Number(this.q4.value);
 	let q5 = Number(this.q5.value);
