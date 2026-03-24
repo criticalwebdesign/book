@@ -20,6 +20,7 @@ When you have a repo open in Codespaces, you must sync your changes before makin
 
 If you face this error in Codespaces you can add the following lines, one at a time, in Codespaces Terminal:
 ```bash
+gh auth status # Check that you are authenticated
 git fetch
 git rebase origin/main
 git rebase —continue
