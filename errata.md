@@ -19,10 +19,12 @@ If you find any typos, errors in code, or otherwise incorrect information, pleas
 When you have a repo open in Codespaces, you must sync your changes before making edits on Github.com. If you edit the same file in two places, you are likely to see an error while trying to push your commits.
 
 If you face this error in Codespaces you can add the following lines, one at a time, in Codespaces Terminal:
+```bash
 git fetch
 git rebase origin/main
 git rebase —continue
 git push
+```
 
 <!-- 
 ## Chapter 2
