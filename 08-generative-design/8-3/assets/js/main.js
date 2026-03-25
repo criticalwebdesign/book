@@ -42,14 +42,8 @@ function generate() {
         let offsetY = positionEle.valueAsNumber;
 
         // random x,y position using center and offset
-        let x = randomInt(
-            centerX - offsetX,
-            centerX + offsetX
-        );
-        let y = randomInt(
-            centerY - offsetY,
-            centerY + offsetY
-        );
+        let x = randomInt(centerX - offsetX, centerX + offsetX);
+        let y = randomInt(centerY - offsetY, centerY + offsetY);
 
         // alternative shapes...
 
@@ -85,6 +79,10 @@ function generate() {
     // console.log(output)
 }
 
+// listeners
+window.addEventListener("load", generate);
+viz.addEventListener("click", generate);
+
 // helpers
 function randomInt(min = 1, max = 100) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -100,8 +98,3 @@ function randomHex() {
 function randomFromArray(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
-
-
-// listeners
-window.addEventListener("load", generate);
-viz.addEventListener("click", generate);

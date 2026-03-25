@@ -7,7 +7,6 @@ function generate() {
     let count = randomInt(6, 12);
     let size = window.innerWidth * .10;
 
-
     for (let i = 0; i < count; i++) {
 
         // parameters
@@ -21,24 +20,20 @@ function generate() {
         let offsetY = (window.innerHeight * .25);
 
         // random x,y position using center and offset
-        let x = randomInt(
-            centerX - offsetX,
-            centerX + offsetX
-        ) - (w * .5);
-        let y = randomInt(
-            centerY - offsetY,
-            centerY + offsetY
-        ) - (h * .5);
+        let x = randomInt(centerX - offsetX, centerX + offsetX);
+        let y = randomInt(centerY - offsetY, centerY + offsetY);
 
         // style to apply to each shape
         let style = `
-                    position: absolute;
-                    transform: translate(${x}px,${y}px)
-                        rotate(${randomInt(-1, 1)}deg);
-                    width: ${w}px;
-                    height: ${h}px;
-                    background-color:#${randomHex()};
-                `;
+            position: absolute;
+            transform: 
+                translate(${x}px,${y}px)
+                rotate(${randomInt(-1, 1)}deg);
+            width: ${w - (w * .5)}px;
+            height: ${h - (h * .5)}px;
+            background-color:#${randomHex()};
+        `;
+                
         // 👉 change to output shapes for SVG
         output += `<div style="${style}"></div>`;
     }
@@ -46,6 +41,10 @@ function generate() {
     viz.innerHTML = output;
     // console.log(output);
 }
+
+// listeners
+window.addEventListener("load", generate);
+document.addEventListener("click", generate);
 
 // helpers
 function randomInt(min = 1, max = 100) {
@@ -59,7 +58,3 @@ function randomHex() {
     return hex;
 }
 // 👉 add helper function
-
-// listeners
-window.addEventListener("load", generate);
-document.addEventListener("click", generate);
