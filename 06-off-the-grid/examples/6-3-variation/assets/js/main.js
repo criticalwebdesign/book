@@ -1,16 +1,14 @@
 // main.js
 
-// Define Random Number Function
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
-// Define divs variable as all divs inside grid container
+let grid = document.querySelectorAll(".grid-container");
 let divs = document.querySelectorAll(".grid-container div");
 
-// Define Randomize function
 function randomize() {
-    console.log(divs.length, "randomize!");
+    console.log(divs.length, "randomize!")
+
+    // affect the whole grid
+    grid[0].style.transform = `rotate(${Math.random() * 360}deg)`;
 
     // just the grid divs
     divs.forEach(function (div) {
@@ -30,3 +28,7 @@ function randomize() {
     });
 }
 document.addEventListener("click", randomize);
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
