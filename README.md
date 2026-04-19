@@ -147,7 +147,7 @@ Examples:
 This chapter prompt leads you to design and code a web page that can generate new iterations of itself based on some changeable data source, like user input, time, location, etc.
 
 Examples: 
-[Generative (Jean) Arp](https://criticalwebdesign.github.io/book/08-generative-design/examples/generative-arp), 
+[Generative (Jean) Arp](https://criticalwebdesign.github.io/book/08-generative-design/8-3), 
 [Band Name Generator](https://criticalwebdesign.github.io/book/08-generative-design/examples/band-name-generator), 
 [String Art Generator](https://criticalwebdesign.github.io/book/08-generative-design/examples/string-art-generator/dist), 
 [Music Venue Generator](https://criticalwebdesign.github.io/book/08-generative-design/examples/music-venue-generator.html),
