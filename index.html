@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homage to the Square — After Josef Albers</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a1a;
+      color: #e8e8e8;
+      font-family: 'Courier New', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 1rem;
+      font-weight: normal;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+      color: #aaa;
+    }
+
+    .subtitle {
+      font-size: 0.7rem;
+      color: #555;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+    }
+
+    .layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    /* ── Canvas ── */
+    #canvas-wrap {
+      position: relative;
+    }
+
+    canvas {
+      display: block;
+      cursor: crosshair;
+    }
+
+    .hint {
+      text-align: center;
+      font-size: 0.65rem;
+      color: #444;
+      margin-top: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── Controls panel ── */
+    .panel {
+      width: 260px;
+    }
+
+    .section-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .section-label:first-child { margin-top: 0; }
+
+    /* Color swatches */
+    .swatch-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      align-items: center;
+    }
+
+    .swatch-label {
+      font-size: 0.65rem;
+      color: #666;
+      width: 60px;
+      flex-shrink: 0;
+    }
+
+    .color-input {
+      width: 36px;
+      height: 28px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 2px;
+      background: none;
+    }
+
+    .hex-input {
+      background: #2a2a2a;
+      border: 1px solid #333;
+      color: #ccc;
+      font-family: 'Courier New', monospace;
+      font-size: 0.7rem;
+      padding: 4px 6px;
+      width: 80px;
+      border-radius: 2px;
+    }
+
+    /* Slider controls */
+    .slider-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .slider-label {
+      font-size: 0.65rem;
+      color: #666;
+      width: 80px;
+      flex-shrink: 0;
+    }
+
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 3px;
+      background: #333;
+      border-radius: 2px;
+      outline: none;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #aaa;
+      cursor: pointer;
+    }
+
+    .slider-val {
+      font-size: 0.65rem;
+      color: #555;
+      width: 32px;
+      text-align: right;
+    }
+
+    /* Palette presets */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .palette-btn {
+      border: 1px solid #333;
+      border-radius: 3px;
+      overflow: hidden;
+      cursor: pointer;
+      height: 28px;
+      display: flex;
+      transition: border-color 0.15s;
+    }
+
+    .palette-btn:hover { border-color: #777; }
+    .palette-btn.active { border-color: #ccc; }
+
+    .palette-swatch {
+      flex: 1;
+    }
+
+    /* Animate toggle */
+    .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    button.action {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      color: #aaa;
+      font-family: 'Courier New', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 2px;
+      text-transform: uppercase;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    button.action:hover { background: #3a3a3a; color: #eee; }
+    button.action.on { background: #444; color: #fff; border-color: #666; }
+
+    /* Info footer */
+    .info {
+      font-size: 0.6rem;
+      color: #3a3a3a;
+      line-height: 1.8;
+      margin-top: 2.5rem;
+      max-width: 560px;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Homage to the Square</h1>
+<p class="subtitle">After Josef Albers (1888–1976) — Interactive Color Study</p>
+
+<div class="layout">
+
+  <div id="canvas-wrap">
+    <canvas id="c" width="480" height="480"></canvas>
+    <p class="hint">click a square to cycle its color &nbsp;·&nbsp; scroll to resize</p>
+  </div>
+
+  <div class="panel">
+
+    <p class="section-label">Square Colors</p>
+
+    <div id="color-controls"></div>
+
+    <p class="section-label">Geometry</p>
+
+    <div class="slider-row">
+      <span class="slider-label">Inset ratio</span>
+      <input type="range" id="sl-inset" min="10" max="30" value="18" step="1">
+      <span class="slider-val" id="val-inset">18</span>
+    </div>
+
+    <div class="slider-row">
+      <span class="slider-label">Offset Y</span>
+      <input type="range" id="sl-offset" min="0" max="50" value="12" step="1">
+      <span class="slider-val" id="val-offset">12</span>
+    </div>
+
+    <div class="slider-row">
+      <span class="slider-label">Squares</span>
+      <input type="range" id="sl-count" min="2" max="6" value="4" step="1">
+      <span class="slider-val" id="val-count">4</span>
+    </div>
+
+    <p class="section-label">Palettes</p>
+
+    <div class="palette-grid" id="palette-grid"></div>
+
+    <p class="section-label">Options</p>
+
+    <div class="btn-row">
+      <button class="action" id="btn-animate">Animate</button>
+      <button class="action" id="btn-reverse">Reverse</button>
+      <button class="action" id="btn-random">Random</button>
+      <button class="action" id="btn-reset">Reset</button>
+    </div>
+
+  </div>
+
+</div>
+
+<p class="info">
+  Josef Albers spent over 25 years painting the <em>Homage to the Square</em> series (1950–1976),
+  producing more than 1,000 works. Each painting uses three or four nested squares to study
+  how colors change in relation to their neighbors — the same hue appears warm or cool,
+  near or far, depending only on context.
+</p>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+
+// ── State ──────────────────────────────────────────────────────────────────
+const state = {
+  colors: ['#E8C84A', '#D4702B', '#8B2E0F', '#3D1A00'],
+  inset: 18,
+  offsetY: 12,
+  count: 4,
+  animating: false,
+  reversed: false,
+  animPhase: 0,
+};
+
+// ── Albers palette presets ─────────────────────────────────────────────────
+const PALETTES = [
+  { name: 'Ochre',    colors: ['#E8C84A', '#D4702B', '#8B2E0F', '#3D1A00', '#1A0800', '#100400'] },
+  { name: 'Terra',    colors: ['#F2DDB0', '#C8773A', '#7A3520', '#2E1008', '#180500', '#0A0200'] },
+  { name: 'Desert',   colors: ['#EDD98A', '#C4873B', '#945A20', '#5C2E08', '#2E1200', '#120500'] },
+  { name: 'Dusk',     colors: ['#F5C6A0', '#C06060', '#6B2E5A', '#2A1040', '#100822', '#060310'] },
+  { name: 'Fog',      colors: ['#D8D8D0', '#A8A89A', '#6A6A60', '#383830', '#181810', '#080804'] },
+  { name: 'Ice',      colors: ['#E0EEF8', '#90B8D8', '#4878A8', '#204068', '#0C1C30', '#040C18'] },
+  { name: 'Grove',    colors: ['#D0E8A0', '#7AB848', '#3A7820', '#184808', '#082000', '#030E00'] },
+  { name: 'Violet',   colors: ['#E8D0F0', '#A870C0', '#603888', '#301848', '#180820', '#08040E'] },
+];
+
+// ── Build palette buttons ──────────────────────────────────────────────────
+const paletteGrid = document.getElementById('palette-grid');
+PALETTES.forEach((p, i) => {
+  const btn = document.createElement('div');
+  btn.className = 'palette-btn' + (i === 0 ? ' active' : '');
+  btn.title = p.name;
+  p.colors.slice(0, 4).forEach(c => {
+    const s = document.createElement('div');
+    s.className = 'palette-swatch';
+    s.style.background = c;
+    btn.appendChild(s);
+  });
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.palette-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyPalette(p.colors);
+  });
+  paletteGrid.appendChild(btn);
+});
+
+function applyPalette(cols) {
+  const n = state.count;
+  state.colors = cols.slice(0, Math.max(n, 6));
+  buildColorControls();
+  draw();
+}
+
+// ── Build color controls ───────────────────────────────────────────────────
+const colorControlsEl = document.getElementById('color-controls');
+
+function buildColorControls() {
+  colorControlsEl.innerHTML = '';
+  const labels = ['Outer', 'Second', 'Third', 'Fourth', 'Fifth', 'Inner'];
+  for (let i = 0; i < state.count; i++) {
+    const row = document.createElement('div');
+    row.className = 'swatch-row';
+
+    const lbl = document.createElement('span');
+    lbl.className = 'swatch-label';
+    lbl.textContent = labels[i] || `#${i+1}`;
+
+    const picker = document.createElement('input');
+    picker.type = 'color';
+    picker.className = 'color-input';
+    picker.value = state.colors[i] || '#888888';
+
+    const hex = document.createElement('input');
+    hex.type = 'text';
+    hex.className = 'hex-input';
+    hex.value = state.colors[i] || '#888888';
+    hex.maxLength = 7;
+
+    const idx = i;
+
+    picker.addEventListener('input', () => {
+      state.colors[idx] = picker.value;
+      hex.value = picker.value;
+      draw();
+    });
+
+    hex.addEventListener('change', () => {
+      const v = hex.value.trim();
+      if (/^#[0-9a-fA-F]{6}$/.test(v)) {
+        state.colors[idx] = v;
+        picker.value = v;
+        draw();
+      }
+    });
+
+    row.append(lbl, picker, hex);
+    colorControlsEl.appendChild(row);
+  }
+}
+
+// ── Slider wiring ──────────────────────────────────────────────────────────
+function wireSlider(id, valId, key, redrawFn) {
+  const sl = document.getElementById(id);
+  const vl = document.getElementById(valId);
+  sl.value = state[key];
+  vl.textContent = state[key];
+  sl.addEventListener('input', () => {
+    state[key] = +sl.value;
+    vl.textContent = sl.value;
+    redrawFn();
+  });
+}
+
+wireSlider('sl-inset',  'val-inset',  'inset',   draw);
+wireSlider('sl-offset', 'val-offset', 'offsetY', draw);
+wireSlider('sl-count',  'val-count',  'count',   () => { buildColorControls(); draw(); });
+
+// ── Draw ───────────────────────────────────────────────────────────────────
+function computeSquares(phase = 0) {
+  const W = canvas.width;
+  const H = canvas.height;
+  const n = state.count;
+  const insetPct = state.inset / 100;
+  const offsetPct = state.offsetY / 100;
+
+  const squares = [];
+  let x = 0, y = 0, w = W, h = H;
+
+  for (let i = 0; i < n; i++) {
+    squares.push({ x, y, w, h, colorIdx: i });
+    const insetX = w * insetPct;
+    const insetY = h * insetPct;
+    const shift  = h * offsetPct * (1 - i / n);
+    x += insetX;
+    y += insetY + shift;
+    w -= insetX * 2;
+    h -= insetY * 2 + shift;
+    if (w <= 0 || h <= 0) break;
+  }
+  return squares;
+}
+
+function draw(phase) {
+  if (phase === undefined) phase = state.animPhase;
+  const squares = computeSquares(phase);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw from outside in
+  const order = state.reversed ? [...squares].reverse() : squares;
+  order.forEach(sq => {
+    const base = state.colors[sq.colorIdx] || '#000';
+    // Subtle hue shift during animation
+    const col = animShift(base, phase * (sq.colorIdx + 1) * 0.4);
+    ctx.fillStyle = col;
+    ctx.fillRect(sq.x, sq.y, sq.w, sq.h);
+  });
+}
+
+function animShift(hex, amt) {
+  // Shift hue slightly via HSL
+  const [h, s, l] = hexToHsl(hex);
+  const hNew = (h + amt * 15) % 360;
+  return hslToHex(hNew, s, l);
+}
+
+// ── Click to cycle color ───────────────────────────────────────────────────
+canvas.addEventListener('click', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) * (canvas.width  / rect.width);
+  const my = (e.clientY - rect.top)  * (canvas.height / rect.height);
+  const squares = computeSquares(state.animPhase);
+
+  // Find innermost square hit
+  let hit = -1;
+  squares.forEach((sq, i) => {
+    if (mx >= sq.x && mx <= sq.x + sq.w && my >= sq.y && my <= sq.y + sq.h) hit = i;
+  });
+  if (hit < 0) return;
+
+  // Cycle through current palette
+  const activePalette = getActivePalette();
+  const cur = state.colors[hit];
+  const idx = activePalette.indexOf(cur);
+  state.colors[hit] = activePalette[(idx + 1) % activePalette.length];
+  buildColorControls();
+  draw();
+});
+
+function getActivePalette() {
+  const active = document.querySelector('.palette-btn.active');
+  if (!active) return PALETTES[0].colors;
+  const i = [...document.querySelectorAll('.palette-btn')].indexOf(active);
+  return PALETTES[i]?.colors || PALETTES[0].colors;
+}
+
+// ── Scroll to resize canvas ────────────────────────────────────────────────
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  const delta = e.deltaY > 0 ? -20 : 20;
+  const newSize = Math.max(200, Math.min(700, canvas.width + delta));
+  canvas.width = newSize;
+  canvas.height = newSize;
+  draw();
+}, { passive: false });
+
+// ── Animation loop ─────────────────────────────────────────────────────────
+let rafId = null;
+function startAnim() {
+  if (rafId) return;
+  let last = performance.now();
+  function tick(now) {
+    const dt = (now - last) / 1000;
+    last = now;
+    state.animPhase = (state.animPhase + dt * 0.12) % 1;
+    draw(state.animPhase);
+    rafId = requestAnimationFrame(tick);
+  }
+  rafId = requestAnimationFrame(tick);
+}
+function stopAnim() {
+  if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+}
+
+// ── Buttons ────────────────────────────────────────────────────────────────
+const btnAnimate = document.getElementById('btn-animate');
+btnAnimate.addEventListener('click', () => {
+  state.animating = !state.animating;
+  btnAnimate.classList.toggle('on', state.animating);
+  state.animating ? startAnim() : stopAnim();
+});
+
+document.getElementById('btn-reverse').addEventListener('click', function() {
+  state.reversed = !state.reversed;
+  this.classList.toggle('on', state.reversed);
+  draw();
+});
+
+document.getElementById('btn-random').addEventListener('click', () => {
+  state.colors = Array.from({ length: state.count }, () =>
+    '#' + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0')
+  );
+  buildColorControls();
+  draw();
+});
+
+document.getElementById('btn-reset').addEventListener('click', () => {
+  applyPalette(PALETTES[0].colors);
+  document.getElementById('sl-inset').value  = state.inset  = 18;
+  document.getElementById('sl-offset').value = state.offsetY = 12;
+  document.getElementById('sl-count').value  = state.count  = 4;
+  document.getElementById('val-inset').textContent  = 18;
+  document.getElementById('val-offset').textContent = 12;
+  document.getElementById('val-count').textContent  = 4;
+  state.reversed = false;
+  document.getElementById('btn-reverse').classList.remove('on');
+  state.animating = false;
+  btnAnimate.classList.remove('on');
+  stopAnim();
+  draw();
+});
+
+// ── Color conversion helpers ───────────────────────────────────────────────
+function hexToHsl(hex) {
+  let r = parseInt(hex.slice(1,3),16)/255;
+  let g = parseInt(hex.slice(3,5),16)/255;
+  let b = parseInt(hex.slice(5,7),16)/255;
+  const max = Math.max(r,g,b), min = Math.min(r,g,b);
+  let h=0, s=0, l=(max+min)/2;
+  if (max !== min) {
+    const d = max - min;
+    s = l > 0.5 ? d/(2-max-min) : d/(max+min);
+    if (max===r) h = (g-b)/d + (g<b?6:0);
+    else if (max===g) h = (b-r)/d + 2;
+    else h = (r-g)/d + 4;
+    h *= 60;
+  }
+  return [h, s*100, l*100];
+}
+
+function hslToHex(h, s, l) {
+  s /= 100; l /= 100;
+  const k = n => (n + h/30) % 12;
+  const a = s * Math.min(l, 1-l);
+  const f = n => l - a * Math.max(-1, Math.min(k(n)-3, Math.min(9-k(n), 1)));
+  const toHex = x => Math.round(x*255).toString(16).padStart(2,'0');
+  return `#${toHex(f(0))}${toHex(f(8))}${toHex(f(4))}`;
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+buildColorControls();
+draw();
+</script>
+</body>
+</html>
