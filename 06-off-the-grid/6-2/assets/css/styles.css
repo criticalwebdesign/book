@@ -22,12 +22,12 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     gap: 2rem;
-    margin: 10% 4rem 0 4rem;
+    margin: 20% 4rem 0 4rem;
 }
 
 .last {
-    padding-bottom: 2rem;
-    border-bottom: 2px solid rgb(220, 200, 180);
+    padding-bottom: 7rem;
+    border-bottom: 2px solid rgb(200, 200, 180);
 }
